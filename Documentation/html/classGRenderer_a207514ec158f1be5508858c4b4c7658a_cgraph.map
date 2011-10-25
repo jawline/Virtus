@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classGRenderer.html#ac203b753c5649c9ee8c0ab139be9f1e9" title="GRenderer::begin" alt="" coords="267,164,389,193"/>
+<area shape="rect" id="node22" href="$classGraphicsAPI.html#a51f4f0fed27c8c19021f858864541e90" title="GraphicsAPI::clearActiveTexture" alt="" coords="221,217,435,247"/>
+<area shape="rect" id="node24" href="$classGraphicsAPI.html#abc33a446a32b6eff1b540cbb04067eb4" title="GraphicsAPI::disableBlending" alt="" coords="231,271,425,300"/>
+<area shape="rect" id="node26" href="$classGRenderLayer.html#a5ce642f7adc62595dc429e267647b0ad" title="GRenderLayer::draw" alt="" coords="257,324,399,353"/>
+<area shape="rect" id="node28" href="$classGraphicsAPI.html#a8f03058d15aff693207f14a589b4dce5" title="GraphicsAPI::enableBlending" alt="" coords="232,377,424,407"/>
+<area shape="rect" id="node30" href="$classGRenderer.html#a04f9d9c4661e28d03fb7cecb658c02bb" title="GRenderer::end" alt="" coords="271,431,385,460"/>
+<area shape="rect" id="node37" href="$classGRenderer.html#a189dc79fbe3e40ab1cf0fd0cb9e83dfc" title="GRenderer::getLayer" alt="" coords="257,484,399,513"/>
+<area shape="rect" id="node39" href="$classGraphicsAPI.html#a5fe75791c0d601d014fb35487913b5ce" title="GraphicsAPI::setupFor2D" alt="" coords="243,537,413,567"/>
+<area shape="rect" id="node5" href="$classGraphicsAPI.html#ab5f8505a14211950fb90b1a407a80153" title="GraphicsAPI::clearScreen" alt="" coords="489,5,663,35"/>
+<area shape="rect" id="node7" href="$classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2" title="GRenderer::getGraphicsAPI" alt="" coords="484,59,668,88"/>
+<area shape="rect" id="node9" href="$classRenderWindow.html#a6815da80b74f775fb1710186ee023269" title="RenderWindow::getHeight" alt="" coords="489,112,663,141"/>
+<area shape="rect" id="node11" href="$classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16" title="GraphicsAPI::getRenderWindow" alt="" coords="717,271,928,300"/>
+<area shape="rect" id="node13" href="$classRenderWindow.html#ade00c67880046e2b7dd2220b15ca7873" title="RenderWindow::getWidth" alt="" coords="491,216,661,245"/>
+<area shape="rect" id="node15" href="$classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27" title="GRenderer::getWindow" alt="" coords="497,376,655,405"/>
+<area shape="rect" id="node18" href="$classGraphicsAPI.html#a342866fc473286e8dbf49031a7c272bf" title="GraphicsAPI::setupViewport" alt="" coords="483,269,669,299"/>
+<area shape="rect" id="node20" href="$classRenderWindow.html#a0eef3cc5a2e986482528d15c8ebdb7f0" title="RenderWindow::update" alt="" coords="497,323,655,352"/>
+<area shape="rect" id="node32" href="$classGraphicsAPI.html#a1d9a56d216cf36a01e82370b9eb65b70" title="GraphicsAPI::clearErrors" alt="" coords="493,431,659,460"/>
+<area shape="rect" id="node34" href="$classRenderWindow.html#ae4c46093ca377813ba2fac5f1194a98b" title="RenderWindow::finalFrame" alt="" coords="487,484,665,513"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2" title="GRenderer::getGraphicsAPI" alt="" coords="196,5,380,35"/>
+<area shape="rect" id="node5" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="207,59,369,88"/>
+<area shape="rect" id="node9" href="$classGraphicsAPI.html#a5fe75791c0d601d014fb35487913b5ce" title="GraphicsAPI::setupFor2D" alt="" coords="203,112,373,141"/>
+<area shape="rect" id="node7" href="$classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="431,59,585,88"/>
+</map>

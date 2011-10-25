@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classGraphicsAPI.html#a1d9a56d216cf36a01e82370b9eb65b70" title="GraphicsAPI::clearErrors" alt="" coords="176,5,341,35"/>
+<area shape="rect" id="node5" href="$classRenderWindow.html#ae4c46093ca377813ba2fac5f1194a98b" title="RenderWindow::finalFrame" alt="" coords="169,59,348,88"/>
+<area shape="rect" id="node7" href="$classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27" title="GRenderer::getWindow" alt="" coords="180,112,337,141"/>
+<area shape="rect" id="node9" href="$classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16" title="GraphicsAPI::getRenderWindow" alt="" coords="397,112,608,141"/>
+</map>

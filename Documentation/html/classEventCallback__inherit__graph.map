@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classCloseHandler.html" title="CloseHandler" alt="" coords="5,83,107,112"/>
+<area shape="rect" id="node5" href="$classPressedEventHandler.html" title="PressedEventHandler" alt="" coords="131,83,280,112"/>
+<area shape="rect" id="node7" href="$classReleasedEventHandler.html" title="ReleasedEventHandler" alt="" coords="304,83,459,112"/>
+<area shape="rect" id="node9" href="$classToggleWireframeHandler.html" title="ToggleWireframeHandler" alt="" coords="483,83,648,112"/>
+</map>

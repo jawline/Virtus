@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classFile.html" title="File" alt="" coords="29,83,72,112"/>
+<area shape="rect" id="node7" href="$classFolder.html" title="Folder" alt="" coords="111,83,169,112"/>
+<area shape="rect" id="node5" href="$classLocalFile.html" title="LocalFile" alt="" coords="5,160,80,189"/>
+<area shape="rect" id="node9" href="$classLocalFolder.html" title="LocalFolder" alt="" coords="104,160,192,189"/>
+</map>

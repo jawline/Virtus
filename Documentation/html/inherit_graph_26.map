@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$classIElement.html" title="IElement" alt="" coords="5,112,80,141"/>
+<area shape="rect" id="node3" href="$classIElements_1_1Button.html" title="IElements::Button" alt="" coords="140,5,265,35"/>
+<area shape="rect" id="node5" href="$classIElements_1_1Checkbox.html" title="IElements::Checkbox" alt="" coords="129,59,276,88"/>
+<area shape="rect" id="node7" href="$classIElements_1_1StaticText.html" title="IElements::StaticText" alt="" coords="128,112,277,141"/>
+<area shape="rect" id="node9" href="$classImageElement.html" title="ImageElement" alt="" coords="149,165,256,195"/>
+<area shape="rect" id="node11" href="$classViewerUserInterface.html" title="ViewerUserInterface" alt="" coords="132,219,273,248"/>
+</map>

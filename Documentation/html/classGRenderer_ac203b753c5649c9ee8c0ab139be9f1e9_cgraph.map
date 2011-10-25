@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classGraphicsAPI.html#ab5f8505a14211950fb90b1a407a80153" title="GraphicsAPI::clearScreen" alt="" coords="185,5,359,35"/>
+<area shape="rect" id="node5" href="$classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2" title="GRenderer::getGraphicsAPI" alt="" coords="180,59,364,88"/>
+<area shape="rect" id="node7" href="$classRenderWindow.html#a6815da80b74f775fb1710186ee023269" title="RenderWindow::getHeight" alt="" coords="185,112,359,141"/>
+<area shape="rect" id="node9" href="$classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16" title="GraphicsAPI::getRenderWindow" alt="" coords="413,217,624,247"/>
+<area shape="rect" id="node11" href="$classRenderWindow.html#ade00c67880046e2b7dd2220b15ca7873" title="RenderWindow::getWidth" alt="" coords="187,216,357,245"/>
+<area shape="rect" id="node13" href="$classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27" title="GRenderer::getWindow" alt="" coords="193,269,351,299"/>
+<area shape="rect" id="node16" href="$classGraphicsAPI.html#a342866fc473286e8dbf49031a7c272bf" title="GraphicsAPI::setupViewport" alt="" coords="179,323,365,352"/>
+<area shape="rect" id="node18" href="$classRenderWindow.html#a0eef3cc5a2e986482528d15c8ebdb7f0" title="RenderWindow::update" alt="" coords="193,376,351,405"/>
+</map>

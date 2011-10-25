@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="225,5,388,35"/>
+<area shape="rect" id="node7" href="$classGRenderer.html#a362ab6eb0a315a128badd5324a4cb6d0" title="GRenderer::getTextureMonitor" alt="" coords="208,59,405,88"/>
+<area shape="rect" id="node9" href="$classTextureMonitor.html#a1240baf2dccb434aae2d1dad10c3daa8" title="TextureMonitor::releaseTexture" alt="" coords="205,112,408,141"/>
+<area shape="rect" id="node5" href="$classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="503,5,657,35"/>
+<area shape="rect" id="node11" href="$classResourceMonitor.html#a8f29eed82e2b9bdf4746350b3acc9832" title="ResourceMonitor::rmReleaseResource" alt="" coords="456,112,704,141"/>
+<area shape="rect" id="node13" href="$classResourceMonitor.html#a58f3542af84141ae8ac2b88be6de641f" title="ResourceMonitor::f_freeIndex" alt="" coords="752,112,947,141"/>
+<area shape="rect" id="node15" href="$classResourceMonitor.html#a24ab892560b57ebb2bc2fc0f7d3d519b" title="ResourceMonitor::f_freeEntity" alt="" coords="996,112,1191,141"/>
+</map>

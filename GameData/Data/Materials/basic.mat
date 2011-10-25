@@ -1,0 +1,17 @@
+Material
+{
+
+	numTextures = 2;
+
+	Texture "base" = "./Data/Models/test.3ds.main.tga";
+	Texture "bump" = "./Data/Models/test.3ds.main.bump.tga";
+
+	Shader
+	{
+		vert = "";
+	
+		frag = "";
+	
+	};
+
+};

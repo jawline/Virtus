@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classGraphicsAPI.html#abc33a446a32b6eff1b540cbb04067eb4" title="GraphicsAPI::disableBlending" alt="" coords="271,112,465,141"/>
+<area shape="rect" id="node5" href="$classInterfaceLayer.html#abc12b35dff40f2199bb1ee0a3ddd1cbf" title="InterfaceLayer::drawQuadWithUIElement" alt="" coords="237,165,499,195"/>
+<area shape="rect" id="node19" href="$classGraphicsAPI.html#a8f03058d15aff693207f14a589b4dce5" title="GraphicsAPI::enableBlending" alt="" coords="272,219,464,248"/>
+<area shape="rect" id="node21" href="$classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2" title="GRenderer::getGraphicsAPI" alt="" coords="276,272,460,301"/>
+<area shape="rect" id="node23" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="287,325,449,355"/>
+<area shape="rect" id="node7" href="$classVertexSet.html#aeec50743201b32bc511412f210bd2da2" title="VertexSet::Draw" alt="" coords="599,5,716,35"/>
+<area shape="rect" id="node9" href="$classTexture.html#a8bdcf7778bdda285b6cb79d5bc6a63a0" title="Texture::getHeight" alt="" coords="592,59,723,88"/>
+<area shape="rect" id="node11" href="$classVertexSet.html#a8e8b906fa449d4a401f59e0d7614c3b6" title="VertexSet::getTextureCoordinates" alt="" coords="548,112,767,141"/>
+<area shape="rect" id="node13" href="$classVertexSet.html#aade73ae165447c61bac9239e076732d9" title="VertexSet::getVertices" alt="" coords="580,165,735,195"/>
+<area shape="rect" id="node15" href="$classTexture.html#ab7aa3041f355301c918be12ab5e06d26" title="Texture::getWidth" alt="" coords="595,219,720,248"/>
+<area shape="rect" id="node17" href="$classTexture.html#af1755014f4c23d4e98a316214888921c" title="Texture::makeActive" alt="" coords="587,272,728,301"/>
+<area shape="rect" id="node25" href="$classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="580,325,735,355"/>
+</map>
