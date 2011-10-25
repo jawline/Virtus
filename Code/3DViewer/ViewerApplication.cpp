@@ -13,7 +13,7 @@
 const float viewerRotateSpeed = 50.0f;
 const float viewerMoveSpeed = 1000.0f;
 
-void toggleWireframeFn(IElements::Button* Btn)
+void toggleWireframeFn(Button* Btn)
 {
 
     GRenderer::getRenderer()->setRenderWireframeValue(!GRenderer::getRenderer()->getRenderWireframeValue());
@@ -131,12 +131,12 @@ bool ModelViewer::onLoad(GEngine* Engine) {
 
     m_gameEngine = Engine;
 
-    Colour textClr = Colour(1, 1, 1);
-    Colour bgNormal = Colour(0, 0, 1);
-    Colour bgOver = Colour(1, 0, 0);
-    Colour bgDown = Colour(0, 1, 0);
+    Color textClr = Color(1, 1, 1);
+    Color bgNormal = Color(0, 0, 1);
+    Color bgOver = Color(1, 0, 0);
+    Color bgDown = Color(0, 1, 0);
 
-    IElements::Button* Btn  = new IElements::Button(10, GEngine::getInstance()->getCanvasHeight() - 50, 300, 50, "Toggle Wireframe", "Really, its pretty cool", "Enjoy", textClr, bgNormal, bgOver, bgDown);
+    Button* Btn  = new Button(10, GEngine::getInstance()->getCanvasHeight() - 50, 300, 50, "Toggle Wireframe", "Really, its pretty cool", "Enjoy", textClr, bgNormal, bgOver, bgDown);
     Btn->setOnMouseUp(toggleWireframeFn);
     GRenderer::getRenderer()->getInterfaceManager()->AddElement(Btn);
 

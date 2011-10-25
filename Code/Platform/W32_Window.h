@@ -8,6 +8,9 @@
 #include GL_HEADER
 #include WINDOWS_HEADER
 
+/**
+ * @brief Implementation of a game window (ARCHIVED - NEEDS UPDATING)
+ */
 class W32Win : public GWindow
 {
 private:

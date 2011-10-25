@@ -13,7 +13,7 @@ BeeHive::BeeHive(unsigned int numberOfBees)
     {
 
         m_bees[i] = new WorkerBee(i + 1);
-        m_bees[i]->Start(this);
+        m_bees[i]->start(this);
 
     }
 

@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -70,16 +69,16 @@
 <a name="l00029"></a>00029         <a class="code" href="classFilesystemUtils.html#a2184bdd61bbb57e810b4362346a36286">FilesystemUtils::writeLineToStream</a>(outStrm, lineBuffer);
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031         <span class="comment">//Loop through each child and write them in as children</span>
-<a name="l00032"></a>00032         <a class="code" href="classConfigurationFolder.html">ConfigurationFolder</a>* folder = <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationFolder.html">ConfigurationFolder</a>*<span class="keyword">&gt;</span> (Node);
+<a name="l00032"></a>00032         <a class="code" href="classConfigurationFolder.html" title="A implementation of a configuration folder, it has a number of children pointers to them and a name...">ConfigurationFolder</a>* folder = <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationFolder.html" title="A implementation of a configuration folder, it has a number of children pointers to them and a name...">ConfigurationFolder</a>*<span class="keyword">&gt;</span> (Node);
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034         <span class="comment">//Get the number of children</span>
-<a name="l00035"></a>00035         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> folderLength = folder-&gt;<a class="code" href="classConfigurationFolder.html#abfcede97444700bca83822238d2e103f">numberOfChildren</a>();
+<a name="l00035"></a>00035         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> folderLength = folder-&gt;<a class="code" href="classConfigurationFolder.html#abfcede97444700bca83822238d2e103f" title="Return the number of children in this node.">numberOfChildren</a>();
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037         <span class="comment">//Loop through each node</span>
 <a name="l00038"></a>00038         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; folderLength; i++)
 <a name="l00039"></a>00039         {
 <a name="l00040"></a>00040             <span class="comment">//Output each node with a depth value of +1 (To make the file format nicely for the possible human reader)</span>
-<a name="l00041"></a>00041             <a class="code" href="classConfigurationWriter.html#a4589945757872f69740679c69f5b8058">outputNode</a>(folder-&gt;<a class="code" href="classConfigurationFolder.html#a2e490b6594b1d65fc4eede8fe48fd634">getChild</a>(i), depth + 1, outStrm);
+<a name="l00041"></a>00041             <a class="code" href="classConfigurationWriter.html#a4589945757872f69740679c69f5b8058">outputNode</a>(folder-&gt;<a class="code" href="classConfigurationFolder.html#a2e490b6594b1d65fc4eede8fe48fd634" title="Return the specified child of the node.">getChild</a>(i), depth + 1, outStrm);
 <a name="l00042"></a>00042         }
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044         <span class="comment">//Start a new line</span>
@@ -128,7 +127,7 @@
 <a name="l00087"></a>00087 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

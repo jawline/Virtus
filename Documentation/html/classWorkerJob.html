@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,6 +46,9 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="WorkerJob" -->
+<p>Virtual class for a job for a worker bee.  
+ <a href="classWorkerJob.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Job_8h_source.html">Job.h</a>&gt;</code></p>
 
 <p><a href="classWorkerJob-members.html">List of all members.</a></p>
@@ -67,8 +69,9 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorkerJob.html#ae2c29352572ad8940af2cf92263c24bf">m_errorDetails</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="Job_8h_source.html#l00009">9</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<div class="textblock"><p>Virtual class for a job for a worker bee. </p>
+
+<p>Definition at line <a class="el" href="Job_8h_source.html#l00013">13</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a99e3d7e946b7302500c2b71ec6b5e92a"></a><!-- doxytag: member="WorkerJob::WorkerJob" ref="a99e3d7e946b7302500c2b71ec6b5e92a" args="()" -->
 <div class="memitem">
@@ -86,7 +89,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Job_8cpp_source.html#l00004">4</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
 
-<p>References <a class="el" href="Job_8h_source.html#l00013">m_errorDetails</a>, and <a class="el" href="Job_8h_source.html#l00012">m_jobStatus</a>.</p>
+<p>References <a class="el" href="Job_8h_source.html#l00017">m_errorDetails</a>, and <a class="el" href="Job_8h_source.html#l00016">m_jobStatus</a>.</p>
 
 </div>
 </div>
@@ -106,7 +109,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Job_8cpp_source.html#l00014">14</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
 
-<p>References <a class="el" href="Job_8h_source.html#l00013">m_errorDetails</a>.</p>
+<p>References <a class="el" href="Job_8h_source.html#l00017">m_errorDetails</a>.</p>
 
 </div>
 </div>
@@ -127,9 +130,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Job_8cpp_source.html#l00039">39</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
 
-<p>References <a class="el" href="Job_8h_source.html#l00013">m_errorDetails</a>.</p>
+<p>References <a class="el" href="Job_8h_source.html#l00017">m_errorDetails</a>.</p>
 
-<p>Referenced by <a class="el" href="Bee_8cpp_source.html#l00023">WorkerBee::Run()</a>.</p>
+<p>Referenced by <a class="el" href="Bee_8cpp_source.html#l00023">WorkerBee::run()</a>.</p>
 
 </div>
 </div>
@@ -147,11 +150,11 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Job_8h_source.html#l00022">22</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p>Definition at line <a class="el" href="Job_8h_source.html#l00026">26</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
-<p>References <a class="el" href="Job_8h_source.html#l00012">m_jobStatus</a>.</p>
+<p>References <a class="el" href="Job_8h_source.html#l00016">m_jobStatus</a>.</p>
 
-<p>Referenced by <a class="el" href="Bee_8cpp_source.html#l00023">WorkerBee::Run()</a>.</p>
+<p>Referenced by <a class="el" href="Bee_8cpp_source.html#l00023">WorkerBee::run()</a>.</p>
 
 </div>
 </div>
@@ -169,7 +172,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="Bee_8cpp_source.html#l00023">WorkerBee::Run()</a>.</p>
+<p>Referenced by <a class="el" href="Bee_8cpp_source.html#l00023">WorkerBee::run()</a>.</p>
 
 </div>
 </div>
@@ -190,7 +193,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Job_8cpp_source.html#l00028">28</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
 
-<p>References <a class="el" href="Job_8h_source.html#l00013">m_errorDetails</a>, and <a class="el" href="Job_8h_source.html#l00012">m_jobStatus</a>.</p>
+<p>References <a class="el" href="Job_8h_source.html#l00017">m_errorDetails</a>, and <a class="el" href="Job_8h_source.html#l00016">m_jobStatus</a>.</p>
 
 </div>
 </div>
@@ -206,7 +209,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Job_8h_source.html#l00013">13</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p>Definition at line <a class="el" href="Job_8h_source.html#l00017">17</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
 <p>Referenced by <a class="el" href="Job_8cpp_source.html#l00039">getErrorDetails()</a>, <a class="el" href="Job_8cpp_source.html#l00028">setError()</a>, <a class="el" href="Job_8cpp_source.html#l00004">WorkerJob()</a>, and <a class="el" href="Job_8cpp_source.html#l00014">~WorkerJob()</a>.</p>
 
@@ -223,9 +226,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Job_8h_source.html#l00012">12</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p>Definition at line <a class="el" href="Job_8h_source.html#l00016">16</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Job_8h_source.html#l00022">getStatus()</a>, <a class="el" href="Job_8cpp_source.html#l00028">setError()</a>, and <a class="el" href="Job_8cpp_source.html#l00004">WorkerJob()</a>.</p>
+<p>Referenced by <a class="el" href="Job_8h_source.html#l00026">getStatus()</a>, <a class="el" href="Job_8cpp_source.html#l00028">setError()</a>, and <a class="el" href="Job_8cpp_source.html#l00004">WorkerJob()</a>.</p>
 
 </div>
 </div>
@@ -234,7 +237,7 @@ Protected Attributes</h2></td></tr>
 <li>Code/HIVE/<a class="el" href="Job_8cpp_source.html">Job.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

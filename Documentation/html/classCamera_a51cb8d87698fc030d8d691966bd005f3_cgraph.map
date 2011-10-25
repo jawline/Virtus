@@ -1,6 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2" title="GRenderer::getGraphicsAPI" alt="" coords="217,5,401,35"/>
-<area shape="rect" id="node5" href="$classVector3f.html#a762fa45136b13bc5c5cd16919ad1036f" title="Vector3f::getMatrix" alt="" coords="243,59,376,88"/>
+<area shape="rect" id="node5" href="$classVector3f.html#a762fa45136b13bc5c5cd16919ad1036f" title="Get a reference to the raw array." alt="" coords="243,59,376,88"/>
 <area shape="rect" id="node7" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="228,112,391,141"/>
 <area shape="rect" id="node11" href="$classGraphicsAPI.html#a3eecd2f90b99083495bb9d97eaf4367e" title="GraphicsAPI::rotateMatrix" alt="" coords="223,165,396,195"/>
 <area shape="rect" id="node13" href="$classGraphicsAPI.html#a2399ee6a1cada60c38c070c2c6aa0723" title="GraphicsAPI::translateMatrix" alt="" coords="215,219,404,248"/>

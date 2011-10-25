@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -49,30 +48,31 @@
 <a name="l00008"></a><a class="code" href="structevent__callback__struct.html#a7e3920defc8a0cb07eee1d82c0c56042">00008</a>     std::vector&lt;EventCallback*&gt;* <a class="code" href="structevent__callback__struct.html#a7e3920defc8a0cb07eee1d82c0c56042">m_eventList</a>;
 <a name="l00009"></a>00009 };
 <a name="l00010"></a>00010 
-<a name="l00011"></a><a class="code" href="classEventManager.html">00011</a> <span class="keyword">class </span><a class="code" href="classEventManager.html">EventManager</a>
-<a name="l00012"></a>00012 {
-<a name="l00013"></a>00013 <span class="keyword">private</span>:
-<a name="l00014"></a><a class="code" href="classEventManager.html#a333271ed28bf247c3248e2b79242ea18">00014</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classEventManager.html#a333271ed28bf247c3248e2b79242ea18">m_numEvents</a>;
-<a name="l00015"></a><a class="code" href="classEventManager.html#a7738bfb20797e95386b7e5d572525be4">00015</a>     <a class="code" href="structevent__callback__struct.html">event_callback_struct</a>* <a class="code" href="classEventManager.html#a7738bfb20797e95386b7e5d572525be4">m_eventCallbacks</a>;
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017     <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#a44a92dbd9d216527ae541307bd2ab253">freeEvents</a>();
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019 <span class="keyword">public</span>:
-<a name="l00020"></a>00020     <a class="code" href="classEventManager.html#a89099b22114f158b5c530edfea52371d">EventManager</a>();
-<a name="l00021"></a>00021     <a class="code" href="classEventManager.html#a2e43e8b165b54f75e9c005cf5b04ade7">~EventManager</a>();
+<a name="l00015"></a><a class="code" href="classEventManager.html">00015</a> <span class="keyword">class </span><a class="code" href="classEventManager.html" title="Manages and stores mapping between events.">EventManager</a>
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017 <span class="keyword">private</span>:
+<a name="l00018"></a><a class="code" href="classEventManager.html#a333271ed28bf247c3248e2b79242ea18">00018</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classEventManager.html#a333271ed28bf247c3248e2b79242ea18">m_numEvents</a>;
+<a name="l00019"></a><a class="code" href="classEventManager.html#a7738bfb20797e95386b7e5d572525be4">00019</a>     <a class="code" href="structevent__callback__struct.html">event_callback_struct</a>* <a class="code" href="classEventManager.html#a7738bfb20797e95386b7e5d572525be4">m_eventCallbacks</a>;
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021     <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#a44a92dbd9d216527ae541307bd2ab253">freeEvents</a>();
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023     <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#a96150c5f3f9b325126d077d0802b7534">setNumberOfEvents</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> number);
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025     <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#aaf00bee56e0923062e6e10d94baf9535">unregisterEventCallback</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event, <a class="code" href="classEventCallback.html">EventCallback</a>* Callback);
-<a name="l00026"></a>00026     <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#a3f1a77490f77e4f5d141fde232c102ef">registerEventCallback</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event, <a class="code" href="classEventCallback.html">EventCallback</a> * Callback);
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028     <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#ad7abcd8b20480ef47856be120baf4d30">triggerEvent</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event,std::vector&lt;int&gt; F, <span class="keywordtype">int</span> Flags);
-<a name="l00029"></a>00029 };
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <span class="preprocessor">#endif //_EVENT_MANAGER_DEF_H_</span>
+<a name="l00023"></a>00023 <span class="keyword">public</span>:
+<a name="l00024"></a>00024     <a class="code" href="classEventManager.html#a89099b22114f158b5c530edfea52371d">EventManager</a>();
+<a name="l00025"></a>00025     <a class="code" href="classEventManager.html#a2e43e8b165b54f75e9c005cf5b04ade7">~EventManager</a>();
+<a name="l00026"></a>00026 
+<a name="l00032"></a>00032     <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#a96150c5f3f9b325126d077d0802b7534" title="Set the number of possible events (From 0 to number)">setNumberOfEvents</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> number);
+<a name="l00033"></a>00033 
+<a name="l00039"></a>00039     <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#aaf00bee56e0923062e6e10d94baf9535" title="Unregister the specified callback from the event.">unregisterEventCallback</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event, <a class="code" href="classEventCallback.html" title="Callback for a event.">EventCallback</a>* Callback);
+<a name="l00040"></a>00040 
+<a name="l00046"></a>00046     <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#a3f1a77490f77e4f5d141fde232c102ef" title="Register the specified callback to the event.">registerEventCallback</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event, <a class="code" href="classEventCallback.html" title="Callback for a event.">EventCallback</a> * Callback);
+<a name="l00047"></a>00047 
+<a name="l00052"></a>00052     <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#ad7abcd8b20480ef47856be120baf4d30" title="Notify the event manager that the specified event has occured.">triggerEvent</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event,std::vector&lt;int&gt; F, <span class="keywordtype">int</span> Flags);
+<a name="l00053"></a>00053 };
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="preprocessor">#endif //_EVENT_MANAGER_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

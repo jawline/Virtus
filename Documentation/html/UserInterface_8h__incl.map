@@ -1,2 +1,8 @@
 <map id="G" name="G">
+<area shape="rect" id="node3" href="$SText_8h.html" title="Render/Interface/SText.h" alt="" coords="1108,83,1276,112"/>
+<area shape="rect" id="node13" href="$InterfaceLayer_8h.html" title="Render/Interface/InterfaceLayer.h" alt="" coords="553,83,769,112"/>
+<area shape="rect" id="node23" href="$Color_8h.html" title="Render/Color.h" alt="" coords="944,160,1053,189"/>
+<area shape="rect" id="node30" href="$Button_8h.html" title="Render/Interface/Button.h" alt="" coords="913,83,1084,112"/>
+<area shape="rect" id="node5" href="$IElement_8h.html" title="IElement.h" alt="" coords="1077,160,1163,189"/>
+<area shape="rect" id="node7" href="$InputEvent_8h.html" title="Input/InputEvent.h" alt="" coords="827,237,955,267"/>
 </map>

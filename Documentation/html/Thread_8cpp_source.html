@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,31 +51,31 @@
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 }
 <a name="l00013"></a>00013 
-<a name="l00014"></a><a class="code" href="classThread.html#a0b241f9f89903ba277fda3c516e931c4">00014</a> <span class="keywordtype">void</span> <a class="code" href="classThread.html#a0b241f9f89903ba277fda3c516e931c4">Thread::Start</a>(<span class="keywordtype">void</span>* Arg)
+<a name="l00014"></a><a class="code" href="classThread.html#a19e0e962beaaafec23971346df5c6f5a">00014</a> <span class="keywordtype">void</span> <a class="code" href="classThread.html#a19e0e962beaaafec23971346df5c6f5a">Thread::start</a>(<span class="keywordtype">void</span>* Arg)
 <a name="l00015"></a>00015 {
 <a name="l00016"></a>00016     <a class="code" href="classThread.html#a1aae790b252dc954c4900bc5c52bfd89">m_threadArg</a> = Arg;
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 <span class="preprocessor">    #if defined(_BUILD_LINUX_)</span>
 <a name="l00019"></a>00019 <span class="preprocessor"></span>
-<a name="l00020"></a>00020         pthread_create( &amp;this_thread, NULL, (<span class="keywordtype">void</span>* (*)(<span class="keywordtype">void</span>*)) <a class="code" href="classThread.html#ac223125f8da58a648b958a8fc26e818e">Thread::EntryPoint</a>, <span class="keyword">this</span>);
+<a name="l00020"></a>00020         pthread_create( &amp;this_thread, NULL, (<span class="keywordtype">void</span>* (*)(<span class="keywordtype">void</span>*)) <a class="code" href="classThread.html#a58e4651f748403d4a56d0a027b0b9b1d">Thread::entryPoint</a>, <span class="keyword">this</span>);
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022 <span class="preprocessor">    #endif</span>
 <a name="l00023"></a>00023 <span class="preprocessor"></span>}
 <a name="l00024"></a>00024 
-<a name="l00025"></a><a class="code" href="classThread.html#adc55e9e70924143eb935a900d63d1f6e">00025</a> <span class="keywordtype">void</span> <a class="code" href="classThread.html#adc55e9e70924143eb935a900d63d1f6e">Thread::Enter</a>()
+<a name="l00025"></a><a class="code" href="classThread.html#ad93d8199858e4bd9cb5f26225f1b2763">00025</a> <span class="keywordtype">void</span> <a class="code" href="classThread.html#ad93d8199858e4bd9cb5f26225f1b2763">Thread::enter</a>()
 <a name="l00026"></a>00026 {
-<a name="l00027"></a>00027     <a class="code" href="classThread.html#a19507268506ba31e33360e75c9310d5b">Run</a>(<a class="code" href="classThread.html#a1aae790b252dc954c4900bc5c52bfd89">m_threadArg</a>);
+<a name="l00027"></a>00027     <a class="code" href="classThread.html#a1079be536a8f5757a76309b808964610">run</a>(<a class="code" href="classThread.html#a1aae790b252dc954c4900bc5c52bfd89">m_threadArg</a>);
 <a name="l00028"></a>00028 }
 <a name="l00029"></a>00029 
-<a name="l00030"></a><a class="code" href="classThread.html#ac223125f8da58a648b958a8fc26e818e">00030</a> <span class="keywordtype">void</span> <a class="code" href="classThread.html#ac223125f8da58a648b958a8fc26e818e">Thread::EntryPoint</a>(<span class="keywordtype">void</span>* This)
+<a name="l00030"></a><a class="code" href="classThread.html#a58e4651f748403d4a56d0a027b0b9b1d">00030</a> <span class="keywordtype">void</span> <a class="code" href="classThread.html#a58e4651f748403d4a56d0a027b0b9b1d">Thread::entryPoint</a>(<span class="keywordtype">void</span>* This)
 <a name="l00031"></a>00031 {
-<a name="l00032"></a>00032     <a class="code" href="classThread.html">Thread</a>* NewThread = (<a class="code" href="classThread.html">Thread</a>*) This;
+<a name="l00032"></a>00032     <a class="code" href="classThread.html" title="An abstraction of a thread.">Thread</a>* NewThread = (<a class="code" href="classThread.html" title="An abstraction of a thread.">Thread</a>*) This;
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034     NewThread-&gt;<a class="code" href="classThread.html#adc55e9e70924143eb935a900d63d1f6e">Enter</a>();
+<a name="l00034"></a>00034     NewThread-&gt;<a class="code" href="classThread.html#ad93d8199858e4bd9cb5f26225f1b2763">enter</a>();
 <a name="l00035"></a>00035 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

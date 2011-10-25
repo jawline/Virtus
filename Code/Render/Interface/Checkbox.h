@@ -3,10 +3,7 @@
 
 #include "IElement.h"
 #include "../TextureMonitor/TextureMonitor.h"
-#include "Colour.h"
-
-namespace IElements
-{
+#include <Render/Color.h>
 
 class Checkbox : public IElement
 {
@@ -17,13 +14,11 @@ protected:
     bool m_isChecked;
 
 public:
-    Checkbox(float x, float y, float w, float h, Colour m_downClr, Colour m_upClr);
+    Checkbox(float x, float y, float w, float h, Color m_downClr, Color m_upClr);
     ~Checkbox();
 
     void draw(InterfaceLayer* IL);
     bool handleInput(Input_Event e);
 };
-
-}
 
 #endif //_INTERFACE_CHECKBOX_DEF_H_

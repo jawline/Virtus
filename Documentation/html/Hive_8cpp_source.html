@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,14 +46,14 @@
 <a name="l00006"></a><a class="code" href="classBeeHive.html#a63a9746954bfd7669a313af7176f698d">00006</a> <a class="code" href="classBeeHive.html#a63a9746954bfd7669a313af7176f698d">BeeHive::BeeHive</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfBees)
 <a name="l00007"></a>00007 {
 <a name="l00008"></a>00008     <span class="comment">//Create a list of bees</span>
-<a name="l00009"></a>00009     <a class="code" href="classBeeHive.html#a8f3ae7f938305b0f60e8ecd68f6218a3">m_bees</a> = <span class="keyword">new</span> <a class="code" href="classWorkerBee.html">WorkerBee</a>*[numberOfBees];
+<a name="l00009"></a>00009     <a class="code" href="classBeeHive.html#a8f3ae7f938305b0f60e8ecd68f6218a3">m_bees</a> = <span class="keyword">new</span> <a class="code" href="classWorkerBee.html" title="Implementation of a thread that takes and processes job from a hive and processes it...">WorkerBee</a>*[numberOfBees];
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011     <span class="comment">//Create each bee and initialize them</span>
 <a name="l00012"></a>00012     <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; numberOfBees; ++i)
 <a name="l00013"></a>00013     {
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015         <a class="code" href="classBeeHive.html#a8f3ae7f938305b0f60e8ecd68f6218a3">m_bees</a>[i] = <span class="keyword">new</span> <a class="code" href="classWorkerBee.html">WorkerBee</a>(i + 1);
-<a name="l00016"></a>00016         <a class="code" href="classBeeHive.html#a8f3ae7f938305b0f60e8ecd68f6218a3">m_bees</a>[i]-&gt;<a class="code" href="classThread.html#a0b241f9f89903ba277fda3c516e931c4">Start</a>(<span class="keyword">this</span>);
+<a name="l00015"></a>00015         <a class="code" href="classBeeHive.html#a8f3ae7f938305b0f60e8ecd68f6218a3">m_bees</a>[i] = <span class="keyword">new</span> <a class="code" href="classWorkerBee.html" title="Implementation of a thread that takes and processes job from a hive and processes it...">WorkerBee</a>(i + 1);
+<a name="l00016"></a>00016         <a class="code" href="classBeeHive.html#a8f3ae7f938305b0f60e8ecd68f6218a3">m_bees</a>[i]-&gt;<a class="code" href="classThread.html#a19e0e962beaaafec23971346df5c6f5a">start</a>(<span class="keyword">this</span>);
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018     }
 <a name="l00019"></a>00019 
@@ -64,13 +63,13 @@
 <a name="l00023"></a>00023     <span class="comment">//Write this into to the log</span>
 <a name="l00024"></a>00024     <span class="keywordtype">char</span> logBuffer[256];
 <a name="l00025"></a>00025     sprintf(logBuffer, <span class="stringliteral">&quot;BeeHive created with %i workers\n&quot;</span>, <a class="code" href="classBeeHive.html#a17f87a446a7c121272aafe3b9ca5721e">m_numberOfBees</a>);
-<a name="l00026"></a>00026     <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">GEngine::getInstance</a>()-&gt;<a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">getLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(logBuffer);
+<a name="l00026"></a>00026     <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">GEngine::getInstance</a>()-&gt;<a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">getLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
 <a name="l00027"></a>00027 }
 <a name="l00028"></a>00028 
 <a name="l00029"></a><a class="code" href="classBeeHive.html#a807d21a2bd935fe819edc77b9f24ee2b">00029</a> <a class="code" href="classBeeHive.html#a807d21a2bd935fe819edc77b9f24ee2b">BeeHive::~BeeHive</a>()
 <a name="l00030"></a>00030 {
 <a name="l00031"></a>00031     <span class="comment">//TODO: KILL BEES FIRST</span>
-<a name="l00032"></a>00032     <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">GEngine::getInstance</a>()-&gt;<a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">getLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(<span class="stringliteral">&quot;WARNING: HIVE isn&#39;t able to kill bees yet. get on it\n&quot;</span>);
+<a name="l00032"></a>00032     <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">GEngine::getInstance</a>()-&gt;<a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">getLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;WARNING: HIVE isn&#39;t able to kill bees yet. get on it\n&quot;</span>);
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034     <span class="comment">//Free up the bee&#39;s</span>
 <a name="l00035"></a>00035     <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classBeeHive.html#a17f87a446a7c121272aafe3b9ca5721e">m_numberOfBees</a>; ++i)
@@ -82,7 +81,7 @@
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042     <span class="keyword">delete</span>[] <a class="code" href="classBeeHive.html#a8f3ae7f938305b0f60e8ecd68f6218a3">m_bees</a>;
 <a name="l00043"></a>00043 
-<a name="l00044"></a>00044     <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">GEngine::getInstance</a>()-&gt;<a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">getLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(<span class="stringliteral">&quot;HIVE destroyed\n&quot;</span>);
+<a name="l00044"></a>00044     <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">GEngine::getInstance</a>()-&gt;<a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">getLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;HIVE destroyed\n&quot;</span>);
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046 }
 <a name="l00047"></a>00047 
@@ -120,7 +119,7 @@
 <a name="l00079"></a>00079 }
 <a name="l00080"></a>00080 
 <a name="l00081"></a>00081 
-<a name="l00082"></a><a class="code" href="classBeeHive.html#a19ac93bd31fdf5788c35fcc3e5fc83f4">00082</a> <span class="keywordtype">void</span> <a class="code" href="classBeeHive.html#a19ac93bd31fdf5788c35fcc3e5fc83f4">BeeHive::issueOrders</a>(<a class="code" href="classWorkerJob.html">WorkerJob</a>* newJob)
+<a name="l00082"></a><a class="code" href="classBeeHive.html#a19ac93bd31fdf5788c35fcc3e5fc83f4">00082</a> <span class="keywordtype">void</span> <a class="code" href="classBeeHive.html#a19ac93bd31fdf5788c35fcc3e5fc83f4">BeeHive::issueOrders</a>(<a class="code" href="classWorkerJob.html" title="Virtual class for a job for a worker bee.">WorkerJob</a>* newJob)
 <a name="l00083"></a>00083 {
 <a name="l00084"></a>00084 
 <a name="l00085"></a>00085     <span class="comment">//LOCK ACCESS TO JOB QUEUE/WAIT FOR ANYTHING ELSE TO CLEAR IT</span>
@@ -134,12 +133,12 @@
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094 }
 <a name="l00095"></a>00095 
-<a name="l00096"></a><a class="code" href="classBeeHive.html#af281217ab270086473072b09fa561475">00096</a> <a class="code" href="classWorkerJob.html">WorkerJob</a>* <a class="code" href="classBeeHive.html#af281217ab270086473072b09fa561475">BeeHive::beeRequestNextJob</a>()
+<a name="l00096"></a><a class="code" href="classBeeHive.html#af281217ab270086473072b09fa561475">00096</a> <a class="code" href="classWorkerJob.html" title="Virtual class for a job for a worker bee.">WorkerJob</a>* <a class="code" href="classBeeHive.html#af281217ab270086473072b09fa561475">BeeHive::beeRequestNextJob</a>()
 <a name="l00097"></a>00097 {
 <a name="l00098"></a>00098     <span class="comment">//LOCK ACCESS TO JOB QUEUE/WAIT FOR ANYTHING TO CLEAR IT</span>
 <a name="l00099"></a>00099     <a class="code" href="classBeeHive.html#aedd59b71bb02553bfe7ccd3c7d0bbfd0">jobQueueMutex</a>.<a class="code" href="classMutex.html#aa732ae651974555965dcaf9ad9e87882">Lock</a>();
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101         <a class="code" href="classWorkerJob.html">WorkerJob</a>* nextJob = 0;
+<a name="l00101"></a>00101         <a class="code" href="classWorkerJob.html" title="Virtual class for a job for a worker bee.">WorkerJob</a>* nextJob = 0;
 <a name="l00102"></a>00102 
 <a name="l00103"></a>00103         <span class="comment">//If there are waiting jobs</span>
 <a name="l00104"></a>00104         <span class="keywordflow">if</span> (<a class="code" href="classBeeHive.html#ac3e5d2821175f3ceaaa593e651ad21fa">m_waitingJobs</a>.size() != 0)
@@ -158,7 +157,7 @@
 <a name="l00117"></a>00117 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

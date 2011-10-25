@@ -15,6 +15,11 @@ typedef enum
 
 #define KEY_UPPERCASE 0x1
 
+/**
+ * @brief A structure to contain the details of a input event
+ *
+ */
+
 struct Input_Event
 {
     int Event_ID;

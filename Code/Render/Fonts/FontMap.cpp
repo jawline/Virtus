@@ -71,7 +71,7 @@ void FontMap::Render(int Char, float X, float Y, float offsetX, float offsetY, f
 
 void FontMap::Cleanup() {
 
-    GRenderer::getRenderer()->getRenderLog()->writeToLogFile("Cleaning up FontMap\n");
+    GRenderer::getRenderer()->getRenderLog()->writeData("Cleaning up FontMap\n");
 
     for (int i = 0; i < 255; i++)
     {

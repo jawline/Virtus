@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -46,6 +45,9 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="Postbox" -->
+<p>Abstraction of a Postbox/Queue used to log input events (FIFO) Warning - Correct usage is to check the HasNext bool before peaking or reading.  
+ <a href="classPostbox.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Postbox_8h_source.html">Postbox.h</a>&gt;</code></p>
 
 <p><a href="classPostbox-members.html">List of all members.</a></p>
@@ -64,8 +66,9 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
 class Postbox&lt; T &gt;</h3>
 
+<p>Abstraction of a Postbox/Queue used to log input events (FIFO) Warning - Correct usage is to check the HasNext bool before peaking or reading. </p>
 
-<p>Definition at line <a class="el" href="Postbox_8h_source.html#l00010">10</a> of file <a class="el" href="Postbox_8h_source.html">Postbox.h</a>.</p>
+<p>Definition at line <a class="el" href="Postbox_8h_source.html#l00014">14</a> of file <a class="el" href="Postbox_8h_source.html">Postbox.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a65fb29dd815db404956135f34ee266c0"></a><!-- doxytag: member="Postbox::AddQueue" ref="a65fb29dd815db404956135f34ee266c0" args="(T Event)" -->
 <div class="memitem">
@@ -84,7 +87,7 @@ template&lt;class T&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Postbox_8h_source.html#l00017">17</a> of file <a class="el" href="Postbox_8h_source.html">Postbox.h</a>.</p>
+<p>Definition at line <a class="el" href="Postbox_8h_source.html#l00021">21</a> of file <a class="el" href="Postbox_8h_source.html">Postbox.h</a>.</p>
 
 </div>
 </div>
@@ -104,7 +107,7 @@ template&lt;class T&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Postbox_8h_source.html#l00037">37</a> of file <a class="el" href="Postbox_8h_source.html">Postbox.h</a>.</p>
+<p>Definition at line <a class="el" href="Postbox_8h_source.html#l00041">41</a> of file <a class="el" href="Postbox_8h_source.html">Postbox.h</a>.</p>
 
 <p>Referenced by <a class="el" href="GEngine_8cpp_source.html#l00463">GEngine::gameLoop()</a>.</p>
 
@@ -126,7 +129,7 @@ template&lt;class T&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Postbox_8h_source.html#l00029">29</a> of file <a class="el" href="Postbox_8h_source.html">Postbox.h</a>.</p>
+<p>Definition at line <a class="el" href="Postbox_8h_source.html#l00033">33</a> of file <a class="el" href="Postbox_8h_source.html">Postbox.h</a>.</p>
 
 </div>
 </div>
@@ -146,7 +149,7 @@ template&lt;class T&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Postbox_8h_source.html#l00022">22</a> of file <a class="el" href="Postbox_8h_source.html">Postbox.h</a>.</p>
+<p>Definition at line <a class="el" href="Postbox_8h_source.html#l00026">26</a> of file <a class="el" href="Postbox_8h_source.html">Postbox.h</a>.</p>
 
 <p>Referenced by <a class="el" href="GEngine_8cpp_source.html#l00463">GEngine::gameLoop()</a>.</p>
 
@@ -166,7 +169,7 @@ template&lt;class T&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Postbox_8h_source.html#l00013">13</a> of file <a class="el" href="Postbox_8h_source.html">Postbox.h</a>.</p>
+<p>Definition at line <a class="el" href="Postbox_8h_source.html#l00017">17</a> of file <a class="el" href="Postbox_8h_source.html">Postbox.h</a>.</p>
 
 </div>
 </div>
@@ -174,7 +177,7 @@ template&lt;class T&gt; </div>
 <li>Code/Input/<a class="el" href="Postbox_8h_source.html">Postbox.h</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

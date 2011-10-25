@@ -2,20 +2,17 @@
 #define _INTERFACE_ELEMENT_BUTTON_
 #include "IElement.h"
 #include "../TextureMonitor/TextureMonitor.h"
-#include "Colour.h"
-
-namespace IElements
-{
+#include <Render/Color.h>
 
 class Button : public IElement
 {
 protected:
 
     unsigned int m_textPointSize;
-    Colour m_textColour;
-    Colour m_normalBg;
-    Colour m_btnDownBg;
-    Colour m_mouseOverBg;
+    Color m_textColour;
+    Color m_normalBg;
+    Color m_btnDownBg;
+    Color m_mouseOverBg;
 
     bool m_mouseOverElement;
     bool m_mouseDownOverElement;
@@ -32,7 +29,7 @@ protected:
     char* m_mouseDownText;
 
 public:
-    Button(float x, float y, float w, float h, const char* BtnNormalText, const char* BtnOverText, const char* BtnDownText, Colour textClr, Colour bgNormal, Colour mouseOver, Colour mouseDown);
+    Button(float x, float y, float w, float h, const char* BtnNormalText, const char* BtnOverText, const char* BtnDownText, Color textClr, Color bgNormal, Color mouseOver, Color mouseDown);
     ~Button();
 
     void draw(InterfaceLayer* IL);
@@ -41,6 +38,5 @@ public:
     void setOnMouseUp(void (*onUpFn)(Button* Btn));
 };
 
-}
 
 #endif //_INTERFACE_ELEMENT_BUTTON_

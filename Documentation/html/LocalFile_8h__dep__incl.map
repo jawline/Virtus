@@ -1,5 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$entry_8cpp.html" title="Code/entry.cpp" alt="" coords="5,83,115,112"/>
-<area shape="rect" id="node5" href="$LocalFile_8cpp.html" title="Code/Filesystem/LocalFile.cpp" alt="" coords="139,83,341,112"/>
-<area shape="rect" id="node7" href="$LocalFolder_8cpp.html" title="Code/Filesystem/LocalFolder.cpp" alt="" coords="365,83,581,112"/>
+<area shape="rect" id="node3" href="$LocalFile_8cpp.html" title="Code/Filesystem/LocalFile.cpp" alt="" coords="5,83,208,112"/>
+<area shape="rect" id="node5" href="$LocalFolder_8cpp.html" title="Code/Filesystem/LocalFolder.cpp" alt="" coords="232,83,448,112"/>
 </map>

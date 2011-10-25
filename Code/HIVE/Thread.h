@@ -11,6 +11,10 @@
 
 #endif
 
+/**
+ * @brief An abstraction of a thread
+ *
+ */
 class Thread
 {
     private:
@@ -24,18 +28,18 @@ class Thread
         void* m_threadArg;
         bool m_startedThread;
 
-        static void EntryPoint(void* thread);
+        static void entryPoint(void* thread);
 
     protected:
-        void Enter();
-        virtual void Run(void* Arg) = 0;
+        void enter();
+        virtual void run(void* Arg) = 0;
 
     public:
         Thread();
         virtual ~Thread();
 
-        void Start(void* Arg);
-        bool Running() { return m_startedThread; }
+        void start(void* Arg);
+        bool running() { return m_startedThread; }
 };
 
 #endif //_THREAD_DEF_H_

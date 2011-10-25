@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,6 +46,9 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="ConfigurationFolder" --><!-- doxytag: inherits="ConfigurationNode" -->
+<p>A implementation of a configuration folder, it has a number of children pointers to them and a name.  
+ <a href="classConfigurationFolder.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="ConfigurationFolder_8h_source.html">ConfigurationFolder.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ConfigurationFolder:</div>
@@ -70,9 +72,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfigurationFolder.html#ac1dbd627e3aa9a6aced5f3e5ff9cc3e1">ConfigurationFolder</a> (const char *Name)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfigurationFolder.html#abbc195f7f320231200adb95464b509a4">~ConfigurationFolder</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfigurationFolder.html#a9470aa5490f78cd1b21619d61de3c6a5">getType</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return that the node is a configuration node.  <a href="#a9470aa5490f78cd1b21619d61de3c6a5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfigurationFolder.html#a0239e0fee7aabfd8f01f45c06c2d9f89">addChild</a> (<a class="el" href="classConfigurationNode.html">ConfigurationNode</a> *node)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the specified child to this node.  <a href="#a0239e0fee7aabfd8f01f45c06c2d9f89"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConfigurationNode.html">ConfigurationNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfigurationFolder.html#a2e490b6594b1d65fc4eede8fe48fd634">getChild</a> (unsigned int iter)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the specified child of the node.  <a href="#a2e490b6594b1d65fc4eede8fe48fd634"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfigurationFolder.html#abfcede97444700bca83822238d2e103f">numberOfChildren</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of children in this node.  <a href="#abfcede97444700bca83822238d2e103f"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfigurationFolder.html#a3a6fa9250dc7ddfe4d16b664040ceff7">freeChildren</a> ()</td></tr>
@@ -81,8 +87,9 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classConfigurationNode.html">ConfigurationNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfigurationFolder.html#abea48bad5a5065aaa37c9da23e99cba7">m_childNodes</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="ConfigurationFolder_8h_source.html#l00008">8</a> of file <a class="el" href="ConfigurationFolder_8h_source.html">ConfigurationFolder.h</a>.</p>
+<div class="textblock"><p>A implementation of a configuration folder, it has a number of children pointers to them and a name. </p>
+
+<p>Definition at line <a class="el" href="ConfigurationFolder_8h_source.html#l00010">10</a> of file <a class="el" href="ConfigurationFolder_8h_source.html">ConfigurationFolder.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac1dbd627e3aa9a6aced5f3e5ff9cc3e1"></a><!-- doxytag: member="ConfigurationFolder::ConfigurationFolder" ref="ac1dbd627e3aa9a6aced5f3e5ff9cc3e1" args="(const char *Name)" -->
 <div class="memitem">
@@ -148,9 +155,11 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Add the specified child to this node. </p>
+
 <p>Definition at line <a class="el" href="ConfigurationFolder_8cpp_source.html#l00012">12</a> of file <a class="el" href="ConfigurationFolder_8cpp_source.html">ConfigurationFolder.cpp</a>.</p>
 
-<p>References <a class="el" href="ConfigurationFolder_8h_source.html#l00013">m_childNodes</a>.</p>
+<p>References <a class="el" href="ConfigurationFolder_8h_source.html#l00015">m_childNodes</a>.</p>
 
 <p>Referenced by <a class="el" href="ConfigurationReader_8cpp_source.html#l00191">ConfigurationReader::readFolderNode()</a>.</p>
 
@@ -172,7 +181,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ConfigurationFolder_8cpp_source.html#l00019">19</a> of file <a class="el" href="ConfigurationFolder_8cpp_source.html">ConfigurationFolder.cpp</a>.</p>
 
-<p>References <a class="el" href="ConfigurationFolder_8h_source.html#l00013">m_childNodes</a>.</p>
+<p>References <a class="el" href="ConfigurationFolder_8h_source.html#l00015">m_childNodes</a>.</p>
 
 <p>Referenced by <a class="el" href="ConfigurationFolder_8cpp_source.html#l00007">~ConfigurationFolder()</a>.</p>
 
@@ -193,9 +202,11 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConfigurationFolder_8h_source.html#l00026">26</a> of file <a class="el" href="ConfigurationFolder_8h_source.html">ConfigurationFolder.h</a>.</p>
+<p>Return the specified child of the node. </p>
 
-<p>References <a class="el" href="ConfigurationFolder_8h_source.html#l00013">m_childNodes</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationFolder_8h_source.html#l00040">40</a> of file <a class="el" href="ConfigurationFolder_8h_source.html">ConfigurationFolder.h</a>.</p>
+
+<p>References <a class="el" href="ConfigurationFolder_8h_source.html#l00015">m_childNodes</a>.</p>
 
 <p>Referenced by <a class="el" href="ConfigurationInstance_8cpp_source.html#l00147">ConfigurationInstance::internalSearchNode()</a>, and <a class="el" href="ConfigurationWriter_8cpp_source.html#l00017">ConfigurationWriter::outputNode()</a>.</p>
 
@@ -215,9 +226,11 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Return that the node is a configuration node. </p>
+
 <p>Reimplemented from <a class="el" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">ConfigurationNode</a>.</p>
 
-<p>Definition at line <a class="el" href="ConfigurationFolder_8h_source.html#l00022">22</a> of file <a class="el" href="ConfigurationFolder_8h_source.html">ConfigurationFolder.h</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationFolder_8h_source.html#l00028">28</a> of file <a class="el" href="ConfigurationFolder_8h_source.html">ConfigurationFolder.h</a>.</p>
 
 <p>References <a class="el" href="ConfigurationNode_8h_source.html#l00010">configurationFolder</a>.</p>
 
@@ -237,9 +250,11 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConfigurationFolder_8h_source.html#l00027">27</a> of file <a class="el" href="ConfigurationFolder_8h_source.html">ConfigurationFolder.h</a>.</p>
+<p>Return the number of children in this node. </p>
 
-<p>References <a class="el" href="ConfigurationFolder_8h_source.html#l00013">m_childNodes</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationFolder_8h_source.html#l00045">45</a> of file <a class="el" href="ConfigurationFolder_8h_source.html">ConfigurationFolder.h</a>.</p>
+
+<p>References <a class="el" href="ConfigurationFolder_8h_source.html#l00015">m_childNodes</a>.</p>
 
 <p>Referenced by <a class="el" href="ConfigurationInstance_8cpp_source.html#l00147">ConfigurationInstance::internalSearchNode()</a>, and <a class="el" href="ConfigurationWriter_8cpp_source.html#l00017">ConfigurationWriter::outputNode()</a>.</p>
 
@@ -257,9 +272,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConfigurationFolder_8h_source.html#l00013">13</a> of file <a class="el" href="ConfigurationFolder_8h_source.html">ConfigurationFolder.h</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationFolder_8h_source.html#l00015">15</a> of file <a class="el" href="ConfigurationFolder_8h_source.html">ConfigurationFolder.h</a>.</p>
 
-<p>Referenced by <a class="el" href="ConfigurationFolder_8cpp_source.html#l00012">addChild()</a>, <a class="el" href="ConfigurationFolder_8cpp_source.html#l00019">freeChildren()</a>, <a class="el" href="ConfigurationFolder_8h_source.html#l00026">getChild()</a>, and <a class="el" href="ConfigurationFolder_8h_source.html#l00027">numberOfChildren()</a>.</p>
+<p>Referenced by <a class="el" href="ConfigurationFolder_8cpp_source.html#l00012">addChild()</a>, <a class="el" href="ConfigurationFolder_8cpp_source.html#l00019">freeChildren()</a>, <a class="el" href="ConfigurationFolder_8h_source.html#l00040">getChild()</a>, and <a class="el" href="ConfigurationFolder_8h_source.html#l00045">numberOfChildren()</a>.</p>
 
 </div>
 </div>
@@ -268,7 +283,7 @@ Here is the call graph for this function:</div>
 <li>Code/Configure/<a class="el" href="ConfigurationFolder_8cpp_source.html">ConfigurationFolder.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

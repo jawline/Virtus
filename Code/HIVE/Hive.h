@@ -7,6 +7,10 @@
 
 class WorkerBee;
 
+/**
+ * @brief Manages a collection of worker bees which process jobs passed to them over multiple threads
+ */
+
 class BeeHive
 {
 private:

@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classConfigurationFolder.html#a0239e0fee7aabfd8f01f45c06c2d9f89" title="ConfigurationFolder::addChild" alt="" coords="312,31,507,60"/>
+<area shape="rect" id="node3" href="$classConfigurationFolder.html#a0239e0fee7aabfd8f01f45c06c2d9f89" title="Add the specified child to this node." alt="" coords="312,31,507,60"/>
 <area shape="rect" id="node5" href="$classConfigurationReader.html#ae9804c7377ebc2c0d43b34a1dde21ef1" title="ConfigurationReader::getNextNode" alt="" coords="296,84,523,113"/>
 <area shape="rect" id="node7" href="$classConfigurationReader.html#a8094d63cdaa2e98b6a0cb2924dbe96db" title="ConfigurationReader::getNextWord" alt="" coords="869,84,1096,113"/>
 <area shape="rect" id="node21" href="$classConfigurationReader.html#a2a48bf808f8bf921452254d68b473eac" title="ConfigurationReader::readNumberNode" alt="" coords="571,57,821,87"/>

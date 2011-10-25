@@ -1,7 +1,7 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$classVertexSet.html#aeec50743201b32bc511412f210bd2da2" title="VertexSet::Draw" alt="" coords="217,5,335,35"/>
 <area shape="rect" id="node5" href="$classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2" title="GRenderer::getGraphicsAPI" alt="" coords="184,59,368,88"/>
-<area shape="rect" id="node7" href="$classVector3f.html#a762fa45136b13bc5c5cd16919ad1036f" title="Vector3f::getMatrix" alt="" coords="209,112,343,141"/>
+<area shape="rect" id="node7" href="$classVector3f.html#a762fa45136b13bc5c5cd16919ad1036f" title="Get a reference to the raw array." alt="" coords="209,112,343,141"/>
 <area shape="rect" id="node9" href="$classCamera.html#afee8381530afff41480c578ca1fef552" title="Camera::getPosition" alt="" coords="205,165,347,195"/>
 <area shape="rect" id="node11" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="195,219,357,248"/>
 <area shape="rect" id="node15" href="$classCamera.html#ab57c87145c9b1f360b312066f3c61cdd" title="Camera::getRotation" alt="" coords="205,272,347,301"/>

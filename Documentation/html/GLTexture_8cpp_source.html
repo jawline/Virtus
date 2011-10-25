@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -74,7 +73,7 @@
 <a name="l00033"></a>00033         <span class="keywordtype">char</span> Buffer[512];
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035         sprintf(Buffer, <span class="stringliteral">&quot;TextureID: %i loadTextureData called with a bad width or height\n&quot;</span>, <a class="code" href="classGLTexture.html#afebd832588fd6f5aa25c801c107d53e3">textureDebugIdentifier</a>);
-<a name="l00036"></a>00036         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(Buffer);
+<a name="l00036"></a>00036         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(Buffer);
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038         <span class="keywordflow">return</span>;
 <a name="l00039"></a>00039     }
@@ -85,7 +84,7 @@
 <a name="l00044"></a>00044         <span class="keywordtype">char</span> Buffer[512];
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046         sprintf(Buffer, <span class="stringliteral">&quot;TextureID: %i loadTextureData width not a two power %i\n&quot;</span>, <a class="code" href="classGLTexture.html#afebd832588fd6f5aa25c801c107d53e3">textureDebugIdentifier</a>, width);
-<a name="l00047"></a>00047         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(Buffer);
+<a name="l00047"></a>00047         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(Buffer);
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049         <span class="keywordflow">return</span>;
 <a name="l00050"></a>00050     }
@@ -216,7 +215,7 @@
 <a name="l00175"></a>00175 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

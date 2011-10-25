@@ -7,11 +7,11 @@
 <LI><OBJECT type="text/sitemap"><param name="Name" value="Class List"><param name="Local" value="annotated.html"><param name="ImageNumber" value="1"></OBJECT>
   <UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="BeeHive"><param name="Local" value="classBeeHive.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="IElements::Button"><param name="Local" value="classIElements_1_1Button.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Button"><param name="Local" value="classButton.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Camera"><param name="Local" value="classCamera.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="IElements::Checkbox"><param name="Local" value="classIElements_1_1Checkbox.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Checkbox"><param name="Local" value="classCheckbox.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="CloseHandler"><param name="Local" value="classCloseHandler.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="Colour"><param name="Local" value="classColour.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Color"><param name="Local" value="classColor.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="ConfigurationFolder"><param name="Local" value="classConfigurationFolder.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="ConfigurationInstance"><param name="Local" value="classConfigurationInstance.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="ConfigurationNode"><param name="Local" value="classConfigurationNode.html"><param name="ImageNumber" value="11"></OBJECT>
@@ -47,7 +47,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Name" value="GRenderLayer"><param name="Local" value="classGRenderLayer.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="GWindowGLX"><param name="Local" value="classGWindowGLX.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="IElement"><param name="Local" value="classIElement.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="ImageElement"><param name="Local" value="classImageElement.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Input_Event"><param name="Local" value="structInput__Event.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="InputBinding"><param name="Local" value="structInputBinding.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="InterfaceLayer"><param name="Local" value="classInterfaceLayer.html"><param name="ImageNumber" value="11"></OBJECT>
@@ -64,14 +63,13 @@
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Postbox< T >"><param name="Local" value="classPostbox.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="PressedEventHandler"><param name="Local" value="classPressedEventHandler.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="ReleasedEventHandler"><param name="Local" value="classReleasedEventHandler.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="RenderLog"><param name="Local" value="classRenderLog.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="RenderWindow"><param name="Local" value="classRenderWindow.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="resource_monitor_entry"><param name="Local" value="structresource__monitor__entry.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="ResourceMonitor"><param name="Local" value="classResourceMonitor.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="SceneNode"><param name="Local" value="classSceneNode.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Shader"><param name="Local" value="classShader.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="ShaderFactory"><param name="Local" value="classShaderFactory.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="IElements::StaticText"><param name="Local" value="classIElements_1_1StaticText.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="StaticText"><param name="Local" value="classStaticText.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="TerrainData"><param name="Local" value="classTerrainData.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="TerrainNode"><param name="Local" value="classTerrainNode.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="TerrainPatch"><param name="Local" value="classTerrainPatch.html"><param name="ImageNumber" value="11"></OBJECT>
@@ -97,7 +95,7 @@
   <UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="BeeHive"><param name="Local" value="classBeeHive.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Camera"><param name="Local" value="classCamera.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="Colour"><param name="Local" value="classColour.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Color"><param name="Local" value="classColor.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="ConfigurationInstance"><param name="Local" value="classConfigurationInstance.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="ConfigurationNode"><param name="Local" value="classConfigurationNode.html"><param name="ImageNumber" value="1"></OBJECT>
     <UL>
@@ -160,10 +158,9 @@
     </UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="IElement"><param name="Local" value="classIElement.html"><param name="ImageNumber" value="1"></OBJECT>
     <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="IElements::Button"><param name="Local" value="classIElements_1_1Button.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="IElements::Checkbox"><param name="Local" value="classIElements_1_1Checkbox.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="IElements::StaticText"><param name="Local" value="classIElements_1_1StaticText.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="ImageElement"><param name="Local" value="classImageElement.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Button"><param name="Local" value="classButton.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Checkbox"><param name="Local" value="classCheckbox.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="StaticText"><param name="Local" value="classStaticText.html"><param name="ImageNumber" value="11"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="ViewerUserInterface"><param name="Local" value="classViewerUserInterface.html"><param name="ImageNumber" value="11"></OBJECT>
     </UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Input_Event"><param name="Local" value="structInput__Event.html"><param name="ImageNumber" value="11"></OBJECT>
@@ -173,7 +170,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Material"><param name="Local" value="classMaterial.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Mutex"><param name="Local" value="classMutex.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Postbox< T >"><param name="Local" value="classPostbox.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="RenderLog"><param name="Local" value="classRenderLog.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="RenderWindow"><param name="Local" value="classRenderWindow.html"><param name="ImageNumber" value="1"></OBJECT>
     <UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="GWindowGLX"><param name="Local" value="classGWindowGLX.html"><param name="ImageNumber" value="11"></OBJECT>
@@ -220,14 +216,9 @@
   <LI><OBJECT type="text/sitemap"><param name="Name" value="WorkerJob"><param name="Local" value="classWorkerJob.html"><param name="ImageNumber" value="11"></OBJECT>
   </UL>
 <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="11"></OBJECT>
-<LI><OBJECT type="text/sitemap"><param name="Name" value="Namespace List"><param name="Local" value="namespaces.html"><param name="ImageNumber" value="1"></OBJECT>
-  <UL>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="IElements"><param name="Local" value="namespaceIElements.html"><param name="ImageNumber" value="11"></OBJECT>
-  </UL>
 <LI><OBJECT type="text/sitemap"><param name="Name" value="File List"><param name="Local" value="files.html"><param name="ImageNumber" value="1"></OBJECT>
   <UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/entry.cpp"><param name="Local" value="entry_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/version.h"><param name="Local" value="version_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/3DViewer/EventHandlers.h"><param name="Local" value="EventHandlers_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/3DViewer/EventsList.h"><param name="Local" value="EventsList_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/3DViewer/UserInterface.cpp"><param name="Local" value="UserInterface_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
@@ -292,14 +283,13 @@
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Math/Vector.h"><param name="Local" value="Vector_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Platform/W32_Window.cpp"><param name="Local" value="W32__Window_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Platform/W32_Window.h"><param name="Local" value="W32__Window_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Color.h"><param name="Local" value="Color_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/GRender.cpp"><param name="Local" value="GRender_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/GRender.h"><param name="Local" value="GRender_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/GRenderLayer.h"><param name="Local" value="GRenderLayer_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/LayerIDs.h"><param name="Local" value="LayerIDs_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Material.cpp"><param name="Local" value="Material_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Material.h"><param name="Local" value="Material_8h.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/RenderLog.cpp"><param name="Local" value="RenderLog_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/RenderLog.h"><param name="Local" value="RenderLog_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/3D/3DRenderLayer.cpp"><param name="Local" value="3DRenderLayer_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/3D/3DRenderLayer.h"><param name="Local" value="3DRenderLayer_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/3D/Camera.cpp"><param name="Local" value="Camera_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
@@ -348,10 +338,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Interface/Button.h"><param name="Local" value="Button_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Interface/Checkbox.cpp"><param name="Local" value="Checkbox_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Interface/Checkbox.h"><param name="Local" value="Checkbox_8h.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Interface/Colour.h"><param name="Local" value="Colour_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Interface/IElement.h"><param name="Local" value="IElement_8h.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Interface/ImageElement.cpp"><param name="Local" value="ImageElement_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Interface/ImageElement.h"><param name="Local" value="ImageElement_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Interface/InterfaceLayer.cpp"><param name="Local" value="InterfaceLayer_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Interface/InterfaceLayer.h"><param name="Local" value="InterfaceLayer_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Render/Interface/SText.cpp"><param name="Local" value="SText_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>

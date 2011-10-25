@@ -3,8 +3,9 @@
 #include "IElement.h"
 #include <iostream>
 
-namespace IElements
-{
+/**
+ * @brief A piece of static text to be displayed
+ */
 
 class StaticText : public IElement
 {
@@ -16,7 +17,5 @@ public:
     StaticText(int PS, int x, int y, std::string T);
     void draw(InterfaceLayer* IL);
 };
-
-}
 
 #endif //_STATIC_TEXT_DEF_H_

@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,6 +46,9 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="EventManager" -->
+<p>Manages and stores mapping between events.  
+ <a href="classEventManager.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="EventManager_8h_source.html">EventManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for EventManager:</div>
@@ -63,9 +65,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEventManager.html#a89099b22114f158b5c530edfea52371d">EventManager</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEventManager.html#a2e43e8b165b54f75e9c005cf5b04ade7">~EventManager</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEventManager.html#a96150c5f3f9b325126d077d0802b7534">setNumberOfEvents</a> (unsigned int number)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of possible events (From 0 to number)  <a href="#a96150c5f3f9b325126d077d0802b7534"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEventManager.html#aaf00bee56e0923062e6e10d94baf9535">unregisterEventCallback</a> (unsigned int event, <a class="el" href="classEventCallback.html">EventCallback</a> *Callback)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister the specified callback from the event.  <a href="#aaf00bee56e0923062e6e10d94baf9535"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEventManager.html#a3f1a77490f77e4f5d141fde232c102ef">registerEventCallback</a> (unsigned int event, <a class="el" href="classEventCallback.html">EventCallback</a> *Callback)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register the specified callback to the event.  <a href="#a3f1a77490f77e4f5d141fde232c102ef"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEventManager.html#ad7abcd8b20480ef47856be120baf4d30">triggerEvent</a> (unsigned int event, std::vector&lt; int &gt; F, int Flags)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the event manager that the specified event has occured.  <a href="#ad7abcd8b20480ef47856be120baf4d30"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEventManager.html#a44a92dbd9d216527ae541307bd2ab253">freeEvents</a> ()</td></tr>
@@ -75,8 +81,9 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structevent__callback__struct.html">event_callback_struct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEventManager.html#a7738bfb20797e95386b7e5d572525be4">m_eventCallbacks</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="EventManager_8h_source.html#l00011">11</a> of file <a class="el" href="EventManager_8h_source.html">EventManager.h</a>.</p>
+<div class="textblock"><p>Manages and stores mapping between events. </p>
+
+<p>Definition at line <a class="el" href="EventManager_8h_source.html#l00015">15</a> of file <a class="el" href="EventManager_8h_source.html">EventManager.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a89099b22114f158b5c530edfea52371d"></a><!-- doxytag: member="EventManager::EventManager" ref="a89099b22114f158b5c530edfea52371d" args="()" -->
 <div class="memitem">
@@ -94,7 +101,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="EventManager_8cpp_source.html#l00004">4</a> of file <a class="el" href="EventManager_8cpp_source.html">EventManager.cpp</a>.</p>
 
-<p>References <a class="el" href="EventManager_8h_source.html#l00015">m_eventCallbacks</a>, and <a class="el" href="EventManager_8h_source.html#l00014">m_numEvents</a>.</p>
+<p>References <a class="el" href="EventManager_8h_source.html#l00019">m_eventCallbacks</a>, and <a class="el" href="EventManager_8h_source.html#l00018">m_numEvents</a>.</p>
 
 </div>
 </div>
@@ -144,7 +151,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="EventManager_8cpp_source.html#l00015">15</a> of file <a class="el" href="EventManager_8cpp_source.html">EventManager.cpp</a>.</p>
 
-<p>References <a class="el" href="EventManager_8h_source.html#l00015">m_eventCallbacks</a>, <a class="el" href="EventManager_8h_source.html#l00008">event_callback_struct::m_eventList</a>, and <a class="el" href="EventManager_8h_source.html#l00014">m_numEvents</a>.</p>
+<p>References <a class="el" href="EventManager_8h_source.html#l00019">m_eventCallbacks</a>, <a class="el" href="EventManager_8h_source.html#l00008">event_callback_struct::m_eventList</a>, and <a class="el" href="EventManager_8h_source.html#l00018">m_numEvents</a>.</p>
 
 <p>Referenced by <a class="el" href="EventManager_8cpp_source.html#l00037">setNumberOfEvents()</a>, and <a class="el" href="EventManager_8cpp_source.html#l00010">~EventManager()</a>.</p>
 
@@ -175,9 +182,11 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Register the specified callback to the event. </p>
+
 <p>Definition at line <a class="el" href="EventManager_8cpp_source.html#l00065">65</a> of file <a class="el" href="EventManager_8cpp_source.html">EventManager.cpp</a>.</p>
 
-<p>References <a class="el" href="EventManager_8h_source.html#l00015">m_eventCallbacks</a>, <a class="el" href="EventManager_8h_source.html#l00008">event_callback_struct::m_eventList</a>, and <a class="el" href="EventManager_8h_source.html#l00014">m_numEvents</a>.</p>
+<p>References <a class="el" href="EventManager_8h_source.html#l00019">m_eventCallbacks</a>, <a class="el" href="EventManager_8h_source.html#l00008">event_callback_struct::m_eventList</a>, and <a class="el" href="EventManager_8h_source.html#l00018">m_numEvents</a>.</p>
 
 <p>Referenced by <a class="el" href="ViewerApplication_8cpp_source.html#l00023">ModelViewer::onLoad()</a>.</p>
 
@@ -198,9 +207,11 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Set the number of possible events (From 0 to number) </p>
+
 <p>Definition at line <a class="el" href="EventManager_8cpp_source.html#l00037">37</a> of file <a class="el" href="EventManager_8cpp_source.html">EventManager.cpp</a>.</p>
 
-<p>References <a class="el" href="EventManager_8cpp_source.html#l00015">freeEvents()</a>, <a class="el" href="EventManager_8h_source.html#l00015">m_eventCallbacks</a>, and <a class="el" href="EventManager_8h_source.html#l00014">m_numEvents</a>.</p>
+<p>References <a class="el" href="EventManager_8cpp_source.html#l00015">freeEvents()</a>, <a class="el" href="EventManager_8h_source.html#l00019">m_eventCallbacks</a>, and <a class="el" href="EventManager_8h_source.html#l00018">m_numEvents</a>.</p>
 
 <p>Referenced by <a class="el" href="ViewerApplication_8cpp_source.html#l00023">ModelViewer::onLoad()</a>.</p>
 
@@ -246,9 +257,11 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Notify the event manager that the specified event has occured. </p>
+
 <p>Definition at line <a class="el" href="EventManager_8cpp_source.html#l00073">73</a> of file <a class="el" href="EventManager_8cpp_source.html">EventManager.cpp</a>.</p>
 
-<p>References <a class="el" href="EventManager_8h_source.html#l00015">m_eventCallbacks</a>, <a class="el" href="EventManager_8h_source.html#l00008">event_callback_struct::m_eventList</a>, and <a class="el" href="EventManager_8h_source.html#l00014">m_numEvents</a>.</p>
+<p>References <a class="el" href="EventManager_8h_source.html#l00019">m_eventCallbacks</a>, <a class="el" href="EventManager_8h_source.html#l00008">event_callback_struct::m_eventList</a>, and <a class="el" href="EventManager_8h_source.html#l00018">m_numEvents</a>.</p>
 
 <p>Referenced by <a class="el" href="GEngine_8cpp_source.html#l00361">GEngine::sendEventManagerMessage()</a>.</p>
 
@@ -279,9 +292,11 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Unregister the specified callback from the event. </p>
+
 <p>Definition at line <a class="el" href="EventManager_8cpp_source.html#l00051">51</a> of file <a class="el" href="EventManager_8cpp_source.html">EventManager.cpp</a>.</p>
 
-<p>References <a class="el" href="EventManager_8h_source.html#l00015">m_eventCallbacks</a>, <a class="el" href="EventManager_8h_source.html#l00008">event_callback_struct::m_eventList</a>, and <a class="el" href="EventManager_8h_source.html#l00014">m_numEvents</a>.</p>
+<p>References <a class="el" href="EventManager_8h_source.html#l00019">m_eventCallbacks</a>, <a class="el" href="EventManager_8h_source.html#l00008">event_callback_struct::m_eventList</a>, and <a class="el" href="EventManager_8h_source.html#l00018">m_numEvents</a>.</p>
 
 <p>Referenced by <a class="el" href="ViewerApplication_8cpp_source.html#l00148">ModelViewer::onUnload()</a>.</p>
 
@@ -299,7 +314,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="EventManager_8h_source.html#l00015">15</a> of file <a class="el" href="EventManager_8h_source.html">EventManager.h</a>.</p>
+<p>Definition at line <a class="el" href="EventManager_8h_source.html#l00019">19</a> of file <a class="el" href="EventManager_8h_source.html">EventManager.h</a>.</p>
 
 <p>Referenced by <a class="el" href="EventManager_8cpp_source.html#l00004">EventManager()</a>, <a class="el" href="EventManager_8cpp_source.html#l00015">freeEvents()</a>, <a class="el" href="EventManager_8cpp_source.html#l00065">registerEventCallback()</a>, <a class="el" href="EventManager_8cpp_source.html#l00037">setNumberOfEvents()</a>, <a class="el" href="EventManager_8cpp_source.html#l00073">triggerEvent()</a>, and <a class="el" href="EventManager_8cpp_source.html#l00051">unregisterEventCallback()</a>.</p>
 
@@ -316,7 +331,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="EventManager_8h_source.html#l00014">14</a> of file <a class="el" href="EventManager_8h_source.html">EventManager.h</a>.</p>
+<p>Definition at line <a class="el" href="EventManager_8h_source.html#l00018">18</a> of file <a class="el" href="EventManager_8h_source.html">EventManager.h</a>.</p>
 
 <p>Referenced by <a class="el" href="EventManager_8cpp_source.html#l00004">EventManager()</a>, <a class="el" href="EventManager_8cpp_source.html#l00015">freeEvents()</a>, <a class="el" href="EventManager_8cpp_source.html#l00065">registerEventCallback()</a>, <a class="el" href="EventManager_8cpp_source.html#l00037">setNumberOfEvents()</a>, <a class="el" href="EventManager_8cpp_source.html#l00073">triggerEvent()</a>, and <a class="el" href="EventManager_8cpp_source.html#l00051">unregisterEventCallback()</a>.</p>
 
@@ -327,7 +342,7 @@ Here is the call graph for this function:</div>
 <li>Code/Logic/Event/<a class="el" href="EventManager_8cpp_source.html">EventManager.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

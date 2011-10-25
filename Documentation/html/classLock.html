@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -46,13 +45,16 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="Lock" -->
+<p>A mutual exclusion lock used to try and ensure that the threads don't crash each other or the core thread (USE THIS IF ANY JOB INTERACTS WITH DATA TOUCHED BY ANY OTHER THREAD INCLUDING THE START THREAD)  
+ <a href="classLock.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Lock_8h_source.html">Lock.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Lock:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLock__coll__graph.png" border="0" usemap="#Lock_coll__map" alt="Collaboration graph"/></div>
 <map name="Lock_coll__map" id="Lock_coll__map">
-<area shape="rect" id="node2" href="classMutex.html" title="Mutex" alt="" coords="5,5,64,35"/></map>
+<area shape="rect" id="node2" href="classMutex.html" title="The actual mutex lock used by the lock class." alt="" coords="5,5,64,35"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classLock-members.html">List of all members.</a></p>
@@ -66,8 +68,9 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMutex.html">Mutex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLock.html#a28477d6b318ed985e5fc174c8a6cd1fb">myMutex</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="Lock_8h_source.html#l00005">5</a> of file <a class="el" href="Lock_8h_source.html">Lock.h</a>.</p>
+<div class="textblock"><p>A mutual exclusion lock used to try and ensure that the threads don't crash each other or the core thread (USE THIS IF ANY JOB INTERACTS WITH DATA TOUCHED BY ANY OTHER THREAD INCLUDING THE START THREAD) </p>
+
+<p>Definition at line <a class="el" href="Lock_8h_source.html#l00009">9</a> of file <a class="el" href="Lock_8h_source.html">Lock.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a96b9505f0d427217c77f0a0182ad1503"></a><!-- doxytag: member="Lock::Lock" ref="a96b9505f0d427217c77f0a0182ad1503" args="(Mutex *mutex)" -->
 <div class="memitem">
@@ -84,9 +87,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Lock_8h_source.html#l00012">12</a> of file <a class="el" href="Lock_8h_source.html">Lock.h</a>.</p>
+<p>Definition at line <a class="el" href="Lock_8h_source.html#l00016">16</a> of file <a class="el" href="Lock_8h_source.html">Lock.h</a>.</p>
 
-<p>References <a class="el" href="classMutex.html#aa732ae651974555965dcaf9ad9e87882">Mutex::Lock()</a>, and <a class="el" href="Lock_8h_source.html#l00008">myMutex</a>.</p>
+<p>References <a class="el" href="classMutex.html#aa732ae651974555965dcaf9ad9e87882">Mutex::Lock()</a>, and <a class="el" href="Lock_8h_source.html#l00012">myMutex</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -113,9 +116,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Lock_8h_source.html#l00018">18</a> of file <a class="el" href="Lock_8h_source.html">Lock.h</a>.</p>
+<p>Definition at line <a class="el" href="Lock_8h_source.html#l00022">22</a> of file <a class="el" href="Lock_8h_source.html">Lock.h</a>.</p>
 
-<p>References <a class="el" href="Lock_8h_source.html#l00008">myMutex</a>, and <a class="el" href="classMutex.html#a669f7a1dd7992948b397726e5d187a39">Mutex::Unlock()</a>.</p>
+<p>References <a class="el" href="Lock_8h_source.html#l00012">myMutex</a>, and <a class="el" href="classMutex.html#a669f7a1dd7992948b397726e5d187a39">Mutex::Unlock()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -140,9 +143,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Lock_8h_source.html#l00008">8</a> of file <a class="el" href="Lock_8h_source.html">Lock.h</a>.</p>
+<p>Definition at line <a class="el" href="Lock_8h_source.html#l00012">12</a> of file <a class="el" href="Lock_8h_source.html">Lock.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Lock_8h_source.html#l00012">Lock()</a>, and <a class="el" href="Lock_8h_source.html#l00018">~Lock()</a>.</p>
+<p>Referenced by <a class="el" href="Lock_8h_source.html#l00016">Lock()</a>, and <a class="el" href="Lock_8h_source.html#l00022">~Lock()</a>.</p>
 
 </div>
 </div>
@@ -150,7 +153,7 @@ Here is the call graph for this function:</div>
 <li>Code/HIVE/<a class="el" href="Lock_8h_source.html">Lock.h</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

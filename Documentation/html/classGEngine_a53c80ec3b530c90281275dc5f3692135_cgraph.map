@@ -1,3 +1,3 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classGApplication.html#af19755f48671ca15565837566021f327" title="GApplication::onUnload" alt="" coords="239,5,396,35"/>
+<area shape="rect" id="node3" href="$classGApplication.html#a45e65b2a4a70b8e398effef37dbd06be" title="Called when the app is unloaded, deinitilization should be done here." alt="" coords="239,5,396,35"/>
 </map>

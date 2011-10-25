@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -66,7 +65,7 @@
 <a name="l00025"></a>00025     }
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027     <span class="keywordflow">if</span> (<a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;getRenderLog() != 0)
-<a name="l00028"></a>00028         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(<span class="stringliteral">&quot;Initialized FreeType font engine\n&quot;</span>);
+<a name="l00028"></a>00028         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Initialized FreeType font engine\n&quot;</span>);
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030     <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00031"></a>00031 }
@@ -127,7 +126,7 @@
 <a name="l00086"></a>00086     lString += <span class="stringliteral">&quot;\n&quot;</span>;
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088     <span class="keywordflow">if</span> (<a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;getRenderLog() != 0)
-<a name="l00089"></a>00089         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(lString.c_str());
+<a name="l00089"></a>00089         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(lString.c_str());
 <a name="l00090"></a>00090 
 <a name="l00091"></a>00091     <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00092"></a>00092 }
@@ -299,7 +298,7 @@
 <a name="l00258"></a><a class="code" href="classFREngine.html#a43cd0dc8122411eb84ac6d66ff5f17d9">00258</a> <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#a43cd0dc8122411eb84ac6d66ff5f17d9">FREngine::Cleanup</a>()
 <a name="l00259"></a>00259 {
 <a name="l00260"></a>00260 
-<a name="l00261"></a>00261     <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(<span class="stringliteral">&quot;Freeing up FreeType resources\n&quot;</span>);
+<a name="l00261"></a>00261     <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Freeing up FreeType resources\n&quot;</span>);
 <a name="l00262"></a>00262 
 <a name="l00263"></a>00263     <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classFREngine.html#ae1e34b65a710aaf4407b5a71f5edc8f3">FontMaps</a>.size(); i++)
 <a name="l00264"></a>00264     {
@@ -331,7 +330,7 @@
 <a name="l00290"></a>00290 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

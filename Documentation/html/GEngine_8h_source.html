@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -77,20 +76,20 @@
 <a name="l00036"></a>00036     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#af9b11a02b018385249d96e9a8201d513">initializeInputBindings</a>();
 <a name="l00037"></a>00037     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#aed97f611db6edabe8b7febc731aa6400">freeInputBindings</a>();
 <a name="l00038"></a>00038 
-<a name="l00039"></a><a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">00039</a>     <a class="code" href="classFPSCalculator.html">FPSCalculator</a> <a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>;
+<a name="l00039"></a><a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">00039</a>     <a class="code" href="classFPSCalculator.html" title="Class to calculate how many frames are occurring per second.">FPSCalculator</a> <a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>;
 <a name="l00040"></a>00040 
-<a name="l00041"></a><a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">00041</a>     <a class="code" href="classEventManager.html">EventManager</a>* <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>;
+<a name="l00041"></a><a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">00041</a>     <a class="code" href="classEventManager.html" title="Manages and stores mapping between events.">EventManager</a>* <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>;
 <a name="l00042"></a>00042 
 <a name="l00043"></a><a class="code" href="classGEngine.html#ab647a8b8faee4a9b6dac40c54b5054c5">00043</a>     <a class="code" href="classPostbox.html">Postbox&lt;Input_Event&gt;</a> <a class="code" href="classGEngine.html#ab647a8b8faee4a9b6dac40c54b5054c5">m_inputPostbox</a>;
 <a name="l00044"></a><a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">00044</a>     <a class="code" href="structInputBinding.html">InputBinding</a>* <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>;
 <a name="l00045"></a>00045 
-<a name="l00046"></a><a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">00046</a>     <a class="code" href="classGApplication.html">GApplication</a>* <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>;
+<a name="l00046"></a><a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">00046</a>     <a class="code" href="classGApplication.html" title="Abstraction of a application that runs on the engine.">GApplication</a>* <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>;
 <a name="l00047"></a>00047 
 <a name="l00048"></a><a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">00048</a>     <a class="code" href="classConfigurationInstance.html">ConfigurationInstance</a>* <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>;
 <a name="l00049"></a>00049 
-<a name="l00050"></a><a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">00050</a>     <a class="code" href="classBeeHive.html">BeeHive</a>* <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a>;
+<a name="l00050"></a><a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">00050</a>     <a class="code" href="classBeeHive.html" title="Manages a collection of worker bees which process jobs passed to them over multiple threads...">BeeHive</a>* <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a>;
 <a name="l00051"></a>00051 
-<a name="l00052"></a><a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">00052</a>     <a class="code" href="classLogWriter.html">LogWriter</a>* <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>;
+<a name="l00052"></a><a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">00052</a>     <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>* <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>;
 <a name="l00053"></a>00053 
 <a name="l00054"></a>00054     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36">f_sleep</a>();
 <a name="l00055"></a>00055 
@@ -114,8 +113,8 @@
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074     <span class="comment">//Bind a event to a event ID and key (For example, keypressed A or mouseclicked LEFT)</span>
 <a name="l00075"></a>00075     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a371f1436dca8af65e605d1854062ed5f">bindEvent</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Eve, <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60">input_event_ids</a>, <a class="code" href="Keys_8h.html#ade02ebcdfd4994c66d26563fb1494a35">key_ids</a>);
-<a name="l00076"></a>00076     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">sendEventManagerMessage</a>(<a class="code" href="structInput__Event.html">Input_Event</a> iEvent);
-<a name="l00077"></a>00077     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">processEvent</a>(<a class="code" href="structInput__Event.html">Input_Event</a> event);
+<a name="l00076"></a>00076     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">sendEventManagerMessage</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> iEvent);
+<a name="l00077"></a>00077     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">processEvent</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> event);
 <a name="l00078"></a>00078 
 <a name="l00079"></a><a class="code" href="classGEngine.html#a46eea5a53dd1491fbc67a279a819ad22">00079</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#a46eea5a53dd1491fbc67a279a819ad22">isInErrorState</a>() { <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a>; }
 <a name="l00080"></a><a class="code" href="classGEngine.html#a214448871793f7202095185a8b800c8b">00080</a>     <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classGEngine.html#a214448871793f7202095185a8b800c8b">errorDetails</a>() { <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a>; }
@@ -129,21 +128,21 @@
 <a name="l00088"></a>00088 
 <a name="l00089"></a>00089     }
 <a name="l00090"></a>00090 
-<a name="l00091"></a><a class="code" href="classGEngine.html#a9a3facf7debcad99fb0cc806317ff937">00091</a>     <a class="code" href="classEventManager.html">EventManager</a>* <a class="code" href="classGEngine.html#a9a3facf7debcad99fb0cc806317ff937">getEventManager</a>()
+<a name="l00091"></a><a class="code" href="classGEngine.html#a9a3facf7debcad99fb0cc806317ff937">00091</a>     <a class="code" href="classEventManager.html" title="Manages and stores mapping between events.">EventManager</a>* <a class="code" href="classGEngine.html#a9a3facf7debcad99fb0cc806317ff937">getEventManager</a>()
 <a name="l00092"></a>00092     {
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094         <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>;
 <a name="l00095"></a>00095 
 <a name="l00096"></a>00096     }
 <a name="l00097"></a>00097 
-<a name="l00098"></a><a class="code" href="classGEngine.html#ad5d13a3e4aeac37b090b3315d74fcd6d">00098</a>     <a class="code" href="classFPSCalculator.html">FPSCalculator</a>* <a class="code" href="classGEngine.html#ad5d13a3e4aeac37b090b3315d74fcd6d">getFpsCalculator</a>()
+<a name="l00098"></a><a class="code" href="classGEngine.html#ad5d13a3e4aeac37b090b3315d74fcd6d">00098</a>     <a class="code" href="classFPSCalculator.html" title="Class to calculate how many frames are occurring per second.">FPSCalculator</a>* <a class="code" href="classGEngine.html#ad5d13a3e4aeac37b090b3315d74fcd6d">getFpsCalculator</a>()
 <a name="l00099"></a>00099     {
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101         <span class="keywordflow">return</span> &amp;<a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>;
 <a name="l00102"></a>00102 
 <a name="l00103"></a>00103     }
 <a name="l00104"></a>00104 
-<a name="l00105"></a><a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">00105</a>     <a class="code" href="classLogWriter.html">LogWriter</a>* <a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">getLog</a>()
+<a name="l00105"></a><a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">00105</a>     <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>* <a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">getLog</a>()
 <a name="l00106"></a>00106     {
 <a name="l00107"></a>00107         <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>;
 <a name="l00108"></a>00108     }
@@ -190,7 +189,7 @@
 <a name="l00149"></a>00149 
 <a name="l00150"></a>00150     }
 <a name="l00151"></a>00151 
-<a name="l00152"></a>00152     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9">loadApplication</a>(<a class="code" href="classGApplication.html">GApplication</a>* App);
+<a name="l00152"></a>00152     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9">loadApplication</a>(<a class="code" href="classGApplication.html" title="Abstraction of a application that runs on the engine.">GApplication</a>* App);
 <a name="l00153"></a>00153     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#a53c80ec3b530c90281275dc5f3692135">unloadApplication</a>();
 <a name="l00154"></a>00154 
 <a name="l00155"></a><a class="code" href="classGEngine.html#af9b072269cee5122cf390ebd5ffc1b55">00155</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#af9b072269cee5122cf390ebd5ffc1b55">applicationLoaded</a>()
@@ -223,7 +222,7 @@
 <a name="l00182"></a>00182 <span class="preprocessor">#endif //_GAME_ENGINE_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

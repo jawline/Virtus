@@ -1,6 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="216,5,379,35"/>
-<area shape="rect" id="node7" href="$classGRenderer.html#ac45b26d019fe672b3692772e4b07f064" title="GRenderer::getRenderLog" alt="" coords="211,59,384,88"/>
-<area shape="rect" id="node9" href="$classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58" title="RenderLog::writeToLogFile" alt="" coords="208,112,387,141"/>
-<area shape="rect" id="node5" href="$classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="436,5,591,35"/>
+<area shape="rect" id="node3" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="215,5,377,35"/>
+<area shape="rect" id="node7" href="$classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="209,59,383,88"/>
+<area shape="rect" id="node9" href="$classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="225,112,367,141"/>
+<area shape="rect" id="node5" href="$classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="445,5,600,35"/>
+<area shape="rect" id="node11" href="$classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="440,59,605,88"/>
+<area shape="rect" id="node13" href="$classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="433,112,612,141"/>
+<area shape="rect" id="node15" href="$classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="440,165,605,195"/>
 </map>

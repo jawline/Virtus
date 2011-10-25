@@ -2,9 +2,13 @@
 #define _POSTBOX_DEF_H_
 #include <queue>
 
-/* Warning - Correct usage is to check the HasNext bool before peaking or reading. */
 
 using namespace std;
+
+/**
+ * @brief Abstraction of a Postbox/Queue used to log input events (FIFO)
+ *  Warning - Correct usage is to check the HasNext bool before peaking or reading.
+ */
 
 template <class T>
 class Postbox

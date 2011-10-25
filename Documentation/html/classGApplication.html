@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -45,6 +44,9 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="GApplication" -->
+<p>Abstraction of a application that runs on the engine.  
+ <a href="classGApplication.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Application_8h_source.html">Application.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for GApplication:</div>
@@ -59,13 +61,17 @@ Inheritance diagram for GApplication:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGApplication.html#ab1cf84cef2299fd472ee2c60a22616ab">~GApplication</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGApplication.html#a50ba447337ce4f31b1bd24e164c1f2c6">onLoad</a> (<a class="el" href="classGEngine.html">GEngine</a> *Engine)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGApplication.html#af19755f48671ca15565837566021f327">onUnload</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGApplication.html#a0e65db467a028d4da3e3fec618e09709">updateApplication</a> (float seconds)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGApplication.html#a89afefa2721de6db1932d71444af506c">onLoad</a> (<a class="el" href="classGEngine.html">GEngine</a> *Engine)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called the first time the app is loaded, initialisation should be done here.  <a href="#a89afefa2721de6db1932d71444af506c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGApplication.html#a45e65b2a4a70b8e398effef37dbd06be">onUnload</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the app is unloaded, deinitilization should be done here.  <a href="#a45e65b2a4a70b8e398effef37dbd06be"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGApplication.html#ad0b604100468ce2edef6d7172d5af43f">updateApplication</a> (float seconds)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called once per frame with the time that has elapsed since the last frame in seconds.  <a href="#ad0b604100468ce2edef6d7172d5af43f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="Application_8h_source.html#l00006">6</a> of file <a class="el" href="Application_8h_source.html">Application.h</a>.</p>
+<div class="textblock"><p>Abstraction of a application that runs on the engine. </p>
+
+<p>Definition at line <a class="el" href="Application_8h_source.html#l00010">10</a> of file <a class="el" href="Application_8h_source.html">Application.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab1cf84cef2299fd472ee2c60a22616ab"></a><!-- doxytag: member="GApplication::~GApplication" ref="ab1cf84cef2299fd472ee2c60a22616ab" args="()" -->
 <div class="memitem">
@@ -81,12 +87,12 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Application_8h_source.html#l00012">12</a> of file <a class="el" href="Application_8h_source.html">Application.h</a>.</p>
+<p>Definition at line <a class="el" href="Application_8h_source.html#l00016">16</a> of file <a class="el" href="Application_8h_source.html">Application.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a50ba447337ce4f31b1bd24e164c1f2c6"></a><!-- doxytag: member="GApplication::onLoad" ref="a50ba447337ce4f31b1bd24e164c1f2c6" args="(GEngine *Engine)" -->
+<a class="anchor" id="a89afefa2721de6db1932d71444af506c"></a><!-- doxytag: member="GApplication::onLoad" ref="a89afefa2721de6db1932d71444af506c" args="(GEngine *Engine)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -95,21 +101,21 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classGEngine.html">GEngine</a> *&#160;</td>
           <td class="paramname"><em>Engine</em></td><td>)</td>
-          <td><code> [inline, virtual]</code></td>
+          <td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classModelViewer.html#a436b543eddb4b865afccb64373fa2344">ModelViewer</a>.</p>
+<p>Called the first time the app is loaded, initialisation should be done here. </p>
 
-<p>Definition at line <a class="el" href="Application_8h_source.html#l00014">14</a> of file <a class="el" href="Application_8h_source.html">Application.h</a>.</p>
+<p>Implemented in <a class="el" href="classModelViewer.html#a436b543eddb4b865afccb64373fa2344">ModelViewer</a>.</p>
 
 <p>Referenced by <a class="el" href="GEngine_8cpp_source.html#l00542">GEngine::loadApplication()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af19755f48671ca15565837566021f327"></a><!-- doxytag: member="GApplication::onUnload" ref="af19755f48671ca15565837566021f327" args="()" -->
+<a class="anchor" id="a45e65b2a4a70b8e398effef37dbd06be"></a><!-- doxytag: member="GApplication::onUnload" ref="a45e65b2a4a70b8e398effef37dbd06be" args="()=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -117,21 +123,21 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool GApplication::onUnload </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [inline, virtual]</code></td>
+          <td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classModelViewer.html#a466807f1a89fb9b4c727c0e83a0aac27">ModelViewer</a>.</p>
+<p>Called when the app is unloaded, deinitilization should be done here. </p>
 
-<p>Definition at line <a class="el" href="Application_8h_source.html#l00020">20</a> of file <a class="el" href="Application_8h_source.html">Application.h</a>.</p>
+<p>Implemented in <a class="el" href="classModelViewer.html#a466807f1a89fb9b4c727c0e83a0aac27">ModelViewer</a>.</p>
 
 <p>Referenced by <a class="el" href="GEngine_8cpp_source.html#l00568">GEngine::unloadApplication()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0e65db467a028d4da3e3fec618e09709"></a><!-- doxytag: member="GApplication::updateApplication" ref="a0e65db467a028d4da3e3fec618e09709" args="(float seconds)" -->
+<a class="anchor" id="ad0b604100468ce2edef6d7172d5af43f"></a><!-- doxytag: member="GApplication::updateApplication" ref="ad0b604100468ce2edef6d7172d5af43f" args="(float seconds)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -140,15 +146,15 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>seconds</em></td><td>)</td>
-          <td><code> [inline, virtual]</code></td>
+          <td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classModelViewer.html#a5fd638ffa0e0ce6783ee2eb689106074">ModelViewer</a>.</p>
+<p>Called once per frame with the time that has elapsed since the last frame in seconds. </p>
 
-<p>Definition at line <a class="el" href="Application_8h_source.html#l00026">26</a> of file <a class="el" href="Application_8h_source.html">Application.h</a>.</p>
+<p>Implemented in <a class="el" href="classModelViewer.html#a5fd638ffa0e0ce6783ee2eb689106074">ModelViewer</a>.</p>
 
 <p>Referenced by <a class="el" href="GEngine_8cpp_source.html#l00434">GEngine::doFrameUpdate()</a>.</p>
 
@@ -158,7 +164,7 @@ Public Member Functions</h2></td></tr>
 <li>Code/API/<a class="el" href="Application_8h_source.html">Application.h</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

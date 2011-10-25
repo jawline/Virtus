@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -83,7 +82,7 @@
 <a name="l00042"></a>00042     <a class="code" href="classInterfaceLayer.html#a78452278409c55db363a2e9ee23c6da7">m_quadVertexSet</a>-&gt;<a class="code" href="classVertexSet.html#a290521b264057be82cc18641e26e3651">setColourValues</a>(baseColourValues, <a class="code" href="VertexSet_8h.html#ae3bb45e357651fc4c3cebc77e04712e8a325cec3bc946e7e5c4aaa972f6e7ccd6">ctype_float_rgb</a>, 4);
 <a name="l00043"></a>00043 }
 <a name="l00044"></a>00044 
-<a name="l00045"></a><a class="code" href="classInterfaceLayer.html#abfa9dab45719b38a4ea93028a00e81c1">00045</a> <span class="keywordtype">void</span> <a class="code" href="classInterfaceLayer.html#abfa9dab45719b38a4ea93028a00e81c1">InterfaceLayer::draw</a>(<a class="code" href="classGRenderer.html">GRenderer</a>*, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h)
+<a name="l00045"></a><a class="code" href="classInterfaceLayer.html#abfa9dab45719b38a4ea93028a00e81c1">00045</a> <span class="keywordtype">void</span> <a class="code" href="classInterfaceLayer.html#abfa9dab45719b38a4ea93028a00e81c1">InterfaceLayer::draw</a>(<a class="code" href="classGRenderer.html" title="The core renderer class - Singleton.">GRenderer</a>*, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h)
 <a name="l00046"></a>00046 {
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048     <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()-&gt;<a class="code" href="classGraphicsAPI.html#a5fe75791c0d601d014fb35487913b5ce">setupFor2D</a>(w, h);
@@ -189,7 +188,7 @@
 <a name="l00148"></a>00148 }
 <a name="l00149"></a>00149 
 <a name="l00150"></a>00150 <span class="comment">//Message every interface asking if it needs this event - on return true the loop breaks</span>
-<a name="l00151"></a><a class="code" href="classInterfaceLayer.html#a5f7b73ce17ff266e73ac42eb935c34be">00151</a> <span class="keywordtype">bool</span> <a class="code" href="classInterfaceLayer.html#a5f7b73ce17ff266e73ac42eb935c34be">InterfaceLayer::processEvent</a>(<a class="code" href="structInput__Event.html">Input_Event</a> E)
+<a name="l00151"></a><a class="code" href="classInterfaceLayer.html#a5f7b73ce17ff266e73ac42eb935c34be">00151</a> <span class="keywordtype">bool</span> <a class="code" href="classInterfaceLayer.html#a5f7b73ce17ff266e73ac42eb935c34be">InterfaceLayer::processEvent</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> E)
 <a name="l00152"></a>00152 {
 <a name="l00153"></a>00153     <span class="keywordtype">bool</span> isHandled = <span class="keyword">false</span>;
 <a name="l00154"></a>00154 
@@ -210,7 +209,7 @@
 <a name="l00169"></a>00169 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

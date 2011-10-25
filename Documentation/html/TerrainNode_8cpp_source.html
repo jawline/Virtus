@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -213,11 +212,11 @@
 <a name="l00172"></a>00172     <span class="keywordtype">float</span> softness = 5.0f;
 <a name="l00173"></a>00173     <span class="keywordtype">float</span> max_Light = 0.95f;
 <a name="l00174"></a>00174 
-<a name="l00175"></a>00175     <a class="code" href="classVector3f.html">Vector3f</a> lightVector;
+<a name="l00175"></a>00175     <a class="code" href="classVector3f.html" title="A vector with 3 points.">Vector3f</a> lightVector;
 <a name="l00176"></a>00176 
-<a name="l00177"></a>00177     lightVector.<a class="code" href="classVector3f.html#a3999baa8fa2c761253362f7e5f68bfec">setX</a>(20);
-<a name="l00178"></a>00178     lightVector.<a class="code" href="classVector3f.html#a533d6931dc15f0f0e66b094debeaf4ce">setY</a>(0);
-<a name="l00179"></a>00179     lightVector.<a class="code" href="classVector3f.html#a0cb5d2450424090a599f0e429f8f3a34">setZ</a>(0);
+<a name="l00177"></a>00177     lightVector.<a class="code" href="classVector3f.html#a3999baa8fa2c761253362f7e5f68bfec" title="Set the X value.">setX</a>(20);
+<a name="l00178"></a>00178     lightVector.<a class="code" href="classVector3f.html#a533d6931dc15f0f0e66b094debeaf4ce" title="Set the Y value.">setY</a>(0);
+<a name="l00179"></a>00179     lightVector.<a class="code" href="classVector3f.html#a0cb5d2450424090a599f0e429f8f3a34" title="Set the Z value.">setZ</a>(0);
 <a name="l00180"></a>00180 
 <a name="l00181"></a>00181     <span class="keywordtype">float</span>* m_terrainData = <a class="code" href="classTerrainNode.html#a00ceb8ca1b60b146baaa1606e8fbeb49">m_terrainDataCl</a>-&gt;<a class="code" href="classTerrainData.html#a957fb76a7542678336cb5c7d20443cdd">getTerrainData</a>();
 <a name="l00182"></a>00182 
@@ -265,7 +264,7 @@
 <a name="l00224"></a>00224     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (light_type == <a class="code" href="TerrainNode_8h.html#ad5240f63a202d28552bcca618f1283ef">slopeLighting</a>)
 <a name="l00225"></a>00225     {
 <a name="l00226"></a>00226 
-<a name="l00227"></a>00227         lightVector = lightVector.<a class="code" href="classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc">normalize</a>();
+<a name="l00227"></a>00227         lightVector = lightVector.<a class="code" href="classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc" title="Returna new vector containing the normalization of this one.">normalize</a>();
 <a name="l00228"></a>00228 
 <a name="l00229"></a>00229         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x = 0; x &lt; l_terrainLength; ++x)
 <a name="l00230"></a>00230         {
@@ -275,9 +274,9 @@
 <a name="l00234"></a>00234                 <span class="keywordtype">float</span> tmp_ShadeValue = 0.0f;
 <a name="l00235"></a>00235 
 <a name="l00236"></a>00236                 <span class="comment">//This double checks that the value is within the boundries of the array</span>
-<a name="l00237"></a>00237                 <span class="keywordflow">if</span> (z &gt;= lightVector.<a class="code" href="classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11">getZ</a>() &amp;&amp; x &gt;= lightVector.<a class="code" href="classVector3f.html#a079f6b05ae7d79406838640be15749de">getX</a>())
+<a name="l00237"></a>00237                 <span class="keywordflow">if</span> (z &gt;= lightVector.<a class="code" href="classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11" title="Get the Z value of the vector.">getZ</a>() &amp;&amp; x &gt;= lightVector.<a class="code" href="classVector3f.html#a079f6b05ae7d79406838640be15749de" title="Return the X value of the vector.">getX</a>())
 <a name="l00238"></a>00238                 {
-<a name="l00239"></a>00239                     tmp_ShadeValue = 1.0f - ( m_terrainData[(<span class="keywordtype">unsigned</span> int) (((z - lightVector.<a class="code" href="classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11">getZ</a>()) * l_terrainLength) + (x - lightVector.<a class="code" href="classVector3f.html#a079f6b05ae7d79406838640be15749de">getX</a>()))] - m_terrainData[(<span class="keywordtype">unsigned</span> int) ((z * l_terrainLength) + x)]) / softness;
+<a name="l00239"></a>00239                     tmp_ShadeValue = 1.0f - ( m_terrainData[(<span class="keywordtype">unsigned</span> int) (((z - lightVector.<a class="code" href="classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11" title="Get the Z value of the vector.">getZ</a>()) * l_terrainLength) + (x - lightVector.<a class="code" href="classVector3f.html#a079f6b05ae7d79406838640be15749de" title="Return the X value of the vector.">getX</a>()))] - m_terrainData[(<span class="keywordtype">unsigned</span> int) ((z * l_terrainLength) + x)]) / softness;
 <a name="l00240"></a>00240                 }
 <a name="l00241"></a>00241                 <span class="keywordflow">else</span>
 <a name="l00242"></a>00242                 {
@@ -306,14 +305,14 @@
 <a name="l00265"></a>00265             <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> z = 0; z &lt; l_terrainLength; ++z)
 <a name="l00266"></a>00266             {
 <a name="l00267"></a>00267 
-<a name="l00268"></a>00268                 <a class="code" href="classVector3f.html">Vector3f</a> vectorBetweenPointAndLight;
+<a name="l00268"></a>00268                 <a class="code" href="classVector3f.html" title="A vector with 3 points.">Vector3f</a> vectorBetweenPointAndLight;
 <a name="l00269"></a>00269 
 <a name="l00270"></a>00270 <span class="comment">/*</span>
 <a name="l00271"></a>00271 <span class="comment">                vectorBetweenPointAndLight.x = lightVector.x - (x + m_position.x);</span>
 <a name="l00272"></a>00272 <span class="comment">                vectorBetweenPointAndLight.y = m_terrainData[(z * m_terrainLength) + x];</span>
 <a name="l00273"></a>00273 <span class="comment">                vectorBetweenPointAndLight.z = lightVector.z - (z + m_position.z);</span>
 <a name="l00274"></a>00274 <span class="comment">*/</span>
-<a name="l00275"></a>00275                 vectorBetweenPointAndLight = vectorBetweenPointAndLight.<a class="code" href="classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc">normalize</a>();
+<a name="l00275"></a>00275                 vectorBetweenPointAndLight = vectorBetweenPointAndLight.<a class="code" href="classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc" title="Returna new vector containing the normalization of this one.">normalize</a>();
 <a name="l00276"></a>00276 
 <a name="l00277"></a>00277 
 <a name="l00278"></a>00278                 <a class="code" href="classTerrainNode.html#a8be2b6c24ae198a0776e017d6804726c">m_lightingData</a>[(z * l_terrainLength) + x] = <a class="code" href="classTerrainNode.html#a1557ce91558ea5add43038d8c5ff67a2">m_ambientLight</a>;
@@ -350,8 +349,8 @@
 <a name="l00309"></a>00309 
 <a name="l00310"></a>00310     <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()-&gt;<a class="code" href="classGraphicsAPI.html#a5a52af4661e18b52bd71c4b59a126e20">pushMatrix</a>();
 <a name="l00311"></a>00311 
-<a name="l00312"></a>00312         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()-&gt;<a class="code" href="classGraphicsAPI.html#a2399ee6a1cada60c38c070c2c6aa0723">translateMatrix</a>(<a class="code" href="classSceneNode.html#a9d054ac0fed76f0de6fee9cfaee03172">m_position</a>.<a class="code" href="classVector3f.html#a079f6b05ae7d79406838640be15749de">getX</a>(), <a class="code" href="classSceneNode.html#a9d054ac0fed76f0de6fee9cfaee03172">m_position</a>.<a class="code" href="classVector3f.html#a552ae944fd6089d3f2c3de38b8365a62">getY</a>(), <a class="code" href="classSceneNode.html#a9d054ac0fed76f0de6fee9cfaee03172">m_position</a>.<a class="code" href="classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11">getZ</a>());
-<a name="l00313"></a>00313         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()-&gt;<a class="code" href="classGraphicsAPI.html#a3eecd2f90b99083495bb9d97eaf4367e">rotateMatrix</a>(<a class="code" href="classSceneNode.html#a73bd600ed3a58bcb4394db572865255a">m_rotation</a>.<a class="code" href="classVector3f.html#a079f6b05ae7d79406838640be15749de">getX</a>(), <a class="code" href="classSceneNode.html#a73bd600ed3a58bcb4394db572865255a">m_rotation</a>.<a class="code" href="classVector3f.html#a552ae944fd6089d3f2c3de38b8365a62">getY</a>(), <a class="code" href="classSceneNode.html#a73bd600ed3a58bcb4394db572865255a">m_rotation</a>.<a class="code" href="classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11">getZ</a>());
+<a name="l00312"></a>00312         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()-&gt;<a class="code" href="classGraphicsAPI.html#a2399ee6a1cada60c38c070c2c6aa0723">translateMatrix</a>(<a class="code" href="classSceneNode.html#a9d054ac0fed76f0de6fee9cfaee03172">m_position</a>.<a class="code" href="classVector3f.html#a079f6b05ae7d79406838640be15749de" title="Return the X value of the vector.">getX</a>(), <a class="code" href="classSceneNode.html#a9d054ac0fed76f0de6fee9cfaee03172">m_position</a>.<a class="code" href="classVector3f.html#a552ae944fd6089d3f2c3de38b8365a62" title="Return the Y value of the vector.">getY</a>(), <a class="code" href="classSceneNode.html#a9d054ac0fed76f0de6fee9cfaee03172">m_position</a>.<a class="code" href="classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11" title="Get the Z value of the vector.">getZ</a>());
+<a name="l00313"></a>00313         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()-&gt;<a class="code" href="classGraphicsAPI.html#a3eecd2f90b99083495bb9d97eaf4367e">rotateMatrix</a>(<a class="code" href="classSceneNode.html#a73bd600ed3a58bcb4394db572865255a">m_rotation</a>.<a class="code" href="classVector3f.html#a079f6b05ae7d79406838640be15749de" title="Return the X value of the vector.">getX</a>(), <a class="code" href="classSceneNode.html#a73bd600ed3a58bcb4394db572865255a">m_rotation</a>.<a class="code" href="classVector3f.html#a552ae944fd6089d3f2c3de38b8365a62" title="Return the Y value of the vector.">getY</a>(), <a class="code" href="classSceneNode.html#a73bd600ed3a58bcb4394db572865255a">m_rotation</a>.<a class="code" href="classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11" title="Get the Z value of the vector.">getZ</a>());
 <a name="l00314"></a>00314 
 <a name="l00315"></a>00315         <span class="keywordflow">if</span> (<a class="code" href="classTerrainNode.html#acf87a7467da2d415a2d7c5593b9c91af">m_terrainShader</a> != 0)
 <a name="l00316"></a>00316         {
@@ -364,9 +363,9 @@
 <a name="l00323"></a>00323 
 <a name="l00324"></a>00324         <span class="keywordtype">float</span> changeDistance = 150 * ((<a class="code" href="classTerrainNode.html#aaf4490df0bc48a7c5f4f2133ca2c261f">scaleFactorX</a> + <a class="code" href="classTerrainNode.html#a54c7df7c26724b1af96e9302ec83d01b">scaleFactorZ</a>) / 2.0f);
 <a name="l00325"></a>00325 
-<a name="l00326"></a>00326         <span class="keywordtype">float</span> cameraCurrentX = ly-&gt;<a class="code" href="classThreeDRenderLayer.html#a47352bfd18f648f3aaf98c3b1cd17aeb">getActiveCamera</a>()-&gt;<a class="code" href="classCamera.html#afee8381530afff41480c578ca1fef552">getPosition</a>().<a class="code" href="classVector3f.html#a079f6b05ae7d79406838640be15749de">getX</a>();
-<a name="l00327"></a>00327         <span class="keywordtype">float</span> cameraCurrentY = ly-&gt;<a class="code" href="classThreeDRenderLayer.html#a47352bfd18f648f3aaf98c3b1cd17aeb">getActiveCamera</a>()-&gt;<a class="code" href="classCamera.html#afee8381530afff41480c578ca1fef552">getPosition</a>().<a class="code" href="classVector3f.html#a552ae944fd6089d3f2c3de38b8365a62">getY</a>();
-<a name="l00328"></a>00328         <span class="keywordtype">float</span> cameraCurrentZ = ly-&gt;<a class="code" href="classThreeDRenderLayer.html#a47352bfd18f648f3aaf98c3b1cd17aeb">getActiveCamera</a>()-&gt;<a class="code" href="classCamera.html#afee8381530afff41480c578ca1fef552">getPosition</a>().<a class="code" href="classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11">getZ</a>();
+<a name="l00326"></a>00326         <span class="keywordtype">float</span> cameraCurrentX = ly-&gt;<a class="code" href="classThreeDRenderLayer.html#a47352bfd18f648f3aaf98c3b1cd17aeb">getActiveCamera</a>()-&gt;<a class="code" href="classCamera.html#afee8381530afff41480c578ca1fef552">getPosition</a>().<a class="code" href="classVector3f.html#a079f6b05ae7d79406838640be15749de" title="Return the X value of the vector.">getX</a>();
+<a name="l00327"></a>00327         <span class="keywordtype">float</span> cameraCurrentY = ly-&gt;<a class="code" href="classThreeDRenderLayer.html#a47352bfd18f648f3aaf98c3b1cd17aeb">getActiveCamera</a>()-&gt;<a class="code" href="classCamera.html#afee8381530afff41480c578ca1fef552">getPosition</a>().<a class="code" href="classVector3f.html#a552ae944fd6089d3f2c3de38b8365a62" title="Return the Y value of the vector.">getY</a>();
+<a name="l00328"></a>00328         <span class="keywordtype">float</span> cameraCurrentZ = ly-&gt;<a class="code" href="classThreeDRenderLayer.html#a47352bfd18f648f3aaf98c3b1cd17aeb">getActiveCamera</a>()-&gt;<a class="code" href="classCamera.html#afee8381530afff41480c578ca1fef552">getPosition</a>().<a class="code" href="classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11" title="Get the Z value of the vector.">getZ</a>();
 <a name="l00329"></a>00329 
 <a name="l00330"></a>00330         glScalef(<a class="code" href="classTerrainNode.html#aaf4490df0bc48a7c5f4f2133ca2c261f">scaleFactorX</a>, <a class="code" href="classTerrainNode.html#ad3db70f2e917eb89f7877cb33c4bcf56">scaleFactorY</a>, <a class="code" href="classTerrainNode.html#a54c7df7c26724b1af96e9302ec83d01b">scaleFactorZ</a>);
 <a name="l00331"></a>00331 
@@ -416,7 +415,7 @@
 <a name="l00375"></a>00375 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

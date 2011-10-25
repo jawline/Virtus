@@ -12,5 +12,5 @@
 <area shape="rect" id="node13" href="$classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60" title="DataInputStream::read" alt="" coords="1804,57,1959,87"/>
 <area shape="rect" id="node16" href="$classDataInputStream.html#afa9093ed850b8013fd4e4e52a0e7aacd" title="DataInputStream::rewind" alt="" coords="1799,136,1964,165"/>
 <area shape="rect" id="node18" href="$classConfigurationReader.html#abb2a9f4722269a7a473e46f68783da85" title="ConfigurationReader::skipWhitespace" alt="" coords="1507,109,1749,139"/>
-<area shape="rect" id="node24" href="$classConfigurationFolder.html#a0239e0fee7aabfd8f01f45c06c2d9f89" title="ConfigurationFolder::addChild" alt="" coords="1248,164,1443,193"/>
+<area shape="rect" id="node24" href="$classConfigurationFolder.html#a0239e0fee7aabfd8f01f45c06c2d9f89" title="Add the specified child to this node." alt="" coords="1248,164,1443,193"/>
 </map>

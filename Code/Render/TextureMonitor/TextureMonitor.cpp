@@ -36,7 +36,7 @@ void* TextureMonitor::f_loadEntity(std::string Name)
     {
         char Buffer[512];
         sprintf(Buffer, "Unable to load texture %s due to being unable to create a Texture object\n", Name.c_str());
-        GRenderer::getRenderer()->getRenderLog()->writeToLogFile(Buffer);
+        GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
         return 0;
     }
 
@@ -46,7 +46,7 @@ void* TextureMonitor::f_loadEntity(std::string Name)
     {
         char Buffer[512];
         sprintf(Buffer, "Unable to load texture %s due to being unable to find specified node in filesystem\n", Name.c_str());
-        GRenderer::getRenderer()->getRenderLog()->writeToLogFile(Buffer);
+        GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
         return 0;
     }
 
@@ -54,7 +54,7 @@ void* TextureMonitor::f_loadEntity(std::string Name)
     {
         char Buffer[512];
         sprintf(Buffer, "Unable to load texture %s due to node not being marked as a file in the filesystem\n", Name.c_str());
-        GRenderer::getRenderer()->getRenderLog()->writeToLogFile(Buffer);
+        GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
         return 0;
     }
 
@@ -68,7 +68,7 @@ void* TextureMonitor::f_loadEntity(std::string Name)
 
         char Buffer[512];
         sprintf(Buffer, "Unable to load texture %s due to being unable to load from file path\n", Name.c_str());
-        GRenderer::getRenderer()->getRenderLog()->writeToLogFile(Buffer);
+        GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
 
         delete newTexture;
 
@@ -82,7 +82,7 @@ void* TextureMonitor::f_loadEntity(std::string Name)
 
         char Buffer[512];
         sprintf(Buffer, "Succesfully loaded texture %s\n", Name.c_str());
-        GRenderer::getRenderer()->getRenderLog()->writeToLogFile(Buffer);
+        GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
 
         f_addEntity( Name, (void*) newTexture );
 

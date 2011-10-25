@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -75,7 +74,7 @@
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035 }
 <a name="l00036"></a>00036 
-<a name="l00037"></a><a class="code" href="classEventManager.html#a96150c5f3f9b325126d077d0802b7534">00037</a> <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#a96150c5f3f9b325126d077d0802b7534">EventManager::setNumberOfEvents</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num)
+<a name="l00037"></a><a class="code" href="classEventManager.html#a96150c5f3f9b325126d077d0802b7534">00037</a> <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#a96150c5f3f9b325126d077d0802b7534" title="Set the number of possible events (From 0 to number)">EventManager::setNumberOfEvents</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num)
 <a name="l00038"></a>00038 {
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040     <a class="code" href="classEventManager.html#a44a92dbd9d216527ae541307bd2ab253">freeEvents</a>();
@@ -89,7 +88,7 @@
 <a name="l00048"></a>00048     <a class="code" href="classEventManager.html#a333271ed28bf247c3248e2b79242ea18">m_numEvents</a> = num;
 <a name="l00049"></a>00049 }
 <a name="l00050"></a>00050 
-<a name="l00051"></a><a class="code" href="classEventManager.html#aaf00bee56e0923062e6e10d94baf9535">00051</a> <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#aaf00bee56e0923062e6e10d94baf9535">EventManager::unregisterEventCallback</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event, <a class="code" href="classEventCallback.html">EventCallback</a>* Cb)
+<a name="l00051"></a><a class="code" href="classEventManager.html#aaf00bee56e0923062e6e10d94baf9535">00051</a> <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#aaf00bee56e0923062e6e10d94baf9535" title="Unregister the specified callback from the event.">EventManager::unregisterEventCallback</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event, <a class="code" href="classEventCallback.html" title="Callback for a event.">EventCallback</a>* Cb)
 <a name="l00052"></a>00052 {
 <a name="l00053"></a>00053     <span class="keywordflow">if</span> (event &gt;= <a class="code" href="classEventManager.html#a333271ed28bf247c3248e2b79242ea18">m_numEvents</a>) <span class="keywordflow">return</span>;
 <a name="l00054"></a>00054 
@@ -103,7 +102,7 @@
 <a name="l00062"></a>00062     }
 <a name="l00063"></a>00063 }
 <a name="l00064"></a>00064 
-<a name="l00065"></a><a class="code" href="classEventManager.html#a3f1a77490f77e4f5d141fde232c102ef">00065</a> <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#a3f1a77490f77e4f5d141fde232c102ef">EventManager::registerEventCallback</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event, <a class="code" href="classEventCallback.html">EventCallback</a> * Callback)
+<a name="l00065"></a><a class="code" href="classEventManager.html#a3f1a77490f77e4f5d141fde232c102ef">00065</a> <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#a3f1a77490f77e4f5d141fde232c102ef" title="Register the specified callback to the event.">EventManager::registerEventCallback</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event, <a class="code" href="classEventCallback.html" title="Callback for a event.">EventCallback</a> * Callback)
 <a name="l00066"></a>00066 {
 <a name="l00067"></a>00067     <span class="keywordflow">if</span> (event &gt;= <a class="code" href="classEventManager.html#a333271ed28bf247c3248e2b79242ea18">m_numEvents</a>) <span class="keywordflow">return</span>;
 <a name="l00068"></a>00068 
@@ -111,7 +110,7 @@
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071 }
 <a name="l00072"></a>00072 
-<a name="l00073"></a><a class="code" href="classEventManager.html#ad7abcd8b20480ef47856be120baf4d30">00073</a> <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#ad7abcd8b20480ef47856be120baf4d30">EventManager::triggerEvent</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event, std::vector&lt;int&gt; EData, <span class="keywordtype">int</span> Flags)
+<a name="l00073"></a><a class="code" href="classEventManager.html#ad7abcd8b20480ef47856be120baf4d30">00073</a> <span class="keywordtype">void</span> <a class="code" href="classEventManager.html#ad7abcd8b20480ef47856be120baf4d30" title="Notify the event manager that the specified event has occured.">EventManager::triggerEvent</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event, std::vector&lt;int&gt; EData, <span class="keywordtype">int</span> Flags)
 <a name="l00074"></a>00074 {
 <a name="l00075"></a>00075     <span class="keywordflow">if</span> (event &gt;= <a class="code" href="classEventManager.html#a333271ed28bf247c3248e2b79242ea18">m_numEvents</a>) <span class="keywordflow">return</span>;
 <a name="l00076"></a>00076 
@@ -124,7 +123,7 @@
 <a name="l00083"></a>00083 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

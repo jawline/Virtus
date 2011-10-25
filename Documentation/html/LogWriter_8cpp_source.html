@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -43,7 +42,7 @@
 <a name="l00002"></a>00002 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
 <a name="l00003"></a>00003 <span class="preprocessor">#include &lt;string.h&gt;</span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a><a class="code" href="classLogWriter.html#a872de1970984353798acf1d0328da71b">00005</a> <a class="code" href="classLogWriter.html#a872de1970984353798acf1d0328da71b">LogWriter::LogWriter</a>(<a class="code" href="classFile.html">File</a>* file)
+<a name="l00005"></a><a class="code" href="classLogWriter.html#a872de1970984353798acf1d0328da71b">00005</a> <a class="code" href="classLogWriter.html#a872de1970984353798acf1d0328da71b" title="Creates a instance of a log bound to a specific FileSystem File.">LogWriter::LogWriter</a>(<a class="code" href="classFile.html">File</a>* file)
 <a name="l00006"></a>00006 {
 <a name="l00007"></a>00007     <span class="keywordflow">if</span> (file == 0) <span class="keywordflow">return</span>;
 <a name="l00008"></a>00008     <span class="keywordflow">else</span>
@@ -67,7 +66,7 @@
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 }
 <a name="l00028"></a>00028 
-<a name="l00029"></a><a class="code" href="classLogWriter.html#a1cc506a798c0573b3ea87e3401a0e24e">00029</a> <a class="code" href="classLogWriter.html#a1cc506a798c0573b3ea87e3401a0e24e">LogWriter::~LogWriter</a>()
+<a name="l00029"></a><a class="code" href="classLogWriter.html#a1cc506a798c0573b3ea87e3401a0e24e">00029</a> <a class="code" href="classLogWriter.html#a1cc506a798c0573b3ea87e3401a0e24e" title="Destroy the log. Flushes any buffers and deinitializes all.">LogWriter::~LogWriter</a>()
 <a name="l00030"></a>00030 {
 <a name="l00031"></a>00031     <span class="keywordflow">if</span> (<a class="code" href="classLogWriter.html#abdd17e977eba316b817c21a3a2e29277">m_logOutStream</a> != 0)
 <a name="l00032"></a>00032     {
@@ -78,7 +77,7 @@
 <a name="l00037"></a>00037     }
 <a name="l00038"></a>00038 }
 <a name="l00039"></a>00039 
-<a name="l00040"></a><a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">00040</a> <span class="keywordtype">void</span> <a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">LogWriter::writeData</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Data)
+<a name="l00040"></a><a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">00040</a> <span class="keywordtype">void</span> <a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">LogWriter::writeData</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Data)
 <a name="l00041"></a>00041 {
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043     <span class="keywordflow">if</span> (<a class="code" href="classLogWriter.html#abdd17e977eba316b817c21a3a2e29277">m_logOutStream</a> != 0)
@@ -96,7 +95,7 @@
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056 }
 <a name="l00057"></a>00057 
-<a name="l00058"></a><a class="code" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a">00058</a> <a class="code" href="classFile.html">File</a>* <a class="code" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a">LogWriter::getPathToLogFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Name)
+<a name="l00058"></a><a class="code" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a">00058</a> <a class="code" href="classFile.html">File</a>* <a class="code" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a" title="Convert the string name of the log (I.e. Render.Log) to a internal filesystem node (Creating it if it...">LogWriter::getPathToLogFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Name)
 <a name="l00059"></a>00059 {
 <a name="l00060"></a>00060     <a class="code" href="classFolder.html">Folder</a>* folder = <span class="keyword">static_cast&lt;</span><a class="code" href="classFolder.html">Folder</a>*<span class="keyword">&gt;</span>(<a class="code" href="classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), <span class="stringliteral">&quot;Logs&quot;</span>));
 <a name="l00061"></a>00061 
@@ -121,7 +120,7 @@
 <a name="l00080"></a>00080 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

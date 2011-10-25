@@ -6,6 +6,10 @@ const static int jobStatusRunning = 2;
 const static int jobStatusDone = 3;
 const static int jobStatusError = 4;
 
+/**
+ * @brief Virtual class for a job for a worker bee
+ *
+ */
 class WorkerJob
 {
 protected:

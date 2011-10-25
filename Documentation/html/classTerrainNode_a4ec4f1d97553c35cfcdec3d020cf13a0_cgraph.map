@@ -6,9 +6,9 @@
 <area shape="rect" id="node11" href="$classGRenderer.html#a189dc79fbe3e40ab1cf0fd0cb9e83dfc" title="GRenderer::getLayer" alt="" coords="237,219,379,248"/>
 <area shape="rect" id="node13" href="$classCamera.html#afee8381530afff41480c578ca1fef552" title="Camera::getPosition" alt="" coords="237,272,379,301"/>
 <area shape="rect" id="node15" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="227,325,389,355"/>
-<area shape="rect" id="node19" href="$classVector3f.html#a079f6b05ae7d79406838640be15749de" title="Vector3f::getX" alt="" coords="524,347,631,376"/>
-<area shape="rect" id="node21" href="$classVector3f.html#a552ae944fd6089d3f2c3de38b8365a62" title="Vector3f::getY" alt="" coords="255,533,361,563"/>
-<area shape="rect" id="node23" href="$classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11" title="Vector3f::getZ" alt="" coords="525,400,629,429"/>
+<area shape="rect" id="node19" href="$classVector3f.html#a079f6b05ae7d79406838640be15749de" title="Return the X value of the vector." alt="" coords="524,347,631,376"/>
+<area shape="rect" id="node21" href="$classVector3f.html#a552ae944fd6089d3f2c3de38b8365a62" title="Return the Y value of the vector." alt="" coords="255,533,361,563"/>
+<area shape="rect" id="node23" href="$classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11" title="Get the Z value of the vector." alt="" coords="525,400,629,429"/>
 <area shape="rect" id="node25" href="$classGraphicsAPI.html#a8b522515c33fec080290f3b6eb73e924" title="GraphicsAPI::popMatrix" alt="" coords="228,587,388,616"/>
 <area shape="rect" id="node27" href="$classGraphicsAPI.html#a5a52af4661e18b52bd71c4b59a126e20" title="GraphicsAPI::pushMatrix" alt="" coords="224,640,392,669"/>
 <area shape="rect" id="node29" href="$classTerrainNode.html#a89085853f37f0fa66b56f5048a51c0e4" title="TerrainNode::recalculateLightMaps" alt="" coords="196,480,420,509"/>
@@ -19,9 +19,9 @@
 <area shape="rect" id="node31" href="$classTerrainData.html#a957fb76a7542678336cb5c7d20443cdd" title="TerrainData::getTerrainData" alt="" coords="485,560,669,589"/>
 <area shape="rect" id="node33" href="$classTerrainData.html#a0da6e1f77f4faefcd86fd19d44afa637" title="TerrainData::getTerrainLength" alt="" coords="480,613,675,643"/>
 <area shape="rect" id="node37" href="$classTexture.html#a49791edaa3beb8f9658565b2ced82cc8" title="Texture::loadTextureData" alt="" coords="492,667,663,696"/>
-<area shape="rect" id="node39" href="$classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc" title="Vector3f::normalize" alt="" coords="511,720,644,749"/>
-<area shape="rect" id="node43" href="$classVector3f.html#a3999baa8fa2c761253362f7e5f68bfec" title="Vector3f::setX" alt="" coords="524,773,631,803"/>
-<area shape="rect" id="node45" href="$classVector3f.html#a533d6931dc15f0f0e66b094debeaf4ce" title="Vector3f::setY" alt="" coords="524,453,631,483"/>
-<area shape="rect" id="node47" href="$classVector3f.html#a0cb5d2450424090a599f0e429f8f3a34" title="Vector3f::setZ" alt="" coords="525,507,629,536"/>
-<area shape="rect" id="node41" href="$classVector3f.html#abd0d544e338c5832b565a189f92e5782" title="Vector3f::length" alt="" coords="723,720,837,749"/>
+<area shape="rect" id="node39" href="$classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc" title="Returna new vector containing the normalization of this one." alt="" coords="511,720,644,749"/>
+<area shape="rect" id="node43" href="$classVector3f.html#a3999baa8fa2c761253362f7e5f68bfec" title="Set the X value." alt="" coords="524,773,631,803"/>
+<area shape="rect" id="node45" href="$classVector3f.html#a533d6931dc15f0f0e66b094debeaf4ce" title="Set the Y value." alt="" coords="524,453,631,483"/>
+<area shape="rect" id="node47" href="$classVector3f.html#a0cb5d2450424090a599f0e429f8f3a34" title="Set the Z value." alt="" coords="525,507,629,536"/>
+<area shape="rect" id="node41" href="$classVector3f.html#abd0d544e338c5832b565a189f92e5782" title="Calculate the length of the vector." alt="" coords="723,720,837,749"/>
 </map>

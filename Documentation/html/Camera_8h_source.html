@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -49,8 +48,8 @@
 <a name="l00008"></a>00008 {
 <a name="l00009"></a>00009 <span class="keyword">private</span>:
 <a name="l00010"></a>00010 
-<a name="l00011"></a><a class="code" href="classCamera.html#af145c21bee84e1e9310a4bbdcd200a05">00011</a>     <a class="code" href="classVector3f.html">point3f_t</a> <a class="code" href="classCamera.html#af145c21bee84e1e9310a4bbdcd200a05">Position</a>;
-<a name="l00012"></a><a class="code" href="classCamera.html#af9dbca2e588ba5efec6624f45cfc2801">00012</a>     <a class="code" href="classVector3f.html">point3f_t</a> <a class="code" href="classCamera.html#af9dbca2e588ba5efec6624f45cfc2801">Rotation</a>;
+<a name="l00011"></a><a class="code" href="classCamera.html#af145c21bee84e1e9310a4bbdcd200a05">00011</a>     <a class="code" href="classVector3f.html" title="A vector with 3 points.">point3f_t</a> <a class="code" href="classCamera.html#af145c21bee84e1e9310a4bbdcd200a05">Position</a>;
+<a name="l00012"></a><a class="code" href="classCamera.html#af9dbca2e588ba5efec6624f45cfc2801">00012</a>     <a class="code" href="classVector3f.html" title="A vector with 3 points.">point3f_t</a> <a class="code" href="classCamera.html#af9dbca2e588ba5efec6624f45cfc2801">Rotation</a>;
 <a name="l00013"></a>00013 
 <a name="l00014"></a><a class="code" href="classCamera.html#ae2d26687c57e6d58c7f1ff7ce68186c5">00014</a>     <span class="keywordtype">float</span> <a class="code" href="classCamera.html#aa84560cd07bb275007039a9e79dd4c3e">angle</a>, <a class="code" href="classCamera.html#ae2d26687c57e6d58c7f1ff7ce68186c5">ratio</a>, <a class="code" href="classCamera.html#ae68d4bb4b35e19f81f30ac10ecb24f51">nearD</a>, <a class="code" href="classCamera.html#a3035ac0b8812cfbd9faca4701deebe4b">farD</a>;
 <a name="l00015"></a>00015 
@@ -63,7 +62,7 @@
 <a name="l00022"></a>00022     <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a5c7766c666e9a4997ccb68abda54c6dc">setPosition</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);
 <a name="l00023"></a>00023     <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a508e66f52e3b77ff209c01dc415d84da">move</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);
 <a name="l00024"></a>00024 
-<a name="l00025"></a><a class="code" href="classCamera.html#afee8381530afff41480c578ca1fef552">00025</a>     <a class="code" href="classVector3f.html">point3f_t</a> <a class="code" href="classCamera.html#afee8381530afff41480c578ca1fef552">getPosition</a>()
+<a name="l00025"></a><a class="code" href="classCamera.html#afee8381530afff41480c578ca1fef552">00025</a>     <a class="code" href="classVector3f.html" title="A vector with 3 points.">point3f_t</a> <a class="code" href="classCamera.html#afee8381530afff41480c578ca1fef552">getPosition</a>()
 <a name="l00026"></a>00026     {
 <a name="l00027"></a>00027         <span class="keywordflow">return</span> <a class="code" href="classCamera.html#af145c21bee84e1e9310a4bbdcd200a05">Position</a>;
 <a name="l00028"></a>00028     }
@@ -71,7 +70,7 @@
 <a name="l00030"></a>00030     <span class="keywordtype">void</span> <a class="code" href="classCamera.html#ab7689553e60c5b162bb27ebb3a85e7a4">setRotation</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);
 <a name="l00031"></a>00031     <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a5360c229ebd95ecf775d6d6b7f5b6f57">rotate</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);
 <a name="l00032"></a>00032 
-<a name="l00033"></a><a class="code" href="classCamera.html#ab57c87145c9b1f360b312066f3c61cdd">00033</a>     <a class="code" href="classVector3f.html">point3f_t</a> <a class="code" href="classCamera.html#ab57c87145c9b1f360b312066f3c61cdd">getRotation</a>()
+<a name="l00033"></a><a class="code" href="classCamera.html#ab57c87145c9b1f360b312066f3c61cdd">00033</a>     <a class="code" href="classVector3f.html" title="A vector with 3 points.">point3f_t</a> <a class="code" href="classCamera.html#ab57c87145c9b1f360b312066f3c61cdd">getRotation</a>()
 <a name="l00034"></a>00034     {
 <a name="l00035"></a>00035         <span class="keywordflow">return</span> <a class="code" href="classCamera.html#af9dbca2e588ba5efec6624f45cfc2801">Rotation</a>;
 <a name="l00036"></a>00036     }
@@ -83,7 +82,7 @@
 <a name="l00042"></a>00042 <span class="preprocessor">#endif //_CAMERA_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

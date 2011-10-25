@@ -2,9 +2,20 @@
 <area shape="rect" id="node3" href="$classRenderWindow.html#a64ebcc830143b0b16c8b6a0cc4945fbf" title="RenderWindow::create" alt="" coords="223,5,377,35"/>
 <area shape="rect" id="node5" href="$classGraphicsAPI.html#a7471f9eb51207183088a48530e6e8a4c" title="GraphicsAPI::getAPIInstance" alt="" coords="203,59,397,88"/>
 <area shape="rect" id="node7" href="$classGraphicsAPI.html#a443b515f9d3256f7d9eac8a2bfb2a36d" title="GraphicsAPI::getAPISummary" alt="" coords="200,112,400,141"/>
-<area shape="rect" id="node9" href="$classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16" title="GraphicsAPI::getRenderWindow" alt="" coords="195,165,405,195"/>
-<area shape="rect" id="node11" href="$classGraphicsAPI.html#abd430dcdcf0f1519731736289fcb45b0" title="GraphicsAPI::initialize" alt="" coords="225,219,375,248"/>
-<area shape="rect" id="node13" href="$classGRenderer.html#a0530349c97b2b04a22019e26dd3d3bcc" title="GRenderer::setLayer" alt="" coords="229,272,371,301"/>
-<area shape="rect" id="node15" href="$classGRenderer.html#a8f9a5f0cbc4a4df10ad0e34af3c36a5a" title="GRenderer::uninitialize" alt="" coords="223,325,377,355"/>
-<area shape="rect" id="node17" href="$classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58" title="RenderLog::writeToLogFile" alt="" coords="211,379,389,408"/>
+<area shape="rect" id="node9" href="$classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a" title="Convert the string name of the log (I.e. Render.Log) to a internal filesystem node (Creating it if it..." alt="" coords="207,165,393,195"/>
+<area shape="rect" id="node26" href="$classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16" title="GraphicsAPI::getRenderWindow" alt="" coords="195,219,405,248"/>
+<area shape="rect" id="node28" href="$classGraphicsAPI.html#abd430dcdcf0f1519731736289fcb45b0" title="GraphicsAPI::initialize" alt="" coords="225,272,375,301"/>
+<area shape="rect" id="node30" href="$classGRenderer.html#a0530349c97b2b04a22019e26dd3d3bcc" title="GRenderer::setLayer" alt="" coords="229,325,371,355"/>
+<area shape="rect" id="node32" href="$classGRenderer.html#a8f9a5f0cbc4a4df10ad0e34af3c36a5a" title="GRenderer::uninitialize" alt="" coords="223,379,377,408"/>
+<area shape="rect" id="node34" href="$classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="229,432,371,461"/>
+<area shape="rect" id="node11" href="$classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896" title="Filesystem::evaluateChild" alt="" coords="457,61,631,91"/>
+<area shape="rect" id="node15" href="$classFolder.html#ac9bd343406ddd4ee391558234e637cd1" title="Folder::searchForChild" alt="" coords="692,113,847,143"/>
+<area shape="rect" id="node17" href="$classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117" title="Filesystem::getRoot" alt="" coords="475,165,613,195"/>
+<area shape="rect" id="node21" href="$classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5" title="Folder::getType" alt="" coords="488,219,600,248"/>
+<area shape="rect" id="node23" href="$classFolder.html#a86e65707748fb4e35f2cd7e60d452804" title="Folder::newChild" alt="" coords="484,272,604,301"/>
+<area shape="rect" id="node13" href="$classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c" title="FilesystemNode::getType" alt="" coords="684,60,855,89"/>
+<area shape="rect" id="node19" href="$classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="716,167,823,196"/>
+<area shape="rect" id="node36" href="$classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="461,379,627,408"/>
+<area shape="rect" id="node38" href="$classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="455,432,633,461"/>
+<area shape="rect" id="node40" href="$classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="461,485,627,515"/>
 </map>

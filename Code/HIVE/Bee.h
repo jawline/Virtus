@@ -10,6 +10,9 @@ class BeeHive;
 static const int beeIdle = 0;
 static const int beeProcessing = 1;
 
+/**
+ * @brief Implementation of a thread that takes and processes job from a hive and processes it
+ */
 class WorkerBee : public Thread
 {
 private:
@@ -26,7 +29,11 @@ public:
     WorkerBee(int number);
     ~WorkerBee();
 
-    void Run(void* Arg);
+    /**
+     * @brief Entry point overloaded from the base Thread class, this is the first function to be run
+     */
+
+    void run(void* Arg);
 
     void hiveUpdate();
 

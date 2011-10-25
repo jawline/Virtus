@@ -40,7 +40,7 @@ bool GRenderer::initialize(unsigned int w, unsigned int h, const char* renderAPI
 
 
     //Create a new render log
-    m_gameRenderLog = new RenderLog("./render.log");
+    m_gameRenderLog = new LogWriter(LogWriter::getPathToLogFile("Render.Log"));
 
 
     printf("GRender: Getting API instance\n");
@@ -59,7 +59,7 @@ bool GRenderer::initialize(unsigned int w, unsigned int h, const char* renderAPI
         char Buffer[512];
         sprintf(Buffer, "GRender: Unable to get a render context for graphics API %s API invalid or not supported by the system\n", renderAPI);
 
-        m_gameRenderLog->writeToLogFile(Buffer);
+        m_gameRenderLog->writeData(Buffer);
 
         uninitialize();
         return false;
@@ -71,7 +71,7 @@ bool GRenderer::initialize(unsigned int w, unsigned int h, const char* renderAPI
         sprintf(Buffer, "GRender: Render API summary: %s\n", m_renderAPI->getAPISummary());
 
         //If you got a API instance write a summary to the log
-        m_gameRenderLog->writeToLogFile(Buffer);
+        m_gameRenderLog->writeData(Buffer);
 
     }
 
@@ -79,14 +79,14 @@ bool GRenderer::initialize(unsigned int w, unsigned int h, const char* renderAPI
 
     if (gameWindow->create("Engine", w, h, this) == false)
     {
-        m_gameRenderLog->writeToLogFile("GRender: Unable to create window");
+        m_gameRenderLog->writeData("GRender: Unable to create window");
         uninitialize();
         return false;
     }
 
     if (m_renderAPI->initialize() == false)
     {
-        m_gameRenderLog->writeToLogFile("GRender: Render API failed to initialize");
+        m_gameRenderLog->writeData("GRender: Render API failed to initialize");
         uninitialize();
 
         return false;

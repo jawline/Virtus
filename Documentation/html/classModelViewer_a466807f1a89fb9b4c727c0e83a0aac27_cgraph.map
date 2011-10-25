@@ -5,6 +5,6 @@
 <area shape="rect" id="node9" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="260,165,423,195"/>
 <area shape="rect" id="node13" href="$classInterfaceLayer.html#ac6f6aa4d72f1b16646edd99399ce7fb3" title="InterfaceLayer::RemoveElement" alt="" coords="236,219,447,248"/>
 <area shape="rect" id="node15" href="$classThreeDRenderLayer.html#a6f4428b281cca6eeeb460d8117763658" title="Set the active world node, pass NULL if you don&#39;t want a world to be rendered." alt="" coords="227,272,456,301"/>
-<area shape="rect" id="node17" href="$classEventManager.html#aaf00bee56e0923062e6e10d94baf9535" title="EventManager::unregisterEventCallback" alt="" coords="213,325,469,355"/>
+<area shape="rect" id="node17" href="$classEventManager.html#aaf00bee56e0923062e6e10d94baf9535" title="Unregister the specified callback from the event." alt="" coords="213,325,469,355"/>
 <area shape="rect" id="node11" href="$classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="519,165,673,195"/>
 </map>

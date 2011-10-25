@@ -64,12 +64,12 @@ bool GL2GraphicsAPI::initialize()
 
     if (err != GLEW_OK)
     {
-        GRenderer::getRenderer()->getRenderLog()->writeToLogFile("GLEW failed to initialize\n");
+        GRenderer::getRenderer()->getRenderLog()->writeData("GLEW failed to initialize\n");
         return false;
     }
     else
     {
-        GRenderer::getRenderer()->getRenderLog()->writeToLogFile("GLEW initialized\n");
+        GRenderer::getRenderer()->getRenderLog()->writeData("GLEW initialized\n");
     }
 
     //Create a framebuffer

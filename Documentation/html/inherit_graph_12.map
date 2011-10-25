@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$classEventCallback.html" title="EventCallback" alt="" coords="5,85,112,115"/>
+<area shape="rect" id="node1" href="$classEventCallback.html" title="Callback for a event." alt="" coords="5,85,112,115"/>
 <area shape="rect" id="node3" href="$classCloseHandler.html" title="CloseHandler" alt="" coords="193,5,295,35"/>
 <area shape="rect" id="node5" href="$classPressedEventHandler.html" title="PressedEventHandler" alt="" coords="169,59,319,88"/>
 <area shape="rect" id="node7" href="$classReleasedEventHandler.html" title="ReleasedEventHandler" alt="" coords="167,112,321,141"/>

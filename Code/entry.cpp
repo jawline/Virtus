@@ -1,12 +1,10 @@
 #include <Core/GEngine.h>
-#include "3DViewer/ViewerApplication.h"
-#include "Render/GRender.h"
+#include <3DViewer/ViewerApplication.h>
 
-#include <Filesystem/Filesystem.h>
-#include <Filesystem/LocalFolder.h>
-#include <Filesystem/LocalFile.h>
-#include <LogWriter/LogWriter.h>
 
+/**
+ * @brief Entry point of the program, loads the base application and starts the engine loop
+ */
 
 int main()
 {

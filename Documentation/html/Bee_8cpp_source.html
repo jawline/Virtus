@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -61,15 +60,15 @@
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 }
 <a name="l00022"></a>00022 
-<a name="l00023"></a><a class="code" href="classWorkerBee.html#aa113fefd82cfadaf91b843575275003a">00023</a> <span class="keywordtype">void</span> <a class="code" href="classWorkerBee.html#aa113fefd82cfadaf91b843575275003a">WorkerBee::Run</a>(<span class="keywordtype">void</span>* Args)
+<a name="l00023"></a><a class="code" href="classWorkerBee.html#adb5452f54bf84663c42092b5d0797d50">00023</a> <span class="keywordtype">void</span> <a class="code" href="classWorkerBee.html#adb5452f54bf84663c42092b5d0797d50" title="Entry point overloaded from the base Thread class, this is the first function to be run...">WorkerBee::run</a>(<span class="keywordtype">void</span>* Args)
 <a name="l00024"></a>00024 {
 <a name="l00025"></a>00025         printf(<span class="stringliteral">&quot;Worker bee %i running\n&quot;</span>, <a class="code" href="classWorkerBee.html#a2c8a63db0d56618f63369bf2681d9820">m_beeNumber</a>);
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027         <a class="code" href="classWorkerBee.html#a9aeb6ed0e6e99b16166245124031f5c5">m_hive</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="classBeeHive.html">BeeHive</a>*<span class="keyword">&gt;</span>(Args);
+<a name="l00027"></a>00027         <a class="code" href="classWorkerBee.html#a9aeb6ed0e6e99b16166245124031f5c5">m_hive</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="classBeeHive.html" title="Manages a collection of worker bees which process jobs passed to them over multiple threads...">BeeHive</a>*<span class="keyword">&gt;</span>(Args);
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029         <span class="keywordflow">while</span> (1)
 <a name="l00030"></a>00030         {
-<a name="l00031"></a>00031             <a class="code" href="classWorkerJob.html">WorkerJob</a>* newJob = <a class="code" href="classWorkerBee.html#a9aeb6ed0e6e99b16166245124031f5c5">m_hive</a>-&gt;<a class="code" href="classBeeHive.html#af281217ab270086473072b09fa561475">beeRequestNextJob</a>();
+<a name="l00031"></a>00031             <a class="code" href="classWorkerJob.html" title="Virtual class for a job for a worker bee.">WorkerJob</a>* newJob = <a class="code" href="classWorkerBee.html#a9aeb6ed0e6e99b16166245124031f5c5">m_hive</a>-&gt;<a class="code" href="classBeeHive.html#af281217ab270086473072b09fa561475">beeRequestNextJob</a>();
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033             <span class="keywordflow">if</span> (newJob != 0)
 <a name="l00034"></a>00034             {
@@ -113,7 +112,7 @@
 <a name="l00072"></a>00072 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

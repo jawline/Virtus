@@ -6,5 +6,5 @@
 <area shape="rect" id="node15" href="$classGEngine.html#a261a030dbf510182e2e672105be7b00f" title="GEngine::sendEventManagerMessage" alt="" coords="213,219,459,248"/>
 <area shape="rect" id="node7" href="$classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="535,59,689,88"/>
 <area shape="rect" id="node13" href="$classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16" title="GraphicsAPI::getRenderWindow" alt="" coords="507,165,717,195"/>
-<area shape="rect" id="node17" href="$classEventManager.html#ad7abcd8b20480ef47856be120baf4d30" title="EventManager::triggerEvent" alt="" coords="520,219,704,248"/>
+<area shape="rect" id="node17" href="$classEventManager.html#ad7abcd8b20480ef47856be120baf4d30" title="Notify the event manager that the specified event has occured." alt="" coords="520,219,704,248"/>
 </map>

@@ -5,10 +5,14 @@
 #include "../Fonts/FREngine.h"
 #include <Input/InputEvent.h>
 #include "IElement.h"
-#include "Colour.h"
+#include <Render/Color.h>
 #include "../TextureMonitor/TextureMonitor.h"
 #include "../GraphicsAPI/VertexSet.h"
 
+/**
+ * @brief The engine interface render layer
+ *
+ */
 class InterfaceLayer : public GRenderLayer
 {
 private:

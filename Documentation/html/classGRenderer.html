@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -48,13 +47,16 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="GRenderer" -->
+<p>The core renderer class - Singleton.  
+ <a href="classGRenderer.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="GRender_8h_source.html">GRender.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for GRenderer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGRenderer__coll__graph.png" border="0" usemap="#GRenderer_coll__map" alt="Collaboration graph"/></div>
 <map name="GRenderer_coll__map" id="GRenderer_coll__map">
-<area shape="rect" id="node2" href="classTextureMonitor.html" title="TextureMonitor" alt="" coords="79,101,188,131"/><area shape="rect" id="node4" href="classResourceMonitor.html" title="ResourceMonitor" alt="" coords="5,5,125,35"/><area shape="rect" id="node6" href="classTextureLoader.html" title="TextureLoader" alt="" coords="149,5,253,35"/><area shape="rect" id="node8" href="classGRenderLayer.html" title="GRenderLayer" alt="" coords="212,101,319,131"/><area shape="rect" id="node10" href="classRenderLog.html" title="RenderLog" alt="" coords="347,101,432,131"/><area shape="rect" id="node12" href="classGraphicsAPI.html" title="GraphicsAPI" alt="" coords="485,101,581,131"/></map>
+<area shape="rect" id="node2" href="classTextureMonitor.html" title="TextureMonitor" alt="" coords="147,101,256,131"/><area shape="rect" id="node4" href="classResourceMonitor.html" title="ResourceMonitor" alt="" coords="5,5,125,35"/><area shape="rect" id="node6" href="classTextureLoader.html" title="TextureLoader" alt="" coords="149,5,253,35"/><area shape="rect" id="node8" href="classLogWriter.html" title="Convenience class for a log." alt="" coords="301,101,379,131"/><area shape="rect" id="node10" href="classDataOutputStream.html" title="DataOutputStream" alt="" coords="277,5,408,35"/><area shape="rect" id="node12" href="classGRenderLayer.html" title="GRenderLayer" alt="" coords="429,101,536,131"/><area shape="rect" id="node14" href="classGraphicsAPI.html" title="GraphicsAPI" alt="" coords="560,101,656,131"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classGRenderer-members.html">List of all members.</a></p>
@@ -72,7 +74,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInterfaceLayer.html">InterfaceLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#a6eee2e3bcc7a5bbeedfdb308b4ea7b65">getInterfaceManager</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classThreeDRenderLayer.html">ThreeDRenderLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#a8ae24b9fbe4f064ad4dd7d3ffcd069e3">get3DLayer</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTextureMonitor.html">TextureMonitor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#a362ab6eb0a315a128badd5324a4cb6d0">getTextureMonitor</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRenderLog.html">RenderLog</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLogWriter.html">LogWriter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRenderWindow.html">RenderWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#a503d677353a71ed75a56f36a00b97cd8">setRenderWireframeValue</a> (bool value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#ae100867bb26b1d1ed795bbcdfea57176">getRenderWireframeValue</a> ()</td></tr>
@@ -89,13 +91,14 @@ Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsAPI.html">GraphicsAPI</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#a9ec4d0e348b779ff80a5f94f7de631af">m_renderAPI</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGRenderLayer.html">GRenderLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a> [Layers_Max]</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRenderLog.html">RenderLog</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#a69a6d7d7b04a6f81860775670ca0fb7c">m_gameRenderLog</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLogWriter.html">LogWriter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#aaa54efa3a56d6b287e530a05ef582329">m_gameRenderLog</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTextureMonitor.html">TextureMonitor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#ad3fd08380e4b8afde17ac08579e0bbe6">m_textureMonitor</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGRenderer.html#a11e7692af82b414a42809ab3148f22df">m_shouldRenderWireframe</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00016">16</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<div class="textblock"><p>The core renderer class - Singleton. </p>
+
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00020">20</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a33bd1fd8860525decac95d88e0d8df3a"></a><!-- doxytag: member="GRenderer::GRenderer" ref="a33bd1fd8860525decac95d88e0d8df3a" args="()" -->
 <div class="memitem">
@@ -113,7 +116,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="GRender_8cpp_source.html#l00010">10</a> of file <a class="el" href="GRender_8cpp_source.html">GRender.cpp</a>.</p>
 
-<p>References <a class="el" href="LayerIDs_8h_source.html#l00010">Layers_Max</a>, <a class="el" href="GRender_8h_source.html#l00023">m_gameRenderLog</a>, <a class="el" href="GRender_8h_source.html#l00020">m_renderAPI</a>, <a class="el" href="GRender_8h_source.html#l00022">m_renderLayers</a>, and <a class="el" href="GRender_8h_source.html#l00025">m_textureMonitor</a>.</p>
+<p>References <a class="el" href="LayerIDs_8h_source.html#l00010">Layers_Max</a>, <a class="el" href="GRender_8h_source.html#l00027">m_gameRenderLog</a>, <a class="el" href="GRender_8h_source.html#l00024">m_renderAPI</a>, <a class="el" href="GRender_8h_source.html#l00026">m_renderLayers</a>, and <a class="el" href="GRender_8h_source.html#l00029">m_textureMonitor</a>.</p>
 
 <p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00027">getRenderer()</a>.</p>
 
@@ -176,7 +179,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="GRender_8cpp_source.html#l00152">152</a> of file <a class="el" href="GRender_8cpp_source.html">GRender.cpp</a>.</p>
 
-<p>References <a class="el" href="classGraphicsAPI.html#ab5f8505a14211950fb90b1a407a80153">GraphicsAPI::clearScreen()</a>, <a class="el" href="GRender_8h_source.html#l00052">getGraphicsAPI()</a>, <a class="el" href="Window_8h_source.html#l00020">RenderWindow::getHeight()</a>, <a class="el" href="classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16">GraphicsAPI::getRenderWindow()</a>, <a class="el" href="Window_8h_source.html#l00015">RenderWindow::getWidth()</a>, <a class="el" href="GRender_8h_source.html#l00090">getWindow()</a>, <a class="el" href="GRender_8h_source.html#l00020">m_renderAPI</a>, <a class="el" href="classGraphicsAPI.html#a342866fc473286e8dbf49031a7c272bf">GraphicsAPI::setupViewport()</a>, and <a class="el" href="Window_8h_source.html#l00036">RenderWindow::update()</a>.</p>
+<p>References <a class="el" href="classGraphicsAPI.html#ab5f8505a14211950fb90b1a407a80153">GraphicsAPI::clearScreen()</a>, <a class="el" href="GRender_8h_source.html#l00056">getGraphicsAPI()</a>, <a class="el" href="Window_8h_source.html#l00020">RenderWindow::getHeight()</a>, <a class="el" href="classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16">GraphicsAPI::getRenderWindow()</a>, <a class="el" href="Window_8h_source.html#l00015">RenderWindow::getWidth()</a>, <a class="el" href="GRender_8h_source.html#l00094">getWindow()</a>, <a class="el" href="GRender_8h_source.html#l00024">m_renderAPI</a>, <a class="el" href="classGraphicsAPI.html#a342866fc473286e8dbf49031a7c272bf">GraphicsAPI::setupViewport()</a>, and <a class="el" href="Window_8h_source.html#l00036">RenderWindow::update()</a>.</p>
 
 <p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00175">renderScene()</a>.</p>
 
@@ -218,7 +221,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="GRender_8cpp_source.html#l00200">200</a> of file <a class="el" href="GRender_8cpp_source.html">GRender.cpp</a>.</p>
 
-<p>References <a class="el" href="classGraphicsAPI.html#a1d9a56d216cf36a01e82370b9eb65b70">GraphicsAPI::clearErrors()</a>, <a class="el" href="Window_8h_source.html#l00037">RenderWindow::finalFrame()</a>, <a class="el" href="GRender_8h_source.html#l00090">getWindow()</a>, and <a class="el" href="GRender_8h_source.html#l00020">m_renderAPI</a>.</p>
+<p>References <a class="el" href="classGraphicsAPI.html#a1d9a56d216cf36a01e82370b9eb65b70">GraphicsAPI::clearErrors()</a>, <a class="el" href="Window_8h_source.html#l00037">RenderWindow::finalFrame()</a>, <a class="el" href="GRender_8h_source.html#l00094">getWindow()</a>, and <a class="el" href="GRender_8h_source.html#l00024">m_renderAPI</a>.</p>
 
 <p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00175">renderScene()</a>.</p>
 
@@ -247,9 +250,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00075">75</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00079">79</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>References <a class="el" href="LayerIDs_8h_source.html#l00007">Layer_3D</a>, and <a class="el" href="GRender_8h_source.html#l00022">m_renderLayers</a>.</p>
+<p>References <a class="el" href="LayerIDs_8h_source.html#l00007">Layer_3D</a>, and <a class="el" href="GRender_8h_source.html#l00026">m_renderLayers</a>.</p>
 
 <p>Referenced by <a class="el" href="ViewerApplication_8cpp_source.html#l00023">ModelViewer::onLoad()</a>.</p>
 
@@ -269,11 +272,11 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00052">52</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00056">56</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>References <a class="el" href="GRender_8h_source.html#l00020">m_renderAPI</a>.</p>
+<p>References <a class="el" href="GRender_8h_source.html#l00024">m_renderAPI</a>.</p>
 
-<p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00152">begin()</a>, <a class="el" href="InterfaceLayer_8cpp_source.html#l00045">InterfaceLayer::draw()</a>, <a class="el" href="Checkbox_8cpp_source.html#l00019">IElements::Checkbox::draw()</a>, <a class="el" href="Button_8cpp_source.html#l00036">IElements::Button::draw()</a>, <a class="el" href="WorldNode_8cpp_source.html#l00133">WorldNode::draw()</a>, <a class="el" href="TestNode_8cpp_source.html#l00109">TestNode::draw()</a>, <a class="el" href="TerrainNode_8cpp_source.html#l00297">TerrainNode::draw()</a>, <a class="el" href="Plane_8cpp_source.html#l00033">Plane::draw()</a>, <a class="el" href="3DRenderLayer_8cpp_source.html#l00013">ThreeDRenderLayer::draw()</a>, <a class="el" href="UserInterface_8cpp_source.html#l00010">ViewerUserInterface::draw()</a>, <a class="el" href="TextureMonitor_8cpp_source.html#l00030">TextureMonitor::f_loadEntity()</a>, <a class="el" href="FontMap_8cpp_source.html#l00004">FontMap::FontMap()</a>, <a class="el" href="TerrainPatch_8cpp_source.html#l00004">TerrainPatch::generateDrawLOD()</a>, <a class="el" href="InterfaceLayer_8cpp_source.html#l00006">InterfaceLayer::InterfaceLayer()</a>, <a class="el" href="FREngine_8cpp_source.html#l00094">FREngine::LoadFontmap()</a>, <a class="el" href="Plane_8cpp_source.html#l00004">Plane::Plane()</a>, <a class="el" href="Camera_8cpp_source.html#l00078">Camera::renderMoveTo()</a>, <a class="el" href="TerrainNode_8cpp_source.html#l00014">TerrainNode::TerrainNode()</a>, <a class="el" href="TestNode_8cpp_source.html#l00064">TestNode::TestNode()</a>, and <a class="el" href="WorldNode_8cpp_source.html#l00069">WorldNode::WorldNode()</a>.</p>
+<p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00152">begin()</a>, <a class="el" href="InterfaceLayer_8cpp_source.html#l00045">InterfaceLayer::draw()</a>, <a class="el" href="Checkbox_8cpp_source.html#l00019">Checkbox::draw()</a>, <a class="el" href="Button_8cpp_source.html#l00036">Button::draw()</a>, <a class="el" href="WorldNode_8cpp_source.html#l00133">WorldNode::draw()</a>, <a class="el" href="TestNode_8cpp_source.html#l00109">TestNode::draw()</a>, <a class="el" href="TerrainNode_8cpp_source.html#l00297">TerrainNode::draw()</a>, <a class="el" href="Plane_8cpp_source.html#l00033">Plane::draw()</a>, <a class="el" href="3DRenderLayer_8cpp_source.html#l00013">ThreeDRenderLayer::draw()</a>, <a class="el" href="UserInterface_8cpp_source.html#l00010">ViewerUserInterface::draw()</a>, <a class="el" href="TextureMonitor_8cpp_source.html#l00030">TextureMonitor::f_loadEntity()</a>, <a class="el" href="FontMap_8cpp_source.html#l00004">FontMap::FontMap()</a>, <a class="el" href="TerrainPatch_8cpp_source.html#l00004">TerrainPatch::generateDrawLOD()</a>, <a class="el" href="InterfaceLayer_8cpp_source.html#l00006">InterfaceLayer::InterfaceLayer()</a>, <a class="el" href="FREngine_8cpp_source.html#l00094">FREngine::LoadFontmap()</a>, <a class="el" href="Plane_8cpp_source.html#l00004">Plane::Plane()</a>, <a class="el" href="Camera_8cpp_source.html#l00078">Camera::renderMoveTo()</a>, <a class="el" href="TerrainNode_8cpp_source.html#l00014">TerrainNode::TerrainNode()</a>, <a class="el" href="TestNode_8cpp_source.html#l00064">TestNode::TestNode()</a>, and <a class="el" href="WorldNode_8cpp_source.html#l00069">WorldNode::WorldNode()</a>.</p>
 
 </div>
 </div>
@@ -291,9 +294,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00070">70</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00074">74</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>References <a class="el" href="LayerIDs_8h_source.html#l00009">Layer_Interface</a>, and <a class="el" href="GRender_8h_source.html#l00022">m_renderLayers</a>.</p>
+<p>References <a class="el" href="LayerIDs_8h_source.html#l00009">Layer_Interface</a>, and <a class="el" href="GRender_8h_source.html#l00026">m_renderLayers</a>.</p>
 
 <p>Referenced by <a class="el" href="GEngine_8cpp_source.html#l00078">GEngine::initialize()</a>, <a class="el" href="ViewerApplication_8cpp_source.html#l00023">ModelViewer::onLoad()</a>, and <a class="el" href="ViewerApplication_8cpp_source.html#l00148">ModelViewer::onUnload()</a>.</p>
 
@@ -314,9 +317,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00058">58</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00062">62</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>References <a class="el" href="LayerIDs_8h_source.html#l00010">Layers_Max</a>, <a class="el" href="LayerIDs_8h_source.html#l00006">Layers_Start</a>, and <a class="el" href="GRender_8h_source.html#l00022">m_renderLayers</a>.</p>
+<p>References <a class="el" href="LayerIDs_8h_source.html#l00010">Layers_Max</a>, <a class="el" href="LayerIDs_8h_source.html#l00006">Layers_Start</a>, and <a class="el" href="GRender_8h_source.html#l00026">m_renderLayers</a>.</p>
 
 <p>Referenced by <a class="el" href="TerrainNode_8cpp_source.html#l00297">TerrainNode::draw()</a>, <a class="el" href="ViewerApplication_8cpp_source.html#l00023">ModelViewer::onLoad()</a>, <a class="el" href="ViewerApplication_8cpp_source.html#l00148">ModelViewer::onUnload()</a>, <a class="el" href="GRender_8cpp_source.html#l00175">renderScene()</a>, and <a class="el" href="ViewerApplication_8cpp_source.html#l00232">ModelViewer::updateApplication()</a>.</p>
 
@@ -340,7 +343,7 @@ Here is the call graph for this function:</div>
 
 <p>References <a class="el" href="GRender_8cpp_source.html#l00010">GRenderer()</a>, and <a class="el" href="GRender_8cpp_source.html#l00008">renderInstance</a>.</p>
 
-<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00258">FREngine::Cleanup()</a>, <a class="el" href="FontMap_8cpp_source.html#l00072">FontMap::Cleanup()</a>, <a class="el" href="GEngine_8cpp_source.html#l00434">GEngine::doFrameUpdate()</a>, <a class="el" href="InterfaceLayer_8cpp_source.html#l00045">InterfaceLayer::draw()</a>, <a class="el" href="Checkbox_8cpp_source.html#l00019">IElements::Checkbox::draw()</a>, <a class="el" href="Button_8cpp_source.html#l00036">IElements::Button::draw()</a>, <a class="el" href="WorldNode_8cpp_source.html#l00133">WorldNode::draw()</a>, <a class="el" href="TestNode_8cpp_source.html#l00109">TestNode::draw()</a>, <a class="el" href="TerrainNode_8cpp_source.html#l00297">TerrainNode::draw()</a>, <a class="el" href="Plane_8cpp_source.html#l00033">Plane::draw()</a>, <a class="el" href="3DRenderLayer_8cpp_source.html#l00013">ThreeDRenderLayer::draw()</a>, <a class="el" href="UserInterface_8cpp_source.html#l00010">ViewerUserInterface::draw()</a>, <a class="el" href="TextureMonitor_8cpp_source.html#l00030">TextureMonitor::f_loadEntity()</a>, <a class="el" href="FontMap_8cpp_source.html#l00004">FontMap::FontMap()</a>, <a class="el" href="GEngine_8cpp_source.html#l00463">GEngine::gameLoop()</a>, <a class="el" href="TerrainPatch_8cpp_source.html#l00004">TerrainPatch::generateDrawLOD()</a>, <a class="el" href="GLShader_8cpp_source.html#l00009">GLShader::GLShader()</a>, <a class="el" href="FREngine_8cpp_source.html#l00019">FREngine::Init()</a>, <a class="el" href="GLAPI_8cpp_source.html#l00048">GL2GraphicsAPI::initialize()</a>, <a class="el" href="GEngine_8cpp_source.html#l00078">GEngine::initialize()</a>, <a class="el" href="InterfaceLayer_8cpp_source.html#l00006">InterfaceLayer::InterfaceLayer()</a>, <a class="el" href="FREngine_8cpp_source.html#l00033">FREngine::Load()</a>, <a class="el" href="FREngine_8cpp_source.html#l00094">FREngine::LoadFontmap()</a>, <a class="el" href="GLShader_8cpp_source.html#l00056">GLShader::loadShader()</a>, <a class="el" href="GLTexture_8cpp_source.html#l00028">GLTexture::loadTextureData()</a>, <a class="el" href="entry_8cpp_source.html#l00011">main()</a>, <a class="el" href="ViewerApplication_8cpp_source.html#l00023">ModelViewer::onLoad()</a>, <a class="el" href="ViewerApplication_8cpp_source.html#l00148">ModelViewer::onUnload()</a>, <a class="el" href="Plane_8cpp_source.html#l00004">Plane::Plane()</a>, <a class="el" href="GEngine_8cpp_source.html#l00389">GEngine::processEvent()</a>, <a class="el" href="Camera_8cpp_source.html#l00078">Camera::renderMoveTo()</a>, <a class="el" href="TerrainNode_8cpp_source.html#l00014">TerrainNode::TerrainNode()</a>, <a class="el" href="TestNode_8cpp_source.html#l00064">TestNode::TestNode()</a>, <a class="el" href="ViewerApplication_8cpp_source.html#l00016">toggleWireframeFn()</a>, <a class="el" href="EventHandlers_8h_source.html#l00072">ToggleWireframeHandler::triggerCallback()</a>, <a class="el" href="ViewerApplication_8cpp_source.html#l00232">ModelViewer::updateApplication()</a>, <a class="el" href="WorldNode_8cpp_source.html#l00069">WorldNode::WorldNode()</a>, <a class="el" href="GLShader_8cpp_source.html#l00028">GLShader::~GLShader()</a>, <a class="el" href="TerrainNode_8cpp_source.html#l00100">TerrainNode::~TerrainNode()</a>, <a class="el" href="TestNode_8cpp_source.html#l00091">TestNode::~TestNode()</a>, and <a class="el" href="WorldNode_8cpp_source.html#l00083">WorldNode::~WorldNode()</a>.</p>
+<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00258">FREngine::Cleanup()</a>, <a class="el" href="FontMap_8cpp_source.html#l00072">FontMap::Cleanup()</a>, <a class="el" href="GEngine_8cpp_source.html#l00434">GEngine::doFrameUpdate()</a>, <a class="el" href="InterfaceLayer_8cpp_source.html#l00045">InterfaceLayer::draw()</a>, <a class="el" href="Checkbox_8cpp_source.html#l00019">Checkbox::draw()</a>, <a class="el" href="Button_8cpp_source.html#l00036">Button::draw()</a>, <a class="el" href="WorldNode_8cpp_source.html#l00133">WorldNode::draw()</a>, <a class="el" href="TestNode_8cpp_source.html#l00109">TestNode::draw()</a>, <a class="el" href="TerrainNode_8cpp_source.html#l00297">TerrainNode::draw()</a>, <a class="el" href="Plane_8cpp_source.html#l00033">Plane::draw()</a>, <a class="el" href="3DRenderLayer_8cpp_source.html#l00013">ThreeDRenderLayer::draw()</a>, <a class="el" href="UserInterface_8cpp_source.html#l00010">ViewerUserInterface::draw()</a>, <a class="el" href="TextureMonitor_8cpp_source.html#l00030">TextureMonitor::f_loadEntity()</a>, <a class="el" href="FontMap_8cpp_source.html#l00004">FontMap::FontMap()</a>, <a class="el" href="GEngine_8cpp_source.html#l00463">GEngine::gameLoop()</a>, <a class="el" href="TerrainPatch_8cpp_source.html#l00004">TerrainPatch::generateDrawLOD()</a>, <a class="el" href="GLShader_8cpp_source.html#l00009">GLShader::GLShader()</a>, <a class="el" href="FREngine_8cpp_source.html#l00019">FREngine::Init()</a>, <a class="el" href="GLAPI_8cpp_source.html#l00048">GL2GraphicsAPI::initialize()</a>, <a class="el" href="GEngine_8cpp_source.html#l00078">GEngine::initialize()</a>, <a class="el" href="InterfaceLayer_8cpp_source.html#l00006">InterfaceLayer::InterfaceLayer()</a>, <a class="el" href="FREngine_8cpp_source.html#l00033">FREngine::Load()</a>, <a class="el" href="FREngine_8cpp_source.html#l00094">FREngine::LoadFontmap()</a>, <a class="el" href="GLShader_8cpp_source.html#l00056">GLShader::loadShader()</a>, <a class="el" href="GLTexture_8cpp_source.html#l00028">GLTexture::loadTextureData()</a>, <a class="el" href="entry_8cpp_source.html#l00009">main()</a>, <a class="el" href="ViewerApplication_8cpp_source.html#l00023">ModelViewer::onLoad()</a>, <a class="el" href="ViewerApplication_8cpp_source.html#l00148">ModelViewer::onUnload()</a>, <a class="el" href="Plane_8cpp_source.html#l00004">Plane::Plane()</a>, <a class="el" href="GEngine_8cpp_source.html#l00389">GEngine::processEvent()</a>, <a class="el" href="Camera_8cpp_source.html#l00078">Camera::renderMoveTo()</a>, <a class="el" href="TerrainNode_8cpp_source.html#l00014">TerrainNode::TerrainNode()</a>, <a class="el" href="TestNode_8cpp_source.html#l00064">TestNode::TestNode()</a>, <a class="el" href="ViewerApplication_8cpp_source.html#l00016">toggleWireframeFn()</a>, <a class="el" href="EventHandlers_8h_source.html#l00072">ToggleWireframeHandler::triggerCallback()</a>, <a class="el" href="ViewerApplication_8cpp_source.html#l00232">ModelViewer::updateApplication()</a>, <a class="el" href="WorldNode_8cpp_source.html#l00069">WorldNode::WorldNode()</a>, <a class="el" href="GLShader_8cpp_source.html#l00028">GLShader::~GLShader()</a>, <a class="el" href="TerrainNode_8cpp_source.html#l00100">TerrainNode::~TerrainNode()</a>, <a class="el" href="TestNode_8cpp_source.html#l00091">TestNode::~TestNode()</a>, and <a class="el" href="WorldNode_8cpp_source.html#l00083">WorldNode::~WorldNode()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -353,12 +356,12 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="ac45b26d019fe672b3692772e4b07f064"></a><!-- doxytag: member="GRenderer::getRenderLog" ref="ac45b26d019fe672b3692772e4b07f064" args="()" -->
+<a class="anchor" id="a5869a90c441779b8a14860a951aea0bd"></a><!-- doxytag: member="GRenderer::getRenderLog" ref="a5869a90c441779b8a14860a951aea0bd" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classRenderLog.html">RenderLog</a>* GRenderer::getRenderLog </td>
+          <td class="memname"><a class="el" href="classLogWriter.html">LogWriter</a>* GRenderer::getRenderLog </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [inline]</code></td>
@@ -367,9 +370,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00085">85</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00089">89</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>References <a class="el" href="GRender_8h_source.html#l00023">m_gameRenderLog</a>.</p>
+<p>References <a class="el" href="GRender_8h_source.html#l00027">m_gameRenderLog</a>.</p>
 
 <p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00258">FREngine::Cleanup()</a>, <a class="el" href="FontMap_8cpp_source.html#l00072">FontMap::Cleanup()</a>, <a class="el" href="TextureMonitor_8cpp_source.html#l00030">TextureMonitor::f_loadEntity()</a>, <a class="el" href="GLShader_8cpp_source.html#l00009">GLShader::GLShader()</a>, <a class="el" href="FREngine_8cpp_source.html#l00019">FREngine::Init()</a>, <a class="el" href="GLAPI_8cpp_source.html#l00048">GL2GraphicsAPI::initialize()</a>, <a class="el" href="FREngine_8cpp_source.html#l00033">FREngine::Load()</a>, <a class="el" href="GLShader_8cpp_source.html#l00056">GLShader::loadShader()</a>, <a class="el" href="GLTexture_8cpp_source.html#l00028">GLTexture::loadTextureData()</a>, and <a class="el" href="GLShader_8cpp_source.html#l00028">GLShader::~GLShader()</a>.</p>
 
@@ -391,7 +394,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="GRender_8cpp_source.html#l00162">162</a> of file <a class="el" href="GRender_8cpp_source.html">GRender.cpp</a>.</p>
 
-<p>References <a class="el" href="GRender_8h_source.html#l00026">m_shouldRenderWireframe</a>.</p>
+<p>References <a class="el" href="GRender_8h_source.html#l00030">m_shouldRenderWireframe</a>.</p>
 
 <p>Referenced by <a class="el" href="3DRenderLayer_8cpp_source.html#l00013">ThreeDRenderLayer::draw()</a>, and <a class="el" href="EventHandlers_8h_source.html#l00072">ToggleWireframeHandler::triggerCallback()</a>.</p>
 
@@ -411,9 +414,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00065">65</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00069">69</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>References <a class="el" href="LayerIDs_8h_source.html#l00008">Layer_Sprites</a>, and <a class="el" href="GRender_8h_source.html#l00022">m_renderLayers</a>.</p>
+<p>References <a class="el" href="LayerIDs_8h_source.html#l00008">Layer_Sprites</a>, and <a class="el" href="GRender_8h_source.html#l00026">m_renderLayers</a>.</p>
 
 </div>
 </div>
@@ -431,9 +434,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00080">80</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00084">84</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>References <a class="el" href="GRender_8h_source.html#l00025">m_textureMonitor</a>.</p>
+<p>References <a class="el" href="GRender_8h_source.html#l00029">m_textureMonitor</a>.</p>
 
 <p>Referenced by <a class="el" href="InterfaceLayer_8cpp_source.html#l00006">InterfaceLayer::InterfaceLayer()</a>, <a class="el" href="TerrainNode_8cpp_source.html#l00014">TerrainNode::TerrainNode()</a>, <a class="el" href="TestNode_8cpp_source.html#l00064">TestNode::TestNode()</a>, <a class="el" href="WorldNode_8cpp_source.html#l00069">WorldNode::WorldNode()</a>, <a class="el" href="TerrainNode_8cpp_source.html#l00100">TerrainNode::~TerrainNode()</a>, <a class="el" href="TestNode_8cpp_source.html#l00091">TestNode::~TestNode()</a>, and <a class="el" href="WorldNode_8cpp_source.html#l00083">WorldNode::~WorldNode()</a>.</p>
 
@@ -453,9 +456,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00090">90</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00094">94</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>References <a class="el" href="classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16">GraphicsAPI::getRenderWindow()</a>, and <a class="el" href="GRender_8h_source.html#l00020">m_renderAPI</a>.</p>
+<p>References <a class="el" href="classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16">GraphicsAPI::getRenderWindow()</a>, and <a class="el" href="GRender_8h_source.html#l00024">m_renderAPI</a>.</p>
 
 <p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00152">begin()</a>, <a class="el" href="GRender_8cpp_source.html#l00200">end()</a>, <a class="el" href="GEngine_8cpp_source.html#l00078">GEngine::initialize()</a>, and <a class="el" href="GEngine_8cpp_source.html#l00389">GEngine::processEvent()</a>.</p>
 
@@ -503,14 +506,14 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="GRender_8cpp_source.html#l00037">37</a> of file <a class="el" href="GRender_8cpp_source.html">GRender.cpp</a>.</p>
 
-<p>References <a class="el" href="Window_8h_source.html#l00025">RenderWindow::create()</a>, <a class="el" href="GraphicsAPI_8cpp_source.html#l00006">GraphicsAPI::getAPIInstance()</a>, <a class="el" href="classGraphicsAPI.html#a443b515f9d3256f7d9eac8a2bfb2a36d">GraphicsAPI::getAPISummary()</a>, <a class="el" href="classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16">GraphicsAPI::getRenderWindow()</a>, <a class="el" href="classGraphicsAPI.html#abd430dcdcf0f1519731736289fcb45b0">GraphicsAPI::initialize()</a>, <a class="el" href="LayerIDs_8h_source.html#l00007">Layer_3D</a>, <a class="el" href="LayerIDs_8h_source.html#l00009">Layer_Interface</a>, <a class="el" href="GRender_8h_source.html#l00023">m_gameRenderLog</a>, <a class="el" href="GRender_8h_source.html#l00020">m_renderAPI</a>, <a class="el" href="GRender_8h_source.html#l00026">m_shouldRenderWireframe</a>, <a class="el" href="GRender_8h_source.html#l00025">m_textureMonitor</a>, <a class="el" href="GRender_8h_source.html#l00028">setLayer()</a>, <a class="el" href="GRender_8cpp_source.html#l00112">uninitialize()</a>, and <a class="el" href="RenderLog_8cpp_source.html#l00004">RenderLog::writeToLogFile()</a>.</p>
+<p>References <a class="el" href="Window_8h_source.html#l00025">RenderWindow::create()</a>, <a class="el" href="GraphicsAPI_8cpp_source.html#l00006">GraphicsAPI::getAPIInstance()</a>, <a class="el" href="classGraphicsAPI.html#a443b515f9d3256f7d9eac8a2bfb2a36d">GraphicsAPI::getAPISummary()</a>, <a class="el" href="LogWriter_8cpp_source.html#l00058">LogWriter::getPathToLogFile()</a>, <a class="el" href="classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16">GraphicsAPI::getRenderWindow()</a>, <a class="el" href="classGraphicsAPI.html#abd430dcdcf0f1519731736289fcb45b0">GraphicsAPI::initialize()</a>, <a class="el" href="LayerIDs_8h_source.html#l00007">Layer_3D</a>, <a class="el" href="LayerIDs_8h_source.html#l00009">Layer_Interface</a>, <a class="el" href="GRender_8h_source.html#l00027">m_gameRenderLog</a>, <a class="el" href="GRender_8h_source.html#l00024">m_renderAPI</a>, <a class="el" href="GRender_8h_source.html#l00030">m_shouldRenderWireframe</a>, <a class="el" href="GRender_8h_source.html#l00029">m_textureMonitor</a>, <a class="el" href="GRender_8h_source.html#l00032">setLayer()</a>, <a class="el" href="GRender_8cpp_source.html#l00112">uninitialize()</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00040">LogWriter::writeData()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGRenderer_a9a16393e21f31a1610421b29220735dc_cgraph.png" border="0" usemap="#classGRenderer_a9a16393e21f31a1610421b29220735dc_cgraph" alt=""/></div>
 <map name="classGRenderer_a9a16393e21f31a1610421b29220735dc_cgraph" id="classGRenderer_a9a16393e21f31a1610421b29220735dc_cgraph">
-<area shape="rect" id="node3" href="classRenderWindow.html#a64ebcc830143b0b16c8b6a0cc4945fbf" title="RenderWindow::create" alt="" coords="223,5,377,35"/><area shape="rect" id="node5" href="classGraphicsAPI.html#a7471f9eb51207183088a48530e6e8a4c" title="GraphicsAPI::getAPIInstance" alt="" coords="203,59,397,88"/><area shape="rect" id="node7" href="classGraphicsAPI.html#a443b515f9d3256f7d9eac8a2bfb2a36d" title="GraphicsAPI::getAPISummary" alt="" coords="200,112,400,141"/><area shape="rect" id="node9" href="classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16" title="GraphicsAPI::getRenderWindow" alt="" coords="195,165,405,195"/><area shape="rect" id="node11" href="classGraphicsAPI.html#abd430dcdcf0f1519731736289fcb45b0" title="GraphicsAPI::initialize" alt="" coords="225,219,375,248"/><area shape="rect" id="node13" href="classGRenderer.html#a0530349c97b2b04a22019e26dd3d3bcc" title="GRenderer::setLayer" alt="" coords="229,272,371,301"/><area shape="rect" id="node15" href="classGRenderer.html#a8f9a5f0cbc4a4df10ad0e34af3c36a5a" title="GRenderer::uninitialize" alt="" coords="223,325,377,355"/><area shape="rect" id="node17" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58" title="RenderLog::writeToLogFile" alt="" coords="211,379,389,408"/></map>
+<area shape="rect" id="node3" href="classRenderWindow.html#a64ebcc830143b0b16c8b6a0cc4945fbf" title="RenderWindow::create" alt="" coords="223,5,377,35"/><area shape="rect" id="node5" href="classGraphicsAPI.html#a7471f9eb51207183088a48530e6e8a4c" title="GraphicsAPI::getAPIInstance" alt="" coords="203,59,397,88"/><area shape="rect" id="node7" href="classGraphicsAPI.html#a443b515f9d3256f7d9eac8a2bfb2a36d" title="GraphicsAPI::getAPISummary" alt="" coords="200,112,400,141"/><area shape="rect" id="node9" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a" title="Convert the string name of the log (I.e. Render.Log) to a internal filesystem node (Creating it if it..." alt="" coords="207,165,393,195"/><area shape="rect" id="node26" href="classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16" title="GraphicsAPI::getRenderWindow" alt="" coords="195,219,405,248"/><area shape="rect" id="node28" href="classGraphicsAPI.html#abd430dcdcf0f1519731736289fcb45b0" title="GraphicsAPI::initialize" alt="" coords="225,272,375,301"/><area shape="rect" id="node30" href="classGRenderer.html#a0530349c97b2b04a22019e26dd3d3bcc" title="GRenderer::setLayer" alt="" coords="229,325,371,355"/><area shape="rect" id="node32" href="classGRenderer.html#a8f9a5f0cbc4a4df10ad0e34af3c36a5a" title="GRenderer::uninitialize" alt="" coords="223,379,377,408"/><area shape="rect" id="node34" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="229,432,371,461"/><area shape="rect" id="node11" href="classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896" title="Filesystem::evaluateChild" alt="" coords="457,61,631,91"/><area shape="rect" id="node15" href="classFolder.html#ac9bd343406ddd4ee391558234e637cd1" title="Folder::searchForChild" alt="" coords="692,113,847,143"/><area shape="rect" id="node17" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117" title="Filesystem::getRoot" alt="" coords="475,165,613,195"/><area shape="rect" id="node21" href="classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5" title="Folder::getType" alt="" coords="488,219,600,248"/><area shape="rect" id="node23" href="classFolder.html#a86e65707748fb4e35f2cd7e60d452804" title="Folder::newChild" alt="" coords="484,272,604,301"/><area shape="rect" id="node13" href="classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c" title="FilesystemNode::getType" alt="" coords="684,60,855,89"/><area shape="rect" id="node19" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="716,167,823,196"/><area shape="rect" id="node36" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="461,379,627,408"/><area shape="rect" id="node38" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="455,432,633,461"/><area shape="rect" id="node40" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="461,485,627,515"/></map>
 </div>
 </p>
 
@@ -543,7 +546,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="GRender_8cpp_source.html#l00175">175</a> of file <a class="el" href="GRender_8cpp_source.html">GRender.cpp</a>.</p>
 
-<p>References <a class="el" href="GRender_8cpp_source.html#l00152">begin()</a>, <a class="el" href="classGraphicsAPI.html#a51f4f0fed27c8c19021f858864541e90">GraphicsAPI::clearActiveTexture()</a>, <a class="el" href="classGraphicsAPI.html#abc33a446a32b6eff1b540cbb04067eb4">GraphicsAPI::disableBlending()</a>, <a class="el" href="GRenderLayer_8h_source.html#l00010">GRenderLayer::draw()</a>, <a class="el" href="classGraphicsAPI.html#a8f03058d15aff693207f14a589b4dce5">GraphicsAPI::enableBlending()</a>, <a class="el" href="GRender_8cpp_source.html#l00200">end()</a>, <a class="el" href="GRender_8h_source.html#l00058">getLayer()</a>, <a class="el" href="LayerIDs_8h_source.html#l00007">Layer_3D</a>, <a class="el" href="LayerIDs_8h_source.html#l00009">Layer_Interface</a>, <a class="el" href="GRender_8h_source.html#l00020">m_renderAPI</a>, and <a class="el" href="classGraphicsAPI.html#a5fe75791c0d601d014fb35487913b5ce">GraphicsAPI::setupFor2D()</a>.</p>
+<p>References <a class="el" href="GRender_8cpp_source.html#l00152">begin()</a>, <a class="el" href="classGraphicsAPI.html#a51f4f0fed27c8c19021f858864541e90">GraphicsAPI::clearActiveTexture()</a>, <a class="el" href="classGraphicsAPI.html#abc33a446a32b6eff1b540cbb04067eb4">GraphicsAPI::disableBlending()</a>, <a class="el" href="GRenderLayer_8h_source.html#l00010">GRenderLayer::draw()</a>, <a class="el" href="classGraphicsAPI.html#a8f03058d15aff693207f14a589b4dce5">GraphicsAPI::enableBlending()</a>, <a class="el" href="GRender_8cpp_source.html#l00200">end()</a>, <a class="el" href="GRender_8h_source.html#l00062">getLayer()</a>, <a class="el" href="LayerIDs_8h_source.html#l00007">Layer_3D</a>, <a class="el" href="LayerIDs_8h_source.html#l00009">Layer_Interface</a>, <a class="el" href="GRender_8h_source.html#l00024">m_renderAPI</a>, and <a class="el" href="classGraphicsAPI.html#a5fe75791c0d601d014fb35487913b5ce">GraphicsAPI::setupFor2D()</a>.</p>
 
 <p>Referenced by <a class="el" href="GEngine_8cpp_source.html#l00463">GEngine::gameLoop()</a>.</p>
 
@@ -583,9 +586,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00028">28</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00032">32</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>References <a class="el" href="LayerIDs_8h_source.html#l00010">Layers_Max</a>, <a class="el" href="LayerIDs_8h_source.html#l00006">Layers_Start</a>, and <a class="el" href="GRender_8h_source.html#l00022">m_renderLayers</a>.</p>
+<p>References <a class="el" href="LayerIDs_8h_source.html#l00010">Layers_Max</a>, <a class="el" href="LayerIDs_8h_source.html#l00006">Layers_Start</a>, and <a class="el" href="GRender_8h_source.html#l00026">m_renderLayers</a>.</p>
 
 <p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00037">initialize()</a>.</p>
 
@@ -608,7 +611,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="GRender_8cpp_source.html#l00168">168</a> of file <a class="el" href="GRender_8cpp_source.html">GRender.cpp</a>.</p>
 
-<p>References <a class="el" href="GRender_8h_source.html#l00026">m_shouldRenderWireframe</a>.</p>
+<p>References <a class="el" href="GRender_8h_source.html#l00030">m_shouldRenderWireframe</a>.</p>
 
 <p>Referenced by <a class="el" href="ViewerApplication_8cpp_source.html#l00016">toggleWireframeFn()</a>, and <a class="el" href="EventHandlers_8h_source.html#l00072">ToggleWireframeHandler::triggerCallback()</a>.</p>
 
@@ -630,7 +633,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="GRender_8cpp_source.html#l00112">112</a> of file <a class="el" href="GRender_8cpp_source.html">GRender.cpp</a>.</p>
 
-<p>References <a class="el" href="LayerIDs_8h_source.html#l00010">Layers_Max</a>, <a class="el" href="GRender_8h_source.html#l00023">m_gameRenderLog</a>, <a class="el" href="GRender_8h_source.html#l00020">m_renderAPI</a>, <a class="el" href="GRender_8h_source.html#l00022">m_renderLayers</a>, and <a class="el" href="GRender_8h_source.html#l00025">m_textureMonitor</a>.</p>
+<p>References <a class="el" href="LayerIDs_8h_source.html#l00010">Layers_Max</a>, <a class="el" href="GRender_8h_source.html#l00027">m_gameRenderLog</a>, <a class="el" href="GRender_8h_source.html#l00024">m_renderAPI</a>, <a class="el" href="GRender_8h_source.html#l00026">m_renderLayers</a>, and <a class="el" href="GRender_8h_source.html#l00029">m_textureMonitor</a>.</p>
 
 <p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00037">initialize()</a>, and <a class="el" href="GRender_8cpp_source.html#l00021">~GRenderer()</a>.</p>
 
@@ -653,7 +656,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="GRender_8cpp_source.html#l00216">216</a> of file <a class="el" href="GRender_8cpp_source.html">GRender.cpp</a>.</p>
 
-<p>References <a class="el" href="LayerIDs_8h_source.html#l00010">Layers_Max</a>, <a class="el" href="GRender_8h_source.html#l00022">m_renderLayers</a>, and <a class="el" href="GRenderLayer_8h_source.html#l00011">GRenderLayer::update()</a>.</p>
+<p>References <a class="el" href="LayerIDs_8h_source.html#l00010">Layers_Max</a>, <a class="el" href="GRender_8h_source.html#l00026">m_renderLayers</a>, and <a class="el" href="GRenderLayer_8h_source.html#l00011">GRenderLayer::update()</a>.</p>
 
 <p>Referenced by <a class="el" href="GEngine_8cpp_source.html#l00434">GEngine::doFrameUpdate()</a>.</p>
 
@@ -669,20 +672,20 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a69a6d7d7b04a6f81860775670ca0fb7c"></a><!-- doxytag: member="GRenderer::m_gameRenderLog" ref="a69a6d7d7b04a6f81860775670ca0fb7c" args="" -->
+<a class="anchor" id="aaa54efa3a56d6b287e530a05ef582329"></a><!-- doxytag: member="GRenderer::m_gameRenderLog" ref="aaa54efa3a56d6b287e530a05ef582329" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classRenderLog.html">RenderLog</a>* <a class="el" href="classGRenderer.html#a69a6d7d7b04a6f81860775670ca0fb7c">GRenderer::m_gameRenderLog</a><code> [private]</code></td>
+          <td class="memname"><a class="el" href="classLogWriter.html">LogWriter</a>* <a class="el" href="classGRenderer.html#aaa54efa3a56d6b287e530a05ef582329">GRenderer::m_gameRenderLog</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00023">23</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00027">27</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>Referenced by <a class="el" href="GRender_8h_source.html#l00085">getRenderLog()</a>, <a class="el" href="GRender_8cpp_source.html#l00010">GRenderer()</a>, <a class="el" href="GRender_8cpp_source.html#l00037">initialize()</a>, and <a class="el" href="GRender_8cpp_source.html#l00112">uninitialize()</a>.</p>
+<p>Referenced by <a class="el" href="GRender_8h_source.html#l00089">getRenderLog()</a>, <a class="el" href="GRender_8cpp_source.html#l00010">GRenderer()</a>, <a class="el" href="GRender_8cpp_source.html#l00037">initialize()</a>, and <a class="el" href="GRender_8cpp_source.html#l00112">uninitialize()</a>.</p>
 
 </div>
 </div>
@@ -697,9 +700,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00020">20</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00024">24</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00152">begin()</a>, <a class="el" href="GRender_8cpp_source.html#l00200">end()</a>, <a class="el" href="GRender_8h_source.html#l00052">getGraphicsAPI()</a>, <a class="el" href="GRender_8h_source.html#l00090">getWindow()</a>, <a class="el" href="GRender_8cpp_source.html#l00010">GRenderer()</a>, <a class="el" href="GRender_8cpp_source.html#l00037">initialize()</a>, <a class="el" href="GRender_8cpp_source.html#l00175">renderScene()</a>, and <a class="el" href="GRender_8cpp_source.html#l00112">uninitialize()</a>.</p>
+<p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00152">begin()</a>, <a class="el" href="GRender_8cpp_source.html#l00200">end()</a>, <a class="el" href="GRender_8h_source.html#l00056">getGraphicsAPI()</a>, <a class="el" href="GRender_8h_source.html#l00094">getWindow()</a>, <a class="el" href="GRender_8cpp_source.html#l00010">GRenderer()</a>, <a class="el" href="GRender_8cpp_source.html#l00037">initialize()</a>, <a class="el" href="GRender_8cpp_source.html#l00175">renderScene()</a>, and <a class="el" href="GRender_8cpp_source.html#l00112">uninitialize()</a>.</p>
 
 </div>
 </div>
@@ -714,9 +717,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00022">22</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00026">26</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>Referenced by <a class="el" href="GRender_8h_source.html#l00075">get3DLayer()</a>, <a class="el" href="GRender_8h_source.html#l00070">getInterfaceManager()</a>, <a class="el" href="GRender_8h_source.html#l00058">getLayer()</a>, <a class="el" href="GRender_8h_source.html#l00065">getSpriteLayer()</a>, <a class="el" href="GRender_8cpp_source.html#l00010">GRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00028">setLayer()</a>, <a class="el" href="GRender_8cpp_source.html#l00112">uninitialize()</a>, and <a class="el" href="GRender_8cpp_source.html#l00216">update()</a>.</p>
+<p>Referenced by <a class="el" href="GRender_8h_source.html#l00079">get3DLayer()</a>, <a class="el" href="GRender_8h_source.html#l00074">getInterfaceManager()</a>, <a class="el" href="GRender_8h_source.html#l00062">getLayer()</a>, <a class="el" href="GRender_8h_source.html#l00069">getSpriteLayer()</a>, <a class="el" href="GRender_8cpp_source.html#l00010">GRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00032">setLayer()</a>, <a class="el" href="GRender_8cpp_source.html#l00112">uninitialize()</a>, and <a class="el" href="GRender_8cpp_source.html#l00216">update()</a>.</p>
 
 </div>
 </div>
@@ -731,7 +734,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00026">26</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00030">30</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
 <p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00162">getRenderWireframeValue()</a>, <a class="el" href="GRender_8cpp_source.html#l00037">initialize()</a>, and <a class="el" href="GRender_8cpp_source.html#l00168">setRenderWireframeValue()</a>.</p>
 
@@ -748,9 +751,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GRender_8h_source.html#l00025">25</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
+<p>Definition at line <a class="el" href="GRender_8h_source.html#l00029">29</a> of file <a class="el" href="GRender_8h_source.html">GRender.h</a>.</p>
 
-<p>Referenced by <a class="el" href="GRender_8h_source.html#l00080">getTextureMonitor()</a>, <a class="el" href="GRender_8cpp_source.html#l00010">GRenderer()</a>, <a class="el" href="GRender_8cpp_source.html#l00037">initialize()</a>, and <a class="el" href="GRender_8cpp_source.html#l00112">uninitialize()</a>.</p>
+<p>Referenced by <a class="el" href="GRender_8h_source.html#l00084">getTextureMonitor()</a>, <a class="el" href="GRender_8cpp_source.html#l00010">GRenderer()</a>, <a class="el" href="GRender_8cpp_source.html#l00037">initialize()</a>, and <a class="el" href="GRender_8cpp_source.html#l00112">uninitialize()</a>.</p>
 
 </div>
 </div>
@@ -759,7 +762,7 @@ Here is the call graph for this function:</div>
 <li>Code/Render/<a class="el" href="GRender_8cpp_source.html">GRender.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

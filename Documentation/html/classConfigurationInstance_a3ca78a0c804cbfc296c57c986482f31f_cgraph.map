@@ -1,9 +1,9 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$classConfigurationInstance.html#a27e4adb2df8981a3efb6056f8da94e25" title="ConfigurationInstance::internalSearchNode" alt="" coords="263,139,532,168"/>
-<area shape="rect" id="node5" href="$classConfigurationFolder.html#a2e490b6594b1d65fc4eede8fe48fd634" title="ConfigurationFolder::getChild" alt="" coords="624,5,813,35"/>
+<area shape="rect" id="node5" href="$classConfigurationFolder.html#a2e490b6594b1d65fc4eede8fe48fd634" title="Return the specified child of the node." alt="" coords="624,5,813,35"/>
 <area shape="rect" id="node7" href="$classConfigurationNode.html#aa43c73fa441abb475d68f30732996744" title="ConfigurationNode::getName" alt="" coords="624,59,813,88"/>
 <area shape="rect" id="node9" href="$classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877" title="ConfigurationInstance::getNode" alt="" coords="616,112,821,141"/>
 <area shape="rect" id="node11" href="$classConfigurationInstance.html#a3c0dc2bb84974008c8cd33629e73a7df" title="ConfigurationInstance::getNumberOfNodes" alt="" coords="583,165,855,195"/>
 <area shape="rect" id="node13" href="$classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30" title="ConfigurationNode::getType" alt="" coords="627,219,811,248"/>
-<area shape="rect" id="node15" href="$classConfigurationFolder.html#abfcede97444700bca83822238d2e103f" title="ConfigurationFolder::numberOfChildren" alt="" coords="595,272,843,301"/>
+<area shape="rect" id="node15" href="$classConfigurationFolder.html#abfcede97444700bca83822238d2e103f" title="Return the number of children in this node." alt="" coords="595,272,843,301"/>
 </map>

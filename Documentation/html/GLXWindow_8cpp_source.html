@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -134,7 +133,7 @@
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094 }
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096 <span class="keywordtype">bool</span> <a class="code" href="classGWindowGLX.html#a8fcd36290f23054f01294b90165266e6">GWindowGLX::create</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * Title, <span class="keywordtype">int</span> W, <span class="keywordtype">int</span> H, <a class="code" href="classGRenderer.html">GRenderer</a>* Render)
+<a name="l00096"></a>00096 <span class="keywordtype">bool</span> <a class="code" href="classGWindowGLX.html#a8fcd36290f23054f01294b90165266e6">GWindowGLX::create</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * Title, <span class="keywordtype">int</span> W, <span class="keywordtype">int</span> H, <a class="code" href="classGRenderer.html" title="The core renderer class - Singleton.">GRenderer</a>* Render)
 <a name="l00097"></a>00097 {
 <a name="l00098"></a>00098     printf(<span class="stringliteral">&quot;GLX window initialized\n&quot;</span>);
 <a name="l00099"></a>00099 
@@ -244,9 +243,9 @@
 <a name="l00203"></a>00203     <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00204"></a>00204 }
 <a name="l00205"></a>00205 
-<a name="l00206"></a>00206 <a class="code" href="structInput__Event.html">Input_Event</a> keyEvent_ASCI(<span class="keywordtype">int</span> itype, <span class="keywordtype">int</span> ASCIVal)
+<a name="l00206"></a>00206 <a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> keyEvent_ASCI(<span class="keywordtype">int</span> itype, <span class="keywordtype">int</span> ASCIVal)
 <a name="l00207"></a>00207 {
-<a name="l00208"></a>00208     <a class="code" href="structInput__Event.html">Input_Event</a> Event;
+<a name="l00208"></a>00208     <a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> Event;
 <a name="l00209"></a>00209     Event.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a> = itype;
 <a name="l00210"></a>00210 
 <a name="l00211"></a>00211     <span class="keywordflow">if</span> (ASCIVal &gt; 64 &amp;&amp; ASCIVal &lt; 91)
@@ -518,7 +517,7 @@
 <a name="l00477"></a>00477                 {
 <a name="l00478"></a>00478                     printf(<span class="stringliteral">&quot;Window destroyed\n&quot;</span>);
 <a name="l00479"></a>00479 
-<a name="l00480"></a>00480                     <a class="code" href="structInput__Event.html">Input_Event</a> newEvent;
+<a name="l00480"></a>00480                     <a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> newEvent;
 <a name="l00481"></a>00481                     newEvent.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a> = <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a4cc1c23763fa8adcca339db8f535ffda">input_event_window</a>;
 <a name="l00482"></a>00482                     newEvent.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a>.push_back(<a class="code" href="Keys_8h.html#ade02ebcdfd4994c66d26563fb1494a35a23d163cec1595f02559c799aebccc821">WINDOW_KILL_REQUEST</a>);
 <a name="l00483"></a>00483 
@@ -531,7 +530,7 @@
 <a name="l00490"></a>00490                 {
 <a name="l00491"></a>00491                     <span class="keywordflow">if</span> (XLookupString(&amp;event.xkey,text,255,&amp;key,0) == 1)
 <a name="l00492"></a>00492                     {
-<a name="l00493"></a>00493                         <a class="code" href="structInput__Event.html">Input_Event</a> E = keyEvent_ASCI(<a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a9d88d3d96d29eec5b265ac5a5885ee03">input_event_keyreleased</a>, text[0]);
+<a name="l00493"></a>00493                         <a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> E = keyEvent_ASCI(<a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a9d88d3d96d29eec5b265ac5a5885ee03">input_event_keyreleased</a>, text[0]);
 <a name="l00494"></a>00494 
 <a name="l00495"></a>00495                         <span class="keywordflow">if</span> (E.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a> != -1)
 <a name="l00496"></a>00496                         {
@@ -542,7 +541,7 @@
 <a name="l00501"></a>00501 
 <a name="l00502"></a>00502                                 KeysDown[E.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a>[0]] = <span class="keyword">true</span>;
 <a name="l00503"></a>00503 
-<a name="l00504"></a>00504                                 <a class="code" href="structInput__Event.html">Input_Event</a> E = keyEvent_ASCI(<a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a51e3936b5375256b432e5b61b7404c95">input_event_keypressed</a>, text[0]);
+<a name="l00504"></a>00504                                 <a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> E = keyEvent_ASCI(<a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a51e3936b5375256b432e5b61b7404c95">input_event_keypressed</a>, text[0]);
 <a name="l00505"></a>00505 
 <a name="l00506"></a>00506                                 <span class="keywordflow">if</span> (E.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a> != -1)
 <a name="l00507"></a>00507                                 {
@@ -561,7 +560,7 @@
 <a name="l00520"></a>00520                 {
 <a name="l00521"></a>00521                     <span class="keywordflow">if</span> (XLookupString(&amp;event.xkey,text,255,&amp;key,0) == 1)
 <a name="l00522"></a>00522                     {
-<a name="l00523"></a>00523                         <a class="code" href="structInput__Event.html">Input_Event</a> E = keyEvent_ASCI(<a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a9d88d3d96d29eec5b265ac5a5885ee03">input_event_keyreleased</a>, text[0]);
+<a name="l00523"></a>00523                         <a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> E = keyEvent_ASCI(<a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a9d88d3d96d29eec5b265ac5a5885ee03">input_event_keyreleased</a>, text[0]);
 <a name="l00524"></a>00524 
 <a name="l00525"></a>00525                         <span class="keywordflow">if</span> (E.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a> != -1)
 <a name="l00526"></a>00526                             sKeyDown[E.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a>[0]] = <span class="keyword">true</span>;
@@ -578,7 +577,7 @@
 <a name="l00537"></a>00537                     Data.push_back(event.xbutton.x);
 <a name="l00538"></a>00538                     Data.push_back(event.xbutton.y);
 <a name="l00539"></a>00539 
-<a name="l00540"></a>00540                     <a class="code" href="structInput__Event.html">Input_Event</a> E;
+<a name="l00540"></a>00540                     <a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> E;
 <a name="l00541"></a>00541                     E.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a> = <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a4df5f6120a667ead96505fc090e7bd92">input_event_button_one</a>;
 <a name="l00542"></a>00542                     E.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a> = Data;
 <a name="l00543"></a>00543                     E.<a class="code" href="structInput__Event.html#ad7c12566ab15a24535c87d192f0df406">Event_Flags</a> = 0;
@@ -596,7 +595,7 @@
 <a name="l00555"></a>00555                     Data.push_back(event.xbutton.x);
 <a name="l00556"></a>00556                     Data.push_back(event.xbutton.y);
 <a name="l00557"></a>00557 
-<a name="l00558"></a>00558                     <a class="code" href="structInput__Event.html">Input_Event</a> E;
+<a name="l00558"></a>00558                     <a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> E;
 <a name="l00559"></a>00559                     E.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a> = <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a4df5f6120a667ead96505fc090e7bd92">input_event_button_one</a>;
 <a name="l00560"></a>00560                     E.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a> = Data;
 <a name="l00561"></a>00561                     E.<a class="code" href="structInput__Event.html#ad7c12566ab15a24535c87d192f0df406">Event_Flags</a> = 0;
@@ -634,7 +633,7 @@
 <a name="l00593"></a>00593                     Data.push_back(event.xbutton.x);
 <a name="l00594"></a>00594                     Data.push_back(event.xbutton.y);
 <a name="l00595"></a>00595 
-<a name="l00596"></a>00596                     <a class="code" href="structInput__Event.html">Input_Event</a> E;
+<a name="l00596"></a>00596                     <a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> E;
 <a name="l00597"></a>00597                     E.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a> = <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a4df5f6120a667ead96505fc090e7bd92">input_event_button_one</a>;
 <a name="l00598"></a>00598                     E.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a> = Data;
 <a name="l00599"></a>00599                     E.<a class="code" href="structInput__Event.html#ad7c12566ab15a24535c87d192f0df406">Event_Flags</a> = 0;
@@ -654,7 +653,7 @@
 <a name="l00613"></a>00613     {
 <a name="l00614"></a>00614         <span class="keywordflow">if</span> (sKeyDown[i] == <span class="keyword">true</span>)
 <a name="l00615"></a>00615         {
-<a name="l00616"></a>00616             <a class="code" href="structInput__Event.html">Input_Event</a> E;
+<a name="l00616"></a>00616             <a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> E;
 <a name="l00617"></a>00617             E.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a> = <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a9d88d3d96d29eec5b265ac5a5885ee03">input_event_keyreleased</a>;
 <a name="l00618"></a>00618             E.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a>.push_back(i);
 <a name="l00619"></a>00619 
@@ -677,7 +676,7 @@
 <a name="l00636"></a>00636 <span class="preprocessor">#endif //_BUILD_LINUX_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

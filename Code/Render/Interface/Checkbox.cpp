@@ -3,20 +3,20 @@
 #include "../GRender.h"
 #include <Input/Keys.h>
 
-IElements::Checkbox::Checkbox(float x, float y, float w, float h, Colour m_downClr, Colour m_upClr) : IElement(x, y, w, h)
+Checkbox::Checkbox(float x, float y, float w, float h, Color m_downClr, Color m_upClr) : IElement(x, y, w, h)
 {
     m_mouseOver = false;
     m_mouseDown = false;
     m_isChecked = false;
 }
 
-IElements::Checkbox::~Checkbox()
+Checkbox::~Checkbox()
 {
 
 }
 
 
-void IElements::Checkbox::draw(InterfaceLayer* IL)
+void Checkbox::draw(InterfaceLayer* IL)
 {
 
     GRenderer::getRenderer()->getGraphicsAPI()->enableBlending();
@@ -45,7 +45,7 @@ void IElements::Checkbox::draw(InterfaceLayer* IL)
     GRenderer::getRenderer()->getGraphicsAPI()->disableBlending();
 }
 
-bool IElements::Checkbox::handleInput(Input_Event e)
+bool Checkbox::handleInput(Input_Event e)
 {
     bool m_Result = false;
 

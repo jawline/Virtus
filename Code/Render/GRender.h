@@ -7,12 +7,16 @@
 #include "./TextureMonitor/TextureMonitor.h"
 #include "./GraphicsAPI/Window.h"
 #include "./GraphicsAPI/GraphicsAPI.h"
-#include "RenderLog.h"
+#include <LogWriter/LogWriter.h>
 
 class GSpriteLayer;
 class InterfaceLayer;
 class ThreeDRenderLayer;
 
+/**
+ * @brief The core renderer class - Singleton
+ *
+ */
 class GRenderer
 {
 private:
@@ -20,7 +24,7 @@ private:
     GraphicsAPI* m_renderAPI;
 
     GRenderLayer* m_renderLayers[Layers_Max];
-    RenderLog* m_gameRenderLog;
+    LogWriter* m_gameRenderLog;
 
     TextureMonitor* m_textureMonitor;
     bool m_shouldRenderWireframe;
@@ -82,7 +86,7 @@ public:
         return m_textureMonitor;
     }
 
-    RenderLog* getRenderLog()
+    LogWriter* getRenderLog()
     {
         return m_gameRenderLog;
     }

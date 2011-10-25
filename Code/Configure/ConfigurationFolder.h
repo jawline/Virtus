@@ -3,7 +3,9 @@
 #include "ConfigurationNode.h"
 #include <vector>
 
-/* A implementation of a configuration folder, it has a number of children pointers to them and a name */
+/**
+ * @brief A implementation of a configuration folder, it has a number of children pointers to them and a name
+ */
 
 class ConfigurationFolder : public ConfigurationNode
 {
@@ -19,11 +21,27 @@ public:
     ConfigurationFolder(const char* Name);
     ~ConfigurationFolder();
 
+    /**
+     * @brief Return that the node is a configuration node
+     */
+
     int getType() { return configurationFolder; }
+
+    /**
+     * @brief Add the specified child to this node
+     */
 
     void addChild(ConfigurationNode* node);
 
+    /**
+     * @brief Return the specified child of the node
+     */
+
     ConfigurationNode* getChild(unsigned int iter) { return m_childNodes.at(iter); }
+
+    /**
+     * @brief Return the number of children in this node
+     */
     size_t numberOfChildren() { return m_childNodes.size(); }
 
 };

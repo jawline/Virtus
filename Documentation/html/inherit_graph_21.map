@@ -1,4 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$classGApplication.html" title="GApplication" alt="" coords="5,5,101,35"/>
+<area shape="rect" id="node1" href="$classGApplication.html" title="Abstraction of a application that runs on the engine." alt="" coords="5,5,101,35"/>
 <area shape="rect" id="node3" href="$classModelViewer.html" title="ModelViewer" alt="" coords="151,5,247,35"/>
 </map>

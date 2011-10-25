@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -77,7 +76,7 @@
 <a name="l00036"></a>00036     {
 <a name="l00037"></a>00037         <span class="keywordtype">char</span> Buffer[512];
 <a name="l00038"></a>00038         sprintf(Buffer, <span class="stringliteral">&quot;Unable to load texture %s due to being unable to create a Texture object\n&quot;</span>, Name.c_str());
-<a name="l00039"></a>00039         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(Buffer);
+<a name="l00039"></a>00039         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(Buffer);
 <a name="l00040"></a>00040         <span class="keywordflow">return</span> 0;
 <a name="l00041"></a>00041     }
 <a name="l00042"></a>00042 
@@ -87,7 +86,7 @@
 <a name="l00046"></a>00046     {
 <a name="l00047"></a>00047         <span class="keywordtype">char</span> Buffer[512];
 <a name="l00048"></a>00048         sprintf(Buffer, <span class="stringliteral">&quot;Unable to load texture %s due to being unable to find specified node in filesystem\n&quot;</span>, Name.c_str());
-<a name="l00049"></a>00049         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(Buffer);
+<a name="l00049"></a>00049         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(Buffer);
 <a name="l00050"></a>00050         <span class="keywordflow">return</span> 0;
 <a name="l00051"></a>00051     }
 <a name="l00052"></a>00052 
@@ -95,7 +94,7 @@
 <a name="l00054"></a>00054     {
 <a name="l00055"></a>00055         <span class="keywordtype">char</span> Buffer[512];
 <a name="l00056"></a>00056         sprintf(Buffer, <span class="stringliteral">&quot;Unable to load texture %s due to node not being marked as a file in the filesystem\n&quot;</span>, Name.c_str());
-<a name="l00057"></a>00057         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(Buffer);
+<a name="l00057"></a>00057         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(Buffer);
 <a name="l00058"></a>00058         <span class="keywordflow">return</span> 0;
 <a name="l00059"></a>00059     }
 <a name="l00060"></a>00060 
@@ -109,7 +108,7 @@
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069         <span class="keywordtype">char</span> Buffer[512];
 <a name="l00070"></a>00070         sprintf(Buffer, <span class="stringliteral">&quot;Unable to load texture %s due to being unable to load from file path\n&quot;</span>, Name.c_str());
-<a name="l00071"></a>00071         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(Buffer);
+<a name="l00071"></a>00071         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(Buffer);
 <a name="l00072"></a>00072 
 <a name="l00073"></a>00073         <span class="keyword">delete</span> newTexture;
 <a name="l00074"></a>00074 
@@ -123,7 +122,7 @@
 <a name="l00082"></a>00082 
 <a name="l00083"></a>00083         <span class="keywordtype">char</span> Buffer[512];
 <a name="l00084"></a>00084         sprintf(Buffer, <span class="stringliteral">&quot;Succesfully loaded texture %s\n&quot;</span>, Name.c_str());
-<a name="l00085"></a>00085         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(Buffer);
+<a name="l00085"></a>00085         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(Buffer);
 <a name="l00086"></a>00086 
 <a name="l00087"></a>00087         <a class="code" href="classResourceMonitor.html#a51748f69f24e6e9725c83bd09d28dd5d">f_addEntity</a>( Name, (<span class="keywordtype">void</span>*) newTexture );
 <a name="l00088"></a>00088 
@@ -145,7 +144,7 @@
 <a name="l00104"></a>00104 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

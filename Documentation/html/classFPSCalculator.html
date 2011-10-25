@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -46,6 +45,9 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="FPSCalculator" -->
+<p>Class to calculate how many frames are occurring per second.  
+ <a href="classFPSCalculator.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="FPSCalculator_8h_source.html">FPSCalculator.h</a>&gt;</code></p>
 
 <p><a href="classFPSCalculator-members.html">List of all members.</a></p>
@@ -54,7 +56,9 @@
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFPSCalculator.html#a16855e1427ea2a0f2962e4b431bb2faf">FPSCalculator</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFPSCalculator.html#a5266e420f914751170b470095e2b7d0a">frame</a> (float seconds)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify that a frame has occured and how long it took.  <a href="#a5266e420f914751170b470095e2b7d0a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4">getFPS</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the last calculated FPS.  <a href="#a0adc463c21e25972f427fcb8c6a207f4"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFPSCalculator.html#a80a84ffab663c1ea297f8adfebdf496a">m_curNumFrames</a></td></tr>
@@ -62,8 +66,9 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFPSCalculator.html#a721a9c49ac41a27b638eb9c86cfb37cd">m_lastAvg</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="FPSCalculator_8h_source.html#l00004">4</a> of file <a class="el" href="FPSCalculator_8h_source.html">FPSCalculator.h</a>.</p>
+<div class="textblock"><p>Class to calculate how many frames are occurring per second. </p>
+
+<p>Definition at line <a class="el" href="FPSCalculator_8h_source.html#l00008">8</a> of file <a class="el" href="FPSCalculator_8h_source.html">FPSCalculator.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a16855e1427ea2a0f2962e4b431bb2faf"></a><!-- doxytag: member="FPSCalculator::FPSCalculator" ref="a16855e1427ea2a0f2962e4b431bb2faf" args="()" -->
 <div class="memitem">
@@ -81,7 +86,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="FPSCalculator_8cpp_source.html#l00004">4</a> of file <a class="el" href="FPSCalculator_8cpp_source.html">FPSCalculator.cpp</a>.</p>
 
-<p>References <a class="el" href="FPSCalculator_8h_source.html#l00007">m_curNumFrames</a>, <a class="el" href="FPSCalculator_8h_source.html#l00008">m_curTime</a>, and <a class="el" href="FPSCalculator_8h_source.html#l00010">m_lastAvg</a>.</p>
+<p>References <a class="el" href="FPSCalculator_8h_source.html#l00011">m_curNumFrames</a>, <a class="el" href="FPSCalculator_8h_source.html#l00012">m_curTime</a>, and <a class="el" href="FPSCalculator_8h_source.html#l00014">m_lastAvg</a>.</p>
 
 </div>
 </div>
@@ -101,9 +106,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Notify that a frame has occured and how long it took. </p>
+
 <p>Definition at line <a class="el" href="FPSCalculator_8cpp_source.html#l00011">11</a> of file <a class="el" href="FPSCalculator_8cpp_source.html">FPSCalculator.cpp</a>.</p>
 
-<p>References <a class="el" href="FPSCalculator_8h_source.html#l00007">m_curNumFrames</a>, <a class="el" href="FPSCalculator_8h_source.html#l00008">m_curTime</a>, and <a class="el" href="FPSCalculator_8h_source.html#l00010">m_lastAvg</a>.</p>
+<p>References <a class="el" href="FPSCalculator_8h_source.html#l00011">m_curNumFrames</a>, <a class="el" href="FPSCalculator_8h_source.html#l00012">m_curTime</a>, and <a class="el" href="FPSCalculator_8h_source.html#l00014">m_lastAvg</a>.</p>
 
 <p>Referenced by <a class="el" href="GEngine_8cpp_source.html#l00463">GEngine::gameLoop()</a>.</p>
 
@@ -123,9 +130,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FPSCalculator_8h_source.html#l00016">16</a> of file <a class="el" href="FPSCalculator_8h_source.html">FPSCalculator.h</a>.</p>
+<p>Return the last calculated FPS. </p>
 
-<p>References <a class="el" href="FPSCalculator_8h_source.html#l00010">m_lastAvg</a>.</p>
+<p>Definition at line <a class="el" href="FPSCalculator_8h_source.html#l00027">27</a> of file <a class="el" href="FPSCalculator_8h_source.html">FPSCalculator.h</a>.</p>
+
+<p>References <a class="el" href="FPSCalculator_8h_source.html#l00014">m_lastAvg</a>.</p>
 
 <p>Referenced by <a class="el" href="UserInterface_8cpp_source.html#l00010">ViewerUserInterface::draw()</a>, and <a class="el" href="GEngine_8cpp_source.html#l00349">GEngine::f_sleep()</a>.</p>
 
@@ -143,7 +152,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FPSCalculator_8h_source.html#l00007">7</a> of file <a class="el" href="FPSCalculator_8h_source.html">FPSCalculator.h</a>.</p>
+<p>Definition at line <a class="el" href="FPSCalculator_8h_source.html#l00011">11</a> of file <a class="el" href="FPSCalculator_8h_source.html">FPSCalculator.h</a>.</p>
 
 <p>Referenced by <a class="el" href="FPSCalculator_8cpp_source.html#l00004">FPSCalculator()</a>, and <a class="el" href="FPSCalculator_8cpp_source.html#l00011">frame()</a>.</p>
 
@@ -160,7 +169,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FPSCalculator_8h_source.html#l00008">8</a> of file <a class="el" href="FPSCalculator_8h_source.html">FPSCalculator.h</a>.</p>
+<p>Definition at line <a class="el" href="FPSCalculator_8h_source.html#l00012">12</a> of file <a class="el" href="FPSCalculator_8h_source.html">FPSCalculator.h</a>.</p>
 
 <p>Referenced by <a class="el" href="FPSCalculator_8cpp_source.html#l00004">FPSCalculator()</a>, and <a class="el" href="FPSCalculator_8cpp_source.html#l00011">frame()</a>.</p>
 
@@ -177,9 +186,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FPSCalculator_8h_source.html#l00010">10</a> of file <a class="el" href="FPSCalculator_8h_source.html">FPSCalculator.h</a>.</p>
+<p>Definition at line <a class="el" href="FPSCalculator_8h_source.html#l00014">14</a> of file <a class="el" href="FPSCalculator_8h_source.html">FPSCalculator.h</a>.</p>
 
-<p>Referenced by <a class="el" href="FPSCalculator_8cpp_source.html#l00004">FPSCalculator()</a>, <a class="el" href="FPSCalculator_8cpp_source.html#l00011">frame()</a>, and <a class="el" href="FPSCalculator_8h_source.html#l00016">getFPS()</a>.</p>
+<p>Referenced by <a class="el" href="FPSCalculator_8cpp_source.html#l00004">FPSCalculator()</a>, <a class="el" href="FPSCalculator_8cpp_source.html#l00011">frame()</a>, and <a class="el" href="FPSCalculator_8h_source.html#l00027">getFPS()</a>.</p>
 
 </div>
 </div>
@@ -188,7 +197,7 @@ Private Attributes</h2></td></tr>
 <li>Code/Core/<a class="el" href="FPSCalculator_8cpp_source.html">FPSCalculator.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

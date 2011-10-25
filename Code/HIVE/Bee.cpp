@@ -20,7 +20,7 @@ WorkerBee::~WorkerBee()
 
 }
 
-void WorkerBee::Run(void* Args)
+void WorkerBee::run(void* Args)
 {
         printf("Worker bee %i running\n", m_beeNumber);
 

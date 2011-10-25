@@ -15,7 +15,7 @@ GLShader::GLShader()
 
     char Buffer[512];
     sprintf(Buffer, "Created shader unique number %i\n", m_debugID);
-    GRenderer::getRenderer()->getRenderLog()->writeToLogFile(Buffer);
+    GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
 
     m_vertexShaderID = 0;
     m_fragmentShaderID = 0;
@@ -49,7 +49,7 @@ GLShader::~GLShader()
 
     char Buffer[512];
     sprintf(Buffer, "Destroying shader unique number %i\n", m_debugID);
-    GRenderer::getRenderer()->getRenderLog()->writeToLogFile(Buffer);
+    GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
 
 }
 
@@ -106,23 +106,23 @@ bool GLShader::loadShader(const char* vert, const char* frag)
         if (isCompiledFS == false)
         {
 
-            GRenderer::getRenderer()->getRenderLog()->writeToLogFile("Fragment error");
+            GRenderer::getRenderer()->getRenderLog()->writeData("Fragment error");
 
             int len;
             glGetShaderInfoLog(m_fragmentShaderID, 1024, &len, Buffer);
 
-            GRenderer::getRenderer()->getRenderLog()->writeToLogFile(Buffer);
+            GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
         }
 
         if (isCompiledVS == false)
         {
 
-            GRenderer::getRenderer()->getRenderLog()->writeToLogFile("Vertex error");
+            GRenderer::getRenderer()->getRenderLog()->writeData("Vertex error");
 
             int len;
             glGetShaderInfoLog(m_vertexShaderID, 1024, &len, Buffer);
 
-            GRenderer::getRenderer()->getRenderLog()->writeToLogFile(Buffer);
+            GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
         }
 
         glDeleteShader(m_vertexShaderID);
@@ -165,7 +165,7 @@ bool GLShader::loadShader(const char* vert, const char* frag)
 
     if (errorMessage != 0)
     {
-        GRenderer::getRenderer()->getRenderLog()->writeToLogFile("Error occured compiling shader");
+        GRenderer::getRenderer()->getRenderLog()->writeData("Error occured compiling shader");
     }
 
     printf("Compiled shader results %i %i %i\n", isLinked, isCompiledVS, isCompiledFS);

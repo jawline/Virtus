@@ -3,6 +3,10 @@
 
 class GEngine;
 
+/**
+ * @brief Abstraction of a application that runs on the engine
+ *
+ */
 class GApplication
 {
 private:
@@ -11,23 +15,21 @@ public:
 
     virtual ~GApplication() {}
 
-    virtual bool onLoad(GEngine* Engine)
-    {
+    /**
+     * @brief Called the first time the app is loaded, initialisation should be done here
+     *
+     */
+    virtual bool onLoad(GEngine* Engine) = 0;
 
-        return false;
-    }
+    /**
+     * @brief Called when the app is unloaded, deinitilization should be done here
+     */
+    virtual bool onUnload() = 0;
 
-    virtual bool onUnload()
-    {
-
-        return false;
-    }
-
-    virtual void updateApplication(float seconds)
-    {
-
-        return;
-    }
+    /**
+     * @brief Called once per frame with the time that has elapsed since the last frame in seconds
+     */
+    virtual void updateApplication(float seconds) = 0;
 };
 
 #endif //_APPLICATION_DEF_H_

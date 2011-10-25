@@ -33,7 +33,7 @@ void GLTexture::loadTextureData(InputDataFormat format, unsigned int width, unsi
         char Buffer[512];
 
         sprintf(Buffer, "TextureID: %i loadTextureData called with a bad width or height\n", textureDebugIdentifier);
-        GRenderer::getRenderer()->getRenderLog()->writeToLogFile(Buffer);
+        GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
 
         return;
     }
@@ -44,7 +44,7 @@ void GLTexture::loadTextureData(InputDataFormat format, unsigned int width, unsi
         char Buffer[512];
 
         sprintf(Buffer, "TextureID: %i loadTextureData width not a two power %i\n", textureDebugIdentifier, width);
-        GRenderer::getRenderer()->getRenderLog()->writeToLogFile(Buffer);
+        GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
 
         return;
     }

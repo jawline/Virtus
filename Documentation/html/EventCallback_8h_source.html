@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -43,17 +42,19 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _EVENT_CALLBACK_DEF_H_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &lt;vector&gt;</span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a><a class="code" href="classEventCallback.html">00005</a> <span class="keyword">class </span><a class="code" href="classEventCallback.html">EventCallback</a>
-<a name="l00006"></a>00006 {
-<a name="l00007"></a>00007 <span class="keyword">public</span>:
-<a name="l00008"></a><a class="code" href="classEventCallback.html#af2bbd2836317a24d5d6735d0dc3a29e2">00008</a>     <span class="keyword">virtual</span> <a class="code" href="classEventCallback.html#af2bbd2836317a24d5d6735d0dc3a29e2">~EventCallback</a>() { }
-<a name="l00009"></a><a class="code" href="classEventCallback.html#aa3b3cf6f6fee5a8360271f9a7372523a">00009</a>     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEventCallback.html#aa3b3cf6f6fee5a8360271f9a7372523a">triggerCallback</a>(std::vector&lt;int&gt; Event_Data, <span class="keywordtype">int</span> Flags) { }
-<a name="l00010"></a>00010 };
+<a name="l00009"></a><a class="code" href="classEventCallback.html">00009</a> <span class="keyword">class </span><a class="code" href="classEventCallback.html" title="Callback for a event.">EventCallback</a>
+<a name="l00010"></a>00010 {
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#endif //_EVENT_CALLBACK_DEF_H_</span>
+<a name="l00012"></a>00012 <span class="keyword">public</span>:
+<a name="l00013"></a><a class="code" href="classEventCallback.html#af2bbd2836317a24d5d6735d0dc3a29e2">00013</a>     <span class="keyword">virtual</span> <a class="code" href="classEventCallback.html#af2bbd2836317a24d5d6735d0dc3a29e2">~EventCallback</a>() { }
+<a name="l00014"></a>00014 
+<a name="l00018"></a>00018     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEventCallback.html#a54cb79b0cc1b334135343dea602fd50d" title="Called when a event this callback is bound too is triggered.">triggerCallback</a>(std::vector&lt;int&gt; Event_Data, <span class="keywordtype">int</span> Flags) = 0;
+<a name="l00019"></a>00019 };
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="preprocessor">#endif //_EVENT_CALLBACK_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

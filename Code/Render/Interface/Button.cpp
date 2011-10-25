@@ -3,7 +3,7 @@
 #include <Input/Keys.h>
 #include "../GRender.h"
 
-IElements::Button::Button(float x, float y, float w, float h, const char* NormalText, const char* OverText, const char* DownText, Colour textClr, Colour bgNormal, Colour mouseOver, Colour mouseDown) : IElement(x, y, w, h)
+Button::Button(float x, float y, float w, float h, const char* NormalText, const char* OverText, const char* DownText, Color textClr, Color bgNormal, Color mouseOver, Color mouseDown) : IElement(x, y, w, h)
 {
     m_mouseDownOverElement = false;
 
@@ -24,7 +24,7 @@ IElements::Button::Button(float x, float y, float w, float h, const char* Normal
     onUpFn = 0;
 }
 
-IElements::Button::~Button()
+Button::~Button()
 {
     delete[] m_buttonNormalText;
     delete[] m_mouseOverText;
@@ -33,12 +33,12 @@ IElements::Button::~Button()
     printf("Button freed\n");
 }
 
-void IElements::Button::draw(InterfaceLayer* IL)
+void Button::draw(InterfaceLayer* IL)
 {
 
     GRenderer::getRenderer()->getGraphicsAPI()->enableBlending();
 
-    Colour drawColour;
+    Color drawColour;
 
     char* m_drawStr = 0;
 
@@ -98,7 +98,7 @@ void IElements::Button::draw(InterfaceLayer* IL)
     GRenderer::getRenderer()->getGraphicsAPI()->disableBlending();
 }
 
-void IElements::Button::handleButtonEvent(Input_Event e)
+void Button::handleButtonEvent(Input_Event e)
 {
 
     if (e.Event_Data[0] == MOUSE_DOWN)
@@ -129,12 +129,12 @@ void IElements::Button::handleButtonEvent(Input_Event e)
 
 }
 
-void IElements::Button::setOnMouseUp(void (*newOnUpFn)(Button* Btn))
+void Button::setOnMouseUp(void (*newOnUpFn)(Button* Btn))
 {
     onUpFn = newOnUpFn;
 }
 
-void IElements::Button::onUp()
+void Button::onUp()
 {
 
     if (onUpFn)
@@ -142,7 +142,7 @@ void IElements::Button::onUp()
 
 }
 
-bool IElements::Button::handleInput(Input_Event e)
+bool Button::handleInput(Input_Event e)
 {
     bool m_Result = false;
 

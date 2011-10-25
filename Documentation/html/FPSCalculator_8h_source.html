@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -42,29 +41,30 @@
 <a href="FPSCalculator_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _FPS_CALCULATOR_DEF_H_</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _FPS_CALCULATOR_DEF_H_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a><a class="code" href="classFPSCalculator.html">00004</a> <span class="keyword">class </span><a class="code" href="classFPSCalculator.html">FPSCalculator</a>
-<a name="l00005"></a>00005 {
-<a name="l00006"></a>00006 <span class="keyword">private</span>:
-<a name="l00007"></a><a class="code" href="classFPSCalculator.html#a80a84ffab663c1ea297f8adfebdf496a">00007</a>     <span class="keywordtype">float</span> <a class="code" href="classFPSCalculator.html#a80a84ffab663c1ea297f8adfebdf496a">m_curNumFrames</a>;
-<a name="l00008"></a><a class="code" href="classFPSCalculator.html#af4953ec63dfc6fd984d3fe982bc62922">00008</a>     <span class="keywordtype">float</span> <a class="code" href="classFPSCalculator.html#af4953ec63dfc6fd984d3fe982bc62922">m_curTime</a>;
-<a name="l00009"></a>00009 
-<a name="l00010"></a><a class="code" href="classFPSCalculator.html#a721a9c49ac41a27b638eb9c86cfb37cd">00010</a>     <span class="keywordtype">float</span> <a class="code" href="classFPSCalculator.html#a721a9c49ac41a27b638eb9c86cfb37cd">m_lastAvg</a>;
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="keyword">public</span>:
-<a name="l00013"></a>00013     <a class="code" href="classFPSCalculator.html#a16855e1427ea2a0f2962e4b431bb2faf">FPSCalculator</a>();
-<a name="l00014"></a>00014     <span class="keywordtype">void</span> <a class="code" href="classFPSCalculator.html#a5266e420f914751170b470095e2b7d0a">frame</a>(<span class="keywordtype">float</span> seconds);
+<a name="l00008"></a><a class="code" href="classFPSCalculator.html">00008</a> <span class="keyword">class </span><a class="code" href="classFPSCalculator.html" title="Class to calculate how many frames are occurring per second.">FPSCalculator</a>
+<a name="l00009"></a>00009 {
+<a name="l00010"></a>00010 <span class="keyword">private</span>:
+<a name="l00011"></a><a class="code" href="classFPSCalculator.html#a80a84ffab663c1ea297f8adfebdf496a">00011</a>     <span class="keywordtype">float</span> <a class="code" href="classFPSCalculator.html#a80a84ffab663c1ea297f8adfebdf496a">m_curNumFrames</a>;
+<a name="l00012"></a><a class="code" href="classFPSCalculator.html#af4953ec63dfc6fd984d3fe982bc62922">00012</a>     <span class="keywordtype">float</span> <a class="code" href="classFPSCalculator.html#af4953ec63dfc6fd984d3fe982bc62922">m_curTime</a>;
+<a name="l00013"></a>00013 
+<a name="l00014"></a><a class="code" href="classFPSCalculator.html#a721a9c49ac41a27b638eb9c86cfb37cd">00014</a>     <span class="keywordtype">float</span> <a class="code" href="classFPSCalculator.html#a721a9c49ac41a27b638eb9c86cfb37cd">m_lastAvg</a>;
 <a name="l00015"></a>00015 
-<a name="l00016"></a><a class="code" href="classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4">00016</a>     <span class="keywordtype">long</span> <a class="code" href="classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4">getFPS</a>()
-<a name="l00017"></a>00017     {
-<a name="l00018"></a>00018         <span class="keywordflow">return</span> <a class="code" href="classFPSCalculator.html#a721a9c49ac41a27b638eb9c86cfb37cd">m_lastAvg</a>;
-<a name="l00019"></a>00019     }
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021 };
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="preprocessor">#endif //_FPS_CALCULATOR_DEF_H_</span>
+<a name="l00016"></a>00016 <span class="keyword">public</span>:
+<a name="l00017"></a>00017     <a class="code" href="classFPSCalculator.html#a16855e1427ea2a0f2962e4b431bb2faf">FPSCalculator</a>();
+<a name="l00018"></a>00018 
+<a name="l00022"></a>00022     <span class="keywordtype">void</span> <a class="code" href="classFPSCalculator.html#a5266e420f914751170b470095e2b7d0a" title="Notify that a frame has occured and how long it took.">frame</a>(<span class="keywordtype">float</span> seconds);
+<a name="l00023"></a>00023 
+<a name="l00027"></a><a class="code" href="classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4">00027</a>     <span class="keywordtype">long</span> <a class="code" href="classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4" title="Return the last calculated FPS.">getFPS</a>()
+<a name="l00028"></a>00028     {
+<a name="l00029"></a>00029         <span class="keywordflow">return</span> <a class="code" href="classFPSCalculator.html#a721a9c49ac41a27b638eb9c86cfb37cd">m_lastAvg</a>;
+<a name="l00030"></a>00030     }
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 };
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="preprocessor">#endif //_FPS_CALCULATOR_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,14 +51,14 @@ Inheritance diagram for PressedEventHandler:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPressedEventHandler__inherit__graph.png" border="0" usemap="#PressedEventHandler_inherit__map" alt="Inheritance graph"/></div>
 <map name="PressedEventHandler_inherit__map" id="PressedEventHandler_inherit__map">
-<area shape="rect" id="node2" href="classEventCallback.html" title="EventCallback" alt="" coords="27,5,133,35"/></map>
+<area shape="rect" id="node2" href="classEventCallback.html" title="Callback for a event." alt="" coords="27,5,133,35"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for PressedEventHandler:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPressedEventHandler__coll__graph.png" border="0" usemap="#PressedEventHandler_coll__map" alt="Collaboration graph"/></div>
 <map name="PressedEventHandler_coll__map" id="PressedEventHandler_coll__map">
-<area shape="rect" id="node2" href="classEventCallback.html" title="EventCallback" alt="" coords="27,5,133,35"/></map>
+<area shape="rect" id="node2" href="classEventCallback.html" title="Callback for a event." alt="" coords="27,5,133,35"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classPressedEventHandler-members.html">List of all members.</a></p>
@@ -68,6 +67,7 @@ Collaboration diagram for PressedEventHandler:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressedEventHandler.html#ad4c60def49660249366b613783f52e34">PressedEventHandler</a> (bool *flag)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressedEventHandler.html#a89891366d855eac63bae7184ffb9710a">triggerCallback</a> (std::vector&lt; int &gt; I, int Flags)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a event this callback is bound too is triggered.  <a href="#a89891366d855eac63bae7184ffb9710a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressedEventHandler.html#ae682ec455028f436c15946af117391e2">m_toManip</a></td></tr>
@@ -106,7 +106,7 @@ Private Attributes</h2></td></tr>
           <td class="memname">void PressedEventHandler::triggerCallback </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
-          <td class="paramname"><em>I</em>, </td>
+          <td class="paramname"><em>Event_Data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -123,7 +123,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classEventCallback.html#aa3b3cf6f6fee5a8360271f9a7372523a">EventCallback</a>.</p>
+<p>Called when a event this callback is bound too is triggered. </p>
+
+<p>Implements <a class="el" href="classEventCallback.html#a54cb79b0cc1b334135343dea602fd50d">EventCallback</a>.</p>
 
 <p>Definition at line <a class="el" href="EventHandlers_8h_source.html#l00041">41</a> of file <a class="el" href="EventHandlers_8h_source.html">EventHandlers.h</a>.</p>
 
@@ -153,7 +155,7 @@ Private Attributes</h2></td></tr>
 <li>Code/3DViewer/<a class="el" href="EventHandlers_8h_source.html">EventHandlers.h</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

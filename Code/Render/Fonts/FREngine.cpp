@@ -25,7 +25,7 @@ bool FREngine::Init()
     }
 
     if (GRenderer::getRenderer()->getRenderLog() != 0)
-        GRenderer::getRenderer()->getRenderLog()->writeToLogFile("Initialized FreeType font engine\n");
+        GRenderer::getRenderer()->getRenderLog()->writeData("Initialized FreeType font engine\n");
 
     return true;
 }
@@ -86,7 +86,7 @@ bool FREngine::Load(File* filenode)
     lString += "\n";
 
     if (GRenderer::getRenderer()->getRenderLog() != 0)
-        GRenderer::getRenderer()->getRenderLog()->writeToLogFile(lString.c_str());
+        GRenderer::getRenderer()->getRenderLog()->writeData(lString.c_str());
 
     return true;
 }
@@ -258,7 +258,7 @@ void FREngine::Render(int PointSize, unsigned int X, unsigned int Y, unsigned in
 void FREngine::Cleanup()
 {
 
-    GRenderer::getRenderer()->getRenderLog()->writeToLogFile("Freeing up FreeType resources\n");
+    GRenderer::getRenderer()->getRenderLog()->writeData("Freeing up FreeType resources\n");
 
     for(unsigned int i = 0; i < FontMaps.size(); i++)
     {

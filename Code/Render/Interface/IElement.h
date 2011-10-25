@@ -4,6 +4,9 @@
 
 class InterfaceLayer;
 
+/**
+ * @brief the abstraction of a base element within the engine
+ */
 class IElement
 {
 protected:
@@ -23,19 +26,24 @@ public:
 
     virtual ~IElement() {}
 
-    virtual void draw(InterfaceLayer* IL) {}
+    virtual void draw(InterfaceLayer* IL) = 0;
 
-    virtual bool handleInput(Input_Event e)
-    {
+    virtual bool handleInput(Input_Event e) = 0;
 
-        return false;
-    }
+    /**
+     * @brief Return the X position of the element
+     *
+     */
 
     float getX()
     {
-
         return x;
     }
+
+    /**
+     * @brief Return the Y position of the element
+     *
+     */
 
     float getY()
     {
@@ -43,12 +51,20 @@ public:
         return y;
     }
 
+    /**
+     * @brief Get the width of the element
+     *
+     */
     float getWidth()
     {
 
         return width;
     }
 
+    /**
+     * @brief Get the height of the element
+     *
+     */
     float getHeight()
     {
 

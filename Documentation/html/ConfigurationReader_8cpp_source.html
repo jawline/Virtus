@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -243,7 +242,7 @@
 <a name="l00202"></a>00202     }
 <a name="l00203"></a>00203 
 <a name="l00204"></a>00204     <span class="comment">//Create the new folder with the name that was read</span>
-<a name="l00205"></a>00205     <a class="code" href="classConfigurationFolder.html">ConfigurationFolder</a>* newFolder = <span class="keyword">new</span> <a class="code" href="classConfigurationFolder.html">ConfigurationFolder</a>(nameBuffer);
+<a name="l00205"></a>00205     <a class="code" href="classConfigurationFolder.html" title="A implementation of a configuration folder, it has a number of children pointers to them and a name...">ConfigurationFolder</a>* newFolder = <span class="keyword">new</span> <a class="code" href="classConfigurationFolder.html" title="A implementation of a configuration folder, it has a number of children pointers to them and a name...">ConfigurationFolder</a>(nameBuffer);
 <a name="l00206"></a>00206 
 <a name="l00207"></a>00207     <span class="comment">//Try and read the {</span>
 <a name="l00208"></a>00208     <span class="keywordflow">if</span> (<a class="code" href="classConfigurationReader.html#a8094d63cdaa2e98b6a0cb2924dbe96db">getNextWord</a>(node, nameBuffer, 512) == <span class="keyword">false</span>)
@@ -282,7 +281,7 @@
 <a name="l00241"></a>00241         {
 <a name="l00242"></a>00242 
 <a name="l00243"></a>00243             <span class="comment">//Otherwise, just add it as a child node</span>
-<a name="l00244"></a>00244             newFolder-&gt;<a class="code" href="classConfigurationFolder.html#a0239e0fee7aabfd8f01f45c06c2d9f89">addChild</a>(childNode);
+<a name="l00244"></a>00244             newFolder-&gt;<a class="code" href="classConfigurationFolder.html#a0239e0fee7aabfd8f01f45c06c2d9f89" title="Add the specified child to this node.">addChild</a>(childNode);
 <a name="l00245"></a>00245 
 <a name="l00246"></a>00246         }
 <a name="l00247"></a>00247 
@@ -486,7 +485,7 @@
 <a name="l00445"></a>00445 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

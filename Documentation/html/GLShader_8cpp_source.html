@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -56,7 +55,7 @@
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016     <span class="keywordtype">char</span> Buffer[512];
 <a name="l00017"></a>00017     sprintf(Buffer, <span class="stringliteral">&quot;Created shader unique number %i\n&quot;</span>, <a class="code" href="classGLShader.html#aca6954f04cfd11ae17e51c94e46dcb81">m_debugID</a>);
-<a name="l00018"></a>00018     <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(Buffer);
+<a name="l00018"></a>00018     <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(Buffer);
 <a name="l00019"></a>00019 
 <a name="l00020"></a>00020     <a class="code" href="classGLShader.html#ac604d8ef29399653122fbce96a90e5ad">m_vertexShaderID</a> = 0;
 <a name="l00021"></a>00021     <a class="code" href="classGLShader.html#abbcde2514d5c63468338425f1a1def81">m_fragmentShaderID</a> = 0;
@@ -90,7 +89,7 @@
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050     <span class="keywordtype">char</span> Buffer[512];
 <a name="l00051"></a>00051     sprintf(Buffer, <span class="stringliteral">&quot;Destroying shader unique number %i\n&quot;</span>, <a class="code" href="classGLShader.html#aca6954f04cfd11ae17e51c94e46dcb81">m_debugID</a>);
-<a name="l00052"></a>00052     <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(Buffer);
+<a name="l00052"></a>00052     <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(Buffer);
 <a name="l00053"></a>00053 
 <a name="l00054"></a>00054 }
 <a name="l00055"></a>00055 
@@ -147,23 +146,23 @@
 <a name="l00106"></a>00106         <span class="keywordflow">if</span> (isCompiledFS == <span class="keyword">false</span>)
 <a name="l00107"></a>00107         {
 <a name="l00108"></a>00108 
-<a name="l00109"></a>00109             <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(<span class="stringliteral">&quot;Fragment error&quot;</span>);
+<a name="l00109"></a>00109             <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Fragment error&quot;</span>);
 <a name="l00110"></a>00110 
 <a name="l00111"></a>00111             <span class="keywordtype">int</span> len;
 <a name="l00112"></a>00112             glGetShaderInfoLog(<a class="code" href="classGLShader.html#abbcde2514d5c63468338425f1a1def81">m_fragmentShaderID</a>, 1024, &amp;len, Buffer);
 <a name="l00113"></a>00113 
-<a name="l00114"></a>00114             <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(Buffer);
+<a name="l00114"></a>00114             <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(Buffer);
 <a name="l00115"></a>00115         }
 <a name="l00116"></a>00116 
 <a name="l00117"></a>00117         <span class="keywordflow">if</span> (isCompiledVS == <span class="keyword">false</span>)
 <a name="l00118"></a>00118         {
 <a name="l00119"></a>00119 
-<a name="l00120"></a>00120             <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(<span class="stringliteral">&quot;Vertex error&quot;</span>);
+<a name="l00120"></a>00120             <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Vertex error&quot;</span>);
 <a name="l00121"></a>00121 
 <a name="l00122"></a>00122             <span class="keywordtype">int</span> len;
 <a name="l00123"></a>00123             glGetShaderInfoLog(<a class="code" href="classGLShader.html#ac604d8ef29399653122fbce96a90e5ad">m_vertexShaderID</a>, 1024, &amp;len, Buffer);
 <a name="l00124"></a>00124 
-<a name="l00125"></a>00125             <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(Buffer);
+<a name="l00125"></a>00125             <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(Buffer);
 <a name="l00126"></a>00126         }
 <a name="l00127"></a>00127 
 <a name="l00128"></a>00128         glDeleteShader(<a class="code" href="classGLShader.html#ac604d8ef29399653122fbce96a90e5ad">m_vertexShaderID</a>);
@@ -206,7 +205,7 @@
 <a name="l00165"></a>00165 
 <a name="l00166"></a>00166     <span class="keywordflow">if</span> (errorMessage != 0)
 <a name="l00167"></a>00167     {
-<a name="l00168"></a>00168         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#ac45b26d019fe672b3692772e4b07f064">getRenderLog</a>()-&gt;<a class="code" href="classRenderLog.html#ac666d4ca869c3b0c29f53985478dba58">writeToLogFile</a>(<span class="stringliteral">&quot;Error occured compiling shader&quot;</span>);
+<a name="l00168"></a>00168         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Error occured compiling shader&quot;</span>);
 <a name="l00169"></a>00169     }
 <a name="l00170"></a>00170 
 <a name="l00171"></a>00171     printf(<span class="stringliteral">&quot;Compiled shader results %i %i %i\n&quot;</span>, isLinked, isCompiledVS, isCompiledFS);
@@ -294,7 +293,7 @@
 <a name="l00253"></a>00253 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

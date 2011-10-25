@@ -11,25 +11,25 @@ Thread::~Thread()
 
 }
 
-void Thread::Start(void* Arg)
+void Thread::start(void* Arg)
 {
     m_threadArg = Arg;
 
     #if defined(_BUILD_LINUX_)
 
-        pthread_create( &this_thread, NULL, (void* (*)(void*)) Thread::EntryPoint, this);
+        pthread_create( &this_thread, NULL, (void* (*)(void*)) Thread::entryPoint, this);
 
     #endif
 }
 
-void Thread::Enter()
+void Thread::enter()
 {
-    Run(m_threadArg);
+    run(m_threadArg);
 }
 
-void Thread::EntryPoint(void* This)
+void Thread::entryPoint(void* This)
 {
     Thread* NewThread = (Thread*) This;
 
-    NewThread->Enter();
+    NewThread->enter();
 }

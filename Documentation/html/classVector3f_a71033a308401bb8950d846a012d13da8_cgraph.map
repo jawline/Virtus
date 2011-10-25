@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classVector3f.html#a3999baa8fa2c761253362f7e5f68bfec" title="Vector3f::setX" alt="" coords="181,5,288,35"/>
-<area shape="rect" id="node5" href="$classVector3f.html#a533d6931dc15f0f0e66b094debeaf4ce" title="Vector3f::setY" alt="" coords="181,59,288,88"/>
-<area shape="rect" id="node7" href="$classVector3f.html#a0cb5d2450424090a599f0e429f8f3a34" title="Vector3f::setZ" alt="" coords="183,112,287,141"/>
+<area shape="rect" id="node3" href="$classVector3f.html#a3999baa8fa2c761253362f7e5f68bfec" title="Set the X value." alt="" coords="181,5,288,35"/>
+<area shape="rect" id="node5" href="$classVector3f.html#a533d6931dc15f0f0e66b094debeaf4ce" title="Set the Y value." alt="" coords="181,59,288,88"/>
+<area shape="rect" id="node7" href="$classVector3f.html#a0cb5d2450424090a599f0e429f8f3a34" title="Set the Z value." alt="" coords="183,112,287,141"/>
 </map>

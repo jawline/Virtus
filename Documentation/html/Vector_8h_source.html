@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -39,73 +38,83 @@
 <div class="title">Code/Math/Vector.h</div>  </div>
 </div>
 <div class="contents">
-<a href="Vector_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _PHYSICS_VECTOR_DEF_H_</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _PHYSICS_VECTOR_DEF_H_</span>
+<a href="Vector_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _VECTOR_DEF_H_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _VECTOR_DEF_H_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 
-<a name="l00005"></a><a class="code" href="classVector2f.html">00005</a> <span class="keyword">class </span><a class="code" href="classVector2f.html">Vector2f</a> {
-<a name="l00006"></a>00006 <span class="keyword">private</span>:
-<a name="l00007"></a><a class="code" href="classVector2f.html#ae3beb61fd911270cc89859e59a9358bd">00007</a>     <span class="keywordtype">float</span> <a class="code" href="classVector2f.html#ae3beb61fd911270cc89859e59a9358bd">m_Length</a>;
-<a name="l00008"></a><a class="code" href="classVector2f.html#ac42022ce29f5bb7c849660c05dc8991e">00008</a>     <span class="keywordtype">bool</span> <a class="code" href="classVector2f.html#ac42022ce29f5bb7c849660c05dc8991e">m_Dirty</a>;
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="keyword">public</span>:
-<a name="l00011"></a>00011     <a class="code" href="classVector2f.html#a3db9a868c58bc809e5e09a88d65a77ec">Vector2f</a>();
+<a name="l00008"></a><a class="code" href="classVector2f.html">00008</a> <span class="keyword">class </span><a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> {
+<a name="l00009"></a>00009 <span class="keyword">private</span>:
+<a name="l00010"></a><a class="code" href="classVector2f.html#ae3beb61fd911270cc89859e59a9358bd">00010</a>     <span class="keywordtype">float</span> <a class="code" href="classVector2f.html#ae3beb61fd911270cc89859e59a9358bd">m_Length</a>;
+<a name="l00011"></a><a class="code" href="classVector2f.html#ac42022ce29f5bb7c849660c05dc8991e">00011</a>     <span class="keywordtype">bool</span> <a class="code" href="classVector2f.html#ac42022ce29f5bb7c849660c05dc8991e">m_Dirty</a>;
 <a name="l00012"></a>00012 
-<a name="l00013"></a><a class="code" href="classVector2f.html#a14874a72597fd358b15f8ba34b999c4d">00013</a>     <span class="keywordtype">float</span> <a class="code" href="classVector2f.html#add58d2378e3a3abdb76cf0ac51c9acfc">x</a>, <a class="code" href="classVector2f.html#a14874a72597fd358b15f8ba34b999c4d">y</a>;
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015     <span class="keywordtype">float</span> <a class="code" href="classVector2f.html#a747f9f110283fd63d127b16521ee6fdc">length</a>();
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017     <a class="code" href="classVector2f.html">Vector2f</a> <a class="code" href="classVector2f.html#a415e39ff7237695e5b794fe2b7350680">scale</a>(<span class="keywordtype">float</span> time_milis);
-<a name="l00018"></a>00018     <a class="code" href="classVector2f.html">Vector2f</a> <a class="code" href="classVector2f.html#ab7a8203afe70e76721403c30cb034346">normalize</a>();
+<a name="l00013"></a>00013 <span class="keyword">public</span>:
+<a name="l00014"></a>00014     <a class="code" href="classVector2f.html#a3db9a868c58bc809e5e09a88d65a77ec">Vector2f</a>();
+<a name="l00015"></a>00015 
+<a name="l00016"></a><a class="code" href="classVector2f.html#a14874a72597fd358b15f8ba34b999c4d">00016</a>     <span class="keywordtype">float</span> <a class="code" href="classVector2f.html#add58d2378e3a3abdb76cf0ac51c9acfc">x</a>, <a class="code" href="classVector2f.html#a14874a72597fd358b15f8ba34b999c4d">y</a>;
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018     <span class="keywordtype">float</span> <a class="code" href="classVector2f.html#a747f9f110283fd63d127b16521ee6fdc">length</a>();
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020     <a class="code" href="classVector2f.html">Vector2f</a> <a class="code" href="classVector2f.html#a1a0067551b3a92aa2869f6af7c2cf28a">add</a>(<a class="code" href="classVector2f.html">Vector2f</a> vector);
-<a name="l00021"></a>00021     <a class="code" href="classVector2f.html">Vector2f</a> <a class="code" href="classVector2f.html#a8a75f9bf1943db952f357b60bd0b4db8">subtract</a>(<a class="code" href="classVector2f.html">Vector2f</a> vector);
-<a name="l00022"></a>00022     <a class="code" href="classVector2f.html">Vector2f</a> <a class="code" href="classVector2f.html#ae2480fb5d5f1c991f2c3bc309cf674a3">negative</a>();
-<a name="l00023"></a>00023 
-<a name="l00024"></a>00024     <a class="code" href="classVector2f.html">Vector2f</a> <a class="code" href="classVector2f.html#a0c642877db5ffeee0bc48fb01af28a91">multiply</a>(<span class="keywordtype">float</span> f);
-<a name="l00025"></a>00025     <a class="code" href="classVector2f.html">Vector2f</a> <a class="code" href="classVector2f.html#afca0158efd966bbbcb66c3658c0e7be0">divide</a>(<span class="keywordtype">float</span> f);
+<a name="l00020"></a>00020     <a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> <a class="code" href="classVector2f.html#a415e39ff7237695e5b794fe2b7350680">scale</a>(<span class="keywordtype">float</span> time_milis);
+<a name="l00021"></a>00021     <a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> <a class="code" href="classVector2f.html#ab7a8203afe70e76721403c30cb034346">normalize</a>();
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023     <a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> <a class="code" href="classVector2f.html#a1a0067551b3a92aa2869f6af7c2cf28a">add</a>(<a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> vector);
+<a name="l00024"></a>00024     <a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> <a class="code" href="classVector2f.html#a8a75f9bf1943db952f357b60bd0b4db8">subtract</a>(<a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> vector);
+<a name="l00025"></a>00025     <a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> <a class="code" href="classVector2f.html#ae2480fb5d5f1c991f2c3bc309cf674a3">negative</a>();
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027     <a class="code" href="classVector2f.html">Vector2f</a> <a class="code" href="classVector2f.html#aba00891f15c03c2e2e33fe43738f645f">reflect</a>(<a class="code" href="classVector2f.html">Vector2f</a> other);
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029     <span class="keywordtype">float</span> <a class="code" href="classVector2f.html#a07bddecd7e0e2a328e07a77e39e7e5f0">dotProduct</a>(<a class="code" href="classVector2f.html">Vector2f</a> vector);
-<a name="l00030"></a>00030     <span class="keywordtype">float</span> <a class="code" href="classVector2f.html#ad2d3a14944943611e8473d313fad2b37">angle</a>(<a class="code" href="classVector2f.html">Vector2f</a> vector);
-<a name="l00031"></a>00031 };
-<a name="l00032"></a>00032 
-<a name="l00033"></a><a class="code" href="classVector3f.html">00033</a> <span class="keyword">class </span><a class="code" href="classVector3f.html">Vector3f</a> {
-<a name="l00034"></a>00034 <span class="keyword">private</span>:
-<a name="l00035"></a><a class="code" href="classVector3f.html#a67e948df909efc6294971d5f321c7509">00035</a>     <span class="keywordtype">float</span> <a class="code" href="classVector3f.html#a67e948df909efc6294971d5f321c7509">m_storeLength</a>;
-<a name="l00036"></a><a class="code" href="classVector3f.html#a5d58d2270efd9a20151e1af4c8c5cfba">00036</a>     <span class="keywordtype">bool</span> <a class="code" href="classVector3f.html#a5d58d2270efd9a20151e1af4c8c5cfba">m_lengthDirty</a>;
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keyword">public</span>:
-<a name="l00039"></a>00039     <a class="code" href="classVector3f.html#a1b14b77d2503c1b1ca1363163ff55432">Vector3f</a>();
-<a name="l00040"></a>00040     <a class="code" href="classVector3f.html#a1b14b77d2503c1b1ca1363163ff55432">Vector3f</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);
-<a name="l00041"></a>00041     <a class="code" href="classVector3f.html#a1b14b77d2503c1b1ca1363163ff55432">Vector3f</a>(<span class="keywordtype">float</span>* matrix);
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043     <span class="keywordtype">void</span> <a class="code" href="classVector3f.html#a3999baa8fa2c761253362f7e5f68bfec">setX</a>(<span class="keywordtype">float</span> x);
-<a name="l00044"></a>00044     <span class="keywordtype">void</span> <a class="code" href="classVector3f.html#a533d6931dc15f0f0e66b094debeaf4ce">setY</a>(<span class="keywordtype">float</span> y);
-<a name="l00045"></a>00045     <span class="keywordtype">void</span> <a class="code" href="classVector3f.html#a0cb5d2450424090a599f0e429f8f3a34">setZ</a>(<span class="keywordtype">float</span> z);
-<a name="l00046"></a>00046     <span class="keywordtype">void</span> <a class="code" href="classVector3f.html#a665325047b6c8e0278983972888bfdd2">setMatrix</a>(<span class="keywordtype">float</span>* newMatrix);
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048     <span class="keywordtype">float</span> <a class="code" href="classVector3f.html#a079f6b05ae7d79406838640be15749de">getX</a>();
-<a name="l00049"></a>00049     <span class="keywordtype">float</span> <a class="code" href="classVector3f.html#a552ae944fd6089d3f2c3de38b8365a62">getY</a>();
-<a name="l00050"></a>00050     <span class="keywordtype">float</span> <a class="code" href="classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11">getZ</a>();
-<a name="l00051"></a>00051     <span class="keywordtype">float</span>* <a class="code" href="classVector3f.html#a762fa45136b13bc5c5cd16919ad1036f">getMatrix</a>();
-<a name="l00052"></a>00052 
-<a name="l00053"></a><a class="code" href="classVector3f.html#a4e8e7d53e9ab1b8c909991f121ce1aa1">00053</a>     <span class="keywordtype">float</span> <a class="code" href="classVector3f.html#a4e8e7d53e9ab1b8c909991f121ce1aa1">m_vectorMatrix</a>[3];
+<a name="l00027"></a>00027     <a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> <a class="code" href="classVector2f.html#a0c642877db5ffeee0bc48fb01af28a91">multiply</a>(<span class="keywordtype">float</span> f);
+<a name="l00028"></a>00028     <a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> <a class="code" href="classVector2f.html#afca0158efd966bbbcb66c3658c0e7be0">divide</a>(<span class="keywordtype">float</span> f);
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030     <a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> <a class="code" href="classVector2f.html#aba00891f15c03c2e2e33fe43738f645f">reflect</a>(<a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> other);
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032     <span class="keywordtype">float</span> <a class="code" href="classVector2f.html#a07bddecd7e0e2a328e07a77e39e7e5f0">dotProduct</a>(<a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> vector);
+<a name="l00033"></a>00033     <span class="keywordtype">float</span> <a class="code" href="classVector2f.html#ad2d3a14944943611e8473d313fad2b37">angle</a>(<a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> vector);
+<a name="l00034"></a>00034 };
+<a name="l00035"></a>00035 
+<a name="l00041"></a><a class="code" href="classVector3f.html">00041</a> <span class="keyword">class </span><a class="code" href="classVector3f.html" title="A vector with 3 points.">Vector3f</a> {
+<a name="l00042"></a>00042 <span class="keyword">private</span>:
+<a name="l00043"></a>00043 
+<a name="l00044"></a><a class="code" href="classVector3f.html#a67e948df909efc6294971d5f321c7509">00044</a>     <span class="keywordtype">float</span> <a class="code" href="classVector3f.html#a67e948df909efc6294971d5f321c7509">m_storeLength</a>;
+<a name="l00045"></a><a class="code" href="classVector3f.html#a5d58d2270efd9a20151e1af4c8c5cfba">00045</a>     <span class="keywordtype">bool</span> <a class="code" href="classVector3f.html#a5d58d2270efd9a20151e1af4c8c5cfba">m_lengthDirty</a>;
+<a name="l00046"></a>00046 
+<a name="l00047"></a><a class="code" href="classVector3f.html#a4e8e7d53e9ab1b8c909991f121ce1aa1">00047</a>     <span class="keywordtype">float</span> <a class="code" href="classVector3f.html#a4e8e7d53e9ab1b8c909991f121ce1aa1">m_vectorMatrix</a>[3];
+<a name="l00048"></a>00048 <span class="keyword">public</span>:
+<a name="l00049"></a>00049 
+<a name="l00053"></a>00053     <a class="code" href="classVector3f.html#a1b14b77d2503c1b1ca1363163ff55432" title="Initialize a blank vector(0, 0, 0)">Vector3f</a>();
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055     <span class="keywordtype">float</span> <a class="code" href="classVector3f.html#abd0d544e338c5832b565a189f92e5782">length</a>();
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057     <a class="code" href="classVector3f.html">Vector3f</a> <a class="code" href="classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc">normalize</a>();
-<a name="l00058"></a>00058     <a class="code" href="classVector3f.html">Vector3f</a> <a class="code" href="classVector3f.html#a552e0a64f841c20b8f305d2f61b0ee5e">cross</a>(<a class="code" href="classVector3f.html">Vector3f</a> other);
-<a name="l00059"></a>00059 };
-<a name="l00060"></a>00060 
-<a name="l00061"></a><a class="code" href="Vector_8h.html#a5d149e64a9f840a34624d4af02c55616">00061</a> <span class="keyword">typedef</span> <a class="code" href="classVector2f.html">Vector2f</a> <a class="code" href="Vector_8h.html#a5d149e64a9f840a34624d4af02c55616">point2f_t</a>;
-<a name="l00062"></a><a class="code" href="Vector_8h.html#ae96cded915dd2139c115a542c83a63ef">00062</a> <span class="keyword">typedef</span> <a class="code" href="classVector3f.html">Vector3f</a> <a class="code" href="Vector_8h.html#ae96cded915dd2139c115a542c83a63ef">point3f_t</a>;
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="preprocessor">#endif //_PHYSICS_VECTOR_DEF_H_</span>
+<a name="l00058"></a>00058     <a class="code" href="classVector3f.html#a1b14b77d2503c1b1ca1363163ff55432" title="Initialize a blank vector(0, 0, 0)">Vector3f</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);
+<a name="l00059"></a>00059 
+<a name="l00063"></a>00063     <a class="code" href="classVector3f.html#a1b14b77d2503c1b1ca1363163ff55432" title="Initialize a blank vector(0, 0, 0)">Vector3f</a>(<span class="keywordtype">float</span>* matrix);
+<a name="l00064"></a>00064 
+<a name="l00068"></a>00068     <span class="keywordtype">void</span> <a class="code" href="classVector3f.html#a3999baa8fa2c761253362f7e5f68bfec" title="Set the X value.">setX</a>(<span class="keywordtype">float</span> x);
+<a name="l00069"></a>00069 
+<a name="l00073"></a>00073     <span class="keywordtype">void</span> <a class="code" href="classVector3f.html#a533d6931dc15f0f0e66b094debeaf4ce" title="Set the Y value.">setY</a>(<span class="keywordtype">float</span> y);
+<a name="l00074"></a>00074 
+<a name="l00078"></a>00078     <span class="keywordtype">void</span> <a class="code" href="classVector3f.html#a0cb5d2450424090a599f0e429f8f3a34" title="Set the Z value.">setZ</a>(<span class="keywordtype">float</span> z);
+<a name="l00079"></a>00079 
+<a name="l00083"></a>00083     <span class="keywordtype">void</span> <a class="code" href="classVector3f.html#a665325047b6c8e0278983972888bfdd2" title="Set the values to values on the specified float array.">setMatrix</a>(<span class="keywordtype">float</span>* newMatrix);
+<a name="l00084"></a>00084 
+<a name="l00088"></a>00088     <span class="keywordtype">float</span> <a class="code" href="classVector3f.html#a079f6b05ae7d79406838640be15749de" title="Return the X value of the vector.">getX</a>();
+<a name="l00089"></a>00089 
+<a name="l00093"></a>00093     <span class="keywordtype">float</span> <a class="code" href="classVector3f.html#a552ae944fd6089d3f2c3de38b8365a62" title="Return the Y value of the vector.">getY</a>();
+<a name="l00094"></a>00094 
+<a name="l00098"></a>00098     <span class="keywordtype">float</span> <a class="code" href="classVector3f.html#a6b035acaf1bf41e7e7d01be9ff57bb11" title="Get the Z value of the vector.">getZ</a>();
+<a name="l00099"></a>00099 
+<a name="l00103"></a>00103     <span class="keywordtype">float</span>* <a class="code" href="classVector3f.html#a762fa45136b13bc5c5cd16919ad1036f" title="Get a reference to the raw array.">getMatrix</a>();
+<a name="l00104"></a>00104 
+<a name="l00108"></a>00108     <span class="keywordtype">float</span> <a class="code" href="classVector3f.html#abd0d544e338c5832b565a189f92e5782" title="Calculate the length of the vector.">length</a>();
+<a name="l00109"></a>00109 
+<a name="l00114"></a>00114     <a class="code" href="classVector3f.html" title="A vector with 3 points.">Vector3f</a> <a class="code" href="classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc" title="Returna new vector containing the normalization of this one.">normalize</a>();
+<a name="l00115"></a>00115 
+<a name="l00120"></a>00120     <a class="code" href="classVector3f.html" title="A vector with 3 points.">Vector3f</a> <a class="code" href="classVector3f.html#a552e0a64f841c20b8f305d2f61b0ee5e" title="Return the cross product of this vector with another.">cross</a>(<a class="code" href="classVector3f.html" title="A vector with 3 points.">Vector3f</a> other);
+<a name="l00121"></a>00121 };
+<a name="l00122"></a>00122 
+<a name="l00126"></a><a class="code" href="Vector_8h.html#a5d149e64a9f840a34624d4af02c55616">00126</a> <span class="keyword">typedef</span> <a class="code" href="classVector2f.html" title="A vector with 2 points.">Vector2f</a> <a class="code" href="Vector_8h.html#a5d149e64a9f840a34624d4af02c55616" title="Define point2f_t as a Vector2f.">point2f_t</a>;
+<a name="l00127"></a>00127 
+<a name="l00131"></a><a class="code" href="Vector_8h.html#ae96cded915dd2139c115a542c83a63ef">00131</a> <span class="keyword">typedef</span> <a class="code" href="classVector3f.html" title="A vector with 3 points.">Vector3f</a> <a class="code" href="Vector_8h.html#ae96cded915dd2139c115a542c83a63ef" title="Define point3f_t as a Vector3f.">point3f_t</a>;
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133 <span class="preprocessor">#endif //_VECTOR_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

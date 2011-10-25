@@ -11,6 +11,10 @@
 
 #endif
 
+/**
+ * @brief The actual mutex lock used by the lock class
+ *
+ */
 class Mutex
 {
     protected:

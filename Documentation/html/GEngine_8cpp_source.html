@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -126,7 +125,7 @@
 <a name="l00085"></a>00085     <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a> = <span class="keyword">new</span> <a class="code" href="classConfigurationInstance.html">ConfigurationInstance</a>( static_cast&lt;File*&gt; ( <a class="code" href="classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), <span class="stringliteral">&quot;Saved/engine.cfg&quot;</span>) ) );
 <a name="l00086"></a>00086 
 <a name="l00087"></a>00087     <span class="comment">//Create a log for the engines core</span>
-<a name="l00088"></a>00088     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a> = <span class="keyword">new</span> <a class="code" href="classLogWriter.html">LogWriter</a>( <a class="code" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a">LogWriter::getPathToLogFile</a>(<span class="stringliteral">&quot;Core&quot;</span>) );
+<a name="l00088"></a>00088     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a> = <span class="keyword">new</span> <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>( <a class="code" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a" title="Convert the string name of the log (I.e. Render.Log) to a internal filesystem node (Creating it if it...">LogWriter::getPathToLogFile</a>(<span class="stringliteral">&quot;Core&quot;</span>) );
 <a name="l00089"></a>00089 
 <a name="l00090"></a>00090     <span class="comment">//Get the graphicsAPI</span>
 <a name="l00091"></a>00091     <span class="keyword">const</span> <span class="keywordtype">char</span>* graphicsAPIString = <span class="stringliteral">&quot;OpenGL2&quot;</span>;
@@ -171,18 +170,18 @@
 <a name="l00130"></a>00130     <span class="comment">//If the configuration node doesn&#39;t exist or isn&#39;t a number then create a job engine</span>
 <a name="l00131"></a>00131     <span class="keywordflow">if</span> (numberOfThreads == 0 || numberOfThreads-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() != <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310adf9dfa08c709d806355279e2b18d1780">configurationNumber</a> )
 <a name="l00132"></a>00132     {
-<a name="l00133"></a>00133         <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> = <span class="keyword">new</span> <a class="code" href="classBeeHive.html">BeeHive</a>(1);
+<a name="l00133"></a>00133         <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> = <span class="keyword">new</span> <a class="code" href="classBeeHive.html" title="Manages a collection of worker bees which process jobs passed to them over multiple threads...">BeeHive</a>(1);
 <a name="l00134"></a>00134     }
 <a name="l00135"></a>00135     <span class="keywordflow">else</span>
 <a name="l00136"></a>00136     {
 <a name="l00137"></a>00137 
 <a name="l00138"></a>00138         <span class="comment">//Otherwise use the number of threads configuration node value to create the BeeHive</span>
-<a name="l00139"></a>00139         <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> = <span class="keyword">new</span> <a class="code" href="classBeeHive.html">BeeHive</a>( (static_cast&lt;ConfigurationNumber*&gt; (numberOfThreads))-&gt;getValue() );
+<a name="l00139"></a>00139         <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> = <span class="keyword">new</span> <a class="code" href="classBeeHive.html" title="Manages a collection of worker bees which process jobs passed to them over multiple threads...">BeeHive</a>( (static_cast&lt;ConfigurationNumber*&gt; (numberOfThreads))-&gt;getValue() );
 <a name="l00140"></a>00140 
 <a name="l00141"></a>00141     }
 <a name="l00142"></a>00142 
 <a name="l00143"></a>00143     <span class="comment">//Send a message that the HIVE has been created to the log</span>
-<a name="l00144"></a>00144     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(<span class="stringliteral">&quot;Initialized job HIVE\n&quot;</span>);
+<a name="l00144"></a>00144     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Initialized job HIVE\n&quot;</span>);
 <a name="l00145"></a>00145 
 <a name="l00146"></a>00146     <span class="comment">//If the width node exists and is a number</span>
 <a name="l00147"></a>00147     <span class="keywordflow">if</span> (widthNode != 0 &amp;&amp; widthNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310adf9dfa08c709d806355279e2b18d1780">configurationNumber</a>)
@@ -194,7 +193,7 @@
 <a name="l00153"></a>00153 
 <a name="l00154"></a>00154         <span class="comment">//Print this info to the log</span>
 <a name="l00155"></a>00155         sprintf(logBuffer, <span class="stringliteral">&quot;Setting window height to %i\n&quot;</span>, renderWindowWidth);
-<a name="l00156"></a>00156         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(logBuffer);
+<a name="l00156"></a>00156         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
 <a name="l00157"></a>00157 
 <a name="l00158"></a>00158     }
 <a name="l00159"></a>00159     <span class="keywordflow">else</span>
@@ -202,7 +201,7 @@
 <a name="l00161"></a>00161 
 <a name="l00162"></a>00162         <span class="comment">//Otherwise tell the log we&#39;re using the default value</span>
 <a name="l00163"></a>00163         sprintf(logBuffer, <span class="stringliteral">&quot;Using default window width of %i\n&quot;</span>, <a class="code" href="GEngine_8cpp.html#ad9afbb8e095f90498bdc638eee4312b7">defaultWindowWidth</a>);
-<a name="l00164"></a>00164         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(logBuffer);
+<a name="l00164"></a>00164         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
 <a name="l00165"></a>00165 
 <a name="l00166"></a>00166     }
 <a name="l00167"></a>00167 
@@ -216,7 +215,7 @@
 <a name="l00175"></a>00175 
 <a name="l00176"></a>00176         <span class="comment">//Print this info to the log</span>
 <a name="l00177"></a>00177         sprintf(logBuffer, <span class="stringliteral">&quot;Setting window height to %i\n&quot;</span>, renderWindowHeight);
-<a name="l00178"></a>00178         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(logBuffer);
+<a name="l00178"></a>00178         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
 <a name="l00179"></a>00179 
 <a name="l00180"></a>00180     }
 <a name="l00181"></a>00181     <span class="keywordflow">else</span>
@@ -224,7 +223,7 @@
 <a name="l00183"></a>00183 
 <a name="l00184"></a>00184         <span class="comment">//Print to the log that the default value is being used</span>
 <a name="l00185"></a>00185         sprintf(logBuffer, <span class="stringliteral">&quot;Using default window height of %i\n&quot;</span>, <a class="code" href="GEngine_8cpp.html#a8a78392bff2dbd9e498318645cd2fafe">defaultWindowHeight</a>);
-<a name="l00186"></a>00186         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(logBuffer);
+<a name="l00186"></a>00186         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
 <a name="l00187"></a>00187 
 <a name="l00188"></a>00188     }
 <a name="l00189"></a>00189 
@@ -245,7 +244,7 @@
 <a name="l00204"></a>00204 
 <a name="l00205"></a>00205             <span class="comment">//Print this info to the log</span>
 <a name="l00206"></a>00206             sprintf(logBuffer, <span class="stringliteral">&quot;Setting window title to %s\n&quot;</span>, string-&gt;<a class="code" href="classConfigurationString.html#aa22ff0fb4c20ae04240b430fe58a9f1a">getStringData</a>());
-<a name="l00207"></a>00207             <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(logBuffer);
+<a name="l00207"></a>00207             <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
 <a name="l00208"></a>00208 
 <a name="l00209"></a>00209         }
 <a name="l00210"></a>00210 
@@ -255,7 +254,7 @@
 <a name="l00214"></a>00214 
 <a name="l00215"></a>00215         <span class="comment">//Print that using the default window title to the log</span>
 <a name="l00216"></a>00216         sprintf(logBuffer, <span class="stringliteral">&quot;Using default window title as none was set in the configuration\n&quot;</span>);
-<a name="l00217"></a>00217         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(logBuffer);
+<a name="l00217"></a>00217         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
 <a name="l00218"></a>00218 
 <a name="l00219"></a>00219     }
 <a name="l00220"></a>00220 
@@ -274,7 +273,7 @@
 <a name="l00233"></a>00233 
 <a name="l00234"></a>00234             <span class="comment">//State this in the log</span>
 <a name="l00235"></a>00235             sprintf(logBuffer, <span class="stringliteral">&quot;Setting the engine render window to be fullscreen&quot;</span>);
-<a name="l00236"></a>00236             <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(logBuffer);
+<a name="l00236"></a>00236             <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
 <a name="l00237"></a>00237 
 <a name="l00238"></a>00238         }
 <a name="l00239"></a>00239         <span class="keywordflow">else</span>
@@ -294,7 +293,7 @@
 <a name="l00253"></a>00253 
 <a name="l00254"></a>00254         <span class="comment">//Write that no fullscreen value is set to the log</span>
 <a name="l00255"></a>00255         sprintf(logBuffer, <span class="stringliteral">&quot;No fullscreen value set, leaving null\n&quot;</span>);
-<a name="l00256"></a>00256         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(logBuffer);
+<a name="l00256"></a>00256         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
 <a name="l00257"></a>00257 
 <a name="l00258"></a>00258     }
 <a name="l00259"></a>00259 
@@ -313,7 +312,7 @@
 <a name="l00272"></a>00272 
 <a name="l00273"></a>00273     <a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">m_GameActive</a> = <span class="keyword">false</span>;
 <a name="l00274"></a>00274 
-<a name="l00275"></a>00275     <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a> = <span class="keyword">new</span> <a class="code" href="classEventManager.html">EventManager</a>();
+<a name="l00275"></a>00275     <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a> = <span class="keyword">new</span> <a class="code" href="classEventManager.html" title="Manages and stores mapping between events.">EventManager</a>();
 <a name="l00276"></a>00276 
 <a name="l00277"></a>00277     <span class="keywordflow">if</span> (!<a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>)
 <a name="l00278"></a>00278     {
@@ -322,7 +321,7 @@
 <a name="l00281"></a>00281         <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00282"></a>00282     }
 <a name="l00283"></a>00283 
-<a name="l00284"></a>00284     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(<span class="stringliteral">&quot;Initialized event manager\n&quot;</span>);
+<a name="l00284"></a>00284     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Initialized event manager\n&quot;</span>);
 <a name="l00285"></a>00285 
 <a name="l00286"></a>00286     <a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a> = <span class="keyword">false</span>;
 <a name="l00287"></a>00287 
@@ -331,7 +330,7 @@
 <a name="l00290"></a>00290     <a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a> = renderWindowWidth;
 <a name="l00291"></a>00291     <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a> = renderWindowHeight;
 <a name="l00292"></a>00292 
-<a name="l00293"></a>00293     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(<span class="stringliteral">&quot;Intiailized engine\n&quot;</span>);
+<a name="l00293"></a>00293     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Intiailized engine\n&quot;</span>);
 <a name="l00294"></a>00294 
 <a name="l00295"></a>00295     <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00296"></a>00296 }
@@ -343,7 +342,7 @@
 <a name="l00302"></a>00302 
 <a name="l00303"></a>00303     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a> != 0)
 <a name="l00304"></a>00304     {
-<a name="l00305"></a>00305         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(<span class="stringliteral">&quot;Freeing event manager\n&quot;</span>);
+<a name="l00305"></a>00305         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Freeing event manager\n&quot;</span>);
 <a name="l00306"></a>00306 
 <a name="l00307"></a>00307         <span class="keyword">delete</span> <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>;
 <a name="l00308"></a>00308         <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a> = 0;
@@ -351,7 +350,7 @@
 <a name="l00310"></a>00310 
 <a name="l00311"></a>00311     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a> != 0)
 <a name="l00312"></a>00312     {
-<a name="l00313"></a>00313         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(<span class="stringliteral">&quot;Freeing the configuration instance&quot;</span>);
+<a name="l00313"></a>00313         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Freeing the configuration instance&quot;</span>);
 <a name="l00314"></a>00314 
 <a name="l00315"></a>00315         <span class="keyword">delete</span> <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>;
 <a name="l00316"></a>00316         <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a> = 0;
@@ -360,14 +359,14 @@
 <a name="l00319"></a>00319     <span class="comment">//Kill the thread hive</span>
 <a name="l00320"></a>00320     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> != 0)
 <a name="l00321"></a>00321     {
-<a name="l00322"></a>00322         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(<span class="stringliteral">&quot;Killing the HIVE\n&quot;</span>);
+<a name="l00322"></a>00322         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Killing the HIVE\n&quot;</span>);
 <a name="l00323"></a>00323 
 <a name="l00324"></a>00324         <span class="keyword">delete</span> <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a>;
 <a name="l00325"></a>00325         <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> = 0;
 <a name="l00326"></a>00326     }
 <a name="l00327"></a>00327 
 <a name="l00328"></a>00328     <span class="comment">//Write that the engine has been uninitialized to the log</span>
-<a name="l00329"></a>00329     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(<span class="stringliteral">&quot;Engine uninitialized&quot;</span>);
+<a name="l00329"></a>00329     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Engine uninitialized&quot;</span>);
 <a name="l00330"></a>00330 
 <a name="l00331"></a>00331     <span class="comment">//Then destroy the log</span>
 <a name="l00332"></a>00332     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a> != 0)
@@ -390,7 +389,7 @@
 <a name="l00349"></a><a class="code" href="classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36">00349</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36">GEngine::f_sleep</a>()
 <a name="l00350"></a>00350 {
 <a name="l00351"></a>00351 
-<a name="l00352"></a>00352     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>.<a class="code" href="classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4">getFPS</a>() &gt; 1000)
+<a name="l00352"></a>00352     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>.<a class="code" href="classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4" title="Return the last calculated FPS.">getFPS</a>() &gt; 1000)
 <a name="l00353"></a>00353     {
 <a name="l00354"></a>00354 
 <a name="l00355"></a>00355         <span class="comment">//usleep(m_fpsCalculator.getFPS() * 2);</span>
@@ -399,7 +398,7 @@
 <a name="l00358"></a>00358 
 <a name="l00359"></a>00359 }
 <a name="l00360"></a>00360 
-<a name="l00361"></a><a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">00361</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">GEngine::sendEventManagerMessage</a>(<a class="code" href="structInput__Event.html">Input_Event</a> iEvent)
+<a name="l00361"></a><a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">00361</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">GEngine::sendEventManagerMessage</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> iEvent)
 <a name="l00362"></a>00362 {
 <a name="l00363"></a>00363 
 <a name="l00364"></a>00364     <span class="comment">//Get the binding related to that event ID</span>
@@ -420,14 +419,14 @@
 <a name="l00379"></a>00379         {
 <a name="l00380"></a>00380 
 <a name="l00381"></a>00381             <span class="comment">//Trigger the event within the event manager</span>
-<a name="l00382"></a>00382             <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>-&gt;<a class="code" href="classEventManager.html#ad7abcd8b20480ef47856be120baf4d30">triggerEvent</a>(eventsToFire-&gt;at(i), iEvent.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a>, iEvent.<a class="code" href="structInput__Event.html#ad7c12566ab15a24535c87d192f0df406">Event_Flags</a>);
+<a name="l00382"></a>00382             <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>-&gt;<a class="code" href="classEventManager.html#ad7abcd8b20480ef47856be120baf4d30" title="Notify the event manager that the specified event has occured.">triggerEvent</a>(eventsToFire-&gt;at(i), iEvent.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a>, iEvent.<a class="code" href="structInput__Event.html#ad7c12566ab15a24535c87d192f0df406">Event_Flags</a>);
 <a name="l00383"></a>00383 
 <a name="l00384"></a>00384         }
 <a name="l00385"></a>00385 
 <a name="l00386"></a>00386     }
 <a name="l00387"></a>00387 }
 <a name="l00388"></a>00388 
-<a name="l00389"></a><a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">00389</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">GEngine::processEvent</a>(<a class="code" href="structInput__Event.html">Input_Event</a> event)
+<a name="l00389"></a><a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">00389</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">GEngine::processEvent</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> event)
 <a name="l00390"></a>00390 {
 <a name="l00391"></a>00391 
 <a name="l00392"></a>00392     <span class="comment">//If the Event ID is a mousepress scale the inputs to the right canvas width (As the canvas width may differ from the renderer width</span>
@@ -493,7 +492,7 @@
 <a name="l00452"></a>00452         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> != 0)
 <a name="l00453"></a>00453         {
 <a name="l00454"></a>00454 
-<a name="l00455"></a>00455             <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>-&gt;<a class="code" href="classGApplication.html#a0e65db467a028d4da3e3fec618e09709">updateApplication</a>(secondsPassed);
+<a name="l00455"></a>00455             <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>-&gt;<a class="code" href="classGApplication.html#ad0b604100468ce2edef6d7172d5af43f" title="Called once per frame with the time that has elapsed since the last frame in seconds.">updateApplication</a>(secondsPassed);
 <a name="l00456"></a>00456 
 <a name="l00457"></a>00457         }
 <a name="l00458"></a>00458 
@@ -563,7 +562,7 @@
 <a name="l00522"></a>00522 
 <a name="l00523"></a>00523 <span class="preprocessor">#endif</span>
 <a name="l00524"></a>00524 <span class="preprocessor"></span>
-<a name="l00525"></a>00525         <a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>.<a class="code" href="classFPSCalculator.html#a5266e420f914751170b470095e2b7d0a">frame</a>(secondsPassed);
+<a name="l00525"></a>00525         <a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>.<a class="code" href="classFPSCalculator.html#a5266e420f914751170b470095e2b7d0a" title="Notify that a frame has occured and how long it took.">frame</a>(secondsPassed);
 <a name="l00526"></a>00526 
 <a name="l00527"></a>00527         <a class="code" href="classGEngine.html#a14bda10f38212a7532dcb38a3a3dd859">doFrameUpdate</a>(secondsPassed);
 <a name="l00528"></a>00528 
@@ -580,7 +579,7 @@
 <a name="l00539"></a>00539     <span class="keywordflow">return</span> 0;
 <a name="l00540"></a>00540 }
 <a name="l00541"></a>00541 
-<a name="l00542"></a><a class="code" href="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9">00542</a> <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9">GEngine::loadApplication</a>(<a class="code" href="classGApplication.html">GApplication</a>* App)
+<a name="l00542"></a><a class="code" href="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9">00542</a> <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9">GEngine::loadApplication</a>(<a class="code" href="classGApplication.html" title="Abstraction of a application that runs on the engine.">GApplication</a>* App)
 <a name="l00543"></a>00543 {
 <a name="l00544"></a>00544 
 <a name="l00545"></a>00545     <span class="comment">//If the engine is in a error state then can&#39;t load a application</span>
@@ -596,7 +595,7 @@
 <a name="l00555"></a>00555         <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00556"></a>00556     }
 <a name="l00557"></a>00557 
-<a name="l00558"></a>00558     <span class="keywordflow">if</span> (App-&gt;<a class="code" href="classGApplication.html#a50ba447337ce4f31b1bd24e164c1f2c6">onLoad</a>(<span class="keyword">this</span>) == <span class="keyword">false</span>)
+<a name="l00558"></a>00558     <span class="keywordflow">if</span> (App-&gt;<a class="code" href="classGApplication.html#a89afefa2721de6db1932d71444af506c" title="Called the first time the app is loaded, initialisation should be done here.">onLoad</a>(<span class="keyword">this</span>) == <span class="keyword">false</span>)
 <a name="l00559"></a>00559     {
 <a name="l00560"></a>00560         <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00561"></a>00561     }
@@ -614,7 +613,7 @@
 <a name="l00573"></a>00573         <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00574"></a>00574     }
 <a name="l00575"></a>00575 
-<a name="l00576"></a>00576     <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>-&gt;<a class="code" href="classGApplication.html#af19755f48671ca15565837566021f327">onUnload</a>();
+<a name="l00576"></a>00576     <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>-&gt;<a class="code" href="classGApplication.html#a45e65b2a4a70b8e398effef37dbd06be" title="Called when the app is unloaded, deinitilization should be done here.">onUnload</a>();
 <a name="l00577"></a>00577 
 <a name="l00578"></a>00578     <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> = 0;
 <a name="l00579"></a>00579 
@@ -631,9 +630,9 @@
 <a name="l00590"></a>00590 
 <a name="l00591"></a>00591     strncpy(newErrorDetails, str, strlen(str) + 1);
 <a name="l00592"></a>00592 
-<a name="l00593"></a>00593     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(<span class="stringliteral">&quot;Error details set to&quot;</span>);
-<a name="l00594"></a>00594     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(<a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a>);
-<a name="l00595"></a>00595     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a>(<span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00593"></a>00593     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Error details set to&quot;</span>);
+<a name="l00594"></a>00594     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a>);
+<a name="l00595"></a>00595     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;\n&quot;</span>);
 <a name="l00596"></a>00596 
 <a name="l00597"></a>00597     <a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a> = <span class="keyword">true</span>;
 <a name="l00598"></a>00598 }
@@ -655,7 +654,7 @@
 <a name="l00614"></a>00614 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

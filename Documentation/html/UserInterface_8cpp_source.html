@@ -23,7 +23,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -44,11 +43,11 @@
 <a name="l00003"></a>00003 <span class="preprocessor">#include &quot;../Render/GRender.h&quot;</span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;<a class="code" href="GEngine_8h.html">Core/GEngine.h</a>&gt;</span>
 <a name="l00005"></a>00005 
-<a name="l00006"></a><a class="code" href="classViewerUserInterface.html#ad2519ce5b1e16e323fa282d8222c63d5">00006</a> <a class="code" href="classViewerUserInterface.html#ad2519ce5b1e16e323fa282d8222c63d5">ViewerUserInterface::ViewerUserInterface</a>() : <a class="code" href="classIElement.html">IElement</a>(10, 100, 250, 100) {
+<a name="l00006"></a><a class="code" href="classViewerUserInterface.html#ad2519ce5b1e16e323fa282d8222c63d5">00006</a> <a class="code" href="classViewerUserInterface.html#ad2519ce5b1e16e323fa282d8222c63d5">ViewerUserInterface::ViewerUserInterface</a>() : <a class="code" href="classIElement.html" title="the abstraction of a base element within the engine">IElement</a>(10, 100, 250, 100) {
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 }
 <a name="l00009"></a>00009 
-<a name="l00010"></a><a class="code" href="classViewerUserInterface.html#ac069fc517de62d62dfce8778159eafd8">00010</a> <span class="keywordtype">void</span> <a class="code" href="classViewerUserInterface.html#ac069fc517de62d62dfce8778159eafd8">ViewerUserInterface::draw</a>(<a class="code" href="classInterfaceLayer.html">InterfaceLayer</a>* IL) {
+<a name="l00010"></a><a class="code" href="classViewerUserInterface.html#ac069fc517de62d62dfce8778159eafd8">00010</a> <span class="keywordtype">void</span> <a class="code" href="classViewerUserInterface.html#ac069fc517de62d62dfce8778159eafd8">ViewerUserInterface::draw</a>(<a class="code" href="classInterfaceLayer.html" title="The engine interface render layer.">InterfaceLayer</a>* IL) {
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()-&gt;<a class="code" href="classGraphicsAPI.html#a8f03058d15aff693207f14a589b4dce5">enableBlending</a>();
 <a name="l00013"></a>00013 
@@ -57,7 +56,7 @@
 <a name="l00016"></a>00016         FPS = <span class="stringliteral">&quot;FPS: &quot;</span>;
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018         std::stringstream Number;
-<a name="l00019"></a>00019         Number &lt;&lt;  <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">GEngine::getInstance</a>()-&gt;<a class="code" href="classGEngine.html#ad5d13a3e4aeac37b090b3315d74fcd6d">getFpsCalculator</a>()-&gt;<a class="code" href="classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4">getFPS</a>();
+<a name="l00019"></a>00019         Number &lt;&lt;  <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">GEngine::getInstance</a>()-&gt;<a class="code" href="classGEngine.html#ad5d13a3e4aeac37b090b3315d74fcd6d">getFpsCalculator</a>()-&gt;<a class="code" href="classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4" title="Return the last calculated FPS.">getFPS</a>();
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021         FPS += Number.str();
 <a name="l00022"></a>00022         IL-&gt;<a class="code" href="classInterfaceLayer.html#a1f2ffa561b6ef715df829159c0b38462">getDefaultTextRenderer</a>()-&gt;<a class="code" href="classFREngine.html#ac2561f4397b93a7c000770b6223ca906">Render</a>(256, <a class="code" href="classIElement.html#a1987f7f1c0d5856fffb21a1690437ca8">x</a>, <a class="code" href="classIElement.html#ae2bcc3fa907a56b9eec0e47bab65e419">y</a>, <a class="code" href="classIElement.html#a8a717ecd0ca7eb28a72fabb699adafc1">width</a>, <a class="code" href="classIElement.html#a95c754211e9809b06a07ff6eb3f903f8">height</a>, FPS);
@@ -67,7 +66,7 @@
 <a name="l00026"></a>00026 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 17:33:28 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>
