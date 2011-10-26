@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classBeeHive.html#af281217ab270086473072b09fa561475" title="BeeHive::beeRequestNextJob" alt="" coords="169,45,367,74"/>
+<area shape="rect" id="node5" href="$classMutex.html#aa732ae651974555965dcaf9ad9e87882" title="Mutex::Lock" alt="" coords="423,6,516,36"/>
+<area shape="rect" id="node7" href="$classMutex.html#a669f7a1dd7992948b397726e5d187a39" title="Mutex::Unlock" alt="" coords="416,72,523,101"/>
+<area shape="rect" id="node9" href="$classWorkerJob.html#ae7e1d97ecb2e9ba1f6564384d21dcfbe" title="WorkerJob::getErrorDetails" alt="" coords="179,149,357,178"/>
+<area shape="rect" id="node11" href="$classWorkerJob.html#abcc795d8aab8b8120c482077b1aa564c" title="WorkerJob::getStatus" alt="" coords="193,202,343,232"/>
+<area shape="rect" id="node14" href="$classWorkerJob.html#a5373f2c86728c851e7ba4518fe91b110" title="WorkerJob::processJob" alt="" coords="188,256,348,285"/>
+</map>
