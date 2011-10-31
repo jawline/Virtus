@@ -40,7 +40,8 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a>  </div>
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">TextureMonitor Class Reference</div>  </div>
 </div>
@@ -77,10 +78,13 @@ Private Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTextureLoader.html">TextureLoader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTextureMonitor.html#acab296e108e056a6ebd9cbc3a6393d22">m_Loader</a></td></tr>
+<tr><td colspan="2"><h2><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTextureMonitor.html#a4e0fee985d0f292bd5619e8ecae97335">TAG</a> = &quot;TextureMonitor&quot;</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="TextureMonitor_8h_source.html#l00010">10</a> of file <a class="el" href="TextureMonitor_8h_source.html">TextureMonitor.h</a>.</p>
+<p>Definition at line <a class="el" href="TextureMonitor_8h_source.html#l00011">11</a> of file <a class="el" href="TextureMonitor_8h_source.html">TextureMonitor.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aece8bb245c2a7665d5a4a6c62e8181f4"></a><!-- doxytag: member="TextureMonitor::TextureMonitor" ref="aece8bb245c2a7665d5a4a6c62e8181f4" args="()" -->
 <div class="memitem">
@@ -96,7 +100,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="TextureMonitor_8cpp_source.html#l00004">4</a> of file <a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TextureMonitor_8cpp_source.html#l00006">6</a> of file <a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a>.</p>
 
 </div>
 </div>
@@ -114,9 +118,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="TextureMonitor_8cpp_source.html#l00009">9</a> of file <a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TextureMonitor_8cpp_source.html#l00010">10</a> of file <a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a>.</p>
 
-<p>References <a class="el" href="TextureMonitor_8cpp_source.html#l00022">f_freeEntity()</a>, and <a class="el" href="ResourceMonitor_8h_source.html#l00029">ResourceMonitor::m_resourceList</a>.</p>
+<p>References <a class="el" href="TextureMonitor_8cpp_source.html#l00020">f_freeEntity()</a>, and <a class="el" href="ResourceMonitor_8h_source.html#l00029">ResourceMonitor::m_resourceList</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -147,9 +151,9 @@ Here is the call graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classResourceMonitor.html#a24ab892560b57ebb2bc2fc0f7d3d519b">ResourceMonitor</a>.</p>
 
-<p>Definition at line <a class="el" href="TextureMonitor_8cpp_source.html#l00022">22</a> of file <a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TextureMonitor_8cpp_source.html#l00020">20</a> of file <a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TextureMonitor_8cpp_source.html#l00009">~TextureMonitor()</a>.</p>
+<p>Referenced by <a class="el" href="TextureMonitor_8cpp_source.html#l00010">~TextureMonitor()</a>.</p>
 
 </div>
 </div>
@@ -170,16 +174,16 @@ Here is the call graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classResourceMonitor.html#aec97dea494de4e2de415c78b833ddb0c">ResourceMonitor</a>.</p>
 
-<p>Definition at line <a class="el" href="TextureMonitor_8cpp_source.html#l00030">30</a> of file <a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TextureMonitor_8cpp_source.html#l00027">27</a> of file <a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a>.</p>
 
-<p>References <a class="el" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d">File::createInputStream()</a>, <a class="el" href="Filesystem_8cpp_source.html#l00006">Filesystem::evaluateChild()</a>, <a class="el" href="ResourceMonitor_8cpp_source.html#l00030">ResourceMonitor::f_addEntity()</a>, <a class="el" href="File_8h_source.html#l00006">fileId</a>, <a class="el" href="GRender_8h_source.html#l00056">GRenderer::getGraphicsAPI()</a>, <a class="el" href="GRender_8cpp_source.html#l00027">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00089">GRenderer::getRenderLog()</a>, <a class="el" href="Filesystem_8cpp_source.html#l00104">Filesystem::getRoot()</a>, <a class="el" href="classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c">FilesystemNode::getType()</a>, <a class="el" href="TextureLoader_8cpp_source.html#l00004">TextureLoader::load()</a>, <a class="el" href="TextureMonitor_8h_source.html#l00013">m_Loader</a>, <a class="el" href="classGraphicsAPI.html#a65d62f6a19c59f5fe2975dd54caa6ef8">GraphicsAPI::newTexture()</a>, <a class="el" href="classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0">DataInputStream::open()</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00040">LogWriter::writeData()</a>.</p>
+<p>References <a class="el" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d">File::createInputStream()</a>, <a class="el" href="Filesystem_8cpp_source.html#l00006">Filesystem::evaluateChild()</a>, <a class="el" href="ResourceMonitor_8cpp_source.html#l00030">ResourceMonitor::f_addEntity()</a>, <a class="el" href="File_8h_source.html#l00006">fileId</a>, <a class="el" href="GRender_8h_source.html#l00057">GRenderer::getGraphicsAPI()</a>, <a class="el" href="GRender_8cpp_source.html#l00028">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00090">GRenderer::getRenderLog()</a>, <a class="el" href="Filesystem_8cpp_source.html#l00112">Filesystem::getRoot()</a>, <a class="el" href="classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c">FilesystemNode::getType()</a>, <a class="el" href="TextureLoader_8cpp_source.html#l00004">TextureLoader::load()</a>, <a class="el" href="TextureMonitor_8h_source.html#l00014">m_Loader</a>, <a class="el" href="classGraphicsAPI.html#a65d62f6a19c59f5fe2975dd54caa6ef8">GraphicsAPI::newTexture()</a>, <a class="el" href="classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0">DataInputStream::open()</a>, <a class="el" href="TextureMonitor_8h_source.html#l00016">TAG</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00035">LogWriter::writeLine()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTextureMonitor_a98ac2108af2dca06b8ca8bdef14cdd73_cgraph.png" border="0" usemap="#classTextureMonitor_a98ac2108af2dca06b8ca8bdef14cdd73_cgraph" alt=""/></div>
 <map name="classTextureMonitor_a98ac2108af2dca06b8ca8bdef14cdd73_cgraph" id="classTextureMonitor_a98ac2108af2dca06b8ca8bdef14cdd73_cgraph">
-<area shape="rect" id="node3" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file." alt="" coords="259,5,416,35"/><area shape="rect" id="node5" href="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d" title="Filesystem::evaluateChild" alt="" coords="251,109,424,139"/><area shape="rect" id="node7" href="classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c" title="FilesystemNode::getType" alt="" coords="524,57,695,87"/><area shape="rect" id="node11" href="classResourceMonitor.html#a51748f69f24e6e9725c83bd09d28dd5d" title="ResourceMonitor::f_addEntity" alt="" coords="240,163,435,192"/><area shape="rect" id="node13" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2" title="GRenderer::getGraphicsAPI" alt="" coords="245,216,429,245"/><area shape="rect" id="node15" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="256,269,419,299"/><area shape="rect" id="node19" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="251,323,424,352"/><area shape="rect" id="node21" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117" title="Filesystem::getRoot" alt="" coords="268,376,407,405"/><area shape="rect" id="node26" href="classTextureLoader.html#ab4f8ba75bdda15786fb7480c64126328" title="TextureLoader::load" alt="" coords="269,429,405,459"/><area shape="rect" id="node44" href="classGraphicsAPI.html#a65d62f6a19c59f5fe2975dd54caa6ef8" title="GraphicsAPI::newTexture" alt="" coords="252,483,423,512"/><area shape="rect" id="node46" href="classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0" title="DataInputStream::open" alt="" coords="259,536,416,565"/><area shape="rect" id="node48" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="267,615,408,644"/><area shape="rect" id="node9" href="classFolder.html#a56700301248e09d2eae56bc7b2a00c0e" title="Folder::searchForChild" alt="" coords="532,111,687,140"/><area shape="rect" id="node17" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="532,269,687,299"/><area shape="rect" id="node23" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="556,323,663,352"/><area shape="rect" id="node28" href="classDataInputStream.html#a7e05b99af408b49e5be07cc178ba23a7" title="DataInputStream::isOpen" alt="" coords="524,429,695,459"/><area shape="rect" id="node30" href="classTextureLoader.html#a967515aa8e01a830d1b8a9942fe14ccd" title="TextureLoader::loadCompressedTGA" alt="" coords="491,376,728,405"/><area shape="rect" id="node34" href="classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60" title="DataInputStream::read" alt="" coords="792,483,947,512"/><area shape="rect" id="node38" href="classTextureLoader.html#a6ab23e009da89d4f60a28f7d3fc1f509" title="TextureLoader::loadUncompressedTGA" alt="" coords="484,483,735,512"/><area shape="rect" id="node32" href="classTexture.html#a49791edaa3beb8f9658565b2ced82cc8" title="Texture::loadTextureData" alt="" coords="784,376,955,405"/><area shape="rect" id="node36" href="TextureLoader_8cpp.html#a8d49f4691b64adb2015a52cc51f0051b" title="swapYRows" alt="" coords="821,429,917,459"/><area shape="rect" id="node50" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="527,587,692,616"/><area shape="rect" id="node52" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="520,640,699,669"/><area shape="rect" id="node54" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="527,693,692,723"/></map>
+<area shape="rect" id="node3" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file." alt="" coords="259,5,416,35"/><area shape="rect" id="node5" href="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d" title="Filesystem::evaluateChild" alt="" coords="251,109,424,139"/><area shape="rect" id="node7" href="classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c" title="FilesystemNode::getType" alt="" coords="524,57,695,87"/><area shape="rect" id="node11" href="classResourceMonitor.html#a51748f69f24e6e9725c83bd09d28dd5d" title="ResourceMonitor::f_addEntity" alt="" coords="240,163,435,192"/><area shape="rect" id="node13" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2" title="GRenderer::getGraphicsAPI" alt="" coords="245,216,429,245"/><area shape="rect" id="node15" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="256,269,419,299"/><area shape="rect" id="node19" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="251,323,424,352"/><area shape="rect" id="node21" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117" title="Filesystem::getRoot" alt="" coords="268,376,407,405"/><area shape="rect" id="node26" href="classTextureLoader.html#ab4f8ba75bdda15786fb7480c64126328" title="TextureLoader::load" alt="" coords="269,429,405,459"/><area shape="rect" id="node44" href="classGraphicsAPI.html#a65d62f6a19c59f5fe2975dd54caa6ef8" title="GraphicsAPI::newTexture" alt="" coords="252,483,423,512"/><area shape="rect" id="node46" href="classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0" title="DataInputStream::open" alt="" coords="259,536,416,565"/><area shape="rect" id="node48" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="268,615,407,644"/><area shape="rect" id="node9" href="classFolder.html#a56700301248e09d2eae56bc7b2a00c0e" title="Folder::searchForChild" alt="" coords="532,111,687,140"/><area shape="rect" id="node17" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="532,269,687,299"/><area shape="rect" id="node23" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="556,323,663,352"/><area shape="rect" id="node28" href="classDataInputStream.html#a7e05b99af408b49e5be07cc178ba23a7" title="DataInputStream::isOpen" alt="" coords="524,429,695,459"/><area shape="rect" id="node30" href="classTextureLoader.html#a967515aa8e01a830d1b8a9942fe14ccd" title="TextureLoader::loadCompressedTGA" alt="" coords="491,376,728,405"/><area shape="rect" id="node34" href="classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60" title="DataInputStream::read" alt="" coords="792,483,947,512"/><area shape="rect" id="node38" href="classTextureLoader.html#a6ab23e009da89d4f60a28f7d3fc1f509" title="TextureLoader::loadUncompressedTGA" alt="" coords="484,483,735,512"/><area shape="rect" id="node32" href="classTexture.html#a49791edaa3beb8f9658565b2ced82cc8" title="Texture::loadTextureData" alt="" coords="784,376,955,405"/><area shape="rect" id="node36" href="TextureLoader_8cpp.html#a8d49f4691b64adb2015a52cc51f0051b" title="swapYRows" alt="" coords="821,429,917,459"/><area shape="rect" id="node50" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="527,587,692,616"/><area shape="rect" id="node52" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="520,640,699,669"/><area shape="rect" id="node54" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="527,693,692,723"/></map>
 </div>
 </p>
 
@@ -200,7 +204,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="TextureMonitor_8cpp_source.html#l00096">96</a> of file <a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TextureMonitor_8cpp_source.html#l00090">90</a> of file <a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a>.</p>
 
 <p>References <a class="el" href="ResourceMonitor_8cpp_source.html#l00046">ResourceMonitor::rmGetResource()</a>.</p>
 
@@ -232,7 +236,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="TextureMonitor_8cpp_source.html#l00101">101</a> of file <a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TextureMonitor_8cpp_source.html#l00094">94</a> of file <a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a>.</p>
 
 <p>References <a class="el" href="ResourceMonitor_8cpp_source.html#l00061">ResourceMonitor::rmReleaseResource()</a>.</p>
 
@@ -261,9 +265,26 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="TextureMonitor_8h_source.html#l00013">13</a> of file <a class="el" href="TextureMonitor_8h_source.html">TextureMonitor.h</a>.</p>
+<p>Definition at line <a class="el" href="TextureMonitor_8h_source.html#l00014">14</a> of file <a class="el" href="TextureMonitor_8h_source.html">TextureMonitor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="TextureMonitor_8cpp_source.html#l00030">f_loadEntity()</a>.</p>
+<p>Referenced by <a class="el" href="TextureMonitor_8cpp_source.html#l00027">f_loadEntity()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e0fee985d0f292bd5619e8ecae97335"></a><!-- doxytag: member="TextureMonitor::TAG" ref="a4e0fee985d0f292bd5619e8ecae97335" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="classTextureMonitor.html#a4e0fee985d0f292bd5619e8ecae97335">TextureMonitor::TAG</a> = &quot;TextureMonitor&quot;<code> [static, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="TextureMonitor_8h_source.html#l00016">16</a> of file <a class="el" href="TextureMonitor_8h_source.html">TextureMonitor.h</a>.</p>
+
+<p>Referenced by <a class="el" href="TextureMonitor_8cpp_source.html#l00027">f_loadEntity()</a>.</p>
 
 </div>
 </div>
@@ -272,7 +293,7 @@ Here is the call graph for this function:</div>
 <li>Code/Render/TextureMonitor/<a class="el" href="TextureMonitor_8cpp_source.html">TextureMonitor.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 16:59:24 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -1,6 +1,8 @@
 #include "FontMap.h"
 #include "../GRender.h"
 
+const char* FontMap::TAG = "Font Map";
+
 FontMap::FontMap() {
 	PointSize = 0;
 
@@ -71,7 +73,7 @@ void FontMap::Render(int Char, float X, float Y, float offsetX, float offsetY, f
 
 void FontMap::Cleanup() {
 
-    GRenderer::getRenderer()->getRenderLog()->writeData("Cleaning up FontMap\n");
+    GRenderer::getRenderer()->getRenderLog()->writeLine(TAG, "Cleaning up FontMap\n");
 
     for (int i = 0; i < 255; i++)
     {

@@ -1,7 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$Filesystem_8h.html" title="Filesystem/Filesystem.h" alt="" coords="15,83,180,112"/>
-<area shape="rect" id="node5" href="$Folder_8h.html" title="Folder.h" alt="" coords="99,160,168,189"/>
-<area shape="rect" id="node7" href="$Node_8h.html" title="Node.h" alt="" coords="147,315,211,344"/>
-<area shape="rect" id="node11" href="$File_8h.html" title="File.h" alt="" coords="60,237,113,267"/>
-<area shape="rect" id="node14" href="$Stream_8h.html" title="Stream.h" alt="" coords="48,315,123,344"/>
+<area shape="rect" id="node3" href="$Filesystem_8h.html" title="Filesystem/Filesystem.h" alt="" coords="75,83,240,112"/>
+<area shape="rect" id="node5" href="$Folder_8h.html" title="Folder.h" alt="" coords="176,160,245,189"/>
+<area shape="rect" id="node7" href="$Node_8h.html" title="Node.h" alt="" coords="224,315,288,344"/>
+<area shape="rect" id="node11" href="$File_8h.html" title="File.h" alt="" coords="137,237,191,267"/>
+<area shape="rect" id="node14" href="$Stream_8h.html" title="Stream.h" alt="" coords="125,315,200,344"/>
 </map>

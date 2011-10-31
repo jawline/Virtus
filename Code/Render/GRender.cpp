@@ -6,6 +6,7 @@
 #include <GL/gl.h>
 
 GRenderer* renderInstance = 0;
+const char* GRenderer::TAG = "Renderer";
 
 GRenderer::GRenderer()
 {
@@ -55,11 +56,7 @@ bool GRenderer::initialize(unsigned int w, unsigned int h, const char* renderAPI
     {
 
         //If there was no gainable API instance bottle out
-
-        char Buffer[512];
-        sprintf(Buffer, "GRender: Unable to get a render context for graphics API %s API invalid or not supported by the system\n", renderAPI);
-
-        m_gameRenderLog->writeData(Buffer);
+        m_gameRenderLog->writeLine(TAG, string("Unable to get a render context for the graphics API") + renderAPI + string("API invalid or not supported by the system"));
 
         uninitialize();
         return false;
@@ -67,11 +64,8 @@ bool GRenderer::initialize(unsigned int w, unsigned int h, const char* renderAPI
     else
     {
 
-        char Buffer[512];
-        sprintf(Buffer, "GRender: Render API summary: %s\n", m_renderAPI->getAPISummary());
-
         //If you got a API instance write a summary to the log
-        m_gameRenderLog->writeData(Buffer);
+        m_gameRenderLog->writeLine(TAG, string("Render API summary: ") + m_renderAPI->getAPISummary());
 
     }
 
@@ -79,14 +73,14 @@ bool GRenderer::initialize(unsigned int w, unsigned int h, const char* renderAPI
 
     if (gameWindow->create("Engine", w, h, this) == false)
     {
-        m_gameRenderLog->writeData("GRender: Unable to create window");
+        m_gameRenderLog->writeLine(TAG, "GRender: Unable to create window");
         uninitialize();
         return false;
     }
 
     if (m_renderAPI->initialize() == false)
     {
-        m_gameRenderLog->writeData("GRender: Render API failed to initialize");
+        m_gameRenderLog->writeLine(TAG, "GRender: Render API failed to initialize");
         uninitialize();
 
         return false;

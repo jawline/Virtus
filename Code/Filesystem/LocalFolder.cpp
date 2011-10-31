@@ -4,6 +4,9 @@
 #include <sys/stat.h>
 #include <dirent.h>
 #include "LocalFile.h"
+#include <Core/GEngine.h>
+
+const char* LocalFolder::TAG = "Local Folder";
 
 LocalFolder::LocalFolder(string name, string path) {
 	m_localFolderPath = path;
@@ -148,13 +151,9 @@ void LocalFolder::emptyList() {
 
 FilesystemNode* LocalFolder::searchForChild(std::string name) {
 
-	printf("Search for %s\n", name.c_str());
-
 	for (unsigned int i = 0; i < m_entryList.size(); ++i) {
 
 		if ( name.compare(m_entryList[i]->getName()) == 0) {
-
-			printf("Found\n");
 
 			return m_entryList[i];
 
@@ -162,7 +161,7 @@ FilesystemNode* LocalFolder::searchForChild(std::string name) {
 
 	}
 
-	printf("ERROR: Child not found\n");
+	GEngine::getInstance()->getLog()->writeLine(TAG, "ERROR: Child not found\n");
 
 	return 0;
 }

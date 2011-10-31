@@ -14,6 +14,8 @@ class FREngine
 public:
     std::vector<FontMap>    FontMaps;
 private:
+    static const char* TAG;
+
     FT_Library	    Library;
     FT_Face         FontFace;
     FT_GlyphSlot    GlyphSlot;

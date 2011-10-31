@@ -6,6 +6,8 @@
 #include GL_HEADER
 #include GLU_HEADER
 
+const char* GL2GraphicsAPI::TAG = "GL2 Graphics API";
+
 GL2GraphicsAPI::GL2GraphicsAPI()
 {
 
@@ -64,12 +66,12 @@ bool GL2GraphicsAPI::initialize()
 
     if (err != GLEW_OK)
     {
-        GRenderer::getRenderer()->getRenderLog()->writeData("GLEW failed to initialize\n");
+        GRenderer::getRenderer()->getRenderLog()->writeLine(TAG, "GLEW failed to initialize\n");
         return false;
     }
     else
     {
-        GRenderer::getRenderer()->getRenderLog()->writeData("GLEW initialized\n");
+        GRenderer::getRenderer()->getRenderLog()->writeLine(TAG, "GLEW initialized\n");
     }
 
     //Create a framebuffer

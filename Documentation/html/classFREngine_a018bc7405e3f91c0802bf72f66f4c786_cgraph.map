@@ -2,7 +2,7 @@
 <area shape="rect" id="node3" href="$classFREngine.html#ad81e6daa06fe655d270c4b404690f191" title="FREngine::Init" alt="" coords="200,59,307,88"/>
 <area shape="rect" id="node5" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="361,5,524,35"/>
 <area shape="rect" id="node9" href="$classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="356,59,529,88"/>
-<area shape="rect" id="node11" href="$classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="372,112,513,141"/>
+<area shape="rect" id="node11" href="$classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="373,112,512,141"/>
 <area shape="rect" id="node7" href="$classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="592,5,747,35"/>
 <area shape="rect" id="node13" href="$classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="587,59,752,88"/>
 <area shape="rect" id="node15" href="$classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="580,112,759,141"/>

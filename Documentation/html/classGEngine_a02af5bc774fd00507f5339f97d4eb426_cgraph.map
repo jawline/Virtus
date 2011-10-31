@@ -35,7 +35,7 @@
 <area shape="rect" id="node59" href="$classRenderWindow.html#a0eef3cc5a2e986482528d15c8ebdb7f0" title="RenderWindow::update" alt="" coords="743,565,900,595"/>
 <area shape="rect" id="node71" href="$classGraphicsAPI.html#a1d9a56d216cf36a01e82370b9eb65b70" title="GraphicsAPI::clearErrors" alt="" coords="739,672,904,701"/>
 <area shape="rect" id="node73" href="$classRenderWindow.html#ae4c46093ca377813ba2fac5f1194a98b" title="RenderWindow::finalFrame" alt="" coords="732,725,911,755"/>
-<area shape="rect" id="node82" href="$classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="487,977,628,1007"/>
+<area shape="rect" id="node82" href="$classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="488,977,627,1007"/>
 <area shape="rect" id="node84" href="$classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="739,924,904,953"/>
 <area shape="rect" id="node86" href="$classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="732,977,911,1007"/>
 <area shape="rect" id="node88" href="$classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="739,1031,904,1060"/>

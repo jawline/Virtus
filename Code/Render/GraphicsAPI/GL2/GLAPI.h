@@ -15,6 +15,7 @@
 class GL2GraphicsAPI : public GraphicsAPI
 {
 private:
+	static const char* TAG;
 
     GLuint frameBufferObjectID;
     GLuint renderBufferID;

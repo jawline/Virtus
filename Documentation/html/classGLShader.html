@@ -40,7 +40,8 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a>  </div>
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">GLShader Class Reference</div>  </div>
 </div>
@@ -85,6 +86,10 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLShader.html#ade2ad12d4910d7616a0ad1aa64131b2f">m_shaderProgramID</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">GLuint *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLShader.html#ae2e8e1c69aefd2abcf50c8d65892f5bc">m_textureLocations</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLShader.html#accaa8bf372e151db21fef908bf5cb92a">m_numTextures</a></td></tr>
+<tr><td colspan="2"><h2><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLShader.html#a2f1d66148036767d50e2680469ee32c2">TAG</a> = &quot;OpenGL <a class="el" href="classShader.html">Shader</a>&quot;</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLShader.html#a13479e6482831cc9504a24ccb0485d16">m_numCreated</a> = 0</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -104,16 +109,16 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00009">9</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00011">11</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
 
-<p>References <a class="el" href="GRender_8cpp_source.html#l00027">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00089">GRenderer::getRenderLog()</a>, <a class="el" href="GLShader_8h_source.html#l00011">m_debugID</a>, <a class="el" href="GLShader_8h_source.html#l00014">m_fragmentShaderID</a>, <a class="el" href="GLShader_8h_source.html#l00018">m_numTextures</a>, <a class="el" href="GLShader_8h_source.html#l00015">m_shaderProgramID</a>, <a class="el" href="GLShader_8h_source.html#l00017">m_textureLocations</a>, <a class="el" href="GLShader_8h_source.html#l00013">m_vertexShaderID</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00040">LogWriter::writeData()</a>.</p>
+<p>References <a class="el" href="GRender_8cpp_source.html#l00028">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00090">GRenderer::getRenderLog()</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00035">LogWriter::writeLine()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGLShader_a71d842a6a99dac037c8d0f91e4de593b_cgraph.png" border="0" usemap="#classGLShader_a71d842a6a99dac037c8d0f91e4de593b_cgraph" alt=""/></div>
 <map name="classGLShader_a71d842a6a99dac037c8d0f91e4de593b_cgraph" id="classGLShader_a71d842a6a99dac037c8d0f91e4de593b_cgraph">
-<area shape="rect" id="node3" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="207,5,369,35"/><area shape="rect" id="node7" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="201,59,375,88"/><area shape="rect" id="node9" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="217,112,359,141"/><area shape="rect" id="node5" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="437,5,592,35"/><area shape="rect" id="node11" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="432,59,597,88"/><area shape="rect" id="node13" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="425,112,604,141"/><area shape="rect" id="node15" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="432,165,597,195"/></map>
+<area shape="rect" id="node3" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="207,5,369,35"/><area shape="rect" id="node7" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="201,59,375,88"/><area shape="rect" id="node9" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="219,112,357,141"/><area shape="rect" id="node5" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="437,5,592,35"/><area shape="rect" id="node11" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="432,59,597,88"/><area shape="rect" id="node13" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="425,112,604,141"/><area shape="rect" id="node15" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="432,165,597,195"/></map>
 </div>
 </p>
 
@@ -133,16 +138,16 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00028">28</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00030">30</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
 
-<p>References <a class="el" href="GRender_8cpp_source.html#l00027">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00089">GRenderer::getRenderLog()</a>, <a class="el" href="GLShader_8h_source.html#l00011">m_debugID</a>, <a class="el" href="GLShader_8h_source.html#l00014">m_fragmentShaderID</a>, <a class="el" href="GLShader_8h_source.html#l00018">m_numTextures</a>, <a class="el" href="GLShader_8h_source.html#l00015">m_shaderProgramID</a>, <a class="el" href="GLShader_8h_source.html#l00017">m_textureLocations</a>, <a class="el" href="GLShader_8h_source.html#l00013">m_vertexShaderID</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00040">LogWriter::writeData()</a>.</p>
+<p>References <a class="el" href="GRender_8cpp_source.html#l00028">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00090">GRenderer::getRenderLog()</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00035">LogWriter::writeLine()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGLShader_a2207b841d8547222303be9fec1236ad9_cgraph.png" border="0" usemap="#classGLShader_a2207b841d8547222303be9fec1236ad9_cgraph" alt=""/></div>
 <map name="classGLShader_a2207b841d8547222303be9fec1236ad9_cgraph" id="classGLShader_a2207b841d8547222303be9fec1236ad9_cgraph">
-<area shape="rect" id="node3" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="215,5,377,35"/><area shape="rect" id="node7" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="209,59,383,88"/><area shape="rect" id="node9" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="225,112,367,141"/><area shape="rect" id="node5" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="445,5,600,35"/><area shape="rect" id="node11" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="440,59,605,88"/><area shape="rect" id="node13" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="433,112,612,141"/><area shape="rect" id="node15" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="440,165,605,195"/></map>
+<area shape="rect" id="node3" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="215,5,377,35"/><area shape="rect" id="node7" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="209,59,383,88"/><area shape="rect" id="node9" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="227,112,365,141"/><area shape="rect" id="node5" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="445,5,600,35"/><area shape="rect" id="node11" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="440,59,605,88"/><area shape="rect" id="node13" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="433,112,612,141"/><area shape="rect" id="node15" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="440,165,605,195"/></map>
 </div>
 </p>
 
@@ -165,11 +170,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classShader.html#a192b2e16ccbe12ead4afa798c30633d6">Shader</a>.</p>
 
-<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00245">245</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
-
-<p>References <a class="el" href="GLShader_8h_source.html#l00015">m_shaderProgramID</a>.</p>
-
-<p>Referenced by <a class="el" href="GLShader_8cpp_source.html#l00225">setTexture()</a>, and <a class="el" href="GLShader_8cpp_source.html#l00210">setTextureName()</a>.</p>
+<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00235">235</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
 
 </div>
 </div>
@@ -189,7 +190,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classShader.html#a4d77584dcb62a676bc44b3776365ecdf">Shader</a>.</p>
 
-<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00250">250</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00239">239</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
 
 </div>
 </div>
@@ -234,9 +235,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00056">56</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00058">58</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
 
-<p>References <a class="el" href="GRender_8cpp_source.html#l00027">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00089">GRenderer::getRenderLog()</a>, <a class="el" href="GLShader_8h_source.html#l00014">m_fragmentShaderID</a>, <a class="el" href="GLShader_8h_source.html#l00015">m_shaderProgramID</a>, <a class="el" href="GLShader_8h_source.html#l00013">m_vertexShaderID</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00040">LogWriter::writeData()</a>.</p>
+<p>References <a class="el" href="GRender_8cpp_source.html#l00028">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00090">GRenderer::getRenderLog()</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00035">LogWriter::writeLine()</a>.</p>
 
 <p>Referenced by <a class="el" href="GLShaderFactory_8cpp_source.html#l00142">GLShaderFactory::loadShader()</a>.</p>
 
@@ -245,7 +246,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGLShader_a9ca588ab6e77024808bfb6efd486476e_cgraph.png" border="0" usemap="#classGLShader_a9ca588ab6e77024808bfb6efd486476e_cgraph" alt=""/></div>
 <map name="classGLShader_a9ca588ab6e77024808bfb6efd486476e_cgraph" id="classGLShader_a9ca588ab6e77024808bfb6efd486476e_cgraph">
-<area shape="rect" id="node3" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="215,5,377,35"/><area shape="rect" id="node7" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="209,59,383,88"/><area shape="rect" id="node9" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="225,112,367,141"/><area shape="rect" id="node5" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="445,5,600,35"/><area shape="rect" id="node11" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="440,59,605,88"/><area shape="rect" id="node13" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="433,112,612,141"/><area shape="rect" id="node15" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="440,165,605,195"/></map>
+<area shape="rect" id="node3" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="215,5,377,35"/><area shape="rect" id="node7" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="209,59,383,88"/><area shape="rect" id="node9" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="227,112,365,141"/><area shape="rect" id="node5" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="445,5,600,35"/><area shape="rect" id="node11" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="440,59,605,88"/><area shape="rect" id="node13" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="433,112,612,141"/><area shape="rect" id="node15" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="440,165,605,195"/></map>
 </div>
 </p>
 
@@ -268,9 +269,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classShader.html#a4ccf788a63e16c8b47833fa7e0e97ba0">Shader</a>.</p>
 
-<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00176">176</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
-
-<p>References <a class="el" href="GLShader_8h_source.html#l00018">m_numTextures</a>, and <a class="el" href="GLShader_8h_source.html#l00017">m_textureLocations</a>.</p>
+<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00175">175</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
 
 </div>
 </div>
@@ -301,18 +300,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classShader.html#afe523f01135c0fe55753d022c4096a7e">Shader</a>.</p>
 
-<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00225">225</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
-
-<p>References <a class="el" href="GLShader_8cpp_source.html#l00245">activateShader()</a>, <a class="el" href="GLShader_8h_source.html#l00018">m_numTextures</a>, and <a class="el" href="GLShader_8h_source.html#l00015">m_shaderProgramID</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGLShader_a21b2f702d71906088007c4771ca6560c_cgraph.png" border="0" usemap="#classGLShader_a21b2f702d71906088007c4771ca6560c_cgraph" alt=""/></div>
-<map name="classGLShader_a21b2f702d71906088007c4771ca6560c_cgraph" id="classGLShader_a21b2f702d71906088007c4771ca6560c_cgraph">
-<area shape="rect" id="node3" href="classGLShader.html#a63fa8b071aca02481d1858d37bf1065c" title="GLShader::activateShader" alt="" coords="207,5,380,35"/></map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00216">216</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
 
 </div>
 </div>
@@ -343,18 +331,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classShader.html#ade9d59c311b425f568dd7d8ad5fad19e">Shader</a>.</p>
 
-<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00210">210</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
-
-<p>References <a class="el" href="GLShader_8cpp_source.html#l00245">activateShader()</a>, <a class="el" href="GLShader_8h_source.html#l00018">m_numTextures</a>, <a class="el" href="GLShader_8h_source.html#l00015">m_shaderProgramID</a>, and <a class="el" href="GLShader_8h_source.html#l00017">m_textureLocations</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGLShader_a39655335b560918d8cee96a95d2a7586_cgraph.png" border="0" usemap="#classGLShader_a39655335b560918d8cee96a95d2a7586_cgraph" alt=""/></div>
-<map name="classGLShader_a39655335b560918d8cee96a95d2a7586_cgraph" id="classGLShader_a39655335b560918d8cee96a95d2a7586_cgraph">
-<area shape="rect" id="node3" href="classGLShader.html#a63fa8b071aca02481d1858d37bf1065c" title="GLShader::activateShader" alt="" coords="241,5,415,35"/></map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="GLShader_8cpp_source.html#l00202">202</a> of file <a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a>.</p>
 
 </div>
 </div>
@@ -370,9 +347,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00011">11</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
-
-<p>Referenced by <a class="el" href="GLShader_8cpp_source.html#l00009">GLShader()</a>, and <a class="el" href="GLShader_8cpp_source.html#l00028">~GLShader()</a>.</p>
+<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00013">13</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
 
 </div>
 </div>
@@ -387,9 +362,22 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00014">14</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
+<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00016">16</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
 
-<p>Referenced by <a class="el" href="GLShader_8cpp_source.html#l00009">GLShader()</a>, <a class="el" href="GLShader_8cpp_source.html#l00056">loadShader()</a>, and <a class="el" href="GLShader_8cpp_source.html#l00028">~GLShader()</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a13479e6482831cc9504a24ccb0485d16"></a><!-- doxytag: member="GLShader::m_numCreated" ref="a13479e6482831cc9504a24ccb0485d16" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="classGLShader.html#a13479e6482831cc9504a24ccb0485d16">GLShader::m_numCreated</a> = 0<code> [static, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00011">11</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
 
 </div>
 </div>
@@ -404,9 +392,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00018">18</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
-
-<p>Referenced by <a class="el" href="GLShader_8cpp_source.html#l00009">GLShader()</a>, <a class="el" href="GLShader_8cpp_source.html#l00176">setNumberOfTextures()</a>, <a class="el" href="GLShader_8cpp_source.html#l00225">setTexture()</a>, <a class="el" href="GLShader_8cpp_source.html#l00210">setTextureName()</a>, and <a class="el" href="GLShader_8cpp_source.html#l00028">~GLShader()</a>.</p>
+<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00020">20</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
 
 </div>
 </div>
@@ -421,9 +407,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00015">15</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
-
-<p>Referenced by <a class="el" href="GLShader_8cpp_source.html#l00245">activateShader()</a>, <a class="el" href="GLShader_8cpp_source.html#l00009">GLShader()</a>, <a class="el" href="GLShader_8cpp_source.html#l00056">loadShader()</a>, <a class="el" href="GLShader_8cpp_source.html#l00225">setTexture()</a>, <a class="el" href="GLShader_8cpp_source.html#l00210">setTextureName()</a>, and <a class="el" href="GLShader_8cpp_source.html#l00028">~GLShader()</a>.</p>
+<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00017">17</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
 
 </div>
 </div>
@@ -438,9 +422,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00017">17</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
-
-<p>Referenced by <a class="el" href="GLShader_8cpp_source.html#l00009">GLShader()</a>, <a class="el" href="GLShader_8cpp_source.html#l00176">setNumberOfTextures()</a>, <a class="el" href="GLShader_8cpp_source.html#l00210">setTextureName()</a>, and <a class="el" href="GLShader_8cpp_source.html#l00028">~GLShader()</a>.</p>
+<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00019">19</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
 
 </div>
 </div>
@@ -455,9 +437,22 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00013">13</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
+<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00015">15</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
 
-<p>Referenced by <a class="el" href="GLShader_8cpp_source.html#l00009">GLShader()</a>, <a class="el" href="GLShader_8cpp_source.html#l00056">loadShader()</a>, and <a class="el" href="GLShader_8cpp_source.html#l00028">~GLShader()</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a2f1d66148036767d50e2680469ee32c2"></a><!-- doxytag: member="GLShader::TAG" ref="a2f1d66148036767d50e2680469ee32c2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="classGLShader.html#a2f1d66148036767d50e2680469ee32c2">GLShader::TAG</a> = &quot;OpenGL <a class="el" href="classShader.html">Shader</a>&quot;<code> [static, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="GLShader_8h_source.html#l00010">10</a> of file <a class="el" href="GLShader_8h_source.html">GLShader.h</a>.</p>
 
 </div>
 </div>
@@ -466,7 +461,7 @@ Here is the call graph for this function:</div>
 <li>Code/Render/GraphicsAPI/GL2/<a class="el" href="GLShader_8cpp_source.html">GLShader.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 16:59:23 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

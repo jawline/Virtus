@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$LogWriter_8h.html" title="LogWriter.h" alt="" coords="44,83,132,112"/>
-<area shape="rect" id="node5" href="$Filesystem_8h.html" title="Filesystem/Filesystem.h" alt="" coords="5,160,171,189"/>
-<area shape="rect" id="node7" href="$Folder_8h.html" title="Folder.h" alt="" coords="89,237,159,267"/>
-<area shape="rect" id="node9" href="$Node_8h.html" title="Node.h" alt="" coords="137,392,201,421"/>
-<area shape="rect" id="node13" href="$File_8h.html" title="File.h" alt="" coords="51,315,104,344"/>
-<area shape="rect" id="node16" href="$Stream_8h.html" title="Stream.h" alt="" coords="39,392,113,421"/>
+<area shape="rect" id="node3" href="$LogWriter_8h.html" title="LogWriter.h" alt="" coords="21,83,109,112"/>
+<area shape="rect" id="node5" href="$Filesystem_8h.html" title="Filesystem/Filesystem.h" alt="" coords="43,160,208,189"/>
+<area shape="rect" id="node7" href="$Folder_8h.html" title="Folder.h" alt="" coords="144,237,213,267"/>
+<area shape="rect" id="node9" href="$Node_8h.html" title="Node.h" alt="" coords="192,392,256,421"/>
+<area shape="rect" id="node13" href="$File_8h.html" title="File.h" alt="" coords="105,315,159,344"/>
+<area shape="rect" id="node16" href="$Stream_8h.html" title="Stream.h" alt="" coords="93,392,168,421"/>
 </map>

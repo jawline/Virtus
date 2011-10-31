@@ -22,7 +22,9 @@ LocalFile::LocalFile(string Path) {
 
 	}
 
-	m_localName = Path.substr(lastSlash, Path.length());
+	//Get the part of the path after the last forward slash (I.e. the file name)
+	m_localName = Path.substr(lastSlash);
+
 	printf("m_localName %s\n", m_localName.c_str());
 }
 

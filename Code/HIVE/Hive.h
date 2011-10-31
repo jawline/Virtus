@@ -14,6 +14,8 @@ class WorkerBee;
 class BeeHive
 {
 private:
+	static const char* TAG;
+
     WorkerBee** m_bees;
     unsigned int m_numberOfBees;
 

@@ -41,7 +41,8 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a>  </div>
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">FREngine Class Reference</div>  </div>
 </div>
@@ -74,6 +75,9 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">FT_Library&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFREngine.html#a92a9273d94f124ae80a25f53aaa62d7e">Library</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">FT_Face&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFREngine.html#a95ed22a25015adea4679b3b309bc16dd">FontFace</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">FT_GlyphSlot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFREngine.html#af59f92539246c39015306f61f90bef7f">GlyphSlot</a></td></tr>
+<tr><td colspan="2"><h2><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFREngine.html#ae7b983d7e038decbbd74ee9de19f797a">TAG</a> = &quot;Font Render Engine&quot;</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -93,7 +97,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00005">5</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00007">7</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
 
 <p>References <a class="el" href="FREngine_8cpp_source.html#l00019">Init()</a>.</p>
 
@@ -102,7 +106,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFREngine_a018bc7405e3f91c0802bf72f66f4c786_cgraph.png" border="0" usemap="#classFREngine_a018bc7405e3f91c0802bf72f66f4c786_cgraph" alt=""/></div>
 <map name="classFREngine_a018bc7405e3f91c0802bf72f66f4c786_cgraph" id="classFREngine_a018bc7405e3f91c0802bf72f66f4c786_cgraph">
-<area shape="rect" id="node3" href="classFREngine.html#ad81e6daa06fe655d270c4b404690f191" title="FREngine::Init" alt="" coords="200,59,307,88"/><area shape="rect" id="node5" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="361,5,524,35"/><area shape="rect" id="node9" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="356,59,529,88"/><area shape="rect" id="node11" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="372,112,513,141"/><area shape="rect" id="node7" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="592,5,747,35"/><area shape="rect" id="node13" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="587,59,752,88"/><area shape="rect" id="node15" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="580,112,759,141"/><area shape="rect" id="node17" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="587,165,752,195"/></map>
+<area shape="rect" id="node3" href="classFREngine.html#ad81e6daa06fe655d270c4b404690f191" title="FREngine::Init" alt="" coords="200,59,307,88"/><area shape="rect" id="node5" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="361,5,524,35"/><area shape="rect" id="node9" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="356,59,529,88"/><area shape="rect" id="node11" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="373,112,512,141"/><area shape="rect" id="node7" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="592,5,747,35"/><area shape="rect" id="node13" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="587,59,752,88"/><area shape="rect" id="node15" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="580,112,759,141"/><area shape="rect" id="node17" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="587,165,752,195"/></map>
 </div>
 </p>
 
@@ -122,16 +126,16 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00012">12</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00013">13</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
 
-<p>References <a class="el" href="FREngine_8cpp_source.html#l00258">Cleanup()</a>.</p>
+<p>References <a class="el" href="FREngine_8cpp_source.html#l00248">Cleanup()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFREngine_abb26208c17b12a26acd70df9e8e85e96_cgraph.png" border="0" usemap="#classFREngine_abb26208c17b12a26acd70df9e8e85e96_cgraph" alt=""/></div>
 <map name="classFREngine_abb26208c17b12a26acd70df9e8e85e96_cgraph" id="classFREngine_abb26208c17b12a26acd70df9e8e85e96_cgraph">
-<area shape="rect" id="node3" href="classFREngine.html#a43cd0dc8122411eb84ac6d66ff5f17d9" title="FREngine::Cleanup" alt="" coords="208,59,344,88"/><area shape="rect" id="node5" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="399,5,561,35"/><area shape="rect" id="node9" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="393,59,567,88"/><area shape="rect" id="node11" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="409,112,551,141"/><area shape="rect" id="node7" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="629,5,784,35"/><area shape="rect" id="node13" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="624,59,789,88"/><area shape="rect" id="node15" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="617,112,796,141"/><area shape="rect" id="node17" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="624,165,789,195"/></map>
+<area shape="rect" id="node3" href="classFREngine.html#a43cd0dc8122411eb84ac6d66ff5f17d9" title="FREngine::Cleanup" alt="" coords="208,59,344,88"/><area shape="rect" id="node5" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="399,5,561,35"/><area shape="rect" id="node9" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="393,59,567,88"/><area shape="rect" id="node11" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="411,112,549,141"/><area shape="rect" id="node7" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="629,5,784,35"/><area shape="rect" id="node13" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="624,59,789,88"/><area shape="rect" id="node15" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="617,112,796,141"/><area shape="rect" id="node17" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="624,165,789,195"/></map>
 </div>
 </p>
 
@@ -152,18 +156,18 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00258">258</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00248">248</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
 
-<p>References <a class="el" href="FREngine_8h_source.html#l00015">FontMaps</a>, <a class="el" href="GRender_8cpp_source.html#l00027">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00089">GRenderer::getRenderLog()</a>, <a class="el" href="FREngine_8h_source.html#l00017">Library</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00040">LogWriter::writeData()</a>.</p>
+<p>References <a class="el" href="FREngine_8h_source.html#l00015">FontMaps</a>, <a class="el" href="GRender_8cpp_source.html#l00028">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00090">GRenderer::getRenderLog()</a>, <a class="el" href="FREngine_8h_source.html#l00019">Library</a>, <a class="el" href="FREngine_8h_source.html#l00017">TAG</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00035">LogWriter::writeLine()</a>.</p>
 
-<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00012">~FREngine()</a>.</p>
+<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00013">~FREngine()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFREngine_a43cd0dc8122411eb84ac6d66ff5f17d9_cgraph.png" border="0" usemap="#classFREngine_a43cd0dc8122411eb84ac6d66ff5f17d9_cgraph" alt=""/></div>
 <map name="classFREngine_a43cd0dc8122411eb84ac6d66ff5f17d9_cgraph" id="classFREngine_a43cd0dc8122411eb84ac6d66ff5f17d9_cgraph">
-<area shape="rect" id="node3" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="196,5,359,35"/><area shape="rect" id="node7" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="191,59,364,88"/><area shape="rect" id="node9" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="207,112,348,141"/><area shape="rect" id="node5" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="427,5,581,35"/><area shape="rect" id="node11" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="421,59,587,88"/><area shape="rect" id="node13" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="415,112,593,141"/><area shape="rect" id="node15" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="421,165,587,195"/></map>
+<area shape="rect" id="node3" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="196,5,359,35"/><area shape="rect" id="node7" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="191,59,364,88"/><area shape="rect" id="node9" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="208,112,347,141"/><area shape="rect" id="node5" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="427,5,581,35"/><area shape="rect" id="node11" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="421,59,587,88"/><area shape="rect" id="node13" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="415,112,593,141"/><area shape="rect" id="node15" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="421,165,587,195"/></map>
 </div>
 </p>
 
@@ -185,16 +189,16 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00019">19</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
 
-<p>References <a class="el" href="GRender_8cpp_source.html#l00027">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00089">GRenderer::getRenderLog()</a>, <a class="el" href="FREngine_8h_source.html#l00017">Library</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00040">LogWriter::writeData()</a>.</p>
+<p>References <a class="el" href="GRender_8cpp_source.html#l00028">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00090">GRenderer::getRenderLog()</a>, <a class="el" href="FREngine_8h_source.html#l00019">Library</a>, <a class="el" href="FREngine_8h_source.html#l00017">TAG</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00035">LogWriter::writeLine()</a>.</p>
 
-<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00005">FREngine()</a>.</p>
+<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00007">FREngine()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFREngine_ad81e6daa06fe655d270c4b404690f191_cgraph.png" border="0" usemap="#classFREngine_ad81e6daa06fe655d270c4b404690f191_cgraph" alt=""/></div>
 <map name="classFREngine_ad81e6daa06fe655d270c4b404690f191_cgraph" id="classFREngine_ad81e6daa06fe655d270c4b404690f191_cgraph">
-<area shape="rect" id="node3" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="167,5,329,35"/><area shape="rect" id="node7" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="161,59,335,88"/><area shape="rect" id="node9" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="177,112,319,141"/><area shape="rect" id="node5" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="397,5,552,35"/><area shape="rect" id="node11" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="392,59,557,88"/><area shape="rect" id="node13" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="385,112,564,141"/><area shape="rect" id="node15" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="392,165,557,195"/></map>
+<area shape="rect" id="node3" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="167,5,329,35"/><area shape="rect" id="node7" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="161,59,335,88"/><area shape="rect" id="node9" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="179,112,317,141"/><area shape="rect" id="node5" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="397,5,552,35"/><area shape="rect" id="node11" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="392,59,557,88"/><area shape="rect" id="node13" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="385,112,564,141"/><area shape="rect" id="node15" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="392,165,557,195"/></map>
 </div>
 </p>
 
@@ -215,18 +219,18 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00033">33</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00032">32</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
 
-<p>References <a class="el" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d">File::createInputStream()</a>, <a class="el" href="File_8h_source.html#l00006">fileId</a>, <a class="el" href="FREngine_8h_source.html#l00018">FontFace</a>, <a class="el" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8">FilesystemNode::getName()</a>, <a class="el" href="GRender_8cpp_source.html#l00027">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00089">GRenderer::getRenderLog()</a>, <a class="el" href="File_8h_source.html#l00019">File::getType()</a>, <a class="el" href="FREngine_8h_source.html#l00019">GlyphSlot</a>, <a class="el" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b">File::length()</a>, <a class="el" href="FREngine_8h_source.html#l00017">Library</a>, <a class="el" href="classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0">DataInputStream::open()</a>, <a class="el" href="classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60">DataInputStream::read()</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00040">LogWriter::writeData()</a>.</p>
+<p>References <a class="el" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d">File::createInputStream()</a>, <a class="el" href="File_8h_source.html#l00006">fileId</a>, <a class="el" href="FREngine_8h_source.html#l00020">FontFace</a>, <a class="el" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8">FilesystemNode::getName()</a>, <a class="el" href="GRender_8cpp_source.html#l00028">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00090">GRenderer::getRenderLog()</a>, <a class="el" href="File_8h_source.html#l00019">File::getType()</a>, <a class="el" href="FREngine_8h_source.html#l00021">GlyphSlot</a>, <a class="el" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b">File::length()</a>, <a class="el" href="FREngine_8h_source.html#l00019">Library</a>, <a class="el" href="classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0">DataInputStream::open()</a>, <a class="el" href="classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60">DataInputStream::read()</a>, <a class="el" href="FREngine_8h_source.html#l00017">TAG</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00035">LogWriter::writeLine()</a>.</p>
 
-<p>Referenced by <a class="el" href="GEngine_8cpp_source.html#l00074">GEngine::initialize()</a>, and <a class="el" href="InterfaceLayer_8cpp_source.html#l00006">InterfaceLayer::InterfaceLayer()</a>.</p>
+<p>Referenced by <a class="el" href="GEngine_8cpp_source.html#l00073">GEngine::initialize()</a>, and <a class="el" href="InterfaceLayer_8cpp_source.html#l00006">InterfaceLayer::InterfaceLayer()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFREngine_a9ac9c46b30f8b98fb541b56d16cb0588_cgraph.png" border="0" usemap="#classFREngine_a9ac9c46b30f8b98fb541b56d16cb0588_cgraph" alt=""/></div>
 <map name="classFREngine_a9ac9c46b30f8b98fb541b56d16cb0588_cgraph" id="classFREngine_a9ac9c46b30f8b98fb541b56d16cb0588_cgraph">
-<area shape="rect" id="node3" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file." alt="" coords="181,5,339,35"/><area shape="rect" id="node5" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8" title="FilesystemNode::getName" alt="" coords="171,59,349,88"/><area shape="rect" id="node7" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="179,112,341,141"/><area shape="rect" id="node11" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="173,165,347,195"/><area shape="rect" id="node13" href="classFile.html#a43d0e1af3412f6b04b0fde9af3cef442" title="File::getType" alt="" coords="211,219,309,248"/><area shape="rect" id="node15" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file." alt="" coords="217,272,303,301"/><area shape="rect" id="node17" href="classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0" title="DataInputStream::open" alt="" coords="181,325,339,355"/><area shape="rect" id="node19" href="classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60" title="DataInputStream::read" alt="" coords="183,379,337,408"/><area shape="rect" id="node21" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="189,432,331,461"/><area shape="rect" id="node9" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="411,112,565,141"/><area shape="rect" id="node23" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="405,379,571,408"/><area shape="rect" id="node25" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="399,432,577,461"/><area shape="rect" id="node27" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="405,485,571,515"/></map>
+<area shape="rect" id="node3" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file." alt="" coords="181,5,339,35"/><area shape="rect" id="node5" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8" title="FilesystemNode::getName" alt="" coords="171,59,349,88"/><area shape="rect" id="node7" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="179,112,341,141"/><area shape="rect" id="node11" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="173,165,347,195"/><area shape="rect" id="node13" href="classFile.html#a43d0e1af3412f6b04b0fde9af3cef442" title="File::getType" alt="" coords="211,219,309,248"/><area shape="rect" id="node15" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file." alt="" coords="217,272,303,301"/><area shape="rect" id="node17" href="classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0" title="DataInputStream::open" alt="" coords="181,325,339,355"/><area shape="rect" id="node19" href="classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60" title="DataInputStream::read" alt="" coords="183,379,337,408"/><area shape="rect" id="node21" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="191,432,329,461"/><area shape="rect" id="node9" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="411,112,565,141"/><area shape="rect" id="node23" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="405,379,571,408"/><area shape="rect" id="node25" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="399,432,577,461"/><area shape="rect" id="node27" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="405,485,571,515"/></map>
 </div>
 </p>
 
@@ -249,9 +253,9 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00094">94</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
 
-<p>References <a class="el" href="FontChar_8h_source.html#l00021">FontChar::AdvanceX</a>, <a class="el" href="FontChar_8h_source.html#l00016">FontChar::CharHeight</a>, <a class="el" href="FontMap_8h_source.html#l00017">FontMap::CharList</a>, <a class="el" href="FontChar_8h_source.html#l00013">FontChar::charTexture</a>, <a class="el" href="FontChar_8h_source.html#l00015">FontChar::CharWidth</a>, <a class="el" href="FREngine_8h_source.html#l00018">FontFace</a>, <a class="el" href="FREngine_8h_source.html#l00015">FontMaps</a>, <a class="el" href="GRender_8h_source.html#l00056">GRenderer::getGraphicsAPI()</a>, <a class="el" href="GRender_8cpp_source.html#l00027">GRenderer::getRenderer()</a>, <a class="el" href="FREngine_8h_source.html#l00019">GlyphSlot</a>, <a class="el" href="FontChar_8h_source.html#l00019">FontChar::Height</a>, <a class="el" href="Texture_8h_source.html#l00013">input_data_byte_luminance_alpha</a>, <a class="el" href="classTexture.html#a49791edaa3beb8f9658565b2ced82cc8">Texture::loadTextureData()</a>, <a class="el" href="classGraphicsAPI.html#a65d62f6a19c59f5fe2975dd54caa6ef8">GraphicsAPI::newTexture()</a>, <a class="el" href="FREngine_8cpp_source.html#l00283">NextPowerTwo()</a>, <a class="el" href="FontChar_8h_source.html#l00023">FontChar::OffsetX</a>, <a class="el" href="FontChar_8h_source.html#l00024">FontChar::OffsetY</a>, <a class="el" href="FontMap_8h_source.html#l00019">FontMap::PointSize</a>, <a class="el" href="FREngine_8cpp_source.html#l00273">SetFontPointSize()</a>, and <a class="el" href="FontChar_8h_source.html#l00018">FontChar::Width</a>.</p>
+<p>References <a class="el" href="FontChar_8h_source.html#l00021">FontChar::AdvanceX</a>, <a class="el" href="FontChar_8h_source.html#l00016">FontChar::CharHeight</a>, <a class="el" href="FontMap_8h_source.html#l00020">FontMap::CharList</a>, <a class="el" href="FontChar_8h_source.html#l00013">FontChar::charTexture</a>, <a class="el" href="FontChar_8h_source.html#l00015">FontChar::CharWidth</a>, <a class="el" href="FREngine_8h_source.html#l00020">FontFace</a>, <a class="el" href="FREngine_8h_source.html#l00015">FontMaps</a>, <a class="el" href="GRender_8h_source.html#l00057">GRenderer::getGraphicsAPI()</a>, <a class="el" href="GRender_8cpp_source.html#l00028">GRenderer::getRenderer()</a>, <a class="el" href="FREngine_8h_source.html#l00021">GlyphSlot</a>, <a class="el" href="FontChar_8h_source.html#l00019">FontChar::Height</a>, <a class="el" href="Texture_8h_source.html#l00013">input_data_byte_luminance_alpha</a>, <a class="el" href="classTexture.html#a49791edaa3beb8f9658565b2ced82cc8">Texture::loadTextureData()</a>, <a class="el" href="classGraphicsAPI.html#a65d62f6a19c59f5fe2975dd54caa6ef8">GraphicsAPI::newTexture()</a>, <a class="el" href="FREngine_8cpp_source.html#l00270">NextPowerTwo()</a>, <a class="el" href="FontChar_8h_source.html#l00023">FontChar::OffsetX</a>, <a class="el" href="FontChar_8h_source.html#l00024">FontChar::OffsetY</a>, <a class="el" href="FontMap_8h_source.html#l00022">FontMap::PointSize</a>, <a class="el" href="FREngine_8cpp_source.html#l00262">SetFontPointSize()</a>, and <a class="el" href="FontChar_8h_source.html#l00018">FontChar::Width</a>.</p>
 
-<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00144">Render()</a>.</p>
+<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00147">Render()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -279,7 +283,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00283">283</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00270">270</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00094">LoadFontmap()</a>.</p>
 
@@ -334,7 +338,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00191">191</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00188">188</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
 
 <p>References <a class="el" href="FontChar_8h_source.html#l00021">FontChar::AdvanceX</a>, <a class="el" href="FontChar_8h_source.html#l00016">FontChar::CharHeight</a>, <a class="el" href="FREngine_8h_source.html#l00015">FontMaps</a>, <a class="el" href="FontChar_8h_source.html#l00019">FontChar::Height</a>, <a class="el" href="FREngine_8cpp_source.html#l00094">LoadFontmap()</a>, <a class="el" href="FontChar_8h_source.html#l00023">FontChar::OffsetX</a>, <a class="el" href="FontChar_8h_source.html#l00024">FontChar::OffsetY</a>, and <a class="el" href="FontChar_8h_source.html#l00018">FontChar::Width</a>.</p>
 
@@ -386,7 +390,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00144">144</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00147">147</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
 
 <p>References <a class="el" href="FontChar_8h_source.html#l00021">FontChar::AdvanceX</a>, <a class="el" href="FREngine_8h_source.html#l00015">FontMaps</a>, and <a class="el" href="FREngine_8cpp_source.html#l00094">LoadFontmap()</a>.</p>
 
@@ -418,9 +422,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00278">278</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00266">266</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
 
-<p>References <a class="el" href="FREngine_8h_source.html#l00018">FontFace</a>.</p>
+<p>References <a class="el" href="FREngine_8h_source.html#l00020">FontFace</a>.</p>
 
 </div>
 </div>
@@ -439,9 +443,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00273">273</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FREngine_8cpp_source.html#l00262">262</a> of file <a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a>.</p>
 
-<p>References <a class="el" href="FREngine_8h_source.html#l00018">FontFace</a>.</p>
+<p>References <a class="el" href="FREngine_8h_source.html#l00020">FontFace</a>.</p>
 
 <p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00094">LoadFontmap()</a>.</p>
 
@@ -459,9 +463,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FREngine_8h_source.html#l00018">18</a> of file <a class="el" href="FREngine_8h_source.html">FREngine.h</a>.</p>
+<p>Definition at line <a class="el" href="FREngine_8h_source.html#l00020">20</a> of file <a class="el" href="FREngine_8h_source.html">FREngine.h</a>.</p>
 
-<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00033">Load()</a>, <a class="el" href="FREngine_8cpp_source.html#l00094">LoadFontmap()</a>, <a class="el" href="FREngine_8cpp_source.html#l00278">SetFontPixelSize()</a>, and <a class="el" href="FREngine_8cpp_source.html#l00273">SetFontPointSize()</a>.</p>
+<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00032">Load()</a>, <a class="el" href="FREngine_8cpp_source.html#l00094">LoadFontmap()</a>, <a class="el" href="FREngine_8cpp_source.html#l00266">SetFontPixelSize()</a>, and <a class="el" href="FREngine_8cpp_source.html#l00262">SetFontPointSize()</a>.</p>
 
 </div>
 </div>
@@ -478,7 +482,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="FREngine_8h_source.html#l00015">15</a> of file <a class="el" href="FREngine_8h_source.html">FREngine.h</a>.</p>
 
-<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00258">Cleanup()</a>, <a class="el" href="FREngine_8cpp_source.html#l00094">LoadFontmap()</a>, and <a class="el" href="FREngine_8cpp_source.html#l00144">Render()</a>.</p>
+<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00248">Cleanup()</a>, <a class="el" href="FREngine_8cpp_source.html#l00094">LoadFontmap()</a>, and <a class="el" href="FREngine_8cpp_source.html#l00147">Render()</a>.</p>
 
 </div>
 </div>
@@ -493,9 +497,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FREngine_8h_source.html#l00019">19</a> of file <a class="el" href="FREngine_8h_source.html">FREngine.h</a>.</p>
+<p>Definition at line <a class="el" href="FREngine_8h_source.html#l00021">21</a> of file <a class="el" href="FREngine_8h_source.html">FREngine.h</a>.</p>
 
-<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00033">Load()</a>, and <a class="el" href="FREngine_8cpp_source.html#l00094">LoadFontmap()</a>.</p>
+<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00032">Load()</a>, and <a class="el" href="FREngine_8cpp_source.html#l00094">LoadFontmap()</a>.</p>
 
 </div>
 </div>
@@ -510,9 +514,26 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Definition at line <a class="el" href="FREngine_8h_source.html#l00019">19</a> of file <a class="el" href="FREngine_8h_source.html">FREngine.h</a>.</p>
+
+<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00248">Cleanup()</a>, <a class="el" href="FREngine_8cpp_source.html#l00019">Init()</a>, and <a class="el" href="FREngine_8cpp_source.html#l00032">Load()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7b983d7e038decbbd74ee9de19f797a"></a><!-- doxytag: member="FREngine::TAG" ref="ae7b983d7e038decbbd74ee9de19f797a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="classFREngine.html#ae7b983d7e038decbbd74ee9de19f797a">FREngine::TAG</a> = &quot;Font Render Engine&quot;<code> [static, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
 <p>Definition at line <a class="el" href="FREngine_8h_source.html#l00017">17</a> of file <a class="el" href="FREngine_8h_source.html">FREngine.h</a>.</p>
 
-<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00258">Cleanup()</a>, <a class="el" href="FREngine_8cpp_source.html#l00019">Init()</a>, and <a class="el" href="FREngine_8cpp_source.html#l00033">Load()</a>.</p>
+<p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00248">Cleanup()</a>, <a class="el" href="FREngine_8cpp_source.html#l00019">Init()</a>, and <a class="el" href="FREngine_8cpp_source.html#l00032">Load()</a>.</p>
 
 </div>
 </div>
@@ -521,7 +542,7 @@ Here is the call graph for this function:</div>
 <li>Code/Render/Fonts/<a class="el" href="FREngine_8cpp_source.html">FREngine.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 16:59:23 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

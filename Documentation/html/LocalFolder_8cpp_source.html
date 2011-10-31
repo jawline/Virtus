@@ -44,171 +44,170 @@
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;sys/stat.h&gt;</span>
 <a name="l00005"></a>00005 <span class="preprocessor">#include &lt;dirent.h&gt;</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="LocalFile_8h.html">LocalFile.h</a>&quot;</span>
-<a name="l00007"></a>00007 
-<a name="l00008"></a><a class="code" href="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238">00008</a> <a class="code" href="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238">LocalFolder::LocalFolder</a>(<span class="keywordtype">string</span> name, <span class="keywordtype">string</span> path) {
-<a name="l00009"></a>00009         <a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a> = path;
-<a name="l00010"></a>00010         <a class="code" href="classLocalFolder.html#a7e4fbd509abd9d25d9994782b61df44f">m_localName</a> = name;
-<a name="l00011"></a>00011 }
-<a name="l00012"></a>00012 
-<a name="l00013"></a><a class="code" href="classLocalFolder.html#a3ddc7ebe6f95cccdeec5374f99042378">00013</a> <a class="code" href="classLocalFolder.html#a3ddc7ebe6f95cccdeec5374f99042378">LocalFolder::~LocalFolder</a>() {
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015         <span class="comment">//Empty the list of child nodes</span>
-<a name="l00016"></a>00016         <a class="code" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0">emptyList</a>();
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;<a class="code" href="GEngine_8h.html">Core/GEngine.h</a>&gt;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classLocalFolder.html#a0dd3ddaa6d3b4766234400e25dc0fe76">LocalFolder::TAG</a> = <span class="stringliteral">&quot;Local Folder&quot;</span>;
+<a name="l00010"></a>00010 
+<a name="l00011"></a><a class="code" href="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238">00011</a> <a class="code" href="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238">LocalFolder::LocalFolder</a>(<span class="keywordtype">string</span> name, <span class="keywordtype">string</span> path) {
+<a name="l00012"></a>00012         <a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a> = path;
+<a name="l00013"></a>00013         <a class="code" href="classLocalFolder.html#a7e4fbd509abd9d25d9994782b61df44f">m_localName</a> = name;
+<a name="l00014"></a>00014 }
+<a name="l00015"></a>00015 
+<a name="l00016"></a><a class="code" href="classLocalFolder.html#a3ddc7ebe6f95cccdeec5374f99042378">00016</a> <a class="code" href="classLocalFolder.html#a3ddc7ebe6f95cccdeec5374f99042378">LocalFolder::~LocalFolder</a>() {
 <a name="l00017"></a>00017 
-<a name="l00018"></a>00018 }
-<a name="l00019"></a>00019 
-<a name="l00020"></a><a class="code" href="classLocalFolder.html#a016d89627e9a5294077d843db4f4d3d0">00020</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classLocalFolder.html#a016d89627e9a5294077d843db4f4d3d0">LocalFolder::numChildren</a>() {
-<a name="l00021"></a>00021 
-<a name="l00022"></a>00022         <span class="keywordflow">return</span> <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.size();
-<a name="l00023"></a>00023 
-<a name="l00024"></a>00024 }
-<a name="l00025"></a>00025 
-<a name="l00026"></a><a class="code" href="classLocalFolder.html#a5aa9e6cff85958d95204f8f1e37e0dca">00026</a> <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* <a class="code" href="classLocalFolder.html#a5aa9e6cff85958d95204f8f1e37e0dca">LocalFolder::getChild</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n) {
-<a name="l00027"></a>00027         <span class="keywordflow">if</span> (<a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.size() &gt; n)
-<a name="l00028"></a>00028                 <span class="keywordflow">return</span> <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>[n];
-<a name="l00029"></a>00029         <span class="keywordflow">else</span>
-<a name="l00030"></a>00030                 <span class="keywordflow">return</span> 0;
-<a name="l00031"></a>00031 }
-<a name="l00032"></a>00032 
-<a name="l00033"></a><a class="code" href="classLocalFolder.html#af9eea69e0cd51a2f563a51232f51519f">00033</a> <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* <a class="code" href="classLocalFolder.html#af9eea69e0cd51a2f563a51232f51519f">LocalFolder::newChild</a>(<span class="keywordtype">string</span> Name) {
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035         <span class="comment">//If the name is invalid return 0</span>
-<a name="l00036"></a>00036         <span class="keywordflow">if</span> (Name.empty()) {
-<a name="l00037"></a>00037                 <span class="keywordflow">return</span> 0;
-<a name="l00038"></a>00038         }
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040         <span class="comment">//If it already exists bottle out return 0</span>
-<a name="l00041"></a>00041         <span class="keywordflow">if</span> (<a class="code" href="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf">searchForChild</a>(Name) != 0) {
-<a name="l00042"></a>00042                 <span class="keywordflow">return</span> 0;
-<a name="l00043"></a>00043         }
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045         <span class="comment">//Generate the file path</span>
-<a name="l00046"></a>00046         <span class="keywordtype">string</span> fullPath = <a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a> + Name;
+<a name="l00018"></a>00018         <span class="comment">//Empty the list of child nodes</span>
+<a name="l00019"></a>00019         <a class="code" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0">emptyList</a>();
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 }
+<a name="l00022"></a>00022 
+<a name="l00023"></a><a class="code" href="classLocalFolder.html#a016d89627e9a5294077d843db4f4d3d0">00023</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classLocalFolder.html#a016d89627e9a5294077d843db4f4d3d0">LocalFolder::numChildren</a>() {
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025         <span class="keywordflow">return</span> <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.size();
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 }
+<a name="l00028"></a>00028 
+<a name="l00029"></a><a class="code" href="classLocalFolder.html#a5aa9e6cff85958d95204f8f1e37e0dca">00029</a> <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* <a class="code" href="classLocalFolder.html#a5aa9e6cff85958d95204f8f1e37e0dca">LocalFolder::getChild</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n) {
+<a name="l00030"></a>00030         <span class="keywordflow">if</span> (<a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.size() &gt; n)
+<a name="l00031"></a>00031                 <span class="keywordflow">return</span> <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>[n];
+<a name="l00032"></a>00032         <span class="keywordflow">else</span>
+<a name="l00033"></a>00033                 <span class="keywordflow">return</span> 0;
+<a name="l00034"></a>00034 }
+<a name="l00035"></a>00035 
+<a name="l00036"></a><a class="code" href="classLocalFolder.html#af9eea69e0cd51a2f563a51232f51519f">00036</a> <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* <a class="code" href="classLocalFolder.html#af9eea69e0cd51a2f563a51232f51519f">LocalFolder::newChild</a>(<span class="keywordtype">string</span> Name) {
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038         <span class="comment">//If the name is invalid return 0</span>
+<a name="l00039"></a>00039         <span class="keywordflow">if</span> (Name.empty()) {
+<a name="l00040"></a>00040                 <span class="keywordflow">return</span> 0;
+<a name="l00041"></a>00041         }
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043         <span class="comment">//If it already exists bottle out return 0</span>
+<a name="l00044"></a>00044         <span class="keywordflow">if</span> (<a class="code" href="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf">searchForChild</a>(Name) != 0) {
+<a name="l00045"></a>00045                 <span class="keywordflow">return</span> 0;
+<a name="l00046"></a>00046         }
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048         <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* newFile = <span class="keyword">new</span> <a class="code" href="classLocalFile.html">LocalFile</a>(fullPath);
-<a name="l00049"></a>00049         <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.push_back(newFile);
+<a name="l00048"></a>00048         <span class="comment">//Generate the file path</span>
+<a name="l00049"></a>00049         <span class="keywordtype">string</span> fullPath = <a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a> + Name;
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051         <span class="keywordflow">return</span> newFile;
-<a name="l00052"></a>00052 }
+<a name="l00051"></a>00051         <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* newFile = <span class="keyword">new</span> <a class="code" href="classLocalFile.html">LocalFile</a>(fullPath);
+<a name="l00052"></a>00052         <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.push_back(newFile);
 <a name="l00053"></a>00053 
-<a name="l00054"></a><a class="code" href="classLocalFolder.html#a3d8a9d563114ea9c611348d8c3ce6309">00054</a> <a class="code" href="classFolder.html" title="The abstraction of a folder within the filesystem.">Folder</a>* <a class="code" href="classLocalFolder.html#a3d8a9d563114ea9c611348d8c3ce6309">LocalFolder::newChildFolder</a>(<span class="keywordtype">string</span> Name) {
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056         <span class="comment">//If the name is invalid return 0</span>
-<a name="l00057"></a>00057         <span class="keywordflow">if</span> (Name.empty())
-<a name="l00058"></a>00058                 <span class="keywordflow">return</span> 0;
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060         <span class="comment">//If it already exists bottle out return 0</span>
-<a name="l00061"></a>00061         <span class="keywordflow">if</span> (<a class="code" href="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf">searchForChild</a>(Name) != 0)
-<a name="l00062"></a>00062                 <span class="keywordflow">return</span> 0;
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064         <a class="code" href="classFolder.html" title="The abstraction of a folder within the filesystem.">Folder</a>* returnFolder = 0;
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066         <span class="comment">//Generate the file path</span>
-<a name="l00067"></a>00067         <span class="keywordtype">string</span> fullPath = <a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a> + Name + <span class="stringliteral">&quot;/&quot;</span>;
+<a name="l00054"></a>00054         <span class="keywordflow">return</span> newFile;
+<a name="l00055"></a>00055 }
+<a name="l00056"></a>00056 
+<a name="l00057"></a><a class="code" href="classLocalFolder.html#a3d8a9d563114ea9c611348d8c3ce6309">00057</a> <a class="code" href="classFolder.html" title="The abstraction of a folder within the filesystem.">Folder</a>* <a class="code" href="classLocalFolder.html#a3d8a9d563114ea9c611348d8c3ce6309">LocalFolder::newChildFolder</a>(<span class="keywordtype">string</span> Name) {
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059         <span class="comment">//If the name is invalid return 0</span>
+<a name="l00060"></a>00060         <span class="keywordflow">if</span> (Name.empty())
+<a name="l00061"></a>00061                 <span class="keywordflow">return</span> 0;
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063         <span class="comment">//If it already exists bottle out return 0</span>
+<a name="l00064"></a>00064         <span class="keywordflow">if</span> (<a class="code" href="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf">searchForChild</a>(Name) != 0)
+<a name="l00065"></a>00065                 <span class="keywordflow">return</span> 0;
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067         <a class="code" href="classFolder.html" title="The abstraction of a folder within the filesystem.">Folder</a>* returnFolder = 0;
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069         <span class="keywordflow">if</span> (mkdir(fullPath.c_str(), 0) == 0) {
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071                 returnFolder = <span class="keyword">new</span> <a class="code" href="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238">LocalFolder</a>(Name, fullPath);
-<a name="l00072"></a>00072                 returnFolder-&gt;<a class="code" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2">refresh</a>();
+<a name="l00069"></a>00069         <span class="comment">//Generate the file path</span>
+<a name="l00070"></a>00070         <span class="keywordtype">string</span> fullPath = <a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a> + Name + <span class="stringliteral">&quot;/&quot;</span>;
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072         <span class="keywordflow">if</span> (mkdir(fullPath.c_str(), 0) == 0) {
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074                 <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.push_back(returnFolder);
-<a name="l00075"></a>00075         }
+<a name="l00074"></a>00074                 returnFolder = <span class="keyword">new</span> <a class="code" href="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238">LocalFolder</a>(Name, fullPath);
+<a name="l00075"></a>00075                 returnFolder-&gt;<a class="code" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2">refresh</a>();
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077         <span class="keywordflow">return</span> returnFolder;
-<a name="l00078"></a>00078 }
+<a name="l00077"></a>00077                 <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.push_back(returnFolder);
+<a name="l00078"></a>00078         }
 <a name="l00079"></a>00079 
-<a name="l00080"></a><a class="code" href="classLocalFolder.html#aa6b99367df578f30adf336efa71649fe">00080</a> <span class="keywordtype">void</span> <a class="code" href="classLocalFolder.html#aa6b99367df578f30adf336efa71649fe">LocalFolder::refresh</a>() {
-<a name="l00081"></a>00081 <span class="preprocessor">#warning May not be compatable with Windows 32</span>
-<a name="l00082"></a>00082 <span class="preprocessor"></span>        <a class="code" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0">emptyList</a>();
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084         DIR* dir = opendir(<a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a>.c_str());
-<a name="l00085"></a>00085         <span class="keyword">struct </span>dirent* nextEntry;
+<a name="l00080"></a>00080         <span class="keywordflow">return</span> returnFolder;
+<a name="l00081"></a>00081 }
+<a name="l00082"></a>00082 
+<a name="l00083"></a><a class="code" href="classLocalFolder.html#aa6b99367df578f30adf336efa71649fe">00083</a> <span class="keywordtype">void</span> <a class="code" href="classLocalFolder.html#aa6b99367df578f30adf336efa71649fe">LocalFolder::refresh</a>() {
+<a name="l00084"></a>00084 <span class="preprocessor">#warning May not be compatable with Windows 32</span>
+<a name="l00085"></a>00085 <span class="preprocessor"></span>        <a class="code" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0">emptyList</a>();
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087         <span class="keywordflow">if</span> (dir != 0) {
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089                 <span class="keywordflow">while</span> (<span class="keyword">true</span>) {
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091                         nextEntry = readdir(dir);
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093                         <span class="keywordflow">if</span> (nextEntry != 0) {
-<a name="l00094"></a>00094                                 <span class="comment">//Check it isn&#39;t the current or parent indicators</span>
-<a name="l00095"></a>00095                                 <span class="keywordflow">if</span> (strcmp(nextEntry-&gt;d_name, <span class="stringliteral">&quot;.&quot;</span>) == 0) {
-<a name="l00096"></a>00096                                         <span class="comment">//Do nothing for this dir</span>
-<a name="l00097"></a>00097                                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(nextEntry-&gt;d_name, <span class="stringliteral">&quot;..&quot;</span>) == 0) {
-<a name="l00098"></a>00098                                         <span class="comment">//Do nothing for the dir the level above</span>
-<a name="l00099"></a>00099                                 } <span class="keywordflow">else</span> {
-<a name="l00100"></a>00100                                         <span class="comment">//if its not process it</span>
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102                                         <span class="keywordflow">if</span> (nextEntry-&gt;d_type == DT_DIR) {
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104                                                 <span class="comment">//Directory</span>
-<a name="l00105"></a>00105                                                 <span class="keywordtype">string</span> fullPath = <a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a> + nextEntry-&gt;d_name
-<a name="l00106"></a>00106                                                                 + <span class="stringliteral">&quot;/&quot;</span>;
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108                                                 <a class="code" href="classFolder.html" title="The abstraction of a folder within the filesystem.">Folder</a>* subFolder = <span class="keyword">new</span> <a class="code" href="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238">LocalFolder</a>(nextEntry-&gt;d_name,
-<a name="l00109"></a>00109                                                                 fullPath);
+<a name="l00087"></a>00087         DIR* dir = opendir(<a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a>.c_str());
+<a name="l00088"></a>00088         <span class="keyword">struct </span>dirent* nextEntry;
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090         <span class="keywordflow">if</span> (dir != 0) {
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092                 <span class="keywordflow">while</span> (<span class="keyword">true</span>) {
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094                         nextEntry = readdir(dir);
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096                         <span class="keywordflow">if</span> (nextEntry != 0) {
+<a name="l00097"></a>00097                                 <span class="comment">//Check it isn&#39;t the current or parent indicators</span>
+<a name="l00098"></a>00098                                 <span class="keywordflow">if</span> (strcmp(nextEntry-&gt;d_name, <span class="stringliteral">&quot;.&quot;</span>) == 0) {
+<a name="l00099"></a>00099                                         <span class="comment">//Do nothing for this dir</span>
+<a name="l00100"></a>00100                                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(nextEntry-&gt;d_name, <span class="stringliteral">&quot;..&quot;</span>) == 0) {
+<a name="l00101"></a>00101                                         <span class="comment">//Do nothing for the dir the level above</span>
+<a name="l00102"></a>00102                                 } <span class="keywordflow">else</span> {
+<a name="l00103"></a>00103                                         <span class="comment">//if its not process it</span>
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105                                         <span class="keywordflow">if</span> (nextEntry-&gt;d_type == DT_DIR) {
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107                                                 <span class="comment">//Directory</span>
+<a name="l00108"></a>00108                                                 <span class="keywordtype">string</span> fullPath = <a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a> + nextEntry-&gt;d_name
+<a name="l00109"></a>00109                                                                 + <span class="stringliteral">&quot;/&quot;</span>;
 <a name="l00110"></a>00110 
-<a name="l00111"></a>00111                                                 subFolder-&gt;<a class="code" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2">refresh</a>();
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113                                                 <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.push_back(subFolder);
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115                                         } <span class="keywordflow">else</span> {
-<a name="l00116"></a>00116 
-<a name="l00117"></a>00117                                                 <span class="comment">//File</span>
-<a name="l00118"></a>00118                                                 <span class="keywordtype">string</span> fullPath = <a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a> + nextEntry-&gt;d_name;
+<a name="l00111"></a>00111                                                 <a class="code" href="classFolder.html" title="The abstraction of a folder within the filesystem.">Folder</a>* subFolder = <span class="keyword">new</span> <a class="code" href="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238">LocalFolder</a>(nextEntry-&gt;d_name,
+<a name="l00112"></a>00112                                                                 fullPath);
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114                                                 subFolder-&gt;<a class="code" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2">refresh</a>();
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116                                                 <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.push_back(subFolder);
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118                                         } <span class="keywordflow">else</span> {
 <a name="l00119"></a>00119 
-<a name="l00120"></a>00120                                                 <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.push_back(<span class="keyword">new</span> <a class="code" href="classLocalFile.html">LocalFile</a>(fullPath));
-<a name="l00121"></a>00121                                         }
+<a name="l00120"></a>00120                                                 <span class="comment">//File</span>
+<a name="l00121"></a>00121                                                 <span class="keywordtype">string</span> fullPath = <a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a> + nextEntry-&gt;d_name;
 <a name="l00122"></a>00122 
-<a name="l00123"></a>00123                                 }
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125                         } <span class="keywordflow">else</span> {
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127                                 <span class="keywordflow">break</span>;
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129                         }
-<a name="l00130"></a>00130 
-<a name="l00131"></a>00131                 }
-<a name="l00132"></a>00132 
-<a name="l00133"></a>00133                 closedir(dir);
-<a name="l00134"></a>00134                 dir = 0;
-<a name="l00135"></a>00135         }
-<a name="l00136"></a>00136 
-<a name="l00137"></a>00137 }
-<a name="l00138"></a>00138 
-<a name="l00139"></a><a class="code" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0">00139</a> <span class="keywordtype">void</span> <a class="code" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0">LocalFolder::emptyList</a>() {
-<a name="l00140"></a>00140 
-<a name="l00141"></a>00141         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.size(); ++i) {
-<a name="l00142"></a>00142                 <span class="keyword">delete</span> <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>[i];
-<a name="l00143"></a>00143         }
-<a name="l00144"></a>00144 
-<a name="l00145"></a>00145         <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.clear();
-<a name="l00146"></a>00146 
-<a name="l00147"></a>00147 }
-<a name="l00148"></a>00148 
-<a name="l00149"></a><a class="code" href="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf">00149</a> <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* <a class="code" href="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf">LocalFolder::searchForChild</a>(std::string name) {
-<a name="l00150"></a>00150 
-<a name="l00151"></a>00151         printf(<span class="stringliteral">&quot;Search for %s\n&quot;</span>, name.c_str());
-<a name="l00152"></a>00152 
-<a name="l00153"></a>00153         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.size(); ++i) {
-<a name="l00154"></a>00154 
-<a name="l00155"></a>00155                 <span class="keywordflow">if</span> ( name.compare(<a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>[i]-&gt;getName()) == 0) {
-<a name="l00156"></a>00156 
-<a name="l00157"></a>00157                         printf(<span class="stringliteral">&quot;Found\n&quot;</span>);
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159                         <span class="keywordflow">return</span> <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>[i];
-<a name="l00160"></a>00160 
-<a name="l00161"></a>00161                 }
-<a name="l00162"></a>00162 
-<a name="l00163"></a>00163         }
-<a name="l00164"></a>00164 
-<a name="l00165"></a>00165         printf(<span class="stringliteral">&quot;ERROR: Child not found\n&quot;</span>);
-<a name="l00166"></a>00166 
-<a name="l00167"></a>00167         <span class="keywordflow">return</span> 0;
-<a name="l00168"></a>00168 }
+<a name="l00123"></a>00123                                                 <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.push_back(<span class="keyword">new</span> <a class="code" href="classLocalFile.html">LocalFile</a>(fullPath));
+<a name="l00124"></a>00124                                         }
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126                                 }
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128                         } <span class="keywordflow">else</span> {
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130                                 <span class="keywordflow">break</span>;
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132                         }
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134                 }
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136                 closedir(dir);
+<a name="l00137"></a>00137                 dir = 0;
+<a name="l00138"></a>00138         }
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140 }
+<a name="l00141"></a>00141 
+<a name="l00142"></a><a class="code" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0">00142</a> <span class="keywordtype">void</span> <a class="code" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0">LocalFolder::emptyList</a>() {
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.size(); ++i) {
+<a name="l00145"></a>00145                 <span class="keyword">delete</span> <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>[i];
+<a name="l00146"></a>00146         }
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148         <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.clear();
+<a name="l00149"></a>00149 
+<a name="l00150"></a>00150 }
+<a name="l00151"></a>00151 
+<a name="l00152"></a><a class="code" href="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf">00152</a> <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* <a class="code" href="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf">LocalFolder::searchForChild</a>(std::string name) {
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>.size(); ++i) {
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156                 <span class="keywordflow">if</span> ( name.compare(<a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>[i]-&gt;getName()) == 0) {
+<a name="l00157"></a>00157 
+<a name="l00158"></a>00158                         <span class="keywordflow">return</span> <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>[i];
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160                 }
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162         }
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164         <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">GEngine::getInstance</a>()-&gt;<a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">getLog</a>()-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classLocalFolder.html#a0dd3ddaa6d3b4766234400e25dc0fe76">TAG</a>, <span class="stringliteral">&quot;ERROR: Child not found\n&quot;</span>);
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166         <span class="keywordflow">return</span> 0;
+<a name="l00167"></a>00167 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 16:59:23 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

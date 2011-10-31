@@ -13,6 +13,9 @@
 
 class FontMap
 {
+private:
+	static const char* TAG;
+
 public:
     FontChar    CharList[255];
 

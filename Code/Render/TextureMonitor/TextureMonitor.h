@@ -7,11 +7,13 @@
 #include "../ResourceMonitor/ResourceMonitor.h"
 #include <Filesystem/Filesystem.h>
 
+
 class TextureMonitor : public ResourceMonitor
 {
 private:
     TextureLoader m_Loader;
 
+    static const char* TAG;
 
     void f_freeEntity(void* m_Entity);
     void* f_loadEntity(std::string Name);

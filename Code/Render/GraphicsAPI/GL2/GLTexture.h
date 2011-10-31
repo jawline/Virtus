@@ -6,6 +6,7 @@
 class GLTexture : public Texture
 {
     private:
+		static const char* TAG;
         GLuint m_glTextureID;
 
 

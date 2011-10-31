@@ -39,7 +39,8 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">FontMap Class Reference</div>  </div>
 </div>
@@ -68,6 +69,9 @@ Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFontChar.html">FontChar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a> [255]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFontMap.html#a191b6e7dbf1c28b95001d2e43e250175">PointSize</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVertexSet.html">VertexSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a></td></tr>
+<tr><td colspan="2"><h2><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFontMap.html#a302e4480f6c126f6624e2193f1b93612">TAG</a> = &quot;Font Map&quot;</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -87,9 +91,9 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FontMap_8cpp_source.html#l00004">4</a> of file <a class="el" href="FontMap_8cpp_source.html">FontMap.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FontMap_8cpp_source.html#l00006">6</a> of file <a class="el" href="FontMap_8cpp_source.html">FontMap.cpp</a>.</p>
 
-<p>References <a class="el" href="FontMap_8h_source.html#l00021">drawBuffer</a>, <a class="el" href="GRender_8h_source.html#l00056">GRenderer::getGraphicsAPI()</a>, <a class="el" href="GRender_8cpp_source.html#l00027">GRenderer::getRenderer()</a>, <a class="el" href="classGraphicsAPI.html#af937193a3b10b38850ca8317c790d13c">GraphicsAPI::newVertexSet()</a>, <a class="el" href="FontMap_8h_source.html#l00019">PointSize</a>, <a class="el" href="classVertexSet.html#aa816c79efbaa9aed21818f3249319dae">VertexSet::setTextureCoordinates()</a>, and <a class="el" href="classVertexSet.html#acbece1981a6126fbadbd7942cf31d28d">VertexSet::setVertices()</a>.</p>
+<p>References <a class="el" href="FontMap_8h_source.html#l00024">drawBuffer</a>, <a class="el" href="GRender_8h_source.html#l00057">GRenderer::getGraphicsAPI()</a>, <a class="el" href="GRender_8cpp_source.html#l00028">GRenderer::getRenderer()</a>, <a class="el" href="classGraphicsAPI.html#af937193a3b10b38850ca8317c790d13c">GraphicsAPI::newVertexSet()</a>, <a class="el" href="FontMap_8h_source.html#l00022">PointSize</a>, <a class="el" href="classVertexSet.html#aa816c79efbaa9aed21818f3249319dae">VertexSet::setTextureCoordinates()</a>, and <a class="el" href="classVertexSet.html#acbece1981a6126fbadbd7942cf31d28d">VertexSet::setVertices()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -117,16 +121,16 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FontMap_8cpp_source.html#l00072">72</a> of file <a class="el" href="FontMap_8cpp_source.html">FontMap.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FontMap_8cpp_source.html#l00074">74</a> of file <a class="el" href="FontMap_8cpp_source.html">FontMap.cpp</a>.</p>
 
-<p>References <a class="el" href="FontMap_8h_source.html#l00017">CharList</a>, <a class="el" href="FontChar_8h_source.html#l00013">FontChar::charTexture</a>, <a class="el" href="FontMap_8h_source.html#l00021">drawBuffer</a>, <a class="el" href="GRender_8cpp_source.html#l00027">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00089">GRenderer::getRenderLog()</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00040">LogWriter::writeData()</a>.</p>
+<p>References <a class="el" href="FontMap_8h_source.html#l00020">CharList</a>, <a class="el" href="FontChar_8h_source.html#l00013">FontChar::charTexture</a>, <a class="el" href="FontMap_8h_source.html#l00024">drawBuffer</a>, <a class="el" href="GRender_8cpp_source.html#l00028">GRenderer::getRenderer()</a>, <a class="el" href="GRender_8h_source.html#l00090">GRenderer::getRenderLog()</a>, <a class="el" href="FontMap_8h_source.html#l00017">TAG</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00035">LogWriter::writeLine()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFontMap_a68c99bce15a4fd5707025d7bd37e59a5_cgraph.png" border="0" usemap="#classFontMap_a68c99bce15a4fd5707025d7bd37e59a5_cgraph" alt=""/></div>
 <map name="classFontMap_a68c99bce15a4fd5707025d7bd37e59a5_cgraph" id="classFontMap_a68c99bce15a4fd5707025d7bd37e59a5_cgraph">
-<area shape="rect" id="node3" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="191,5,353,35"/><area shape="rect" id="node7" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="185,59,359,88"/><area shape="rect" id="node9" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="201,112,343,141"/><area shape="rect" id="node5" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="421,5,576,35"/><area shape="rect" id="node11" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="416,59,581,88"/><area shape="rect" id="node13" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="409,112,588,141"/><area shape="rect" id="node15" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="416,165,581,195"/></map>
+<area shape="rect" id="node3" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="191,5,353,35"/><area shape="rect" id="node7" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="185,59,359,88"/><area shape="rect" id="node9" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="203,112,341,141"/><area shape="rect" id="node5" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="421,5,576,35"/><area shape="rect" id="node11" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="416,59,581,88"/><area shape="rect" id="node13" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="409,112,588,141"/><area shape="rect" id="node15" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="416,165,581,195"/></map>
 </div>
 </p>
 
@@ -147,9 +151,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FontMap_8cpp_source.html#l00094">94</a> of file <a class="el" href="FontMap_8cpp_source.html">FontMap.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FontMap_8cpp_source.html#l00096">96</a> of file <a class="el" href="FontMap_8cpp_source.html">FontMap.cpp</a>.</p>
 
-<p>References <a class="el" href="FontMap_8h_source.html#l00017">CharList</a>.</p>
+<p>References <a class="el" href="FontMap_8h_source.html#l00020">CharList</a>.</p>
 
 </div>
 </div>
@@ -184,9 +188,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FontMap_8cpp_source.html#l00027">27</a> of file <a class="el" href="FontMap_8cpp_source.html">FontMap.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FontMap_8cpp_source.html#l00029">29</a> of file <a class="el" href="FontMap_8cpp_source.html">FontMap.cpp</a>.</p>
 
-<p>References <a class="el" href="FontMap_8h_source.html#l00017">CharList</a>, <a class="el" href="FontChar_8h_source.html#l00023">FontChar::OffsetX</a>, and <a class="el" href="FontChar_8h_source.html#l00024">FontChar::OffsetY</a>.</p>
+<p>References <a class="el" href="FontMap_8h_source.html#l00020">CharList</a>, <a class="el" href="FontChar_8h_source.html#l00023">FontChar::OffsetX</a>, and <a class="el" href="FontChar_8h_source.html#l00024">FontChar::OffsetY</a>.</p>
 
 </div>
 </div>
@@ -245,9 +249,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FontMap_8cpp_source.html#l00037">37</a> of file <a class="el" href="FontMap_8cpp_source.html">FontMap.cpp</a>.</p>
+<p>Definition at line <a class="el" href="FontMap_8cpp_source.html#l00039">39</a> of file <a class="el" href="FontMap_8cpp_source.html">FontMap.cpp</a>.</p>
 
-<p>References <a class="el" href="FontMap_8h_source.html#l00017">CharList</a>, <a class="el" href="FontChar_8h_source.html#l00013">FontChar::charTexture</a>, <a class="el" href="classVertexSet.html#aeec50743201b32bc511412f210bd2da2">VertexSet::Draw()</a>, <a class="el" href="FontMap_8h_source.html#l00021">drawBuffer</a>, <a class="el" href="classVertexSet.html#aade73ae165447c61bac9239e076732d9">VertexSet::getVertices()</a>, <a class="el" href="classTexture.html#af1755014f4c23d4e98a316214888921c">Texture::makeActive()</a>, and <a class="el" href="VertexSet_8h_source.html#l00014">QUADS</a>.</p>
+<p>References <a class="el" href="FontMap_8h_source.html#l00020">CharList</a>, <a class="el" href="FontChar_8h_source.html#l00013">FontChar::charTexture</a>, <a class="el" href="classVertexSet.html#aeec50743201b32bc511412f210bd2da2">VertexSet::Draw()</a>, <a class="el" href="FontMap_8h_source.html#l00024">drawBuffer</a>, <a class="el" href="classVertexSet.html#aade73ae165447c61bac9239e076732d9">VertexSet::getVertices()</a>, <a class="el" href="classTexture.html#af1755014f4c23d4e98a316214888921c">Texture::makeActive()</a>, and <a class="el" href="VertexSet_8h_source.html#l00014">QUADS</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -272,9 +276,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FontMap_8h_source.html#l00017">17</a> of file <a class="el" href="FontMap_8h_source.html">FontMap.h</a>.</p>
+<p>Definition at line <a class="el" href="FontMap_8h_source.html#l00020">20</a> of file <a class="el" href="FontMap_8h_source.html">FontMap.h</a>.</p>
 
-<p>Referenced by <a class="el" href="FontMap_8cpp_source.html#l00072">Cleanup()</a>, <a class="el" href="FontMap_8cpp_source.html#l00094">GetChar()</a>, <a class="el" href="FREngine_8cpp_source.html#l00094">FREngine::LoadFontmap()</a>, and <a class="el" href="FontMap_8cpp_source.html#l00027">Render()</a>.</p>
+<p>Referenced by <a class="el" href="FontMap_8cpp_source.html#l00074">Cleanup()</a>, <a class="el" href="FontMap_8cpp_source.html#l00096">GetChar()</a>, <a class="el" href="FREngine_8cpp_source.html#l00094">FREngine::LoadFontmap()</a>, and <a class="el" href="FontMap_8cpp_source.html#l00029">Render()</a>.</p>
 
 </div>
 </div>
@@ -289,9 +293,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FontMap_8h_source.html#l00021">21</a> of file <a class="el" href="FontMap_8h_source.html">FontMap.h</a>.</p>
+<p>Definition at line <a class="el" href="FontMap_8h_source.html#l00024">24</a> of file <a class="el" href="FontMap_8h_source.html">FontMap.h</a>.</p>
 
-<p>Referenced by <a class="el" href="FontMap_8cpp_source.html#l00072">Cleanup()</a>, <a class="el" href="FontMap_8cpp_source.html#l00004">FontMap()</a>, and <a class="el" href="FontMap_8cpp_source.html#l00037">Render()</a>.</p>
+<p>Referenced by <a class="el" href="FontMap_8cpp_source.html#l00074">Cleanup()</a>, <a class="el" href="FontMap_8cpp_source.html#l00006">FontMap()</a>, and <a class="el" href="FontMap_8cpp_source.html#l00039">Render()</a>.</p>
 
 </div>
 </div>
@@ -306,9 +310,26 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="FontMap_8h_source.html#l00019">19</a> of file <a class="el" href="FontMap_8h_source.html">FontMap.h</a>.</p>
+<p>Definition at line <a class="el" href="FontMap_8h_source.html#l00022">22</a> of file <a class="el" href="FontMap_8h_source.html">FontMap.h</a>.</p>
 
-<p>Referenced by <a class="el" href="FontMap_8cpp_source.html#l00004">FontMap()</a>, and <a class="el" href="FREngine_8cpp_source.html#l00094">FREngine::LoadFontmap()</a>.</p>
+<p>Referenced by <a class="el" href="FontMap_8cpp_source.html#l00006">FontMap()</a>, and <a class="el" href="FREngine_8cpp_source.html#l00094">FREngine::LoadFontmap()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a302e4480f6c126f6624e2193f1b93612"></a><!-- doxytag: member="FontMap::TAG" ref="a302e4480f6c126f6624e2193f1b93612" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="classFontMap.html#a302e4480f6c126f6624e2193f1b93612">FontMap::TAG</a> = &quot;Font Map&quot;<code> [static, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="FontMap_8h_source.html#l00017">17</a> of file <a class="el" href="FontMap_8h_source.html">FontMap.h</a>.</p>
+
+<p>Referenced by <a class="el" href="FontMap_8cpp_source.html#l00074">Cleanup()</a>.</p>
 
 </div>
 </div>
@@ -317,7 +338,7 @@ Here is the call graph for this function:</div>
 <li>Code/Render/Fonts/<a class="el" href="FontMap_8cpp_source.html">FontMap.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 16:59:23 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

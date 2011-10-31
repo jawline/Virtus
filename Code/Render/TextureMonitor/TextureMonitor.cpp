@@ -1,104 +1,96 @@
 #include "TextureMonitor.h"
 #include "../GRender.h"
 
-TextureMonitor::TextureMonitor()
-{
-    printf("Texture Monitor initialized\n");
+const char* TextureMonitor::TAG = "TextureMonitor";
+
+TextureMonitor::TextureMonitor() {
+	printf("Texture Monitor initialized\n");
 }
 
-TextureMonitor::~TextureMonitor()
-{
-    printf("Destroying texture monitor\n");
+TextureMonitor::~TextureMonitor() {
+	printf("Destroying texture monitor\n");
 
-    for (unsigned int i = 0; i < m_resourceList.size(); ++i)
-    {
-        f_freeEntity(m_resourceList[i].m_Entity);
-    }
+	for (unsigned int i = 0; i < m_resourceList.size(); ++i) {
+		f_freeEntity(m_resourceList[i].m_Entity);
+	}
 
-    m_resourceList.clear();
+	m_resourceList.clear();
 }
 
+void TextureMonitor::f_freeEntity(void* m_Entity) {
+	Texture* texture = (Texture*) m_Entity;
+	delete texture;
 
-void TextureMonitor::f_freeEntity(void* m_Entity)
-{
-    Texture* texture = (Texture*) m_Entity;
-    delete texture;
-
-    return;
+	return;
 }
 
-void* TextureMonitor::f_loadEntity(std::string Name)
-{
-    printf("Load entity called\n");
-    Texture* newTexture = GRenderer::getRenderer()->getGraphicsAPI()->newTexture();
+void* TextureMonitor::f_loadEntity(std::string Name) {
 
-    if (newTexture == 0)
-    {
-        char Buffer[512];
-        sprintf(Buffer, "Unable to load texture %s due to being unable to create a Texture object\n", Name.c_str());
-        GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
-        return 0;
-    }
+	Texture* newTexture =
+			GRenderer::getRenderer()->getGraphicsAPI()->newTexture();
 
-    FilesystemNode* node = Filesystem::evaluateChild(Filesystem::getRoot(), Name);
+	if (newTexture == 0) {
+		GRenderer::getRenderer()->getRenderLog()->writeLine(
+				TAG,
+				string("Unable to load texture") + Name
+						+ " due to being unable to create a texture object");
+		return 0;
+	}
 
-    if (node == 0)
-    {
-        char Buffer[512];
-        sprintf(Buffer, "Unable to load texture %s due to being unable to find specified node in filesystem\n", Name.c_str());
-        GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
-        return 0;
-    }
+	FilesystemNode* node = Filesystem::evaluateChild(Filesystem::getRoot(),
+			Name);
 
-    if (node->getType() != fileId)
-    {
-        char Buffer[512];
-        sprintf(Buffer, "Unable to load texture %s due to node not being marked as a file in the filesystem\n", Name.c_str());
-        GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
-        return 0;
-    }
+	if (node == 0) {
+		GRenderer::getRenderer()->getRenderLog()->writeLine(
+				TAG,
+				string("Unable to load texture") + Name
+						+ " due to being unable to locate the file (FILE NOT FOUND)");
+		return 0;
+	}
 
-    File* castToFile = static_cast<File*> (node);
+	if (node->getType() != fileId) {
+		GRenderer::getRenderer()->getRenderLog()->writeLine(
+				TAG,
+				string("Unable to load texture") + Name
+						+ " as the specified filesystem node is not a readable file");
 
-    DataInputStream* newStream = castToFile->createInputStream();
-    newStream->open(false);
+		return 0;
+	}
 
-    if (m_Loader.load(newTexture, newStream) == false)
-    {
+	File* castToFile = static_cast<File*> (node);
 
-        char Buffer[512];
-        sprintf(Buffer, "Unable to load texture %s due to being unable to load from file path\n", Name.c_str());
-        GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
+	DataInputStream* newStream = castToFile->createInputStream();
+	newStream->open(false);
 
-        delete newTexture;
+	if (m_Loader.load(newTexture, newStream) == false) {
 
-        //Delete the input stream once its been used
-        delete newStream;
+		GRenderer::getRenderer()->getRenderLog()->writeLine(
+				TAG,
+				string("Unable to load texture") + Name
+						+ " due to the texture loader being unable to load this file");
 
-        return 0;
-    }
-    else
-    {
+		delete newTexture;
 
-        char Buffer[512];
-        sprintf(Buffer, "Succesfully loaded texture %s\n", Name.c_str());
-        GRenderer::getRenderer()->getRenderLog()->writeData(Buffer);
+		//Delete the input stream once its been used
+		delete newStream;
 
-        f_addEntity( Name, (void*) newTexture );
+		return 0;
 
-        //Delete the input stream once its been used
-        delete newStream;
+	} else {
 
-        return (void*)newTexture;
-    }
+		f_addEntity(Name, (void*) newTexture);
+
+		//Delete the input stream once its been used
+		delete newStream;
+
+		return (void*) newTexture;
+	}
 }
 
-Texture* TextureMonitor::getTexture(const char* Filename)
-{
-    return (Texture*) rmGetResource(Filename);
+Texture* TextureMonitor::getTexture(const char* Filename) {
+	return (Texture*) rmGetResource(Filename);
 }
 
-void TextureMonitor::releaseTexture(Texture* Texture)
-{
-    rmReleaseResource((void*)Texture);
+void TextureMonitor::releaseTexture(Texture* Texture) {
+	rmReleaseResource((void*) Texture);
 }

@@ -31,6 +31,7 @@ typedef struct
 class GEngine
 {
 private:
+	static const char* TAG;
 
     bool initialize();
     void uninitialize();

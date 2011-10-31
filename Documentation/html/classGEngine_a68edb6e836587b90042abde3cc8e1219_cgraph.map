@@ -1,6 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$classGEngine.html#aed97f611db6edabe8b7febc731aa6400" title="GEngine::freeInputBindings" alt="" coords="195,5,376,35"/>
-<area shape="rect" id="node5" href="$classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="215,59,356,88"/>
+<area shape="rect" id="node5" href="$classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="216,59,355,88"/>
 <area shape="rect" id="node7" href="$classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="432,5,597,35"/>
 <area shape="rect" id="node9" href="$classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="425,59,604,88"/>
 <area shape="rect" id="node11" href="$classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="432,112,597,141"/>

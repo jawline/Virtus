@@ -41,104 +41,106 @@
 <a href="FontMap_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="FontMap_8h.html">FontMap.h</a>&quot;</span>
 <a name="l00002"></a>00002 <span class="preprocessor">#include &quot;../GRender.h&quot;</span>
 <a name="l00003"></a>00003 
-<a name="l00004"></a><a class="code" href="classFontMap.html#a6ed5269f6c0483352ce1db4d9a5dcb2f">00004</a> <a class="code" href="classFontMap.html#a6ed5269f6c0483352ce1db4d9a5dcb2f">FontMap::FontMap</a>() {
-<a name="l00005"></a>00005         <a class="code" href="classFontMap.html#a191b6e7dbf1c28b95001d2e43e250175">PointSize</a> = 0;
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007         <span class="comment">//Optimize this to use a single VertexSet for the whole engine? Or will one per map be efficient enough..</span>
-<a name="l00008"></a>00008         <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a> = <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()-&gt;<a class="code" href="classGraphicsAPI.html#af937193a3b10b38850ca8317c790d13c">newVertexSet</a>();
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010         <span class="comment">//Setup the initial vertex set state so taht the render function can just manipulate the existing vertices and texture coordinates,</span>
-<a name="l00011"></a>00011         <span class="keywordtype">float</span> texCoords[] = { 0, 1,
-<a name="l00012"></a>00012                           0, 0,
-<a name="l00013"></a>00013                           1, 0,
-<a name="l00014"></a>00014                           1, 1
-<a name="l00015"></a>00015                         };
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017     <span class="keywordtype">float</span> vertices[] = { 0, 0, 0,
-<a name="l00018"></a>00018                          0, 0, 0,
-<a name="l00019"></a>00019                          0, 0, 0,
-<a name="l00020"></a>00020                          0, 0, 0
-<a name="l00021"></a>00021                        };
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023     <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a>-&gt;<a class="code" href="classVertexSet.html#acbece1981a6126fbadbd7942cf31d28d">setVertices</a>(vertices, 4);
-<a name="l00024"></a>00024     <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a>-&gt;<a class="code" href="classVertexSet.html#aa816c79efbaa9aed21818f3249319dae">setTextureCoordinates</a>(texCoords, 4);
-<a name="l00025"></a>00025 }
-<a name="l00026"></a>00026 
-<a name="l00027"></a><a class="code" href="classFontMap.html#a86522444e8905fd2bdb91c2d64c26df7">00027</a> <span class="keywordtype">void</span> <a class="code" href="classFontMap.html#a86522444e8905fd2bdb91c2d64c26df7">FontMap::Render</a>(<span class="keywordtype">int</span> Char, <span class="keywordtype">float</span> X, <span class="keywordtype">float</span> Y)
-<a name="l00028"></a>00028 {
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030     <span class="keywordtype">int</span> OffsetX = <a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char].<a class="code" href="classFontChar.html#ac23b1829384c491f534929be7c871bcd">OffsetX</a>;
-<a name="l00031"></a>00031     <span class="keywordtype">int</span> OffsetY = -<a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char].<a class="code" href="classFontChar.html#ae1ff10c8852b5df02aa91705da4ab4e7">OffsetY</a>;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033     <a class="code" href="classFontMap.html#a86522444e8905fd2bdb91c2d64c26df7">FontMap::Render</a>(Char, X, Y, OffsetX, OffsetY, <a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char].Width, <a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char].Height);
+<a name="l00004"></a>00004 <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classFontMap.html#a302e4480f6c126f6624e2193f1b93612">FontMap::TAG</a> = <span class="stringliteral">&quot;Font Map&quot;</span>;
+<a name="l00005"></a>00005 
+<a name="l00006"></a><a class="code" href="classFontMap.html#a6ed5269f6c0483352ce1db4d9a5dcb2f">00006</a> <a class="code" href="classFontMap.html#a6ed5269f6c0483352ce1db4d9a5dcb2f">FontMap::FontMap</a>() {
+<a name="l00007"></a>00007         <a class="code" href="classFontMap.html#a191b6e7dbf1c28b95001d2e43e250175">PointSize</a> = 0;
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009         <span class="comment">//Optimize this to use a single VertexSet for the whole engine? Or will one per map be efficient enough..</span>
+<a name="l00010"></a>00010         <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a> = <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()-&gt;<a class="code" href="classGraphicsAPI.html#af937193a3b10b38850ca8317c790d13c">newVertexSet</a>();
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012         <span class="comment">//Setup the initial vertex set state so taht the render function can just manipulate the existing vertices and texture coordinates,</span>
+<a name="l00013"></a>00013         <span class="keywordtype">float</span> texCoords[] = { 0, 1,
+<a name="l00014"></a>00014                           0, 0,
+<a name="l00015"></a>00015                           1, 0,
+<a name="l00016"></a>00016                           1, 1
+<a name="l00017"></a>00017                         };
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019     <span class="keywordtype">float</span> vertices[] = { 0, 0, 0,
+<a name="l00020"></a>00020                          0, 0, 0,
+<a name="l00021"></a>00021                          0, 0, 0,
+<a name="l00022"></a>00022                          0, 0, 0
+<a name="l00023"></a>00023                        };
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025     <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a>-&gt;<a class="code" href="classVertexSet.html#acbece1981a6126fbadbd7942cf31d28d">setVertices</a>(vertices, 4);
+<a name="l00026"></a>00026     <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a>-&gt;<a class="code" href="classVertexSet.html#aa816c79efbaa9aed21818f3249319dae">setTextureCoordinates</a>(texCoords, 4);
+<a name="l00027"></a>00027 }
+<a name="l00028"></a>00028 
+<a name="l00029"></a><a class="code" href="classFontMap.html#a86522444e8905fd2bdb91c2d64c26df7">00029</a> <span class="keywordtype">void</span> <a class="code" href="classFontMap.html#a86522444e8905fd2bdb91c2d64c26df7">FontMap::Render</a>(<span class="keywordtype">int</span> Char, <span class="keywordtype">float</span> X, <span class="keywordtype">float</span> Y)
+<a name="l00030"></a>00030 {
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032     <span class="keywordtype">int</span> OffsetX = <a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char].<a class="code" href="classFontChar.html#ac23b1829384c491f534929be7c871bcd">OffsetX</a>;
+<a name="l00033"></a>00033     <span class="keywordtype">int</span> OffsetY = -<a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char].<a class="code" href="classFontChar.html#ae1ff10c8852b5df02aa91705da4ab4e7">OffsetY</a>;
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035 }
+<a name="l00035"></a>00035     <a class="code" href="classFontMap.html#a86522444e8905fd2bdb91c2d64c26df7">FontMap::Render</a>(Char, X, Y, OffsetX, OffsetY, <a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char].Width, <a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char].Height);
 <a name="l00036"></a>00036 
-<a name="l00037"></a><a class="code" href="classFontMap.html#ae1e8df48a0c2ec4d35cb41f364121e2d">00037</a> <span class="keywordtype">void</span> <a class="code" href="classFontMap.html#a86522444e8905fd2bdb91c2d64c26df7">FontMap::Render</a>(<span class="keywordtype">int</span> Char, <span class="keywordtype">float</span> X, <span class="keywordtype">float</span> Y, <span class="keywordtype">float</span> offsetX, <span class="keywordtype">float</span> offsetY, <span class="keywordtype">float</span> Width, <span class="keywordtype">float</span> Height)
-<a name="l00038"></a>00038 {
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040     <span class="keywordflow">if</span>(Char &lt;= 0 || Char &gt;= 255) <span class="keywordflow">return</span>;
+<a name="l00037"></a>00037 }
+<a name="l00038"></a>00038 
+<a name="l00039"></a><a class="code" href="classFontMap.html#ae1e8df48a0c2ec4d35cb41f364121e2d">00039</a> <span class="keywordtype">void</span> <a class="code" href="classFontMap.html#a86522444e8905fd2bdb91c2d64c26df7">FontMap::Render</a>(<span class="keywordtype">int</span> Char, <span class="keywordtype">float</span> X, <span class="keywordtype">float</span> Y, <span class="keywordtype">float</span> offsetX, <span class="keywordtype">float</span> offsetY, <span class="keywordtype">float</span> Width, <span class="keywordtype">float</span> Height)
+<a name="l00040"></a>00040 {
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042     <span class="keywordflow">if</span> (<a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char].charTexture != 0)
-<a name="l00043"></a>00043     {
-<a name="l00044"></a>00044         <a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char].<a class="code" href="classFontChar.html#aeebd106eee9259b6faa632cf141b4b3d">charTexture</a>-&gt;<a class="code" href="classTexture.html#af1755014f4c23d4e98a316214888921c">makeActive</a>();
-<a name="l00045"></a>00045     }
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047     <span class="comment">//Get a pointer to the drawBuffers vertices to manipulate</span>
-<a name="l00048"></a>00048     <span class="keywordtype">float</span>* vertices = <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a>-&gt;<a class="code" href="classVertexSet.html#aade73ae165447c61bac9239e076732d9">getVertices</a>();
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050     <span class="comment">//Set the drawBuffers vertices</span>
-<a name="l00051"></a>00051     vertices[0] = X + offsetX;
-<a name="l00052"></a>00052     vertices[1] = Y + Height + offsetY;
-<a name="l00053"></a>00053     vertices[2] = 0;
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055     vertices[3] = X + offsetX;
-<a name="l00056"></a>00056     vertices[4] = Y + offsetY;
-<a name="l00057"></a>00057     vertices[5] = 0;
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059     vertices[6] = X + Width + offsetX;
-<a name="l00060"></a>00060     vertices[7] = Y + offsetY;
-<a name="l00061"></a>00061     vertices[8] = 0;
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063     vertices[9] = X + Width + offsetX;
-<a name="l00064"></a>00064     vertices[10] = Y + Height + offsetY;
-<a name="l00065"></a>00065     vertices[11] = 0;
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067     <span class="comment">//Send it to be drawn</span>
-<a name="l00068"></a>00068     <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a>-&gt;<a class="code" href="classVertexSet.html#aeec50743201b32bc511412f210bd2da2">Draw</a>(0, 4, <a class="code" href="VertexSet_8h.html#a4ab67aed37d3d2383d2e24195b3bfa7ca27f9590991016e795e40b58f0bfeaf4c">QUADS</a>);
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070 }
+<a name="l00042"></a>00042     <span class="keywordflow">if</span>(Char &lt;= 0 || Char &gt;= 255) <span class="keywordflow">return</span>;
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044     <span class="keywordflow">if</span> (<a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char].charTexture != 0)
+<a name="l00045"></a>00045     {
+<a name="l00046"></a>00046         <a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char].<a class="code" href="classFontChar.html#aeebd106eee9259b6faa632cf141b4b3d">charTexture</a>-&gt;<a class="code" href="classTexture.html#af1755014f4c23d4e98a316214888921c">makeActive</a>();
+<a name="l00047"></a>00047     }
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049     <span class="comment">//Get a pointer to the drawBuffers vertices to manipulate</span>
+<a name="l00050"></a>00050     <span class="keywordtype">float</span>* vertices = <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a>-&gt;<a class="code" href="classVertexSet.html#aade73ae165447c61bac9239e076732d9">getVertices</a>();
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052     <span class="comment">//Set the drawBuffers vertices</span>
+<a name="l00053"></a>00053     vertices[0] = X + offsetX;
+<a name="l00054"></a>00054     vertices[1] = Y + Height + offsetY;
+<a name="l00055"></a>00055     vertices[2] = 0;
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057     vertices[3] = X + offsetX;
+<a name="l00058"></a>00058     vertices[4] = Y + offsetY;
+<a name="l00059"></a>00059     vertices[5] = 0;
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061     vertices[6] = X + Width + offsetX;
+<a name="l00062"></a>00062     vertices[7] = Y + offsetY;
+<a name="l00063"></a>00063     vertices[8] = 0;
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065     vertices[9] = X + Width + offsetX;
+<a name="l00066"></a>00066     vertices[10] = Y + Height + offsetY;
+<a name="l00067"></a>00067     vertices[11] = 0;
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069     <span class="comment">//Send it to be drawn</span>
+<a name="l00070"></a>00070     <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a>-&gt;<a class="code" href="classVertexSet.html#aeec50743201b32bc511412f210bd2da2">Draw</a>(0, 4, <a class="code" href="VertexSet_8h.html#a4ab67aed37d3d2383d2e24195b3bfa7ca27f9590991016e795e40b58f0bfeaf4c">QUADS</a>);
 <a name="l00071"></a>00071 
-<a name="l00072"></a><a class="code" href="classFontMap.html#a68c99bce15a4fd5707025d7bd37e59a5">00072</a> <span class="keywordtype">void</span> <a class="code" href="classFontMap.html#a68c99bce15a4fd5707025d7bd37e59a5">FontMap::Cleanup</a>() {
+<a name="l00072"></a>00072 }
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074     <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Cleaning up FontMap\n&quot;</span>);
+<a name="l00074"></a><a class="code" href="classFontMap.html#a68c99bce15a4fd5707025d7bd37e59a5">00074</a> <span class="keywordtype">void</span> <a class="code" href="classFontMap.html#a68c99bce15a4fd5707025d7bd37e59a5">FontMap::Cleanup</a>() {
 <a name="l00075"></a>00075 
-<a name="l00076"></a>00076     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 255; i++)
-<a name="l00077"></a>00077     {
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079         <span class="keywordflow">if</span> (<a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[i].charTexture != 0)
-<a name="l00080"></a>00080         {
-<a name="l00081"></a>00081             <span class="keyword">delete</span> <a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[i].<a class="code" href="classFontChar.html#aeebd106eee9259b6faa632cf141b4b3d">charTexture</a>;
-<a name="l00082"></a>00082         }
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084         <a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[i].<a class="code" href="classFontChar.html#aeebd106eee9259b6faa632cf141b4b3d">charTexture</a> = 0;
+<a name="l00076"></a>00076     <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classFontMap.html#a302e4480f6c126f6624e2193f1b93612">TAG</a>, <span class="stringliteral">&quot;Cleaning up FontMap\n&quot;</span>);
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 255; i++)
+<a name="l00079"></a>00079     {
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081         <span class="keywordflow">if</span> (<a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[i].charTexture != 0)
+<a name="l00082"></a>00082         {
+<a name="l00083"></a>00083             <span class="keyword">delete</span> <a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[i].<a class="code" href="classFontChar.html#aeebd106eee9259b6faa632cf141b4b3d">charTexture</a>;
+<a name="l00084"></a>00084         }
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086     }
+<a name="l00086"></a>00086         <a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[i].<a class="code" href="classFontChar.html#aeebd106eee9259b6faa632cf141b4b3d">charTexture</a> = 0;
 <a name="l00087"></a>00087 
-<a name="l00088"></a>00088     <span class="keywordflow">if</span> (<a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a> != 0)
-<a name="l00089"></a>00089         <span class="keyword">delete</span> <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a>;
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091     <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a> = 0;
-<a name="l00092"></a>00092 }
-<a name="l00093"></a>00093 
-<a name="l00094"></a><a class="code" href="classFontMap.html#a8de1cd7286b340c0a383d05e500487b2">00094</a> <a class="code" href="classFontChar.html">FontChar</a>* <a class="code" href="classFontMap.html#a8de1cd7286b340c0a383d05e500487b2">FontMap::GetChar</a>(<span class="keywordtype">int</span> Char) {
-<a name="l00095"></a>00095         <span class="keywordflow">if</span>(Char &lt;= 0 || Char &gt;= 255) <span class="keywordflow">return</span> NULL;
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097     <span class="keywordflow">return</span> &amp;<a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char];
-<a name="l00098"></a>00098 }
+<a name="l00088"></a>00088     }
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090     <span class="keywordflow">if</span> (<a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a> != 0)
+<a name="l00091"></a>00091         <span class="keyword">delete</span> <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a>;
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093     <a class="code" href="classFontMap.html#ab17838031d9afd0f0ccddc43e65050e0">drawBuffer</a> = 0;
+<a name="l00094"></a>00094 }
+<a name="l00095"></a>00095 
+<a name="l00096"></a><a class="code" href="classFontMap.html#a8de1cd7286b340c0a383d05e500487b2">00096</a> <a class="code" href="classFontChar.html">FontChar</a>* <a class="code" href="classFontMap.html#a8de1cd7286b340c0a383d05e500487b2">FontMap::GetChar</a>(<span class="keywordtype">int</span> Char) {
+<a name="l00097"></a>00097         <span class="keywordflow">if</span>(Char &lt;= 0 || Char &gt;= 255) <span class="keywordflow">return</span> NULL;
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099     <span class="keywordflow">return</span> &amp;<a class="code" href="classFontMap.html#adff5c88c6c761ba45e250a7a794bb01e">CharList</a>[Char];
+<a name="l00100"></a>00100 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 16:59:23 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

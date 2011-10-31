@@ -20,6 +20,7 @@ class ThreeDRenderLayer;
 class GRenderer
 {
 private:
+	static const char* TAG;
 
     GraphicsAPI* m_renderAPI;
 

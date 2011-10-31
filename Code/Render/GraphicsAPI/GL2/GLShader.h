@@ -7,6 +7,8 @@
 class GLShader : public Shader
 {
 private:
+	static const char* TAG;
+	static unsigned int m_numCreated;
 
     unsigned int m_debugID;
 

@@ -54,34 +54,36 @@
 <a name="l00014"></a>00014 <span class="keyword">public</span>:
 <a name="l00015"></a><a class="code" href="classFREngine.html#ae1e34b65a710aaf4407b5a71f5edc8f3">00015</a>     std::vector&lt;FontMap&gt;    <a class="code" href="classFREngine.html#ae1e34b65a710aaf4407b5a71f5edc8f3">FontMaps</a>;
 <a name="l00016"></a>00016 <span class="keyword">private</span>:
-<a name="l00017"></a><a class="code" href="classFREngine.html#a92a9273d94f124ae80a25f53aaa62d7e">00017</a>     FT_Library      <a class="code" href="classFREngine.html#a92a9273d94f124ae80a25f53aaa62d7e">Library</a>;
-<a name="l00018"></a><a class="code" href="classFREngine.html#a95ed22a25015adea4679b3b309bc16dd">00018</a>     FT_Face         <a class="code" href="classFREngine.html#a95ed22a25015adea4679b3b309bc16dd">FontFace</a>;
-<a name="l00019"></a><a class="code" href="classFREngine.html#af59f92539246c39015306f61f90bef7f">00019</a>     FT_GlyphSlot    <a class="code" href="classFREngine.html#af59f92539246c39015306f61f90bef7f">GlyphSlot</a>;
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00022"></a>00022     <a class="code" href="classFREngine.html#a018bc7405e3f91c0802bf72f66f4c786">FREngine</a>();
-<a name="l00023"></a>00023     <a class="code" href="classFREngine.html#abb26208c17b12a26acd70df9e8e85e96">~FREngine</a>();
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025     <span class="keywordtype">bool</span> <a class="code" href="classFREngine.html#ad81e6daa06fe655d270c4b404690f191">Init</a>();
-<a name="l00026"></a>00026     <span class="keywordtype">bool</span> <a class="code" href="classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588">Load</a>(<a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* file);
-<a name="l00027"></a>00027     <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#aaab255417ff59d5a671419895e7e9121">LoadFontmap</a>(<span class="keywordtype">int</span> PointSize);
-<a name="l00028"></a>00028     <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#ac2561f4397b93a7c000770b6223ca906">Render</a>(<span class="keywordtype">int</span> PointSize, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> X, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Y, std::string Line);
-<a name="l00029"></a>00029     <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#ac2561f4397b93a7c000770b6223ca906">Render</a>(<span class="keywordtype">int</span> PointSize, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> X, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Y, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> drawWidth, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> drawHeight, std::string Line);
-<a name="l00030"></a>00030     <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#a43cd0dc8122411eb84ac6d66ff5f17d9">Cleanup</a>();
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="keyword">public</span>:
-<a name="l00033"></a>00033     <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#a01b734ad18d864d7372da6d08f14af05">SetFontPointSize</a>(<span class="keywordtype">int</span> Point);
-<a name="l00034"></a>00034     <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#af8c6eb368a34fe57085ba17a0d158000">SetFontPixelSize</a>(<span class="keywordtype">int</span> Pixels);
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="keyword">private</span>:
-<a name="l00037"></a>00037     <span class="keywordtype">int</span> <a class="code" href="classFREngine.html#a4a897e02873d6507e2462f9809a25b40">NextPowerTwo</a>(<span class="keywordtype">int</span> X);
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039 };
+<a name="l00017"></a><a class="code" href="classFREngine.html#ae7b983d7e038decbbd74ee9de19f797a">00017</a>     <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classFREngine.html#ae7b983d7e038decbbd74ee9de19f797a">TAG</a>;
+<a name="l00018"></a>00018 
+<a name="l00019"></a><a class="code" href="classFREngine.html#a92a9273d94f124ae80a25f53aaa62d7e">00019</a>     FT_Library      <a class="code" href="classFREngine.html#a92a9273d94f124ae80a25f53aaa62d7e">Library</a>;
+<a name="l00020"></a><a class="code" href="classFREngine.html#a95ed22a25015adea4679b3b309bc16dd">00020</a>     FT_Face         <a class="code" href="classFREngine.html#a95ed22a25015adea4679b3b309bc16dd">FontFace</a>;
+<a name="l00021"></a><a class="code" href="classFREngine.html#af59f92539246c39015306f61f90bef7f">00021</a>     FT_GlyphSlot    <a class="code" href="classFREngine.html#af59f92539246c39015306f61f90bef7f">GlyphSlot</a>;
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="keyword">public</span>:
+<a name="l00024"></a>00024     <a class="code" href="classFREngine.html#a018bc7405e3f91c0802bf72f66f4c786">FREngine</a>();
+<a name="l00025"></a>00025     <a class="code" href="classFREngine.html#abb26208c17b12a26acd70df9e8e85e96">~FREngine</a>();
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027     <span class="keywordtype">bool</span> <a class="code" href="classFREngine.html#ad81e6daa06fe655d270c4b404690f191">Init</a>();
+<a name="l00028"></a>00028     <span class="keywordtype">bool</span> <a class="code" href="classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588">Load</a>(<a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* file);
+<a name="l00029"></a>00029     <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#aaab255417ff59d5a671419895e7e9121">LoadFontmap</a>(<span class="keywordtype">int</span> PointSize);
+<a name="l00030"></a>00030     <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#ac2561f4397b93a7c000770b6223ca906">Render</a>(<span class="keywordtype">int</span> PointSize, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> X, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Y, std::string Line);
+<a name="l00031"></a>00031     <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#ac2561f4397b93a7c000770b6223ca906">Render</a>(<span class="keywordtype">int</span> PointSize, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> X, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Y, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> drawWidth, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> drawHeight, std::string Line);
+<a name="l00032"></a>00032     <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#a43cd0dc8122411eb84ac6d66ff5f17d9">Cleanup</a>();
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="keyword">public</span>:
+<a name="l00035"></a>00035     <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#a01b734ad18d864d7372da6d08f14af05">SetFontPointSize</a>(<span class="keywordtype">int</span> Point);
+<a name="l00036"></a>00036     <span class="keywordtype">void</span> <a class="code" href="classFREngine.html#af8c6eb368a34fe57085ba17a0d158000">SetFontPixelSize</a>(<span class="keywordtype">int</span> Pixels);
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="keyword">private</span>:
+<a name="l00039"></a>00039     <span class="keywordtype">int</span> <a class="code" href="classFREngine.html#a4a897e02873d6507e2462f9809a25b40">NextPowerTwo</a>(<span class="keywordtype">int</span> X);
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="preprocessor">#endif</span>
+<a name="l00041"></a>00041 };
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 16:59:23 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

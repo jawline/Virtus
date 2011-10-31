@@ -1,10 +1,11 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$GEngine_8h.html" title="Code/Core/GEngine.h" alt="" coords="496,83,645,112"/>
-<area shape="rect" id="node17" href="$Hive_8cpp.html" title="Code/HIVE/Hive.cpp" alt="" coords="795,160,939,189"/>
-<area shape="rect" id="node19" href="$Bee_8cpp.html" title="Code/HIVE/Bee.cpp" alt="" coords="812,83,953,112"/>
+<area shape="rect" id="node3" href="$GEngine_8h.html" title="Code/Core/GEngine.h" alt="" coords="555,83,704,112"/>
+<area shape="rect" id="node19" href="$Hive_8cpp.html" title="Code/HIVE/Hive.cpp" alt="" coords="1035,160,1179,189"/>
+<area shape="rect" id="node21" href="$Bee_8cpp.html" title="Code/HIVE/Bee.cpp" alt="" coords="991,83,1132,112"/>
 <area shape="rect" id="node5" href="$UserInterface_8cpp.html" title="Code/3DViewer/UserInterface.cpp" alt="" coords="5,160,227,189"/>
 <area shape="rect" id="node7" href="$ViewerApplication_8h.html" title="Code/3DViewer/ViewerApplication.h" alt="" coords="301,160,533,189"/>
 <area shape="rect" id="node9" href="$ViewerApplication_8cpp.html" title="Code/3DViewer/ViewerApplication.cpp" alt="" coords="168,237,413,267"/>
 <area shape="rect" id="node11" href="$entry_8cpp.html" title="Code/entry.cpp" alt="" coords="489,237,599,267"/>
 <area shape="rect" id="node14" href="$GEngine_8cpp.html" title="Code/Core/GEngine.cpp" alt="" coords="608,160,771,189"/>
+<area shape="rect" id="node17" href="$LocalFolder_8cpp.html" title="Code/Filesystem/LocalFolder.cpp" alt="" coords="795,160,1011,189"/>
 </map>

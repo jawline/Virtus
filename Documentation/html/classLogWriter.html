@@ -66,8 +66,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a instance of a log bound to a specific FileSystem <a class="el" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>.  <a href="#a872de1970984353798acf1d0328da71b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogWriter.html#a1cc506a798c0573b3ea87e3401a0e24e">~LogWriter</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the log. Flushes any buffers and deinitializes all.  <a href="#a1cc506a798c0573b3ea87e3401a0e24e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a> (const char *Data)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the specified line to the log.  <a href="#af4359cbe4566a4c02676d5af080127fe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10">writeLine</a> (string tag, string line)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the specified line to the log.  <a href="#abe31e4f2a2011936e2ef925657074a10"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classFile.html">File</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a">getPathToLogFile</a> (const char *Name)</td></tr>
@@ -79,7 +79,7 @@ Private Attributes</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Convenience class for a log. </p>
 
-<p>Definition at line <a class="el" href="LogWriter_8h_source.html#l00010">10</a> of file <a class="el" href="LogWriter_8h_source.html">LogWriter.h</a>.</p>
+<p>Definition at line <a class="el" href="LogWriter_8h_source.html#l00012">12</a> of file <a class="el" href="LogWriter_8h_source.html">LogWriter.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a872de1970984353798acf1d0328da71b"></a><!-- doxytag: member="LogWriter::LogWriter" ref="a872de1970984353798acf1d0328da71b" args="(File *file)" -->
 <div class="memitem">
@@ -100,7 +100,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="LogWriter_8cpp_source.html#l00005">5</a> of file <a class="el" href="LogWriter_8cpp_source.html">LogWriter.cpp</a>.</p>
 
-<p>References <a class="el" href="classFile.html#a29f2b872d0cec26b0fb706cbd7934628">File::createOutputStream()</a>, <a class="el" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8">FilesystemNode::getName()</a>, <a class="el" href="LogWriter_8h_source.html#l00014">m_logOutStream</a>, and <a class="el" href="classDataOutputStream.html#a3b640f16e0de59b60082c054db67f706">DataOutputStream::open()</a>.</p>
+<p>References <a class="el" href="classFile.html#a29f2b872d0cec26b0fb706cbd7934628">File::createOutputStream()</a>, <a class="el" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8">FilesystemNode::getName()</a>, <a class="el" href="LogWriter_8h_source.html#l00016">m_logOutStream</a>, and <a class="el" href="classDataOutputStream.html#a3b640f16e0de59b60082c054db67f706">DataOutputStream::open()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -129,9 +129,9 @@ Here is the call graph for this function:</div>
 
 <p>Destroy the log. Flushes any buffers and deinitializes all. </p>
 
-<p>Definition at line <a class="el" href="LogWriter_8cpp_source.html#l00029">29</a> of file <a class="el" href="LogWriter_8cpp_source.html">LogWriter.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LogWriter_8cpp_source.html#l00026">26</a> of file <a class="el" href="LogWriter_8cpp_source.html">LogWriter.cpp</a>.</p>
 
-<p>References <a class="el" href="LogWriter_8h_source.html#l00014">m_logOutStream</a>.</p>
+<p>References <a class="el" href="LogWriter_8h_source.html#l00016">m_logOutStream</a>.</p>
 
 </div>
 </div>
@@ -153,11 +153,11 @@ Here is the call graph for this function:</div>
 
 <p>Convert the string name of the log (I.e. Render.Log) to a internal filesystem node (Creating it if it doesn't already exist) </p>
 
-<p>Definition at line <a class="el" href="LogWriter_8cpp_source.html#l00058">58</a> of file <a class="el" href="LogWriter_8cpp_source.html">LogWriter.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LogWriter_8cpp_source.html#l00053">53</a> of file <a class="el" href="LogWriter_8cpp_source.html">LogWriter.cpp</a>.</p>
 
-<p>References <a class="el" href="Filesystem_8cpp_source.html#l00006">Filesystem::evaluateChild()</a>, <a class="el" href="Folder_8h_source.html#l00006">folderId</a>, <a class="el" href="Filesystem_8cpp_source.html#l00104">Filesystem::getRoot()</a>, <a class="el" href="Folder_8h_source.html#l00023">Folder::getType()</a>, <a class="el" href="classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428">Folder::newChild()</a>, and <a class="el" href="classFolder.html#a56700301248e09d2eae56bc7b2a00c0e">Folder::searchForChild()</a>.</p>
+<p>References <a class="el" href="Filesystem_8cpp_source.html#l00006">Filesystem::evaluateChild()</a>, <a class="el" href="Folder_8h_source.html#l00006">folderId</a>, <a class="el" href="Filesystem_8cpp_source.html#l00112">Filesystem::getRoot()</a>, <a class="el" href="Folder_8h_source.html#l00023">Folder::getType()</a>, <a class="el" href="classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428">Folder::newChild()</a>, and <a class="el" href="classFolder.html#a56700301248e09d2eae56bc7b2a00c0e">Folder::searchForChild()</a>.</p>
 
-<p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00037">GRenderer::initialize()</a>, and <a class="el" href="GEngine_8cpp_source.html#l00074">GEngine::initialize()</a>.</p>
+<p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00038">GRenderer::initialize()</a>, and <a class="el" href="GEngine_8cpp_source.html#l00073">GEngine::initialize()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -170,16 +170,26 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="af4359cbe4566a4c02676d5af080127fe"></a><!-- doxytag: member="LogWriter::writeData" ref="af4359cbe4566a4c02676d5af080127fe" args="(const char *Data)" -->
+<a class="anchor" id="abe31e4f2a2011936e2ef925657074a10"></a><!-- doxytag: member="LogWriter::writeLine" ref="abe31e4f2a2011936e2ef925657074a10" args="(string tag, string line)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void LogWriter::writeData </td>
+          <td class="memname">void LogWriter::writeLine </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>Data</em></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
@@ -187,18 +197,18 @@ Here is the call graph for this function:</div>
 
 <p>Write the specified line to the log. </p>
 
-<p>Definition at line <a class="el" href="LogWriter_8cpp_source.html#l00040">40</a> of file <a class="el" href="LogWriter_8cpp_source.html">LogWriter.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LogWriter_8cpp_source.html#l00035">35</a> of file <a class="el" href="LogWriter_8cpp_source.html">LogWriter.cpp</a>.</p>
 
-<p>References <a class="el" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea">DataOutputStream::flush()</a>, <a class="el" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b">DataOutputStream::isOpen()</a>, <a class="el" href="LogWriter_8h_source.html#l00014">m_logOutStream</a>, and <a class="el" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9">DataOutputStream::write()</a>.</p>
+<p>References <a class="el" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea">DataOutputStream::flush()</a>, <a class="el" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b">DataOutputStream::isOpen()</a>, <a class="el" href="LogWriter_8h_source.html#l00016">m_logOutStream</a>, and <a class="el" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9">DataOutputStream::write()</a>.</p>
 
-<p>Referenced by <a class="el" href="Hive_8cpp_source.html#l00006">BeeHive::BeeHive()</a>, <a class="el" href="FREngine_8cpp_source.html#l00258">FREngine::Cleanup()</a>, <a class="el" href="FontMap_8cpp_source.html#l00072">FontMap::Cleanup()</a>, <a class="el" href="TextureMonitor_8cpp_source.html#l00030">TextureMonitor::f_loadEntity()</a>, <a class="el" href="GLShader_8cpp_source.html#l00009">GLShader::GLShader()</a>, <a class="el" href="FREngine_8cpp_source.html#l00019">FREngine::Init()</a>, <a class="el" href="GRender_8cpp_source.html#l00037">GRenderer::initialize()</a>, <a class="el" href="GLAPI_8cpp_source.html#l00048">GL2GraphicsAPI::initialize()</a>, <a class="el" href="GEngine_8cpp_source.html#l00074">GEngine::initialize()</a>, <a class="el" href="FREngine_8cpp_source.html#l00033">FREngine::Load()</a>, <a class="el" href="GLShader_8cpp_source.html#l00056">GLShader::loadShader()</a>, <a class="el" href="GLTexture_8cpp_source.html#l00028">GLTexture::loadTextureData()</a>, <a class="el" href="GEngine_8cpp_source.html#l00548">GEngine::setErrorDetails()</a>, <a class="el" href="GEngine_8cpp_source.html#l00294">GEngine::uninitialize()</a>, <a class="el" href="Hive_8cpp_source.html#l00029">BeeHive::~BeeHive()</a>, and <a class="el" href="GLShader_8cpp_source.html#l00028">GLShader::~GLShader()</a>.</p>
+<p>Referenced by <a class="el" href="Hive_8cpp_source.html#l00010">BeeHive::BeeHive()</a>, <a class="el" href="FREngine_8cpp_source.html#l00248">FREngine::Cleanup()</a>, <a class="el" href="FontMap_8cpp_source.html#l00074">FontMap::Cleanup()</a>, <a class="el" href="TextureMonitor_8cpp_source.html#l00027">TextureMonitor::f_loadEntity()</a>, <a class="el" href="GLShader_8cpp_source.html#l00011">GLShader::GLShader()</a>, <a class="el" href="FREngine_8cpp_source.html#l00019">FREngine::Init()</a>, <a class="el" href="GRender_8cpp_source.html#l00038">GRenderer::initialize()</a>, <a class="el" href="GLAPI_8cpp_source.html#l00050">GL2GraphicsAPI::initialize()</a>, <a class="el" href="GEngine_8cpp_source.html#l00073">GEngine::initialize()</a>, <a class="el" href="FREngine_8cpp_source.html#l00032">FREngine::Load()</a>, <a class="el" href="GLShader_8cpp_source.html#l00058">GLShader::loadShader()</a>, <a class="el" href="GLTexture_8cpp_source.html#l00022">GLTexture::loadTextureData()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00152">LocalFolder::searchForChild()</a>, <a class="el" href="GEngine_8cpp_source.html#l00495">GEngine::setErrorDetails()</a>, <a class="el" href="GEngine_8cpp_source.html#l00268">GEngine::uninitialize()</a>, <a class="el" href="Hive_8cpp_source.html#l00035">BeeHive::~BeeHive()</a>, and <a class="el" href="GLShader_8cpp_source.html#l00030">GLShader::~GLShader()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classLogWriter_af4359cbe4566a4c02676d5af080127fe_cgraph.png" border="0" usemap="#classLogWriter_af4359cbe4566a4c02676d5af080127fe_cgraph" alt=""/></div>
-<map name="classLogWriter_af4359cbe4566a4c02676d5af080127fe_cgraph" id="classLogWriter_af4359cbe4566a4c02676d5af080127fe_cgraph">
-<area shape="rect" id="node3" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="205,5,371,35"/><area shape="rect" id="node5" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="199,59,377,88"/><area shape="rect" id="node7" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="205,112,371,141"/></map>
+<div class="center"><img src="classLogWriter_abe31e4f2a2011936e2ef925657074a10_cgraph.png" border="0" usemap="#classLogWriter_abe31e4f2a2011936e2ef925657074a10_cgraph" alt=""/></div>
+<map name="classLogWriter_abe31e4f2a2011936e2ef925657074a10_cgraph" id="classLogWriter_abe31e4f2a2011936e2ef925657074a10_cgraph">
+<area shape="rect" id="node3" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="200,5,365,35"/><area shape="rect" id="node5" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="193,59,372,88"/><area shape="rect" id="node7" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="200,112,365,141"/></map>
 </div>
 </p>
 
@@ -216,9 +226,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="LogWriter_8h_source.html#l00014">14</a> of file <a class="el" href="LogWriter_8h_source.html">LogWriter.h</a>.</p>
+<p>Definition at line <a class="el" href="LogWriter_8h_source.html#l00016">16</a> of file <a class="el" href="LogWriter_8h_source.html">LogWriter.h</a>.</p>
 
-<p>Referenced by <a class="el" href="LogWriter_8cpp_source.html#l00005">LogWriter()</a>, <a class="el" href="LogWriter_8cpp_source.html#l00040">writeData()</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00029">~LogWriter()</a>.</p>
+<p>Referenced by <a class="el" href="LogWriter_8cpp_source.html#l00005">LogWriter()</a>, <a class="el" href="LogWriter_8cpp_source.html#l00035">writeLine()</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00026">~LogWriter()</a>.</p>
 
 </div>
 </div>
@@ -227,7 +237,7 @@ Here is the call graph for this function:</div>
 <li>Code/LogWriter/<a class="el" href="LogWriter_8cpp_source.html">LogWriter.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 16:59:23 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

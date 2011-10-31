@@ -1,12 +1,13 @@
-BeeHive created with 6 workers
-Initialized job HIVE
-Setting window height to 800
-Setting window height to 600
-Setting window title to VIRTUS CORE (SET IN CFG)
-Initialized event manager
-Intiailized engine
-Freeing event manager
-Freeing the configuration instanceKilling the HIVE
-WARNING: HIVE isn't able to kill bees yet. get on it
-HIVE destroyed
-Engine uninitialized
+HIVE: BeeHive created with 6 Bees
+Engine Core: Initialized job HIVE
+Engine Core: Set width to 1920
+Engine Core: Set height to 1080
+Engine Core: Setting window title to VIRTUS CORE (SET IN CFG)
+Engine Core: Initialized event manager
+Engine Core: Intiailized engine
+Engine Core: Freeing event manager
+Engine Core: Freeing the configuration instance
+Engine Core: Killing the HIVE
+HIVE: WARNING: HIVE isn't able to kill bees yet. get on it
+HIVE: HIVE destroyed
+Engine Core: Engine uninitialized

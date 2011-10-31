@@ -23,7 +23,7 @@
 <area shape="rect" id="node38" href="$classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file." alt="" coords="588,351,673,380"/>
 <area shape="rect" id="node40" href="$classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0" title="DataInputStream::open" alt="" coords="552,404,709,433"/>
 <area shape="rect" id="node42" href="$classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60" title="DataInputStream::read" alt="" coords="553,457,708,487"/>
-<area shape="rect" id="node44" href="$classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="560,511,701,540"/>
+<area shape="rect" id="node44" href="$classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="561,511,700,540"/>
 <area shape="rect" id="node46" href="$classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="807,564,972,593"/>
 <area shape="rect" id="node48" href="$classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b" title="DataOutputStream::isOpen" alt="" coords="800,457,979,487"/>
 <area shape="rect" id="node50" href="$classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="807,511,972,540"/>

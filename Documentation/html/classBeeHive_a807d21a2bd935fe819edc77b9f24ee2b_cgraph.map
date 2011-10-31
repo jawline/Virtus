@@ -1,6 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245" title="GEngine::getInstance" alt="" coords="193,771,340,800"/>
-<area shape="rect" id="node67" href="$classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="904,956,1045,985"/>
+<area shape="rect" id="node67" href="$classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="905,956,1044,985"/>
 <area shape="rect" id="node87" href="$classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6" title="GEngine::getLog" alt="" coords="208,1059,325,1088"/>
 <area shape="rect" id="node5" href="$classGEngine.html#a2f445aaf503b28d11a6fcc8a3cc11b59" title="GEngine::GEngine" alt="" coords="389,771,520,800"/>
 <area shape="rect" id="node7" href="$classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757" title="GEngine::initialize" alt="" coords="392,507,517,536"/>

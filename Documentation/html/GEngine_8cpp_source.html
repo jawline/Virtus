@@ -46,580 +46,522 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
 <a name="l00007"></a>00007 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &lt;iostream&gt;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="InterfaceLayer_8h.html">./Render/Interface/InterfaceLayer.h</a>&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="ConfigurationNumber_8h.html">Configure/ConfigurationNumber.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="ConfigurationString_8h.html">Configure/ConfigurationString.h</a>&quot;</span>
-<a name="l00012"></a>00012 
-<a name="l00013"></a><a class="code" href="GEngine_8cpp.html#aae46523663431439199f7f066652f8c5">00013</a> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="GEngine_8cpp.html#aae46523663431439199f7f066652f8c5">defaultCfgFile</a> = <span class="stringliteral">&quot;./engine.cfg&quot;</span>;
-<a name="l00014"></a><a class="code" href="GEngine_8cpp.html#ad9afbb8e095f90498bdc638eee4312b7">00014</a> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="GEngine_8cpp.html#ad9afbb8e095f90498bdc638eee4312b7">defaultWindowWidth</a> = 800;
-<a name="l00015"></a><a class="code" href="GEngine_8cpp.html#a8a78392bff2dbd9e498318645cd2fafe">00015</a> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="GEngine_8cpp.html#a8a78392bff2dbd9e498318645cd2fafe">defaultWindowHeight</a> = 600;
-<a name="l00016"></a><a class="code" href="GEngine_8cpp.html#a01a59f0176634e4d7ccee8671d675725">00016</a> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="GEngine_8cpp.html#a01a59f0176634e4d7ccee8671d675725">defaultWindowTitle</a> = <span class="stringliteral">&quot;Virtus Base Window&quot;</span>;
-<a name="l00017"></a>00017 
-<a name="l00018"></a><a class="code" href="classGEngine.html#a2f445aaf503b28d11a6fcc8a3cc11b59">00018</a> <a class="code" href="classGEngine.html#a2f445aaf503b28d11a6fcc8a3cc11b59">GEngine::GEngine</a>() : m_fpsCalculator()
-<a name="l00019"></a>00019 {
-<a name="l00020"></a>00020     <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a> = 0;
-<a name="l00021"></a>00021     <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a> = 0;
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023     <a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a> = 0;
-<a name="l00024"></a>00024     <a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a> = 0;
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="InterfaceLayer_8h.html">./Render/Interface/InterfaceLayer.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="ConfigurationNumber_8h.html">Configure/ConfigurationNumber.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="ConfigurationString_8h.html">Configure/ConfigurationString.h</a>&quot;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a><a class="code" href="GEngine_8cpp.html#aae46523663431439199f7f066652f8c5">00014</a> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="GEngine_8cpp.html#aae46523663431439199f7f066652f8c5">defaultCfgFile</a> = <span class="stringliteral">&quot;./engine.cfg&quot;</span>;
+<a name="l00015"></a><a class="code" href="GEngine_8cpp.html#ad9afbb8e095f90498bdc638eee4312b7">00015</a> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="GEngine_8cpp.html#ad9afbb8e095f90498bdc638eee4312b7">defaultWindowWidth</a> = 800;
+<a name="l00016"></a><a class="code" href="GEngine_8cpp.html#a8a78392bff2dbd9e498318645cd2fafe">00016</a> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="GEngine_8cpp.html#a8a78392bff2dbd9e498318645cd2fafe">defaultWindowHeight</a> = 600;
+<a name="l00017"></a><a class="code" href="GEngine_8cpp.html#a01a59f0176634e4d7ccee8671d675725">00017</a> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="GEngine_8cpp.html#a01a59f0176634e4d7ccee8671d675725">defaultWindowTitle</a> = <span class="stringliteral">&quot;Virtus Base Window&quot;</span>;
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">GEngine::TAG</a> = <span class="stringliteral">&quot;Engine Core&quot;</span>;
+<a name="l00020"></a>00020 
+<a name="l00021"></a><a class="code" href="classGEngine.html#a2f445aaf503b28d11a6fcc8a3cc11b59">00021</a> <a class="code" href="classGEngine.html#a2f445aaf503b28d11a6fcc8a3cc11b59">GEngine::GEngine</a>() :
+<a name="l00022"></a>00022         m_fpsCalculator() {
+<a name="l00023"></a>00023         <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a> = 0;
+<a name="l00024"></a>00024         <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a> = 0;
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026     <a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a> = 0;
-<a name="l00027"></a>00027     <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a> = 0;
+<a name="l00026"></a>00026         <a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a> = 0;
+<a name="l00027"></a>00027         <a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a> = 0;
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029     <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> = 0;
-<a name="l00030"></a>00030     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a> = 0;
+<a name="l00029"></a>00029         <a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a> = 0;
+<a name="l00030"></a>00030         <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a> = 0;
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032     <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a> = 0;
-<a name="l00033"></a>00033 }
+<a name="l00032"></a>00032         <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> = 0;
+<a name="l00033"></a>00033         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a> = 0;
 <a name="l00034"></a>00034 
-<a name="l00035"></a><a class="code" href="classGEngine.html#a3bdec944d319d1f91af57597f781faa7">00035</a> <a class="code" href="classGEngine.html#a3bdec944d319d1f91af57597f781faa7">GEngine::~GEngine</a>()
-<a name="l00036"></a>00036 {
+<a name="l00035"></a>00035         <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a> = 0;
+<a name="l00036"></a>00036 }
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038     <a class="code" href="classGEngine.html#a68edb6e836587b90042abde3cc8e1219">uninitialize</a>();
+<a name="l00038"></a><a class="code" href="classGEngine.html#a3bdec944d319d1f91af57597f781faa7">00038</a> <a class="code" href="classGEngine.html#a3bdec944d319d1f91af57597f781faa7">GEngine::~GEngine</a>() {
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040 }
+<a name="l00040"></a>00040         <a class="code" href="classGEngine.html#a68edb6e836587b90042abde3cc8e1219">uninitialize</a>();
 <a name="l00041"></a>00041 
-<a name="l00042"></a><a class="code" href="classGEngine.html#af9b11a02b018385249d96e9a8201d513">00042</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#af9b11a02b018385249d96e9a8201d513">GEngine::initializeInputBindings</a>()
-<a name="l00043"></a>00043 {
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045     <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a> = <span class="keyword">new</span> <a class="code" href="structInputBinding.html">InputBinding</a>[<a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60af82583f2bbdcd05b3c7eef18f1efaa37">input_event_end</a>];
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047     <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60af82583f2bbdcd05b3c7eef18f1efaa37">input_event_end</a>; ++i)
-<a name="l00048"></a>00048     {
+<a name="l00042"></a>00042 }
+<a name="l00043"></a>00043 
+<a name="l00044"></a><a class="code" href="classGEngine.html#af9b11a02b018385249d96e9a8201d513">00044</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#af9b11a02b018385249d96e9a8201d513">GEngine::initializeInputBindings</a>() {
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046         <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a> = <span class="keyword">new</span> <a class="code" href="structInputBinding.html">InputBinding</a>[<a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60af82583f2bbdcd05b3c7eef18f1efaa37">input_event_end</a>];
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60af82583f2bbdcd05b3c7eef18f1efaa37">input_event_end</a>; ++i) {
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050         <a class="code" href="structInputBinding.html">InputBinding</a> * l_CurInput = &amp;<a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>[i];
-<a name="l00051"></a>00051         l_CurInput-&gt;<a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">Keys</a> = <span class="keyword">new</span> <a class="code" href="structEventBinding.html">EventBinding</a>[<a class="code" href="Keys_8h.html#ade02ebcdfd4994c66d26563fb1494a35a55359a77619753651a227eddb9e27694">KEYS_END</a>];
+<a name="l00050"></a>00050                 <a class="code" href="structInputBinding.html">InputBinding</a> * l_CurInput = &amp;<a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>[i];
+<a name="l00051"></a>00051                 l_CurInput-&gt;<a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">Keys</a> = <span class="keyword">new</span> <a class="code" href="structEventBinding.html">EventBinding</a>[<a class="code" href="Keys_8h.html#ade02ebcdfd4994c66d26563fb1494a35a55359a77619753651a227eddb9e27694">KEYS_END</a>];
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053     }
+<a name="l00053"></a>00053         }
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055 }
 <a name="l00056"></a>00056 
-<a name="l00057"></a><a class="code" href="classGEngine.html#aed97f611db6edabe8b7febc731aa6400">00057</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#aed97f611db6edabe8b7febc731aa6400">GEngine::freeInputBindings</a>()
-<a name="l00058"></a>00058 {
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a> == 0) <span class="keywordflow">return</span>;
-<a name="l00061"></a>00061     <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60af82583f2bbdcd05b3c7eef18f1efaa37">input_event_end</a>; ++i)
-<a name="l00062"></a>00062     {
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064         <a class="code" href="structInputBinding.html">InputBinding</a>* l_curInput = &amp;<a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>[i];
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066         <span class="keywordflow">if</span> (l_curInput != 0 &amp;&amp; l_curInput-&gt;<a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">Keys</a> != 0)
-<a name="l00067"></a>00067             <span class="keyword">delete</span>[] l_curInput-&gt;<a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">Keys</a>;
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069     }
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071     <span class="keyword">delete</span>[] <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>;
-<a name="l00072"></a>00072 }
-<a name="l00073"></a>00073 
-<a name="l00074"></a><a class="code" href="classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757">00074</a> <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757">GEngine::initialize</a>()  <span class="comment">//Not much initialization to do yet =)</span>
-<a name="l00075"></a>00075 {
-<a name="l00076"></a>00076     <span class="comment">//A buffer for the log messages</span>
-<a name="l00077"></a>00077     <span class="keywordtype">char</span> logBuffer[512];
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079     <span class="comment">//Create the engine configuration</span>
-<a name="l00080"></a>00080     <span class="comment">//TODO: Check the log exists if not create it etc</span>
-<a name="l00081"></a>00081     <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a> = <span class="keyword">new</span> <a class="code" href="classConfigurationInstance.html">ConfigurationInstance</a>( static_cast&lt;File*&gt; ( <a class="code" href="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), <span class="stringliteral">&quot;Saved/engine.cfg&quot;</span>) ) );
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083     <span class="comment">//Create a log for the engines core</span>
-<a name="l00084"></a>00084     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a> = <span class="keyword">new</span> <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>( <a class="code" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a" title="Convert the string name of the log (I.e. Render.Log) to a internal filesystem node (Creating it if it...">LogWriter::getPathToLogFile</a>(<span class="stringliteral">&quot;Core&quot;</span>) );
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086     <span class="comment">//Get the graphicsAPI</span>
-<a name="l00087"></a>00087     <span class="keyword">const</span> <span class="keywordtype">char</span>* graphicsAPIString = <span class="stringliteral">&quot;OpenGL2&quot;</span>;
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089     <span class="comment">//Get a node to the configuration graphics API string</span>
-<a name="l00090"></a>00090     <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* apiNode = <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(<span class="stringliteral">&quot;Graphics/GraphicsAPI&quot;</span>);
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092     <span class="comment">//If the graphics API is specified as a string in the Cfg use that instead</span>
-<a name="l00093"></a>00093     <span class="keywordflow">if</span> (apiNode != 0 &amp;&amp; apiNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310add618b70afb3f0c772611eb62e2ae862">configurationString</a>)
-<a name="l00094"></a>00094     {
+<a name="l00057"></a><a class="code" href="classGEngine.html#aed97f611db6edabe8b7febc731aa6400">00057</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#aed97f611db6edabe8b7febc731aa6400">GEngine::freeInputBindings</a>() {
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a> == 0)
+<a name="l00060"></a>00060                 <span class="keywordflow">return</span>;
+<a name="l00061"></a>00061         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60af82583f2bbdcd05b3c7eef18f1efaa37">input_event_end</a>; ++i) {
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063                 <a class="code" href="structInputBinding.html">InputBinding</a>* l_curInput = &amp;<a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>[i];
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065                 <span class="keywordflow">if</span> (l_curInput != 0 &amp;&amp; l_curInput-&gt;<a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">Keys</a> != 0)
+<a name="l00066"></a>00066                         <span class="keyword">delete</span>[] l_curInput-&gt;<a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">Keys</a>;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068         }
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070         <span class="keyword">delete</span>[] <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>;
+<a name="l00071"></a>00071 }
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757">00073</a> <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757">GEngine::initialize</a>() <span class="comment">//Not much initialization to do yet =)</span>
+<a name="l00074"></a>00074 {
+<a name="l00075"></a>00075         <span class="comment">//A buffer for the log messages</span>
+<a name="l00076"></a>00076         <span class="keywordtype">char</span> logBuffer[512];
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078         <span class="comment">//Create the engine configuration</span>
+<a name="l00079"></a>00079         <span class="comment">//TODO: Check the log exists if not create it etc</span>
+<a name="l00080"></a>00080         <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a> = <span class="keyword">new</span> <a class="code" href="classConfigurationInstance.html">ConfigurationInstance</a>(
+<a name="l00081"></a>00081                         static_cast&lt;File*&gt; (<a class="code" href="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d">Filesystem::evaluateChild</a>(
+<a name="l00082"></a>00082                                         <a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), <span class="stringliteral">&quot;Saved/engine.cfg&quot;</span>)));
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084         <span class="comment">//Create a log for the engines core</span>
+<a name="l00085"></a>00085         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a> = <span class="keyword">new</span> <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>(<a class="code" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a" title="Convert the string name of the log (I.e. Render.Log) to a internal filesystem node (Creating it if it...">LogWriter::getPathToLogFile</a>(<span class="stringliteral">&quot;Core&quot;</span>));
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087         <span class="comment">//Get the graphicsAPI</span>
+<a name="l00088"></a>00088         <span class="keyword">const</span> <span class="keywordtype">char</span>* graphicsAPIString = <span class="stringliteral">&quot;OpenGL2&quot;</span>;
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090         <span class="comment">//Get a node to the configuration graphics API string</span>
+<a name="l00091"></a>00091         <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* apiNode = <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(<span class="stringliteral">&quot;Graphics/GraphicsAPI&quot;</span>);
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093         <span class="comment">//If the graphics API is specified as a string in the Cfg use that instead</span>
+<a name="l00094"></a>00094         <span class="keywordflow">if</span> (apiNode != 0 &amp;&amp; apiNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310add618b70afb3f0c772611eb62e2ae862">configurationString</a>) {
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096         <a class="code" href="classConfigurationString.html">ConfigurationString</a>* apiString = <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationString.html">ConfigurationString</a>*<span class="keyword">&gt;</span> (apiNode);
-<a name="l00097"></a>00097         graphicsAPIString = apiString-&gt;<a class="code" href="classConfigurationString.html#aa22ff0fb4c20ae04240b430fe58a9f1a">getStringData</a>();
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099     }
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101     <span class="comment">//Initialize the games renderer. this function must be called before doing anything with the renderer</span>
-<a name="l00102"></a>00102     <span class="keywordflow">if</span> (<a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757">initialize</a>(<a class="code" href="GEngine_8cpp.html#ad9afbb8e095f90498bdc638eee4312b7">defaultWindowWidth</a>, <a class="code" href="GEngine_8cpp.html#a8a78392bff2dbd9e498318645cd2fafe">defaultWindowHeight</a>, graphicsAPIString) == <span class="keyword">false</span>)
-<a name="l00103"></a>00103     {
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105         <span class="comment">//Unable to init the renderer so set the error state</span>
-<a name="l00106"></a>00106         <a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">setErrorDetails</a>(<span class="stringliteral">&quot;Unable to get a instance for the specified graphics API&quot;</span>);
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108         <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00109"></a>00109     }
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111     <span class="comment">//Bind input events from the renderers window to our input postbox</span>
-<a name="l00112"></a>00112     <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#a2a806dfe5cc5503a1144902a0378ca4b">setInputPostbox</a>(&amp;<a class="code" href="classGEngine.html#ab647a8b8faee4a9b6dac40c54b5054c5">m_inputPostbox</a>);
-<a name="l00113"></a>00113 
-<a name="l00114"></a>00114     <span class="comment">//Create variables for the window height and width and set them to the defaults</span>
-<a name="l00115"></a>00115     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> renderWindowWidth = <a class="code" href="GEngine_8cpp.html#ad9afbb8e095f90498bdc638eee4312b7">defaultWindowWidth</a>;
-<a name="l00116"></a>00116     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> renderWindowHeight = <a class="code" href="GEngine_8cpp.html#a8a78392bff2dbd9e498318645cd2fafe">defaultWindowHeight</a>;
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118     <span class="comment">//Get a load of nodes for the engine settings</span>
-<a name="l00119"></a>00119     <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* widthNode = <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(<span class="stringliteral">&quot;Graphics/Window/Width&quot;</span>);
-<a name="l00120"></a>00120     <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* heightNode = <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(<span class="stringliteral">&quot;Graphics/Window/Height&quot;</span>);
-<a name="l00121"></a>00121     <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* titleNode = <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(<span class="stringliteral">&quot;Graphics/Window/Title&quot;</span>);
-<a name="l00122"></a>00122     <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* fullscreenNode = <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(<span class="stringliteral">&quot;Graphics/Window/Fullscreen&quot;</span>);
-<a name="l00123"></a>00123     <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* defaultFontNode = <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(<span class="stringliteral">&quot;Graphics/Fonts/defaultFont&quot;</span>);
-<a name="l00124"></a>00124     <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* numberOfThreads = <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(<span class="stringliteral">&quot;Engine/Cores&quot;</span>);
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126     <span class="comment">//If the configuration node doesn&#39;t exist or isn&#39;t a number then create a job engine</span>
-<a name="l00127"></a>00127     <span class="keywordflow">if</span> (numberOfThreads == 0 || numberOfThreads-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() != <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310adf9dfa08c709d806355279e2b18d1780">configurationNumber</a> )
-<a name="l00128"></a>00128     {
-<a name="l00129"></a>00129         <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> = <span class="keyword">new</span> <a class="code" href="classBeeHive.html" title="Manages a collection of worker bees which process jobs passed to them over multiple threads...">BeeHive</a>(1);
-<a name="l00130"></a>00130     }
-<a name="l00131"></a>00131     <span class="keywordflow">else</span>
-<a name="l00132"></a>00132     {
-<a name="l00133"></a>00133 
-<a name="l00134"></a>00134         <span class="comment">//Otherwise use the number of threads configuration node value to create the BeeHive</span>
-<a name="l00135"></a>00135         <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> = <span class="keyword">new</span> <a class="code" href="classBeeHive.html" title="Manages a collection of worker bees which process jobs passed to them over multiple threads...">BeeHive</a>( (static_cast&lt;ConfigurationNumber*&gt; (numberOfThreads))-&gt;getValue() );
-<a name="l00136"></a>00136 
-<a name="l00137"></a>00137     }
+<a name="l00096"></a>00096                 <a class="code" href="classConfigurationString.html">ConfigurationString</a>* apiString =
+<a name="l00097"></a>00097                                 <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationString.html">ConfigurationString</a>*<span class="keyword">&gt;</span> (apiNode);
+<a name="l00098"></a>00098                 graphicsAPIString = apiString-&gt;<a class="code" href="classConfigurationString.html#aa22ff0fb4c20ae04240b430fe58a9f1a">getStringData</a>();
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100         }
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102         <span class="comment">//Initialize the games renderer. this function must be called before doing anything with the renderer</span>
+<a name="l00103"></a>00103         <span class="keywordflow">if</span> (<a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757">initialize</a>(<a class="code" href="GEngine_8cpp.html#ad9afbb8e095f90498bdc638eee4312b7">defaultWindowWidth</a>,
+<a name="l00104"></a>00104                         <a class="code" href="GEngine_8cpp.html#a8a78392bff2dbd9e498318645cd2fafe">defaultWindowHeight</a>, graphicsAPIString) == <span class="keyword">false</span>) {
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106                 <span class="comment">//Unable to init the renderer so set the error state</span>
+<a name="l00107"></a>00107                 <a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">setErrorDetails</a>(
+<a name="l00108"></a>00108                                 <span class="stringliteral">&quot;Unable to get a instance for the specified graphics API&quot;</span>);
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00111"></a>00111         }
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113         <span class="comment">//Bind input events from the renderers window to our input postbox</span>
+<a name="l00114"></a>00114         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#a2a806dfe5cc5503a1144902a0378ca4b">setInputPostbox</a>(&amp;<a class="code" href="classGEngine.html#ab647a8b8faee4a9b6dac40c54b5054c5">m_inputPostbox</a>);
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116         <span class="comment">//Create variables for the window height and width and set them to the defaults</span>
+<a name="l00117"></a>00117         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> renderWindowWidth = <a class="code" href="GEngine_8cpp.html#ad9afbb8e095f90498bdc638eee4312b7">defaultWindowWidth</a>;
+<a name="l00118"></a>00118         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> renderWindowHeight = <a class="code" href="GEngine_8cpp.html#a8a78392bff2dbd9e498318645cd2fafe">defaultWindowHeight</a>;
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120         <span class="comment">//Get a load of nodes for the engine settings</span>
+<a name="l00121"></a>00121         <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* widthNode =
+<a name="l00122"></a>00122                         <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(<span class="stringliteral">&quot;Graphics/Window/Width&quot;</span>);
+<a name="l00123"></a>00123         <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* heightNode = <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(
+<a name="l00124"></a>00124                         <span class="stringliteral">&quot;Graphics/Window/Height&quot;</span>);
+<a name="l00125"></a>00125         <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* titleNode =
+<a name="l00126"></a>00126                         <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(<span class="stringliteral">&quot;Graphics/Window/Title&quot;</span>);
+<a name="l00127"></a>00127         <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* fullscreenNode = <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(
+<a name="l00128"></a>00128                         <span class="stringliteral">&quot;Graphics/Window/Fullscreen&quot;</span>);
+<a name="l00129"></a>00129         <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* defaultFontNode = <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(
+<a name="l00130"></a>00130                         <span class="stringliteral">&quot;Graphics/Fonts/defaultFont&quot;</span>);
+<a name="l00131"></a>00131         <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>* numberOfThreads = <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>-&gt;<a class="code" href="classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877">getNode</a>(<span class="stringliteral">&quot;Engine/Cores&quot;</span>);
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133         <span class="comment">//If the configuration node doesn&#39;t exist or isn&#39;t a number then create a job engine</span>
+<a name="l00134"></a>00134         <span class="keywordflow">if</span> (numberOfThreads == 0 || numberOfThreads-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>()
+<a name="l00135"></a>00135                         != <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310adf9dfa08c709d806355279e2b18d1780">configurationNumber</a>) {
+<a name="l00136"></a>00136                 <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> = <span class="keyword">new</span> <a class="code" href="classBeeHive.html" title="Manages a collection of worker bees which process jobs passed to them over multiple threads...">BeeHive</a>(1);
+<a name="l00137"></a>00137         } <span class="keywordflow">else</span> {
 <a name="l00138"></a>00138 
-<a name="l00139"></a>00139     <span class="comment">//Send a message that the HIVE has been created to the log</span>
-<a name="l00140"></a>00140     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Initialized job HIVE\n&quot;</span>);
-<a name="l00141"></a>00141 
-<a name="l00142"></a>00142     <span class="comment">//If the width node exists and is a number</span>
-<a name="l00143"></a>00143     <span class="keywordflow">if</span> (widthNode != 0 &amp;&amp; widthNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310adf9dfa08c709d806355279e2b18d1780">configurationNumber</a>)
-<a name="l00144"></a>00144     {
+<a name="l00139"></a>00139                 <span class="comment">//Otherwise use the number of threads configuration node value to create the BeeHive</span>
+<a name="l00140"></a>00140                 <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a>
+<a name="l00141"></a>00141                                 = <span class="keyword">new</span> <a class="code" href="classBeeHive.html" title="Manages a collection of worker bees which process jobs passed to them over multiple threads...">BeeHive</a>(
+<a name="l00142"></a>00142                                                 (static_cast&lt;ConfigurationNumber*&gt; (numberOfThreads))-&gt;getValue());
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144         }
 <a name="l00145"></a>00145 
-<a name="l00146"></a>00146         <span class="comment">//Set the window width to the width nodes value</span>
-<a name="l00147"></a>00147         <a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>* Number = <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>*<span class="keyword">&gt;</span> (widthNode);
-<a name="l00148"></a>00148         renderWindowWidth = Number-&gt;<a class="code" href="classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb">getValue</a>();
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150         <span class="comment">//Print this info to the log</span>
-<a name="l00151"></a>00151         sprintf(logBuffer, <span class="stringliteral">&quot;Setting window height to %i\n&quot;</span>, renderWindowWidth);
-<a name="l00152"></a>00152         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
-<a name="l00153"></a>00153 
-<a name="l00154"></a>00154     }
-<a name="l00155"></a>00155     <span class="keywordflow">else</span>
-<a name="l00156"></a>00156     {
+<a name="l00146"></a>00146         <span class="comment">//Send a message that the HIVE has been created to the log</span>
+<a name="l00147"></a>00147         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">TAG</a>, <span class="stringliteral">&quot;Initialized job HIVE&quot;</span>);
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149         <span class="comment">//If the width node exists and is a number</span>
+<a name="l00150"></a>00150         <span class="keywordflow">if</span> (widthNode != 0 &amp;&amp; widthNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310adf9dfa08c709d806355279e2b18d1780">configurationNumber</a>) {
+<a name="l00151"></a>00151 
+<a name="l00152"></a>00152                 <span class="comment">//Set the window width to the width nodes value</span>
+<a name="l00153"></a>00153                 <a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>* Number =
+<a name="l00154"></a>00154                                 <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>*<span class="keyword">&gt;</span> (widthNode);
+<a name="l00155"></a>00155                 renderWindowWidth = Number-&gt;<a class="code" href="classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb">getValue</a>();
+<a name="l00156"></a>00156         } <span class="comment">/* NOTE: if it doesn&#39;t exist it will be set to the default value above */</span>
 <a name="l00157"></a>00157 
-<a name="l00158"></a>00158         <span class="comment">//Otherwise tell the log we&#39;re using the default value</span>
-<a name="l00159"></a>00159         sprintf(logBuffer, <span class="stringliteral">&quot;Using default window width of %i\n&quot;</span>, <a class="code" href="GEngine_8cpp.html#ad9afbb8e095f90498bdc638eee4312b7">defaultWindowWidth</a>);
-<a name="l00160"></a>00160         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
-<a name="l00161"></a>00161 
-<a name="l00162"></a>00162     }
-<a name="l00163"></a>00163 
-<a name="l00164"></a>00164     <span class="comment">//If the height node exists and is a number</span>
-<a name="l00165"></a>00165     <span class="keywordflow">if</span> (heightNode != 0 &amp;&amp; heightNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310adf9dfa08c709d806355279e2b18d1780">configurationNumber</a>)
-<a name="l00166"></a>00166     {
+<a name="l00158"></a>00158         <span class="comment">//If the height node exists and is a number</span>
+<a name="l00159"></a>00159         <span class="keywordflow">if</span> (heightNode != 0 &amp;&amp; heightNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310adf9dfa08c709d806355279e2b18d1780">configurationNumber</a>) {
+<a name="l00160"></a>00160 
+<a name="l00161"></a>00161                 <span class="comment">//Set the window height to the height nodes value</span>
+<a name="l00162"></a>00162                 <a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>* Number =
+<a name="l00163"></a>00163                                 <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>*<span class="keyword">&gt;</span> (heightNode);
+<a name="l00164"></a>00164                 renderWindowHeight = Number-&gt;<a class="code" href="classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb">getValue</a>();
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166         } <span class="comment">/* NOTE: As above if  it doesn&#39;t exist it will be set to default */</span>
 <a name="l00167"></a>00167 
-<a name="l00168"></a>00168         <span class="comment">//Set the window height to the height nodes value</span>
-<a name="l00169"></a>00169         <a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>* Number = <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>*<span class="keyword">&gt;</span> (heightNode);
-<a name="l00170"></a>00170         renderWindowHeight = Number-&gt;<a class="code" href="classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb">getValue</a>();
+<a name="l00168"></a>00168         <span class="comment">//Print this info to the log</span>
+<a name="l00169"></a>00169         stringstream widthStrm;
+<a name="l00170"></a>00170         widthStrm &lt;&lt; renderWindowWidth;
 <a name="l00171"></a>00171 
-<a name="l00172"></a>00172         <span class="comment">//Print this info to the log</span>
-<a name="l00173"></a>00173         sprintf(logBuffer, <span class="stringliteral">&quot;Setting window height to %i\n&quot;</span>, renderWindowHeight);
-<a name="l00174"></a>00174         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
-<a name="l00175"></a>00175 
-<a name="l00176"></a>00176     }
-<a name="l00177"></a>00177     <span class="keywordflow">else</span>
-<a name="l00178"></a>00178     {
-<a name="l00179"></a>00179 
-<a name="l00180"></a>00180         <span class="comment">//Print to the log that the default value is being used</span>
-<a name="l00181"></a>00181         sprintf(logBuffer, <span class="stringliteral">&quot;Using default window height of %i\n&quot;</span>, <a class="code" href="GEngine_8cpp.html#a8a78392bff2dbd9e498318645cd2fafe">defaultWindowHeight</a>);
-<a name="l00182"></a>00182         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
-<a name="l00183"></a>00183 
-<a name="l00184"></a>00184     }
-<a name="l00185"></a>00185 
-<a name="l00186"></a>00186     <span class="comment">//Set the window dimensions to the variables</span>
-<a name="l00187"></a>00187     <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#a9950d9b256c7b37be2011b5a5fd23181">setDimensions</a>(renderWindowWidth, renderWindowHeight);
-<a name="l00188"></a>00188 
-<a name="l00189"></a>00189     <span class="comment">//If the window has a title node and it is a configuration string</span>
-<a name="l00190"></a>00190     <span class="keywordflow">if</span> (titleNode != 0 &amp;&amp; titleNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310add618b70afb3f0c772611eb62e2ae862">configurationString</a>)
-<a name="l00191"></a>00191     {
+<a name="l00172"></a>00172         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">TAG</a>, <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Set width to &quot;</span>) + widthStrm.str());
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174         stringstream heightStrm;
+<a name="l00175"></a>00175         heightStrm &lt;&lt; renderWindowHeight;
+<a name="l00176"></a>00176 
+<a name="l00177"></a>00177         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">TAG</a>, <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Set height to &quot;</span>) + heightStrm.str());
+<a name="l00178"></a>00178 
+<a name="l00179"></a>00179         <span class="comment">//Set the window dimensions to the variables</span>
+<a name="l00180"></a>00180         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#a9950d9b256c7b37be2011b5a5fd23181">setDimensions</a>(renderWindowWidth,
+<a name="l00181"></a>00181                         renderWindowHeight);
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183         <span class="keywordtype">string</span> title = <a class="code" href="GEngine_8cpp.html#a01a59f0176634e4d7ccee8671d675725">defaultWindowTitle</a>;
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185         <span class="comment">//If the window has a title node and it is a configuration string</span>
+<a name="l00186"></a>00186         <span class="keywordflow">if</span> (titleNode != 0 &amp;&amp; titleNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310add618b70afb3f0c772611eb62e2ae862">configurationString</a>) {
+<a name="l00187"></a>00187 
+<a name="l00188"></a>00188                 <a class="code" href="classConfigurationString.html">ConfigurationString</a>* <span class="keywordtype">string</span> =
+<a name="l00189"></a>00189                                 <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationString.html">ConfigurationString</a>*<span class="keyword">&gt;</span> (titleNode);
+<a name="l00190"></a>00190 
+<a name="l00191"></a>00191                 <span class="keywordflow">if</span> (string-&gt;<a class="code" href="classConfigurationString.html#aa22ff0fb4c20ae04240b430fe58a9f1a">getStringData</a>() != 0) {
 <a name="l00192"></a>00192 
-<a name="l00193"></a>00193         <a class="code" href="classConfigurationString.html">ConfigurationString</a>* <span class="keywordtype">string</span> = <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationString.html">ConfigurationString</a>*<span class="keyword">&gt;</span> (titleNode);
-<a name="l00194"></a>00194 
-<a name="l00195"></a>00195         <span class="keywordflow">if</span> (string-&gt;<a class="code" href="classConfigurationString.html#aa22ff0fb4c20ae04240b430fe58a9f1a">getStringData</a>() != 0)
-<a name="l00196"></a>00196         {
-<a name="l00197"></a>00197 
-<a name="l00198"></a>00198             <span class="comment">//Set the window title to the configuration node value</span>
-<a name="l00199"></a>00199             <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#a6f6d06722d9661df64d3b2fbe2357364">setTitle</a>(string-&gt;<a class="code" href="classConfigurationString.html#aa22ff0fb4c20ae04240b430fe58a9f1a">getStringData</a>());
-<a name="l00200"></a>00200 
-<a name="l00201"></a>00201             <span class="comment">//Print this info to the log</span>
-<a name="l00202"></a>00202             sprintf(logBuffer, <span class="stringliteral">&quot;Setting window title to %s\n&quot;</span>, string-&gt;<a class="code" href="classConfigurationString.html#aa22ff0fb4c20ae04240b430fe58a9f1a">getStringData</a>());
-<a name="l00203"></a>00203             <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
-<a name="l00204"></a>00204 
-<a name="l00205"></a>00205         }
+<a name="l00193"></a>00193                         <span class="comment">//Set the window title to the configuration node value</span>
+<a name="l00194"></a>00194                         title = <span class="keywordtype">string</span>-&gt;<a class="code" href="classConfigurationString.html#aa22ff0fb4c20ae04240b430fe58a9f1a">getStringData</a>();
+<a name="l00195"></a>00195                 }
+<a name="l00196"></a>00196 
+<a name="l00197"></a>00197         } <span class="comment">/* NOTE: Otherwise set to default */</span>
+<a name="l00198"></a>00198 
+<a name="l00199"></a>00199         <span class="comment">//Print this info to the log</span>
+<a name="l00200"></a>00200         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">TAG</a>, <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Setting window title to &quot;</span>) + title);
+<a name="l00201"></a>00201 
+<a name="l00202"></a>00202         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#a6f6d06722d9661df64d3b2fbe2357364">setTitle</a>(title.c_str());
+<a name="l00203"></a>00203 
+<a name="l00204"></a>00204         <span class="comment">//If the window is supposed to be fullscreen hit that</span>
+<a name="l00205"></a>00205         <span class="keywordflow">if</span> (fullscreenNode != 0 &amp;&amp; fullscreenNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310adf9dfa08c709d806355279e2b18d1780">configurationNumber</a>) {
 <a name="l00206"></a>00206 
-<a name="l00207"></a>00207     }
-<a name="l00208"></a>00208     <span class="keywordflow">else</span>
-<a name="l00209"></a>00209     {
-<a name="l00210"></a>00210 
-<a name="l00211"></a>00211         <span class="comment">//Print that using the default window title to the log</span>
-<a name="l00212"></a>00212         sprintf(logBuffer, <span class="stringliteral">&quot;Using default window title as none was set in the configuration\n&quot;</span>);
-<a name="l00213"></a>00213         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
-<a name="l00214"></a>00214 
-<a name="l00215"></a>00215     }
-<a name="l00216"></a>00216 
-<a name="l00217"></a>00217     <span class="comment">//If the window is supposed to be fullscreen hit that</span>
-<a name="l00218"></a>00218     <span class="keywordflow">if</span> (fullscreenNode != 0 &amp;&amp; fullscreenNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310adf9dfa08c709d806355279e2b18d1780">configurationNumber</a>)
-<a name="l00219"></a>00219     {
+<a name="l00207"></a>00207                 <a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>* fullscreenValue =
+<a name="l00208"></a>00208                                 <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>*<span class="keyword">&gt;</span> (fullscreenNode);
+<a name="l00209"></a>00209 
+<a name="l00210"></a>00210                 <span class="comment">//If the value is set to 1 (True)</span>
+<a name="l00211"></a>00211                 <span class="keywordflow">if</span> (fullscreenValue-&gt;<a class="code" href="classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb">getValue</a>() == 1) {
+<a name="l00212"></a>00212 
+<a name="l00213"></a>00213                         <span class="comment">//Fullscreen the window</span>
+<a name="l00214"></a>00214                         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#a575c1bceb25c3629ec4f363779aade6b">setFullscreen</a>(<span class="keyword">true</span>);
+<a name="l00215"></a>00215 
+<a name="l00216"></a>00216                         <span class="comment">//State this in the log</span>
+<a name="l00217"></a>00217                         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">TAG</a>, <span class="stringliteral">&quot;Using fullscreen if supported&quot;</span>);
+<a name="l00218"></a>00218 
+<a name="l00219"></a>00219                 } <span class="keywordflow">else</span> {
 <a name="l00220"></a>00220 
-<a name="l00221"></a>00221         <a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>* fullscreenValue = <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>*<span class="keyword">&gt;</span> (fullscreenNode);
-<a name="l00222"></a>00222 
-<a name="l00223"></a>00223         <span class="comment">//If the value is set to 1 (True)</span>
-<a name="l00224"></a>00224         <span class="keywordflow">if</span> (fullscreenValue-&gt;<a class="code" href="classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb">getValue</a>() == 1)
-<a name="l00225"></a>00225         {
-<a name="l00226"></a>00226 
-<a name="l00227"></a>00227             <span class="comment">//Fullscreen the window</span>
-<a name="l00228"></a>00228             <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#a575c1bceb25c3629ec4f363779aade6b">setFullscreen</a>(<span class="keyword">true</span>);
-<a name="l00229"></a>00229 
-<a name="l00230"></a>00230             <span class="comment">//State this in the log</span>
-<a name="l00231"></a>00231             sprintf(logBuffer, <span class="stringliteral">&quot;Setting the engine render window to be fullscreen&quot;</span>);
-<a name="l00232"></a>00232             <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
-<a name="l00233"></a>00233 
-<a name="l00234"></a>00234         }
-<a name="l00235"></a>00235         <span class="keywordflow">else</span>
-<a name="l00236"></a>00236         {
-<a name="l00237"></a>00237 
-<a name="l00238"></a>00238             <span class="comment">//Unfullscreenit</span>
-<a name="l00239"></a>00239             <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#a575c1bceb25c3629ec4f363779aade6b">setFullscreen</a>(<span class="keyword">false</span>);
+<a name="l00221"></a>00221                         <span class="comment">//Unfullscreenit</span>
+<a name="l00222"></a>00222                         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#a575c1bceb25c3629ec4f363779aade6b">setFullscreen</a>(<span class="keyword">false</span>);
+<a name="l00223"></a>00223 
+<a name="l00224"></a>00224                 }
+<a name="l00225"></a>00225 
+<a name="l00226"></a>00226         }
+<a name="l00227"></a>00227 
+<a name="l00228"></a>00228         <span class="comment">//If the default font node is set in the config and is a file path</span>
+<a name="l00229"></a>00229         <span class="keywordflow">if</span> (defaultFontNode != 0 &amp;&amp; defaultFontNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>()
+<a name="l00230"></a>00230                         == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310add618b70afb3f0c772611eb62e2ae862">configurationString</a>) {
+<a name="l00231"></a>00231 
+<a name="l00232"></a>00232                 <span class="comment">//Set the defalt font renderer to load the specified font</span>
+<a name="l00233"></a>00233                 <a class="code" href="classConfigurationString.html">ConfigurationString</a>* <span class="keywordtype">string</span> =
+<a name="l00234"></a>00234                                 <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationString.html">ConfigurationString</a>*<span class="keyword">&gt;</span> (defaultFontNode);
+<a name="l00235"></a>00235                 <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6eee2e3bcc7a5bbeedfdb308b4ea7b65">getInterfaceManager</a>()-&gt;<a class="code" href="classInterfaceLayer.html#a1f2ffa561b6ef715df829159c0b38462">getDefaultTextRenderer</a>()-&gt;<a class="code" href="classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588">Load</a>(
+<a name="l00236"></a>00236                                 (<a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>*) <a class="code" href="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(),
+<a name="l00237"></a>00237                                                 string-&gt;<a class="code" href="classConfigurationString.html#aa22ff0fb4c20ae04240b430fe58a9f1a">getStringData</a>()));
+<a name="l00238"></a>00238 
+<a name="l00239"></a>00239         }
 <a name="l00240"></a>00240 
-<a name="l00241"></a>00241             <span class="comment">//State this in the log</span>
-<a name="l00242"></a>00242             sprintf(logBuffer, <span class="stringliteral">&quot;Setting the engine render window to not be fullscreen&quot;</span>);
+<a name="l00241"></a>00241         <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a> = 0;
+<a name="l00242"></a>00242         <a class="code" href="classGEngine.html#af9b11a02b018385249d96e9a8201d513">initializeInputBindings</a>();
 <a name="l00243"></a>00243 
-<a name="l00244"></a>00244         }
+<a name="l00244"></a>00244         <a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">m_GameActive</a> = <span class="keyword">false</span>;
 <a name="l00245"></a>00245 
-<a name="l00246"></a>00246     }
-<a name="l00247"></a>00247     <span class="keywordflow">else</span>
-<a name="l00248"></a>00248     {
-<a name="l00249"></a>00249 
-<a name="l00250"></a>00250         <span class="comment">//Write that no fullscreen value is set to the log</span>
-<a name="l00251"></a>00251         sprintf(logBuffer, <span class="stringliteral">&quot;No fullscreen value set, leaving null\n&quot;</span>);
-<a name="l00252"></a>00252         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(logBuffer);
+<a name="l00246"></a>00246         <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a> = <span class="keyword">new</span> <a class="code" href="classEventManager.html" title="Manages and stores mapping between events.">EventManager</a>();
+<a name="l00247"></a>00247 
+<a name="l00248"></a>00248         <span class="keywordflow">if</span> (!<a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>) {
+<a name="l00249"></a>00249                 <a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">setErrorDetails</a>(<span class="stringliteral">&quot;Couldn&#39;t create a new event manager&quot;</span>);
+<a name="l00250"></a>00250 
+<a name="l00251"></a>00251                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00252"></a>00252         }
 <a name="l00253"></a>00253 
-<a name="l00254"></a>00254     }
+<a name="l00254"></a>00254         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">TAG</a>, <span class="stringliteral">&quot;Initialized event manager&quot;</span>);
 <a name="l00255"></a>00255 
-<a name="l00256"></a>00256     <span class="comment">//If the default font node is set in the config and is a file path</span>
-<a name="l00257"></a>00257     <span class="keywordflow">if</span> (defaultFontNode != 0 &amp;&amp; defaultFontNode-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310add618b70afb3f0c772611eb62e2ae862">configurationString</a>)
-<a name="l00258"></a>00258     {
+<a name="l00256"></a>00256         <a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a> = <span class="keyword">false</span>;
+<a name="l00257"></a>00257 
+<a name="l00258"></a>00258         <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> = 0;
 <a name="l00259"></a>00259 
-<a name="l00260"></a>00260         <span class="comment">//Set the defalt font renderer to load the specified font</span>
-<a name="l00261"></a>00261         <a class="code" href="classConfigurationString.html">ConfigurationString</a>* <span class="keywordtype">string</span> = <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationString.html">ConfigurationString</a>*<span class="keyword">&gt;</span> (defaultFontNode);
-<a name="l00262"></a>00262         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6eee2e3bcc7a5bbeedfdb308b4ea7b65">getInterfaceManager</a>()-&gt;<a class="code" href="classInterfaceLayer.html#a1f2ffa561b6ef715df829159c0b38462">getDefaultTextRenderer</a>()-&gt;<a class="code" href="classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588">Load</a>((<a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>*)<a class="code" href="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), string-&gt;<a class="code" href="classConfigurationString.html#aa22ff0fb4c20ae04240b430fe58a9f1a">getStringData</a>()));
-<a name="l00263"></a>00263 
-<a name="l00264"></a>00264     }
-<a name="l00265"></a>00265 
-<a name="l00266"></a>00266     <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a> = 0;
-<a name="l00267"></a>00267     <a class="code" href="classGEngine.html#af9b11a02b018385249d96e9a8201d513">initializeInputBindings</a>();
-<a name="l00268"></a>00268 
-<a name="l00269"></a>00269     <a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">m_GameActive</a> = <span class="keyword">false</span>;
-<a name="l00270"></a>00270 
-<a name="l00271"></a>00271     <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a> = <span class="keyword">new</span> <a class="code" href="classEventManager.html" title="Manages and stores mapping between events.">EventManager</a>();
-<a name="l00272"></a>00272 
-<a name="l00273"></a>00273     <span class="keywordflow">if</span> (!<a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>)
-<a name="l00274"></a>00274     {
-<a name="l00275"></a>00275         <a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">setErrorDetails</a>(<span class="stringliteral">&quot;Couldn&#39;t create a new event manager\n&quot;</span>);
-<a name="l00276"></a>00276 
-<a name="l00277"></a>00277         <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00278"></a>00278     }
-<a name="l00279"></a>00279 
-<a name="l00280"></a>00280     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Initialized event manager\n&quot;</span>);
+<a name="l00260"></a>00260         <a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a> = renderWindowWidth;
+<a name="l00261"></a>00261         <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a> = renderWindowHeight;
+<a name="l00262"></a>00262 
+<a name="l00263"></a>00263         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">TAG</a>, <span class="stringliteral">&quot;Intiailized engine&quot;</span>);
+<a name="l00264"></a>00264 
+<a name="l00265"></a>00265         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00266"></a>00266 }
+<a name="l00267"></a>00267 
+<a name="l00268"></a><a class="code" href="classGEngine.html#a68edb6e836587b90042abde3cc8e1219">00268</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a68edb6e836587b90042abde3cc8e1219">GEngine::uninitialize</a>() {
+<a name="l00269"></a>00269 
+<a name="l00270"></a>00270         <a class="code" href="classGEngine.html#aed97f611db6edabe8b7febc731aa6400">freeInputBindings</a>();
+<a name="l00271"></a>00271 
+<a name="l00272"></a>00272         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a> != 0) {
+<a name="l00273"></a>00273                 <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">TAG</a>, <span class="stringliteral">&quot;Freeing event manager&quot;</span>);
+<a name="l00274"></a>00274 
+<a name="l00275"></a>00275                 <span class="keyword">delete</span> <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>;
+<a name="l00276"></a>00276                 <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a> = 0;
+<a name="l00277"></a>00277         }
+<a name="l00278"></a>00278 
+<a name="l00279"></a>00279         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a> != 0) {
+<a name="l00280"></a>00280                 <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">TAG</a>, <span class="stringliteral">&quot;Freeing the configuration instance&quot;</span>);
 <a name="l00281"></a>00281 
-<a name="l00282"></a>00282     <a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a> = <span class="keyword">false</span>;
-<a name="l00283"></a>00283 
-<a name="l00284"></a>00284     <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> = 0;
+<a name="l00282"></a>00282                 <span class="keyword">delete</span> <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>;
+<a name="l00283"></a>00283                 <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a> = 0;
+<a name="l00284"></a>00284         }
 <a name="l00285"></a>00285 
-<a name="l00286"></a>00286     <a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a> = renderWindowWidth;
-<a name="l00287"></a>00287     <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a> = renderWindowHeight;
-<a name="l00288"></a>00288 
-<a name="l00289"></a>00289     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Intiailized engine\n&quot;</span>);
-<a name="l00290"></a>00290 
-<a name="l00291"></a>00291     <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00292"></a>00292 }
+<a name="l00286"></a>00286         <span class="comment">//Kill the thread hive</span>
+<a name="l00287"></a>00287         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> != 0) {
+<a name="l00288"></a>00288                 <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">TAG</a>, <span class="stringliteral">&quot;Killing the HIVE&quot;</span>);
+<a name="l00289"></a>00289 
+<a name="l00290"></a>00290                 <span class="keyword">delete</span> <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a>;
+<a name="l00291"></a>00291                 <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> = 0;
+<a name="l00292"></a>00292         }
 <a name="l00293"></a>00293 
-<a name="l00294"></a><a class="code" href="classGEngine.html#a68edb6e836587b90042abde3cc8e1219">00294</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a68edb6e836587b90042abde3cc8e1219">GEngine::uninitialize</a>()
-<a name="l00295"></a>00295 {
+<a name="l00294"></a>00294         <span class="comment">//Write that the engine has been uninitialized to the log</span>
+<a name="l00295"></a>00295         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>(<a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">TAG</a>, <span class="stringliteral">&quot;Engine uninitialized&quot;</span>);
 <a name="l00296"></a>00296 
-<a name="l00297"></a>00297     <a class="code" href="classGEngine.html#aed97f611db6edabe8b7febc731aa6400">freeInputBindings</a>();
-<a name="l00298"></a>00298 
-<a name="l00299"></a>00299     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a> != 0)
-<a name="l00300"></a>00300     {
-<a name="l00301"></a>00301         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Freeing event manager\n&quot;</span>);
+<a name="l00297"></a>00297         <span class="comment">//Then destroy the log</span>
+<a name="l00298"></a>00298         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a> != 0) {
+<a name="l00299"></a>00299                 <span class="keyword">delete</span> <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>;
+<a name="l00300"></a>00300                 <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a> = 0;
+<a name="l00301"></a>00301         }
 <a name="l00302"></a>00302 
-<a name="l00303"></a>00303         <span class="keyword">delete</span> <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>;
-<a name="l00304"></a>00304         <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a> = 0;
-<a name="l00305"></a>00305     }
-<a name="l00306"></a>00306 
-<a name="l00307"></a>00307     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a> != 0)
-<a name="l00308"></a>00308     {
-<a name="l00309"></a>00309         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Freeing the configuration instance&quot;</span>);
+<a name="l00303"></a>00303 }
+<a name="l00304"></a>00304 
+<a name="l00305"></a><a class="code" href="classGEngine.html#a371f1436dca8af65e605d1854062ed5f">00305</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a371f1436dca8af65e605d1854062ed5f">GEngine::bindEvent</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Eve, <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60">input_event_ids</a> <span class="keywordtype">id</span>, <a class="code" href="Keys_8h.html#ade02ebcdfd4994c66d26563fb1494a35">key_ids</a> key) {
+<a name="l00306"></a>00306         <span class="keywordflow">if</span> (<span class="keywordtype">id</span> &gt; <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60af82583f2bbdcd05b3c7eef18f1efaa37">input_event_end</a>)
+<a name="l00307"></a>00307                 <span class="keywordflow">return</span>;
+<a name="l00308"></a>00308         <span class="keywordflow">if</span> (key &gt; <a class="code" href="Keys_8h.html#ade02ebcdfd4994c66d26563fb1494a35a55359a77619753651a227eddb9e27694">KEYS_END</a>)
+<a name="l00309"></a>00309                 <span class="keywordflow">return</span>;
 <a name="l00310"></a>00310 
-<a name="l00311"></a>00311         <span class="keyword">delete</span> <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>;
-<a name="l00312"></a>00312         <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a> = 0;
-<a name="l00313"></a>00313     }
-<a name="l00314"></a>00314 
-<a name="l00315"></a>00315     <span class="comment">//Kill the thread hive</span>
-<a name="l00316"></a>00316     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> != 0)
-<a name="l00317"></a>00317     {
-<a name="l00318"></a>00318         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Killing the HIVE\n&quot;</span>);
+<a name="l00311"></a>00311         <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>[id].<a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">Keys</a>[key].<a class="code" href="structEventBinding.html#a83c608264021d3b316e454248e727245">Events</a>.push_back(Eve);
+<a name="l00312"></a>00312 }
+<a name="l00313"></a>00313 
+<a name="l00314"></a><a class="code" href="classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36">00314</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36">GEngine::f_sleep</a>() {
+<a name="l00315"></a>00315 
+<a name="l00316"></a>00316         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>.<a class="code" href="classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4" title="Return the last calculated FPS.">getFPS</a>() &gt; 1000) {
+<a name="l00317"></a>00317 
+<a name="l00318"></a>00318                 <span class="comment">//usleep(m_fpsCalculator.getFPS() * 2);</span>
 <a name="l00319"></a>00319 
-<a name="l00320"></a>00320         <span class="keyword">delete</span> <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a>;
-<a name="l00321"></a>00321         <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a> = 0;
-<a name="l00322"></a>00322     }
+<a name="l00320"></a>00320         }
+<a name="l00321"></a>00321 
+<a name="l00322"></a>00322 }
 <a name="l00323"></a>00323 
-<a name="l00324"></a>00324     <span class="comment">//Write that the engine has been uninitialized to the log</span>
-<a name="l00325"></a>00325     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Engine uninitialized&quot;</span>);
-<a name="l00326"></a>00326 
-<a name="l00327"></a>00327     <span class="comment">//Then destroy the log</span>
-<a name="l00328"></a>00328     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a> != 0)
-<a name="l00329"></a>00329     {
-<a name="l00330"></a>00330         <span class="keyword">delete</span> <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>;
-<a name="l00331"></a>00331         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a> = 0;
-<a name="l00332"></a>00332     }
-<a name="l00333"></a>00333 
-<a name="l00334"></a>00334 }
-<a name="l00335"></a>00335 
-<a name="l00336"></a><a class="code" href="classGEngine.html#a371f1436dca8af65e605d1854062ed5f">00336</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a371f1436dca8af65e605d1854062ed5f">GEngine::bindEvent</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Eve, <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60">input_event_ids</a> <span class="keywordtype">id</span>, <a class="code" href="Keys_8h.html#ade02ebcdfd4994c66d26563fb1494a35">key_ids</a> key)
-<a name="l00337"></a>00337 {
-<a name="l00338"></a>00338     <span class="keywordflow">if</span> (<span class="keywordtype">id</span> &gt; <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60af82583f2bbdcd05b3c7eef18f1efaa37">input_event_end</a>) <span class="keywordflow">return</span>;
-<a name="l00339"></a>00339     <span class="keywordflow">if</span> (key &gt; <a class="code" href="Keys_8h.html#ade02ebcdfd4994c66d26563fb1494a35a55359a77619753651a227eddb9e27694">KEYS_END</a>) <span class="keywordflow">return</span>;
+<a name="l00324"></a><a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">00324</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">GEngine::sendEventManagerMessage</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> iEvent) {
+<a name="l00325"></a>00325 
+<a name="l00326"></a>00326         <span class="comment">//Get the binding related to that event ID</span>
+<a name="l00327"></a>00327         <a class="code" href="structInputBinding.html">InputBinding</a>* inputBinding = &amp;<a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>[iEvent.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a>];
+<a name="l00328"></a>00328 
+<a name="l00329"></a>00329         <span class="comment">//Trigger the event bound to that key</span>
+<a name="l00330"></a>00330         <span class="keywordflow">if</span> (iEvent.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a>.size() != 0) {
+<a name="l00331"></a>00331 
+<a name="l00332"></a>00332                 <span class="comment">//Find the event binding for that key</span>
+<a name="l00333"></a>00333                 <a class="code" href="structEventBinding.html">EventBinding</a>* eventBinding = &amp;inputBinding-&gt;<a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">Keys</a>[iEvent.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a>[0]];
+<a name="l00334"></a>00334 
+<a name="l00335"></a>00335                 <span class="comment">//Find the list of events to fire from the event binding</span>
+<a name="l00336"></a>00336                 std::vector&lt;unsigned int&gt;* eventsToFire = &amp;eventBinding-&gt;<a class="code" href="structEventBinding.html#a83c608264021d3b316e454248e727245">Events</a>;
+<a name="l00337"></a>00337 
+<a name="l00338"></a>00338                 <span class="comment">//For each of those events</span>
+<a name="l00339"></a>00339                 <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; eventsToFire-&gt;size(); i++) {
 <a name="l00340"></a>00340 
-<a name="l00341"></a>00341 
-<a name="l00342"></a>00342     <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>[id].<a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">Keys</a>[key].<a class="code" href="structEventBinding.html#a83c608264021d3b316e454248e727245">Events</a>.push_back(Eve);
-<a name="l00343"></a>00343 }
+<a name="l00341"></a>00341                         <span class="comment">//Trigger the event within the event manager</span>
+<a name="l00342"></a>00342                         <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>-&gt;<a class="code" href="classEventManager.html#ad7abcd8b20480ef47856be120baf4d30" title="Notify the event manager that the specified event has occured.">triggerEvent</a>(eventsToFire-&gt;at(i),
+<a name="l00343"></a>00343                                         iEvent.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a>, iEvent.<a class="code" href="structInput__Event.html#ad7c12566ab15a24535c87d192f0df406">Event_Flags</a>);
 <a name="l00344"></a>00344 
-<a name="l00345"></a><a class="code" href="classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36">00345</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36">GEngine::f_sleep</a>()
-<a name="l00346"></a>00346 {
-<a name="l00347"></a>00347 
-<a name="l00348"></a>00348     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>.<a class="code" href="classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4" title="Return the last calculated FPS.">getFPS</a>() &gt; 1000)
-<a name="l00349"></a>00349     {
-<a name="l00350"></a>00350 
-<a name="l00351"></a>00351         <span class="comment">//usleep(m_fpsCalculator.getFPS() * 2);</span>
-<a name="l00352"></a>00352 
-<a name="l00353"></a>00353     }
+<a name="l00345"></a>00345                 }
+<a name="l00346"></a>00346 
+<a name="l00347"></a>00347         }
+<a name="l00348"></a>00348 }
+<a name="l00349"></a>00349 
+<a name="l00350"></a><a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">00350</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">GEngine::processEvent</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> event) {
+<a name="l00351"></a>00351 
+<a name="l00352"></a>00352         <span class="comment">//If the Event ID is a mousepress scale the inputs to the right canvas width (As the canvas width may differ from the renderer width</span>
+<a name="l00353"></a>00353         <span class="keywordflow">switch</span> (event.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a>) {
 <a name="l00354"></a>00354 
-<a name="l00355"></a>00355 }
-<a name="l00356"></a>00356 
-<a name="l00357"></a><a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">00357</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">GEngine::sendEventManagerMessage</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> iEvent)
-<a name="l00358"></a>00358 {
+<a name="l00355"></a>00355         <span class="keywordflow">case</span> <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a4df5f6120a667ead96505fc090e7bd92">input_event_button_one</a>:
+<a name="l00356"></a>00356         <span class="keywordflow">case</span> <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60abb1e5a5dfae5fe9b2705600551271b69">input_event_button_two</a>: {
+<a name="l00357"></a>00357                 <span class="keywordtype">float</span> eventX = <span class="keyword">event</span>.Event_Data[1];
+<a name="l00358"></a>00358                 <span class="keywordtype">float</span> eventY = <span class="keyword">event</span>.Event_Data[2];
 <a name="l00359"></a>00359 
-<a name="l00360"></a>00360     <span class="comment">//Get the binding related to that event ID</span>
-<a name="l00361"></a>00361     <a class="code" href="structInputBinding.html">InputBinding</a>* inputBinding = &amp;<a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>[iEvent.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a>];
+<a name="l00360"></a>00360                 eventX = eventX / <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#ade00c67880046e2b7dd2220b15ca7873">getWidth</a>();
+<a name="l00361"></a>00361                 eventX = eventX * <a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a>;
 <a name="l00362"></a>00362 
-<a name="l00363"></a>00363     <span class="comment">//Trigger the event bound to that key</span>
-<a name="l00364"></a>00364     <span class="keywordflow">if</span> (iEvent.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a>.size() != 0)
-<a name="l00365"></a>00365     {
-<a name="l00366"></a>00366 
-<a name="l00367"></a>00367         <span class="comment">//Find the event binding for that key</span>
-<a name="l00368"></a>00368         <a class="code" href="structEventBinding.html">EventBinding</a>* eventBinding = &amp;inputBinding-&gt;<a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">Keys</a>[iEvent.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a>[0]];
-<a name="l00369"></a>00369 
-<a name="l00370"></a>00370         <span class="comment">//Find the list of events to fire from the event binding</span>
-<a name="l00371"></a>00371         std::vector&lt;unsigned int&gt;* eventsToFire = &amp;eventBinding-&gt;<a class="code" href="structEventBinding.html#a83c608264021d3b316e454248e727245">Events</a>;
-<a name="l00372"></a>00372 
-<a name="l00373"></a>00373         <span class="comment">//For each of those events</span>
-<a name="l00374"></a>00374         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; eventsToFire-&gt;size(); i++)
-<a name="l00375"></a>00375         {
+<a name="l00363"></a>00363                 eventY = eventY / <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#a6815da80b74f775fb1710186ee023269">getHeight</a>();
+<a name="l00364"></a>00364                 eventY = eventY * <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a>;
+<a name="l00365"></a>00365 
+<a name="l00366"></a>00366                 <span class="keyword">event</span>.Event_Data[1] = eventX;
+<a name="l00367"></a>00367                 <span class="keyword">event</span>.Event_Data[2] = eventY;
+<a name="l00368"></a>00368 
+<a name="l00369"></a>00369                 <span class="keywordflow">break</span>;
+<a name="l00370"></a>00370         }
+<a name="l00371"></a>00371                 ;
+<a name="l00372"></a>00372         }
+<a name="l00373"></a>00373 
+<a name="l00374"></a>00374         <span class="comment">//The next few lines send it through the interface manager. if the interface manager uses it then don&#39;t send it to the registered listener, otherwise send it to the registered listener</span>
+<a name="l00375"></a>00375 
 <a name="l00376"></a>00376 
-<a name="l00377"></a>00377             <span class="comment">//Trigger the event within the event manager</span>
-<a name="l00378"></a>00378             <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>-&gt;<a class="code" href="classEventManager.html#ad7abcd8b20480ef47856be120baf4d30" title="Notify the event manager that the specified event has occured.">triggerEvent</a>(eventsToFire-&gt;at(i), iEvent.<a class="code" href="structInput__Event.html#a35612ae2a80953f4866be145f9fc2f85">Event_Data</a>, iEvent.<a class="code" href="structInput__Event.html#ad7c12566ab15a24535c87d192f0df406">Event_Flags</a>);
-<a name="l00379"></a>00379 
-<a name="l00380"></a>00380         }
-<a name="l00381"></a>00381 
-<a name="l00382"></a>00382     }
-<a name="l00383"></a>00383 }
-<a name="l00384"></a>00384 
-<a name="l00385"></a><a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">00385</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">GEngine::processEvent</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> event)
-<a name="l00386"></a>00386 {
-<a name="l00387"></a>00387 
-<a name="l00388"></a>00388     <span class="comment">//If the Event ID is a mousepress scale the inputs to the right canvas width (As the canvas width may differ from the renderer width</span>
-<a name="l00389"></a>00389     <span class="keywordflow">switch</span> (event.<a class="code" href="structInput__Event.html#a577f4631fcc2d8673d10b17e26f6e47e">Event_ID</a>)
-<a name="l00390"></a>00390     {
-<a name="l00391"></a>00391 
-<a name="l00392"></a>00392     <span class="keywordflow">case</span> <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60a4df5f6120a667ead96505fc090e7bd92">input_event_button_one</a>:
-<a name="l00393"></a>00393     <span class="keywordflow">case</span> <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60abb1e5a5dfae5fe9b2705600551271b69">input_event_button_two</a>:
-<a name="l00394"></a>00394     {
-<a name="l00395"></a>00395         <span class="keywordtype">float</span> eventX = <span class="keyword">event</span>.Event_Data[1];
-<a name="l00396"></a>00396         <span class="keywordtype">float</span> eventY = <span class="keyword">event</span>.Event_Data[2];
-<a name="l00397"></a>00397 
-<a name="l00398"></a>00398         eventX = eventX / <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#ade00c67880046e2b7dd2220b15ca7873">getWidth</a>();
-<a name="l00399"></a>00399         eventX = eventX * <a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a>;
-<a name="l00400"></a>00400 
-<a name="l00401"></a>00401         eventY = eventY / <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()-&gt;<a class="code" href="classRenderWindow.html#a6815da80b74f775fb1710186ee023269">getHeight</a>();
-<a name="l00402"></a>00402         eventY = eventY * <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a>;
-<a name="l00403"></a>00403 
-<a name="l00404"></a>00404         <span class="keyword">event</span>.Event_Data[1] = eventX;
-<a name="l00405"></a>00405         <span class="keyword">event</span>.Event_Data[2] = eventY;
-<a name="l00406"></a>00406 
-<a name="l00407"></a>00407         <span class="keywordflow">break</span>;
-<a name="l00408"></a>00408     };
-<a name="l00409"></a>00409     }
-<a name="l00410"></a>00410 
-<a name="l00411"></a>00411     <span class="comment">//The next few lines send it through the interface manager. if the interface manager uses it then don&#39;t send it to the registered listener, otherwise send it to the registered listener</span>
-<a name="l00412"></a>00412 
+<a name="l00377"></a>00377         <span class="comment">//If the interface manager returns true on ProcessEvent</span>
+<a name="l00378"></a>00378         <span class="keywordflow">if</span> (<a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;getInterfaceManager()-&gt;<a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">processEvent</a>(event)
+<a name="l00379"></a>00379                         == <span class="keyword">true</span>) {
+<a name="l00380"></a>00380 
+<a name="l00381"></a>00381                 <span class="comment">//This event has been used by the interface manager, don&#39;t send it to the event manager</span>
+<a name="l00382"></a>00382 
+<a name="l00383"></a>00383 
+<a name="l00384"></a>00384         } <span class="keywordflow">else</span> {
+<a name="l00385"></a>00385 
+<a name="l00386"></a>00386                 <span class="comment">//Send it to the event manager because the interfacemanager</span>
+<a name="l00387"></a>00387                 <a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">sendEventManagerMessage</a>(event);
+<a name="l00388"></a>00388         }
+<a name="l00389"></a>00389 }
+<a name="l00390"></a>00390 
+<a name="l00391"></a><a class="code" href="classGEngine.html#a14bda10f38212a7532dcb38a3a3dd859">00391</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a14bda10f38212a7532dcb38a3a3dd859">GEngine::doFrameUpdate</a>(<span class="keywordtype">float</span> secondsPassed) {
+<a name="l00392"></a>00392 
+<a name="l00393"></a>00393         <span class="keywordflow">if</span> (!<a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a>) {
+<a name="l00394"></a>00394 
+<a name="l00395"></a>00395                 <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a>) {
+<a name="l00396"></a>00396 
+<a name="l00397"></a>00397                         <span class="comment">//Process all physics</span>
+<a name="l00398"></a>00398                         <span class="comment">//TODO: REVISE PHYSICS - m_gamePhysics-&gt;Update(secondsPassed);</span>
+<a name="l00399"></a>00399 
+<a name="l00400"></a>00400                 }
+<a name="l00401"></a>00401 
+<a name="l00402"></a>00402                 <span class="comment">//Update all the rendering bits</span>
+<a name="l00403"></a>00403                 <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a7888dc4b2197e16cfb11e476edba51d1">update</a>(secondsPassed);
+<a name="l00404"></a>00404 
+<a name="l00405"></a>00405                 <span class="comment">//Update the application</span>
+<a name="l00406"></a>00406                 <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> != 0) {
+<a name="l00407"></a>00407 
+<a name="l00408"></a>00408                         <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>-&gt;<a class="code" href="classGApplication.html#ad0b604100468ce2edef6d7172d5af43f" title="Called once per frame with the time that has elapsed since the last frame in seconds.">updateApplication</a>(secondsPassed);
+<a name="l00409"></a>00409 
+<a name="l00410"></a>00410                 }
+<a name="l00411"></a>00411 
+<a name="l00412"></a>00412         }
 <a name="l00413"></a>00413 
-<a name="l00414"></a>00414     <span class="comment">//If the interface manager returns true on ProcessEvent</span>
-<a name="l00415"></a>00415     <span class="keywordflow">if</span> (<a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;getInterfaceManager()-&gt;<a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">processEvent</a>(event) == <span class="keyword">true</span>)
-<a name="l00416"></a>00416     {
+<a name="l00414"></a>00414 }
+<a name="l00415"></a>00415 
+<a name="l00416"></a><a class="code" href="classGEngine.html#a02af5bc774fd00507f5339f97d4eb426">00416</a> <span class="keywordtype">int</span> <a class="code" href="classGEngine.html#a02af5bc774fd00507f5339f97d4eb426">GEngine::gameLoop</a>() {
 <a name="l00417"></a>00417 
-<a name="l00418"></a>00418         <span class="comment">//This event has been used by the interface manager, don&#39;t send it to the event manager</span>
-<a name="l00419"></a>00419 
-<a name="l00420"></a>00420 
-<a name="l00421"></a>00421     }
-<a name="l00422"></a>00422     <span class="keywordflow">else</span>
-<a name="l00423"></a>00423     {
-<a name="l00424"></a>00424 
-<a name="l00425"></a>00425         <span class="comment">//Send it to the event manager because the interfacemanager</span>
-<a name="l00426"></a>00426         <a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">sendEventManagerMessage</a>(event);
-<a name="l00427"></a>00427     }
-<a name="l00428"></a>00428 }
+<a name="l00418"></a>00418         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a> == <span class="keyword">true</span>) {
+<a name="l00419"></a>00419                 <a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">setErrorDetails</a>(
+<a name="l00420"></a>00420                                 <span class="stringliteral">&quot;Cannot enter game loop when the engine is in a error state&quot;</span>);
+<a name="l00421"></a>00421                 <span class="keywordflow">return</span> -1;
+<a name="l00422"></a>00422         }
+<a name="l00423"></a>00423 
+<a name="l00424"></a>00424         <a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">m_GameActive</a> = <span class="keyword">true</span>;
+<a name="l00425"></a>00425         <a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a> = <span class="keyword">true</span>;
+<a name="l00426"></a>00426 
+<a name="l00427"></a>00427         <a class="code" href="classGEngine.html#a70037a06c731f2291baac8596640e2ba">m_clock</a>.<a class="code" href="classClock.html#a0e1d9a28caec6c2128e4278136a4722f" title="Initialise the clock.">initialize</a>();
+<a name="l00428"></a>00428         <span class="keywordtype">float</span> secondsPassed;
 <a name="l00429"></a>00429 
-<a name="l00430"></a><a class="code" href="classGEngine.html#a14bda10f38212a7532dcb38a3a3dd859">00430</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a14bda10f38212a7532dcb38a3a3dd859">GEngine::doFrameUpdate</a>(<span class="keywordtype">float</span> secondsPassed)
-<a name="l00431"></a>00431 {
-<a name="l00432"></a>00432 
-<a name="l00433"></a>00433     <span class="keywordflow">if</span> (!<a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a>)
-<a name="l00434"></a>00434     {
-<a name="l00435"></a>00435 
-<a name="l00436"></a>00436         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a>)
-<a name="l00437"></a>00437         {
-<a name="l00438"></a>00438 
-<a name="l00439"></a>00439             <span class="comment">//Process all physics</span>
-<a name="l00440"></a>00440             <span class="comment">//TODO: REVISE PHYSICS - m_gamePhysics-&gt;Update(secondsPassed);</span>
+<a name="l00430"></a>00430         <span class="keywordflow">while</span> (<a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">m_GameActive</a>) {
+<a name="l00431"></a>00431 
+<a name="l00432"></a>00432                 secondsPassed = <a class="code" href="classGEngine.html#a70037a06c731f2291baac8596640e2ba">m_clock</a>.<a class="code" href="classClock.html#a438ea54b4ab041c82718600668bbb394" title="Returns the time that has elapsed since this was last called in seconds.">calculateElapsedTime</a>();
+<a name="l00433"></a>00433 
+<a name="l00434"></a>00434                 <span class="comment">//Alert to the FPS calculator of a new frame</span>
+<a name="l00435"></a>00435                 <a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>.<a class="code" href="classFPSCalculator.html#a5266e420f914751170b470095e2b7d0a" title="Notify that a frame has occured and how long it took.">frame</a>(secondsPassed);
+<a name="l00436"></a>00436 
+<a name="l00437"></a>00437                 <span class="comment">//Run through the postbox and trigger events</span>
+<a name="l00438"></a>00438                 <span class="keywordflow">while</span> (<a class="code" href="classGEngine.html#ab647a8b8faee4a9b6dac40c54b5054c5">m_inputPostbox</a>.<a class="code" href="classPostbox.html#a38cdeca8626362e8fe1f0f31cf8f0f09">HasNext</a>()) {
+<a name="l00439"></a>00439 
+<a name="l00440"></a>00440                         <a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">processEvent</a>(<a class="code" href="classGEngine.html#ab647a8b8faee4a9b6dac40c54b5054c5">m_inputPostbox</a>.<a class="code" href="classPostbox.html#aec8a72fffe1c67845bae08a05bb8b95c">ReadNext</a>());
 <a name="l00441"></a>00441 
-<a name="l00442"></a>00442         }
+<a name="l00442"></a>00442                 }
 <a name="l00443"></a>00443 
-<a name="l00444"></a>00444         <span class="comment">//Update all the rendering bits</span>
-<a name="l00445"></a>00445         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a7888dc4b2197e16cfb11e476edba51d1">update</a>(secondsPassed);
-<a name="l00446"></a>00446 
-<a name="l00447"></a>00447         <span class="comment">//Update the application</span>
-<a name="l00448"></a>00448         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> != 0)
-<a name="l00449"></a>00449         {
-<a name="l00450"></a>00450 
-<a name="l00451"></a>00451             <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>-&gt;<a class="code" href="classGApplication.html#ad0b604100468ce2edef6d7172d5af43f" title="Called once per frame with the time that has elapsed since the last frame in seconds.">updateApplication</a>(secondsPassed);
-<a name="l00452"></a>00452 
-<a name="l00453"></a>00453         }
-<a name="l00454"></a>00454 
-<a name="l00455"></a>00455     }
-<a name="l00456"></a>00456 
+<a name="l00444"></a>00444                 <a class="code" href="classGEngine.html#a14bda10f38212a7532dcb38a3a3dd859">doFrameUpdate</a>(secondsPassed);
+<a name="l00445"></a>00445 
+<a name="l00446"></a>00446                 <span class="comment">//Rendering Step</span>
+<a name="l00447"></a>00447 
+<a name="l00448"></a>00448                 <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a207514ec158f1be5508858c4b4c7658a">renderScene</a>(<a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a>, <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a>);
+<a name="l00449"></a>00449 
+<a name="l00450"></a>00450                 <span class="comment">//End of rendering step</span>
+<a name="l00451"></a>00451 
+<a name="l00452"></a>00452                 <span class="comment">//Sleep</span>
+<a name="l00453"></a>00453                 <a class="code" href="classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36">f_sleep</a>();
+<a name="l00454"></a>00454         }
+<a name="l00455"></a>00455 
+<a name="l00456"></a>00456         <span class="keywordflow">return</span> 0;
 <a name="l00457"></a>00457 }
 <a name="l00458"></a>00458 
-<a name="l00459"></a><a class="code" href="classGEngine.html#a02af5bc774fd00507f5339f97d4eb426">00459</a> <span class="keywordtype">int</span> <a class="code" href="classGEngine.html#a02af5bc774fd00507f5339f97d4eb426">GEngine::gameLoop</a>()
-<a name="l00460"></a>00460 {
-<a name="l00461"></a>00461 
-<a name="l00462"></a>00462     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a> == <span class="keyword">true</span>)
-<a name="l00463"></a>00463     {
-<a name="l00464"></a>00464         <a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">setErrorDetails</a>(<span class="stringliteral">&quot;Cannot enter game loop when the engine is in a error state\n&quot;</span>);
-<a name="l00465"></a>00465         <span class="keywordflow">return</span> -1;
-<a name="l00466"></a>00466     }
+<a name="l00459"></a><a class="code" href="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9">00459</a> <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9">GEngine::loadApplication</a>(<a class="code" href="classGApplication.html" title="Abstraction of a application that runs on the engine.">GApplication</a>* App) {
+<a name="l00460"></a>00460 
+<a name="l00461"></a>00461         <span class="comment">//If the engine is in a error state then can&#39;t load a application</span>
+<a name="l00462"></a>00462         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a> == <span class="keyword">true</span>) {
+<a name="l00463"></a>00463                 <a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">setErrorDetails</a>(
+<a name="l00464"></a>00464                                 <span class="stringliteral">&quot;Cannot load application if a error occured prior to load call&quot;</span>);
+<a name="l00465"></a>00465                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00466"></a>00466         }
 <a name="l00467"></a>00467 
-<a name="l00468"></a>00468     <a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">m_GameActive</a> = <span class="keyword">true</span>;
-<a name="l00469"></a>00469     <a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a> = <span class="keyword">true</span>;
-<a name="l00470"></a>00470 
-<a name="l00471"></a>00471     <a class="code" href="classGEngine.html#a70037a06c731f2291baac8596640e2ba">m_clock</a>.<a class="code" href="classClock.html#a0e1d9a28caec6c2128e4278136a4722f" title="Initialise the clock.">initialize</a>();
-<a name="l00472"></a>00472     <span class="keywordtype">float</span> secondsPassed;
-<a name="l00473"></a>00473 
-<a name="l00474"></a>00474     <span class="keywordflow">while</span> (<a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">m_GameActive</a>)
-<a name="l00475"></a>00475     {
+<a name="l00468"></a>00468         <span class="comment">//If there is currently a application loaded return false</span>
+<a name="l00469"></a>00469         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> != 0) {
+<a name="l00470"></a>00470                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00471"></a>00471         }
+<a name="l00472"></a>00472 
+<a name="l00473"></a>00473         <span class="keywordflow">if</span> (App-&gt;<a class="code" href="classGApplication.html#a89afefa2721de6db1932d71444af506c" title="Called the first time the app is loaded, initialisation should be done here.">onLoad</a>(<span class="keyword">this</span>) == <span class="keyword">false</span>) {
+<a name="l00474"></a>00474                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00475"></a>00475         }
 <a name="l00476"></a>00476 
-<a name="l00477"></a>00477         secondsPassed =  <a class="code" href="classGEngine.html#a70037a06c731f2291baac8596640e2ba">m_clock</a>.<a class="code" href="classClock.html#a438ea54b4ab041c82718600668bbb394" title="Returns the time that has elapsed since this was last called in seconds.">calculateElapsedTime</a>();
+<a name="l00477"></a>00477         <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> = App;
 <a name="l00478"></a>00478 
-<a name="l00479"></a>00479 
-<a name="l00480"></a>00480         <span class="comment">//Alert to the FPS calculator of a new frame</span>
-<a name="l00481"></a>00481         <a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>.<a class="code" href="classFPSCalculator.html#a5266e420f914751170b470095e2b7d0a" title="Notify that a frame has occured and how long it took.">frame</a>(secondsPassed);
-<a name="l00482"></a>00482 
-<a name="l00483"></a>00483         <span class="comment">//Run through the postbox and trigger events</span>
-<a name="l00484"></a>00484         <span class="keywordflow">while</span> (<a class="code" href="classGEngine.html#ab647a8b8faee4a9b6dac40c54b5054c5">m_inputPostbox</a>.<a class="code" href="classPostbox.html#a38cdeca8626362e8fe1f0f31cf8f0f09">HasNext</a>())
-<a name="l00485"></a>00485         {
-<a name="l00486"></a>00486 
-<a name="l00487"></a>00487             <a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">processEvent</a>(<a class="code" href="classGEngine.html#ab647a8b8faee4a9b6dac40c54b5054c5">m_inputPostbox</a>.<a class="code" href="classPostbox.html#aec8a72fffe1c67845bae08a05bb8b95c">ReadNext</a>());
-<a name="l00488"></a>00488 
-<a name="l00489"></a>00489         }
-<a name="l00490"></a>00490 
+<a name="l00479"></a>00479         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00480"></a>00480 }
+<a name="l00481"></a>00481 
+<a name="l00482"></a><a class="code" href="classGEngine.html#a53c80ec3b530c90281275dc5f3692135">00482</a> <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#a53c80ec3b530c90281275dc5f3692135">GEngine::unloadApplication</a>() {
+<a name="l00483"></a>00483 
+<a name="l00484"></a>00484         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> == 0) {
+<a name="l00485"></a>00485                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00486"></a>00486         }
+<a name="l00487"></a>00487 
+<a name="l00488"></a>00488         <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>-&gt;<a class="code" href="classGApplication.html#a45e65b2a4a70b8e398effef37dbd06be" title="Called when the app is unloaded, deinitilization should be done here.">onUnload</a>();
+<a name="l00489"></a>00489 
+<a name="l00490"></a>00490         <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> = 0;
 <a name="l00491"></a>00491 
-<a name="l00492"></a>00492         <a class="code" href="classGEngine.html#a14bda10f38212a7532dcb38a3a3dd859">doFrameUpdate</a>(secondsPassed);
-<a name="l00493"></a>00493 
-<a name="l00494"></a>00494         <span class="comment">//Rendering Step</span>
-<a name="l00495"></a>00495 
-<a name="l00496"></a>00496         <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a207514ec158f1be5508858c4b4c7658a">renderScene</a>(<a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a>, <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a>);
-<a name="l00497"></a>00497 
-<a name="l00498"></a>00498         <span class="comment">//End of rendering step</span>
-<a name="l00499"></a>00499 
-<a name="l00500"></a>00500         <span class="comment">//Sleep</span>
-<a name="l00501"></a>00501         <a class="code" href="classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36">f_sleep</a>();
-<a name="l00502"></a>00502     }
+<a name="l00492"></a>00492         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00493"></a>00493 }
+<a name="l00494"></a>00494 
+<a name="l00495"></a><a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">00495</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">GEngine::setErrorDetails</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str) {
+<a name="l00496"></a>00496         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a> != 0)
+<a name="l00497"></a>00497                 <span class="keyword">delete</span>[] <a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a>;
+<a name="l00498"></a>00498 
+<a name="l00499"></a>00499         <span class="keywordtype">char</span>* newErrorDetails = <span class="keyword">new</span> <span class="keywordtype">char</span>[strlen(str) + 1];
+<a name="l00500"></a>00500         <a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a> = newErrorDetails;
+<a name="l00501"></a>00501 
+<a name="l00502"></a>00502         strncpy(newErrorDetails, str, strlen(str) + 1);
 <a name="l00503"></a>00503 
-<a name="l00504"></a>00504     <span class="keywordflow">return</span> 0;
-<a name="l00505"></a>00505 }
-<a name="l00506"></a>00506 
-<a name="l00507"></a><a class="code" href="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9">00507</a> <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9">GEngine::loadApplication</a>(<a class="code" href="classGApplication.html" title="Abstraction of a application that runs on the engine.">GApplication</a>* App)
-<a name="l00508"></a>00508 {
-<a name="l00509"></a>00509 
-<a name="l00510"></a>00510     <span class="comment">//If the engine is in a error state then can&#39;t load a application</span>
-<a name="l00511"></a>00511     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a> == <span class="keyword">true</span>)
-<a name="l00512"></a>00512     {
-<a name="l00513"></a>00513         <a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">setErrorDetails</a>(<span class="stringliteral">&quot;Cannot load application if a error occured prior to load call&quot;</span>);
-<a name="l00514"></a>00514         <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00515"></a>00515     }
-<a name="l00516"></a>00516 
-<a name="l00517"></a>00517     <span class="comment">//If there is currently a application loaded return false</span>
-<a name="l00518"></a>00518     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> != 0)
-<a name="l00519"></a>00519     {
-<a name="l00520"></a>00520         <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00521"></a>00521     }
-<a name="l00522"></a>00522 
-<a name="l00523"></a>00523     <span class="keywordflow">if</span> (App-&gt;<a class="code" href="classGApplication.html#a89afefa2721de6db1932d71444af506c" title="Called the first time the app is loaded, initialisation should be done here.">onLoad</a>(<span class="keyword">this</span>) == <span class="keyword">false</span>)
-<a name="l00524"></a>00524     {
-<a name="l00525"></a>00525         <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00526"></a>00526     }
-<a name="l00527"></a>00527 
-<a name="l00528"></a>00528     <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> = App;
-<a name="l00529"></a>00529 
-<a name="l00530"></a>00530     <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00531"></a>00531 }
-<a name="l00532"></a>00532 
-<a name="l00533"></a><a class="code" href="classGEngine.html#a53c80ec3b530c90281275dc5f3692135">00533</a> <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#a53c80ec3b530c90281275dc5f3692135">GEngine::unloadApplication</a>()
-<a name="l00534"></a>00534 {
-<a name="l00535"></a>00535 
-<a name="l00536"></a>00536     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> == 0)
-<a name="l00537"></a>00537     {
-<a name="l00538"></a>00538         <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00539"></a>00539     }
-<a name="l00540"></a>00540 
-<a name="l00541"></a>00541     <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>-&gt;<a class="code" href="classGApplication.html#a45e65b2a4a70b8e398effef37dbd06be" title="Called when the app is unloaded, deinitilization should be done here.">onUnload</a>();
-<a name="l00542"></a>00542 
-<a name="l00543"></a>00543     <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a> = 0;
-<a name="l00544"></a>00544 
-<a name="l00545"></a>00545     <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00546"></a>00546 }
-<a name="l00547"></a>00547 
-<a name="l00548"></a><a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">00548</a> <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">GEngine::setErrorDetails</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str)
-<a name="l00549"></a>00549 {
-<a name="l00550"></a>00550     <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a> != 0)
-<a name="l00551"></a>00551         <span class="keyword">delete</span>[] <a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a>;
-<a name="l00552"></a>00552 
-<a name="l00553"></a>00553     <span class="keywordtype">char</span>* newErrorDetails = <span class="keyword">new</span> <span class="keywordtype">char</span>[strlen(str) + 1];
-<a name="l00554"></a>00554     <a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a> = newErrorDetails;
-<a name="l00555"></a>00555 
-<a name="l00556"></a>00556     strncpy(newErrorDetails, str, strlen(str) + 1);
-<a name="l00557"></a>00557 
-<a name="l00558"></a>00558     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;Error details set to&quot;</span>);
-<a name="l00559"></a>00559     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a>);
-<a name="l00560"></a>00560     <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log.">writeData</a>(<span class="stringliteral">&quot;\n&quot;</span>);
-<a name="l00561"></a>00561 
-<a name="l00562"></a>00562     <a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a> = <span class="keyword">true</span>;
-<a name="l00563"></a>00563 }
-<a name="l00564"></a>00564 
-<a name="l00565"></a>00565 <span class="keyword">static</span> <a class="code" href="classGEngine.html">GEngine</a>* m_gameEngineInstance = 0;
-<a name="l00566"></a>00566 
-<a name="l00567"></a><a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">00567</a> <a class="code" href="classGEngine.html">GEngine</a>* <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">GEngine::getInstance</a>()
-<a name="l00568"></a>00568 {
-<a name="l00569"></a>00569 
-<a name="l00570"></a>00570     <span class="keywordflow">if</span> (m_gameEngineInstance == 0)
-<a name="l00571"></a>00571     {
-<a name="l00572"></a>00572 
-<a name="l00573"></a>00573         m_gameEngineInstance = <span class="keyword">new</span> <a class="code" href="classGEngine.html#a2f445aaf503b28d11a6fcc8a3cc11b59">GEngine</a>();
-<a name="l00574"></a>00574         m_gameEngineInstance-&gt;<a class="code" href="classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757">initialize</a>();
-<a name="l00575"></a>00575 
-<a name="l00576"></a>00576     }
-<a name="l00577"></a>00577 
-<a name="l00578"></a>00578     <span class="keywordflow">return</span> m_gameEngineInstance;
-<a name="l00579"></a>00579 }
+<a name="l00504"></a>00504         <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>-&gt;<a class="code" href="classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log.">writeLine</a>( <a class="code" href="classGEngine.html#aed711542848afd1cabc80e46bfe7aa73">TAG</a>, <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Error details set as &quot;</span>) + <a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a>);
+<a name="l00505"></a>00505 
+<a name="l00506"></a>00506         <a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a> = <span class="keyword">true</span>;
+<a name="l00507"></a>00507 }
+<a name="l00508"></a>00508 
+<a name="l00509"></a>00509 <span class="keyword">static</span> <a class="code" href="classGEngine.html">GEngine</a>* m_gameEngineInstance = 0;
+<a name="l00510"></a>00510 
+<a name="l00511"></a><a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">00511</a> <a class="code" href="classGEngine.html">GEngine</a>* <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">GEngine::getInstance</a>() {
+<a name="l00512"></a>00512 
+<a name="l00513"></a>00513         <span class="keywordflow">if</span> (m_gameEngineInstance == 0) {
+<a name="l00514"></a>00514 
+<a name="l00515"></a>00515                 m_gameEngineInstance = <span class="keyword">new</span> <a class="code" href="classGEngine.html#a2f445aaf503b28d11a6fcc8a3cc11b59">GEngine</a>();
+<a name="l00516"></a>00516                 m_gameEngineInstance-&gt;<a class="code" href="classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757">initialize</a>();
+<a name="l00517"></a>00517 
+<a name="l00518"></a>00518         }
+<a name="l00519"></a>00519 
+<a name="l00520"></a>00520         <span class="keywordflow">return</span> m_gameEngineInstance;
+<a name="l00521"></a>00521 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 16:59:23 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

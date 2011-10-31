@@ -46,26 +46,27 @@
 <a name="l00006"></a><a class="code" href="classGLTexture.html">00006</a> <span class="keyword">class </span><a class="code" href="classGLTexture.html">GLTexture</a> : <span class="keyword">public</span> <a class="code" href="classTexture.html">Texture</a>
 <a name="l00007"></a>00007 {
 <a name="l00008"></a>00008     <span class="keyword">private</span>:
-<a name="l00009"></a><a class="code" href="classGLTexture.html#a5f28e8c0b8033b093f2abeb118615f67">00009</a>         GLuint <a class="code" href="classGLTexture.html#a5f28e8c0b8033b093f2abeb118615f67">m_glTextureID</a>;
-<a name="l00010"></a>00010 
+<a name="l00009"></a><a class="code" href="classGLTexture.html#a033bb07cb6709b7e3837711c4ec811d9">00009</a>                 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classGLTexture.html#a033bb07cb6709b7e3837711c4ec811d9">TAG</a>;
+<a name="l00010"></a><a class="code" href="classGLTexture.html#a5f28e8c0b8033b093f2abeb118615f67">00010</a>         GLuint <a class="code" href="classGLTexture.html#a5f28e8c0b8033b093f2abeb118615f67">m_glTextureID</a>;
 <a name="l00011"></a>00011 
-<a name="l00012"></a><a class="code" href="classGLTexture.html#afebd832588fd6f5aa25c801c107d53e3">00012</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classGLTexture.html#afebd832588fd6f5aa25c801c107d53e3">textureDebugIdentifier</a>;
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014     <span class="keyword">public</span>:
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016         <a class="code" href="classGLTexture.html#abb3da94e96ea6893e33e51c5422a42f9">GLTexture</a>();
-<a name="l00017"></a>00017         <a class="code" href="classGLTexture.html#a7a0f04b3bd68c77588c0aea9b30b08c4">~GLTexture</a>();
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019         <span class="keywordtype">void</span> <a class="code" href="classGLTexture.html#ae1cea989df558b079d4439dcc901080d">loadTextureData</a>(<a class="code" href="Texture_8h.html#a68f62b076cffc7974f46696fa6954307">InputDataFormat</a> format, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="TextureLoader_8h.html#ae0ffb42440f0305b6d22a1c6106b6e6f">width</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="TextureLoader_8h.html#a777dd66f9609a587ee98ad50de301662">height</a>, <span class="keywordtype">bool</span> genMips, <span class="keywordtype">void</span>* inputData);
-<a name="l00020"></a>00020         <span class="keywordtype">void</span> <a class="code" href="classGLTexture.html#acdbeabe03632f55d44ae143c29963d12">makeActive</a>();
-<a name="l00021"></a>00021 
-<a name="l00022"></a><a class="code" href="classGLTexture.html#a3631b9a2c8ead89165e727b8cad1f569">00022</a>         GLuint <a class="code" href="classGLTexture.html#a3631b9a2c8ead89165e727b8cad1f569">getTextureID</a>() { <span class="keywordflow">return</span> <a class="code" href="classGLTexture.html#a5f28e8c0b8033b093f2abeb118615f67">m_glTextureID</a>; }
-<a name="l00023"></a>00023 };
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="preprocessor">#endif //_GL_TEXTURE_DEF_H_</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a><a class="code" href="classGLTexture.html#afebd832588fd6f5aa25c801c107d53e3">00013</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classGLTexture.html#afebd832588fd6f5aa25c801c107d53e3">textureDebugIdentifier</a>;
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015     <span class="keyword">public</span>:
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017         <a class="code" href="classGLTexture.html#abb3da94e96ea6893e33e51c5422a42f9">GLTexture</a>();
+<a name="l00018"></a>00018         <a class="code" href="classGLTexture.html#a7a0f04b3bd68c77588c0aea9b30b08c4">~GLTexture</a>();
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020         <span class="keywordtype">void</span> <a class="code" href="classGLTexture.html#ae1cea989df558b079d4439dcc901080d">loadTextureData</a>(<a class="code" href="Texture_8h.html#a68f62b076cffc7974f46696fa6954307">InputDataFormat</a> format, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="TextureLoader_8h.html#ae0ffb42440f0305b6d22a1c6106b6e6f">width</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="TextureLoader_8h.html#a777dd66f9609a587ee98ad50de301662">height</a>, <span class="keywordtype">bool</span> genMips, <span class="keywordtype">void</span>* inputData);
+<a name="l00021"></a>00021         <span class="keywordtype">void</span> <a class="code" href="classGLTexture.html#acdbeabe03632f55d44ae143c29963d12">makeActive</a>();
+<a name="l00022"></a>00022 
+<a name="l00023"></a><a class="code" href="classGLTexture.html#a3631b9a2c8ead89165e727b8cad1f569">00023</a>         GLuint <a class="code" href="classGLTexture.html#a3631b9a2c8ead89165e727b8cad1f569">getTextureID</a>() { <span class="keywordflow">return</span> <a class="code" href="classGLTexture.html#a5f28e8c0b8033b093f2abeb118615f67">m_glTextureID</a>; }
+<a name="l00024"></a>00024 };
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="preprocessor">#endif //_GL_TEXTURE_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 16:59:23 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

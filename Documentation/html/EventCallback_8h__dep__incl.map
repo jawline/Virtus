@@ -1,12 +1,13 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$EventHandlers_8h.html" title="Code/3DViewer/EventHandlers.h" alt="" coords="684,83,897,112"/>
-<area shape="rect" id="node11" href="$EventManager_8h.html" title="Code/Logic/Event/EventManager.h" alt="" coords="436,83,660,112"/>
-<area shape="rect" id="node5" href="$ViewerApplication_8h.html" title="Code/3DViewer/ViewerApplication.h" alt="" coords="674,237,906,267"/>
-<area shape="rect" id="node7" href="$ViewerApplication_8cpp.html" title="Code/3DViewer/ViewerApplication.cpp" alt="" coords="590,315,836,344"/>
-<area shape="rect" id="node9" href="$entry_8cpp.html" title="Code/entry.cpp" alt="" coords="233,315,342,344"/>
-<area shape="rect" id="node13" href="$GEngine_8h.html" title="Code/Core/GEngine.h" alt="" coords="309,160,458,189"/>
-<area shape="rect" id="node24" href="$EventManager_8cpp.html" title="Code/Logic/Event/EventManager.cpp" alt="" coords="482,160,720,189"/>
+<area shape="rect" id="node3" href="$EventHandlers_8h.html" title="Code/3DViewer/EventHandlers.h" alt="" coords="921,83,1134,112"/>
+<area shape="rect" id="node11" href="$EventManager_8h.html" title="Code/Logic/Event/EventManager.h" alt="" coords="670,83,894,112"/>
+<area shape="rect" id="node5" href="$ViewerApplication_8h.html" title="Code/3DViewer/ViewerApplication.h" alt="" coords="914,237,1146,267"/>
+<area shape="rect" id="node7" href="$ViewerApplication_8cpp.html" title="Code/3DViewer/ViewerApplication.cpp" alt="" coords="830,315,1076,344"/>
+<area shape="rect" id="node9" href="$entry_8cpp.html" title="Code/entry.cpp" alt="" coords="353,315,462,344"/>
+<area shape="rect" id="node13" href="$GEngine_8h.html" title="Code/Core/GEngine.h" alt="" coords="489,160,638,189"/>
+<area shape="rect" id="node26" href="$EventManager_8cpp.html" title="Code/Logic/Event/EventManager.cpp" alt="" coords="664,160,901,189"/>
 <area shape="rect" id="node15" href="$UserInterface_8cpp.html" title="Code/3DViewer/UserInterface.cpp" alt="" coords="24,237,245,267"/>
 <area shape="rect" id="node19" href="$GEngine_8cpp.html" title="Code/Core/GEngine.cpp" alt="" coords="269,237,432,267"/>
-<area shape="rect" id="node22" href="$Hive_8cpp.html" title="Code/HIVE/Hive.cpp" alt="" coords="456,237,600,267"/>
+<area shape="rect" id="node22" href="$LocalFolder_8cpp.html" title="Code/Filesystem/LocalFolder.cpp" alt="" coords="456,237,672,267"/>
+<area shape="rect" id="node24" href="$Hive_8cpp.html" title="Code/HIVE/Hive.cpp" alt="" coords="696,237,840,267"/>
 </map>

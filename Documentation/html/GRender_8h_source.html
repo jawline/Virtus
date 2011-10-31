@@ -56,95 +56,96 @@
 <a name="l00020"></a><a class="code" href="classGRenderer.html">00020</a> <span class="keyword">class </span><a class="code" href="classGRenderer.html" title="The core renderer class - Singleton.">GRenderer</a>
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">private</span>:
-<a name="l00023"></a>00023 
-<a name="l00024"></a><a class="code" href="classGRenderer.html#a9ec4d0e348b779ff80a5f94f7de631af">00024</a>     <a class="code" href="classGraphicsAPI.html">GraphicsAPI</a>* <a class="code" href="classGRenderer.html#a9ec4d0e348b779ff80a5f94f7de631af">m_renderAPI</a>;
-<a name="l00025"></a>00025 
-<a name="l00026"></a><a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">00026</a>     <a class="code" href="classGRenderLayer.html">GRenderLayer</a>* <a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a>[<a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404a2902ee5b5e648c3089e6b17bacaff4a2">Layers_Max</a>];
-<a name="l00027"></a><a class="code" href="classGRenderer.html#aaa54efa3a56d6b287e530a05ef582329">00027</a>     <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>* <a class="code" href="classGRenderer.html#aaa54efa3a56d6b287e530a05ef582329">m_gameRenderLog</a>;
-<a name="l00028"></a>00028 
-<a name="l00029"></a><a class="code" href="classGRenderer.html#ad3fd08380e4b8afde17ac08579e0bbe6">00029</a>     <a class="code" href="classTextureMonitor.html">TextureMonitor</a>* <a class="code" href="classGRenderer.html#ad3fd08380e4b8afde17ac08579e0bbe6">m_textureMonitor</a>;
-<a name="l00030"></a><a class="code" href="classGRenderer.html#a11e7692af82b414a42809ab3148f22df">00030</a>     <span class="keywordtype">bool</span> <a class="code" href="classGRenderer.html#a11e7692af82b414a42809ab3148f22df">m_shouldRenderWireframe</a>;
-<a name="l00031"></a>00031 
-<a name="l00032"></a><a class="code" href="classGRenderer.html#a0530349c97b2b04a22019e26dd3d3bcc">00032</a>     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#a0530349c97b2b04a22019e26dd3d3bcc">setLayer</a>(<span class="keywordtype">int</span> ID, <a class="code" href="classGRenderLayer.html">GRenderLayer</a> * Layer)
-<a name="l00033"></a>00033     {
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035         <span class="keywordflow">if</span> ((ID &lt; <a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404a35c92ef0539ef808f500b25992fb14e8">Layers_Start</a>) | (ID &gt; <a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404a2902ee5b5e648c3089e6b17bacaff4a2">Layers_Max</a>)) <span class="keywordflow">return</span>;
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037         <a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a>[ID] = Layer;
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039     }
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041     <a class="code" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a">GRenderer</a>();
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#ac203b753c5649c9ee8c0ab139be9f1e9">begin</a>(<span class="keywordtype">int</span> wx, <span class="keywordtype">int</span> wy);
-<a name="l00044"></a>00044     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#a04f9d9c4661e28d03fb7cecb658c02bb">end</a>(<span class="keywordtype">int</span> wx, <span class="keywordtype">int</span> wy);
-<a name="l00045"></a>00045 <span class="keyword">public</span>:
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047     <a class="code" href="classGRenderer.html#ac3e3aa5398f28f35bf2e20a2e0973713">~GRenderer</a>();
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049     <span class="keywordtype">bool</span> <a class="code" href="classGRenderer.html#a9a16393e21f31a1610421b29220735dc">initialize</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> w, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> h, <span class="keyword">const</span> <span class="keywordtype">char</span>* renderAPI);
-<a name="l00050"></a>00050     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#a8f9a5f0cbc4a4df10ad0e34af3c36a5a">uninitialize</a>();
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#a7888dc4b2197e16cfb11e476edba51d1">update</a>(<span class="keywordtype">float</span> seconds);
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#a207514ec158f1be5508858c4b4c7658a">renderScene</a>(<span class="keywordtype">int</span> wx, <span class="keywordtype">int</span> wy);
-<a name="l00055"></a>00055 
-<a name="l00056"></a><a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">00056</a>     <a class="code" href="classGraphicsAPI.html">GraphicsAPI</a>* <a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()
-<a name="l00057"></a>00057     {
-<a name="l00058"></a>00058         <span class="keywordflow">return</span> <a class="code" href="classGRenderer.html#a9ec4d0e348b779ff80a5f94f7de631af">m_renderAPI</a>;
-<a name="l00059"></a>00059     }
-<a name="l00060"></a>00060 
+<a name="l00023"></a><a class="code" href="classGRenderer.html#a1152c9029cd708ee1468e449333c7de3">00023</a>         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classGRenderer.html#a1152c9029cd708ee1468e449333c7de3">TAG</a>;
+<a name="l00024"></a>00024 
+<a name="l00025"></a><a class="code" href="classGRenderer.html#a9ec4d0e348b779ff80a5f94f7de631af">00025</a>     <a class="code" href="classGraphicsAPI.html">GraphicsAPI</a>* <a class="code" href="classGRenderer.html#a9ec4d0e348b779ff80a5f94f7de631af">m_renderAPI</a>;
+<a name="l00026"></a>00026 
+<a name="l00027"></a><a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">00027</a>     <a class="code" href="classGRenderLayer.html">GRenderLayer</a>* <a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a>[<a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404a2902ee5b5e648c3089e6b17bacaff4a2">Layers_Max</a>];
+<a name="l00028"></a><a class="code" href="classGRenderer.html#aaa54efa3a56d6b287e530a05ef582329">00028</a>     <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>* <a class="code" href="classGRenderer.html#aaa54efa3a56d6b287e530a05ef582329">m_gameRenderLog</a>;
+<a name="l00029"></a>00029 
+<a name="l00030"></a><a class="code" href="classGRenderer.html#ad3fd08380e4b8afde17ac08579e0bbe6">00030</a>     <a class="code" href="classTextureMonitor.html">TextureMonitor</a>* <a class="code" href="classGRenderer.html#ad3fd08380e4b8afde17ac08579e0bbe6">m_textureMonitor</a>;
+<a name="l00031"></a><a class="code" href="classGRenderer.html#a11e7692af82b414a42809ab3148f22df">00031</a>     <span class="keywordtype">bool</span> <a class="code" href="classGRenderer.html#a11e7692af82b414a42809ab3148f22df">m_shouldRenderWireframe</a>;
+<a name="l00032"></a>00032 
+<a name="l00033"></a><a class="code" href="classGRenderer.html#a0530349c97b2b04a22019e26dd3d3bcc">00033</a>     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#a0530349c97b2b04a22019e26dd3d3bcc">setLayer</a>(<span class="keywordtype">int</span> ID, <a class="code" href="classGRenderLayer.html">GRenderLayer</a> * Layer)
+<a name="l00034"></a>00034     {
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036         <span class="keywordflow">if</span> ((ID &lt; <a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404a35c92ef0539ef808f500b25992fb14e8">Layers_Start</a>) | (ID &gt; <a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404a2902ee5b5e648c3089e6b17bacaff4a2">Layers_Max</a>)) <span class="keywordflow">return</span>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038         <a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a>[ID] = Layer;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040     }
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042     <a class="code" href="classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a">GRenderer</a>();
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#ac203b753c5649c9ee8c0ab139be9f1e9">begin</a>(<span class="keywordtype">int</span> wx, <span class="keywordtype">int</span> wy);
+<a name="l00045"></a>00045     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#a04f9d9c4661e28d03fb7cecb658c02bb">end</a>(<span class="keywordtype">int</span> wx, <span class="keywordtype">int</span> wy);
+<a name="l00046"></a>00046 <span class="keyword">public</span>:
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048     <a class="code" href="classGRenderer.html#ac3e3aa5398f28f35bf2e20a2e0973713">~GRenderer</a>();
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050     <span class="keywordtype">bool</span> <a class="code" href="classGRenderer.html#a9a16393e21f31a1610421b29220735dc">initialize</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> w, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> h, <span class="keyword">const</span> <span class="keywordtype">char</span>* renderAPI);
+<a name="l00051"></a>00051     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#a8f9a5f0cbc4a4df10ad0e34af3c36a5a">uninitialize</a>();
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#a7888dc4b2197e16cfb11e476edba51d1">update</a>(<span class="keywordtype">float</span> seconds);
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#a207514ec158f1be5508858c4b4c7658a">renderScene</a>(<span class="keywordtype">int</span> wx, <span class="keywordtype">int</span> wy);
+<a name="l00056"></a>00056 
+<a name="l00057"></a><a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">00057</a>     <a class="code" href="classGraphicsAPI.html">GraphicsAPI</a>* <a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()
+<a name="l00058"></a>00058     {
+<a name="l00059"></a>00059         <span class="keywordflow">return</span> <a class="code" href="classGRenderer.html#a9ec4d0e348b779ff80a5f94f7de631af">m_renderAPI</a>;
+<a name="l00060"></a>00060     }
 <a name="l00061"></a>00061 
-<a name="l00062"></a><a class="code" href="classGRenderer.html#a189dc79fbe3e40ab1cf0fd0cb9e83dfc">00062</a>     <a class="code" href="classGRenderLayer.html">GRenderLayer</a>* <a class="code" href="classGRenderer.html#a189dc79fbe3e40ab1cf0fd0cb9e83dfc">getLayer</a>(<span class="keywordtype">int</span> ID)
-<a name="l00063"></a>00063     {
-<a name="l00064"></a>00064         <span class="keywordflow">if</span> ((ID &lt; <a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404a35c92ef0539ef808f500b25992fb14e8">Layers_Start</a>) | (ID &gt; <a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404a2902ee5b5e648c3089e6b17bacaff4a2">Layers_Max</a>)) <span class="keywordflow">return</span> 0;
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066         <span class="keywordflow">return</span> <a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a>[ID];
-<a name="l00067"></a>00067     }
-<a name="l00068"></a>00068 
-<a name="l00069"></a><a class="code" href="classGRenderer.html#a088ce193a1a3cff38604f92b67ef6799">00069</a>     GSpriteLayer* <a class="code" href="classGRenderer.html#a088ce193a1a3cff38604f92b67ef6799">getSpriteLayer</a>()
-<a name="l00070"></a>00070     {
-<a name="l00071"></a>00071         <span class="keywordflow">return</span> (GSpriteLayer*) <a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a>[<a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404ab94ad00d277d17d5ffc88c0387759a24">Layer_Sprites</a>];
-<a name="l00072"></a>00072     }
-<a name="l00073"></a>00073 
-<a name="l00074"></a><a class="code" href="classGRenderer.html#a6eee2e3bcc7a5bbeedfdb308b4ea7b65">00074</a>     <a class="code" href="classInterfaceLayer.html" title="The engine interface render layer.">InterfaceLayer</a>* <a class="code" href="classGRenderer.html#a6eee2e3bcc7a5bbeedfdb308b4ea7b65">getInterfaceManager</a>()
-<a name="l00075"></a>00075     {
-<a name="l00076"></a>00076         <span class="keywordflow">return</span> (<a class="code" href="classInterfaceLayer.html" title="The engine interface render layer.">InterfaceLayer</a>*) <a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a>[<a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404afbe6f95035620e5166e43de3f3e7ceac">Layer_Interface</a>];
-<a name="l00077"></a>00077     }
-<a name="l00078"></a>00078 
-<a name="l00079"></a><a class="code" href="classGRenderer.html#a8ae24b9fbe4f064ad4dd7d3ffcd069e3">00079</a>     <a class="code" href="classThreeDRenderLayer.html">ThreeDRenderLayer</a>* <a class="code" href="classGRenderer.html#a8ae24b9fbe4f064ad4dd7d3ffcd069e3">get3DLayer</a>()
-<a name="l00080"></a>00080     {
-<a name="l00081"></a>00081         <span class="keywordflow">return</span> (<a class="code" href="classThreeDRenderLayer.html">ThreeDRenderLayer</a>*) <a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a>[<a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404a006c2e85d226d493c2afffae05fd6020">Layer_3D</a>];
-<a name="l00082"></a>00082     }
-<a name="l00083"></a>00083 
-<a name="l00084"></a><a class="code" href="classGRenderer.html#a362ab6eb0a315a128badd5324a4cb6d0">00084</a>     <a class="code" href="classTextureMonitor.html">TextureMonitor</a>* <a class="code" href="classGRenderer.html#a362ab6eb0a315a128badd5324a4cb6d0">getTextureMonitor</a>()
-<a name="l00085"></a>00085     {
-<a name="l00086"></a>00086         <span class="keywordflow">return</span> <a class="code" href="classGRenderer.html#ad3fd08380e4b8afde17ac08579e0bbe6">m_textureMonitor</a>;
-<a name="l00087"></a>00087     }
-<a name="l00088"></a>00088 
-<a name="l00089"></a><a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">00089</a>     <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>* <a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()
-<a name="l00090"></a>00090     {
-<a name="l00091"></a>00091         <span class="keywordflow">return</span> <a class="code" href="classGRenderer.html#aaa54efa3a56d6b287e530a05ef582329">m_gameRenderLog</a>;
-<a name="l00092"></a>00092     }
-<a name="l00093"></a>00093 
-<a name="l00094"></a><a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">00094</a>     <a class="code" href="classRenderWindow.html">RenderWindow</a>* <a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()
-<a name="l00095"></a>00095     {
-<a name="l00096"></a>00096         <span class="keywordflow">if</span> (<a class="code" href="classGRenderer.html#a9ec4d0e348b779ff80a5f94f7de631af">m_renderAPI</a> != 0)
-<a name="l00097"></a>00097             <span class="keywordflow">return</span> <a class="code" href="classGRenderer.html#a9ec4d0e348b779ff80a5f94f7de631af">m_renderAPI</a>-&gt;<a class="code" href="classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16">getRenderWindow</a>();
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099         <span class="keywordflow">return</span> 0;
-<a name="l00100"></a>00100     }
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#a503d677353a71ed75a56f36a00b97cd8">setRenderWireframeValue</a>(<span class="keywordtype">bool</span> value);
-<a name="l00103"></a>00103     <span class="keywordtype">bool</span> <a class="code" href="classGRenderer.html#ae100867bb26b1d1ed795bbcdfea57176">getRenderWireframeValue</a>();
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105     <span class="keyword">static</span> <a class="code" href="classGRenderer.html" title="The core renderer class - Singleton.">GRenderer</a>* <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">getRenderer</a>();
-<a name="l00106"></a>00106 };
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 <span class="preprocessor">#endif //_RENDER_DEF_H_</span>
+<a name="l00062"></a>00062 
+<a name="l00063"></a><a class="code" href="classGRenderer.html#a189dc79fbe3e40ab1cf0fd0cb9e83dfc">00063</a>     <a class="code" href="classGRenderLayer.html">GRenderLayer</a>* <a class="code" href="classGRenderer.html#a189dc79fbe3e40ab1cf0fd0cb9e83dfc">getLayer</a>(<span class="keywordtype">int</span> ID)
+<a name="l00064"></a>00064     {
+<a name="l00065"></a>00065         <span class="keywordflow">if</span> ((ID &lt; <a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404a35c92ef0539ef808f500b25992fb14e8">Layers_Start</a>) | (ID &gt; <a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404a2902ee5b5e648c3089e6b17bacaff4a2">Layers_Max</a>)) <span class="keywordflow">return</span> 0;
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067         <span class="keywordflow">return</span> <a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a>[ID];
+<a name="l00068"></a>00068     }
+<a name="l00069"></a>00069 
+<a name="l00070"></a><a class="code" href="classGRenderer.html#a088ce193a1a3cff38604f92b67ef6799">00070</a>     GSpriteLayer* <a class="code" href="classGRenderer.html#a088ce193a1a3cff38604f92b67ef6799">getSpriteLayer</a>()
+<a name="l00071"></a>00071     {
+<a name="l00072"></a>00072         <span class="keywordflow">return</span> (GSpriteLayer*) <a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a>[<a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404ab94ad00d277d17d5ffc88c0387759a24">Layer_Sprites</a>];
+<a name="l00073"></a>00073     }
+<a name="l00074"></a>00074 
+<a name="l00075"></a><a class="code" href="classGRenderer.html#a6eee2e3bcc7a5bbeedfdb308b4ea7b65">00075</a>     <a class="code" href="classInterfaceLayer.html" title="The engine interface render layer.">InterfaceLayer</a>* <a class="code" href="classGRenderer.html#a6eee2e3bcc7a5bbeedfdb308b4ea7b65">getInterfaceManager</a>()
+<a name="l00076"></a>00076     {
+<a name="l00077"></a>00077         <span class="keywordflow">return</span> (<a class="code" href="classInterfaceLayer.html" title="The engine interface render layer.">InterfaceLayer</a>*) <a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a>[<a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404afbe6f95035620e5166e43de3f3e7ceac">Layer_Interface</a>];
+<a name="l00078"></a>00078     }
+<a name="l00079"></a>00079 
+<a name="l00080"></a><a class="code" href="classGRenderer.html#a8ae24b9fbe4f064ad4dd7d3ffcd069e3">00080</a>     <a class="code" href="classThreeDRenderLayer.html">ThreeDRenderLayer</a>* <a class="code" href="classGRenderer.html#a8ae24b9fbe4f064ad4dd7d3ffcd069e3">get3DLayer</a>()
+<a name="l00081"></a>00081     {
+<a name="l00082"></a>00082         <span class="keywordflow">return</span> (<a class="code" href="classThreeDRenderLayer.html">ThreeDRenderLayer</a>*) <a class="code" href="classGRenderer.html#a759e3925773ab00aba75a6d85f0d47ae">m_renderLayers</a>[<a class="code" href="LayerIDs_8h.html#ada0325790665429965ccf1b63beec404a006c2e85d226d493c2afffae05fd6020">Layer_3D</a>];
+<a name="l00083"></a>00083     }
+<a name="l00084"></a>00084 
+<a name="l00085"></a><a class="code" href="classGRenderer.html#a362ab6eb0a315a128badd5324a4cb6d0">00085</a>     <a class="code" href="classTextureMonitor.html">TextureMonitor</a>* <a class="code" href="classGRenderer.html#a362ab6eb0a315a128badd5324a4cb6d0">getTextureMonitor</a>()
+<a name="l00086"></a>00086     {
+<a name="l00087"></a>00087         <span class="keywordflow">return</span> <a class="code" href="classGRenderer.html#ad3fd08380e4b8afde17ac08579e0bbe6">m_textureMonitor</a>;
+<a name="l00088"></a>00088     }
+<a name="l00089"></a>00089 
+<a name="l00090"></a><a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">00090</a>     <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>* <a class="code" href="classGRenderer.html#a5869a90c441779b8a14860a951aea0bd">getRenderLog</a>()
+<a name="l00091"></a>00091     {
+<a name="l00092"></a>00092         <span class="keywordflow">return</span> <a class="code" href="classGRenderer.html#aaa54efa3a56d6b287e530a05ef582329">m_gameRenderLog</a>;
+<a name="l00093"></a>00093     }
+<a name="l00094"></a>00094 
+<a name="l00095"></a><a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">00095</a>     <a class="code" href="classRenderWindow.html">RenderWindow</a>* <a class="code" href="classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27">getWindow</a>()
+<a name="l00096"></a>00096     {
+<a name="l00097"></a>00097         <span class="keywordflow">if</span> (<a class="code" href="classGRenderer.html#a9ec4d0e348b779ff80a5f94f7de631af">m_renderAPI</a> != 0)
+<a name="l00098"></a>00098             <span class="keywordflow">return</span> <a class="code" href="classGRenderer.html#a9ec4d0e348b779ff80a5f94f7de631af">m_renderAPI</a>-&gt;<a class="code" href="classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16">getRenderWindow</a>();
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100         <span class="keywordflow">return</span> 0;
+<a name="l00101"></a>00101     }
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103     <span class="keywordtype">void</span> <a class="code" href="classGRenderer.html#a503d677353a71ed75a56f36a00b97cd8">setRenderWireframeValue</a>(<span class="keywordtype">bool</span> value);
+<a name="l00104"></a>00104     <span class="keywordtype">bool</span> <a class="code" href="classGRenderer.html#ae100867bb26b1d1ed795bbcdfea57176">getRenderWireframeValue</a>();
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106     <span class="keyword">static</span> <a class="code" href="classGRenderer.html" title="The core renderer class - Singleton.">GRenderer</a>* <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">getRenderer</a>();
+<a name="l00107"></a>00107 };
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 <span class="preprocessor">#endif //_RENDER_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 16:59:23 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

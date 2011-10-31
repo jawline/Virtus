@@ -8,6 +8,7 @@ using namespace std;
 class LocalFolder : public Folder
 {
 private:
+	static const char* TAG;
 
     string m_localFolderPath;
     string m_localName;

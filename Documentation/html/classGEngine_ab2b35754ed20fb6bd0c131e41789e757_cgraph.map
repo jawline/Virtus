@@ -12,7 +12,7 @@
 <area shape="rect" id="node38" href="$classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27" title="GRenderer::getWindow" alt="" coords="229,325,387,354"/>
 <area shape="rect" id="node42" href="$classGEngine.html#af9b11a02b018385249d96e9a8201d513" title="GEngine::initializeInputBindings" alt="" coords="205,589,411,618"/>
 <area shape="rect" id="node44" href="$classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588" title="FREngine::Load" alt="" coords="251,642,365,671"/>
-<area shape="rect" id="node61" href="$classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="517,831,659,861"/>
+<area shape="rect" id="node61" href="$classLogWriter.html#abe31e4f2a2011936e2ef925657074a10" title="Write the specified line to the log." alt="" coords="519,831,657,861"/>
 <area shape="rect" id="node69" href="$classRenderWindow.html#a9950d9b256c7b37be2011b5a5fd23181" title="RenderWindow::setDimensions" alt="" coords="205,749,411,778"/>
 <area shape="rect" id="node71" href="$classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285" title="GEngine::setErrorDetails" alt="" coords="225,695,391,725"/>
 <area shape="rect" id="node74" href="$classRenderWindow.html#a575c1bceb25c3629ec4f363779aade6b" title="RenderWindow::setFullscreen" alt="" coords="209,853,407,882"/>
