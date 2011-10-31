@@ -1,18 +1,19 @@
 #ifndef _LOCAL_DATA_INPUT_STREAM_DEF_H_
 #define _LOCAL_DATA_INPUT_STREAM_DEF_H_
 #include <stdio.h>
-#include <string.h>
+#include <string>
+using namespace std;
 #include "Stream.h"
 
 class LocalDataInputStream : public DataInputStream
 {
 private:
-    char* m_localDataFilePath;
+    string m_localDataFilePath;
     FILE* m_fileInputStream;
 
 public:
 
-    LocalDataInputStream(const char* filePath);
+    LocalDataInputStream(string filePath);
     ~LocalDataInputStream();
 
     bool read(void* target, unsigned long amount);

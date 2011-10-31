@@ -1,3 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$classTerrainData.html" title="TerrainData" alt="" coords="5,5,96,35"/>
+<area shape="rect" id="node1" href="$classShaderFactory.html" title="ShaderFactory" alt="" coords="5,5,112,35"/>
+<area shape="rect" id="node3" href="$classGLShaderFactory.html" title="GLShaderFactory" alt="" coords="161,5,284,35"/>
 </map>

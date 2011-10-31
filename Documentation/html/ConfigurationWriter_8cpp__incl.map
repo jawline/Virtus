@@ -1,11 +1,11 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$ConfigurationWriter_8h.html" title="ConfigurationWriter.h" alt="" coords="523,83,667,112"/>
-<area shape="rect" id="node19" href="$ConfigurationFolder_8h.html" title="ConfigurationFolder.h" alt="" coords="5,83,152,112"/>
-<area shape="rect" id="node24" href="$ConfigurationString_8h.html" title="ConfigurationString.h" alt="" coords="176,83,320,112"/>
-<area shape="rect" id="node27" href="$ConfigurationNumber_8h.html" title="ConfigurationNumber.h" alt="" coords="344,83,499,112"/>
-<area shape="rect" id="node30" href="$Utils_8h.html" title="Filesystem/Utils.h" alt="" coords="691,83,819,112"/>
+<area shape="rect" id="node21" href="$ConfigurationFolder_8h.html" title="ConfigurationFolder.h" alt="" coords="5,83,152,112"/>
+<area shape="rect" id="node26" href="$ConfigurationString_8h.html" title="ConfigurationString.h" alt="" coords="176,83,320,112"/>
+<area shape="rect" id="node29" href="$ConfigurationNumber_8h.html" title="ConfigurationNumber.h" alt="" coords="344,83,499,112"/>
+<area shape="rect" id="node32" href="$Utils_8h.html" title="Filesystem/Utils.h" alt="" coords="691,83,819,112"/>
 <area shape="rect" id="node5" href="$ConfigurationNode_8h.html" title="ConfigurationNode.h" alt="" coords="240,160,381,189"/>
 <area shape="rect" id="node13" href="$File_8h.html" title="Filesystem/File.h" alt="" coords="533,160,656,189"/>
 <area shape="rect" id="node15" href="$Node_8h.html" title="Node.h" alt="" coords="516,237,580,267"/>
-<area shape="rect" id="node17" href="$Stream_8h.html" title="Stream.h" alt="" coords="604,237,679,267"/>
+<area shape="rect" id="node19" href="$Stream_8h.html" title="Stream.h" alt="" coords="604,237,679,267"/>
 </map>

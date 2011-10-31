@@ -5,26 +5,27 @@
 
 const int folderId = 2;
 
-class Folder : public FilesystemNode
-{
+/**
+ * @brief The abstraction of a folder within the filesystem
+ *
+ */
+class Folder: public FilesystemNode {
 public:
 
-    virtual unsigned int numChildren() = 0;
-    virtual FilesystemNode* getChild(unsigned int number) = 0;
+	virtual unsigned int numChildren() = 0;
+	virtual FilesystemNode* getChild(unsigned int number) = 0;
 
-    virtual void refresh() = 0;
-    virtual File* newChild(const char* Name) = 0;
-    virtual Folder* newChildFolder(const char* Name) = 0;
-    virtual FilesystemNode* searchForChild(const char* Name, unsigned int nameLength = 0) = 0;
+	virtual void refresh() = 0;
+	virtual File* newChild(string name) = 0;
+	virtual Folder* newChildFolder(string name) = 0;
+	virtual FilesystemNode* searchForChild(string name) = 0;
 
-    int getType()
-    {
-        return folderId;
-    }
+	int getType() {
+		return folderId;
+	}
 
-    virtual ~Folder()
-    {
-    }
+	virtual ~Folder() {
+	}
 
 };
 

@@ -7,10 +7,10 @@
 
 void ConfigurationWriter::startNewLine(unsigned int depth, DataOutputStream* outputStream)
 {
-    FilesystemUtils::writeLineToStream(outputStream, "\n");
+    FsUtils::writeLineToStream(outputStream, "\n");
 
     for (unsigned int i = 0; i < depth; i++)
-        FilesystemUtils::writeLineToStream(outputStream, "\n");
+        FsUtils::writeLineToStream(outputStream, "\n");
 
 }
 
@@ -26,7 +26,7 @@ void ConfigurationWriter::outputNode(ConfigurationNode* Node, unsigned int depth
 
         //Create the line folder "NAME" { and write it to the file
         sprintf(lineBuffer, "folder \"%s\" {", Node->getName());
-        FilesystemUtils::writeLineToStream(outStrm, lineBuffer);
+        FsUtils::writeLineToStream(outStrm, lineBuffer);
 
         //Loop through each child and write them in as children
         ConfigurationFolder* folder = static_cast<ConfigurationFolder*> (Node);
@@ -45,7 +45,7 @@ void ConfigurationWriter::outputNode(ConfigurationNode* Node, unsigned int depth
         startNewLine(depth, outStrm);
 
         //Output the } to signify the end of the folder in the file
-        FilesystemUtils::writeLineToStream(outStrm, "}");
+        FsUtils::writeLineToStream(outStrm, "}");
 
     }
     else if (Node->getType() == configurationString)
@@ -59,7 +59,7 @@ void ConfigurationWriter::outputNode(ConfigurationNode* Node, unsigned int depth
 
         //Write the string line using fprintf
         sprintf(lineBuffer, "string \"%s\" = \"%s\";", Node->getName(), string->getStringData());
-        FilesystemUtils::writeLineToStream(outStrm, lineBuffer);
+        FsUtils::writeLineToStream(outStrm, lineBuffer);
 
 
     }
@@ -74,7 +74,7 @@ void ConfigurationWriter::outputNode(ConfigurationNode* Node, unsigned int depth
 
         //Write the number line using fprintf
         sprintf(lineBuffer, "number \"%s\" = %f;", Node->getName(), Number->getValue());
-        FilesystemUtils::writeLineToStream(outStrm, lineBuffer);
+        FsUtils::writeLineToStream(outStrm, lineBuffer);
 
     }
     else

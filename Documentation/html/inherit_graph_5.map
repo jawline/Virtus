@@ -1,3 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$classConfigurationReader.html" title="ConfigurationReader" alt="" coords="5,5,147,35"/>
+<area shape="rect" id="node1" href="$classConfigurationNode.html" title="ConfigurationNode" alt="" coords="5,59,136,88"/>
+<area shape="rect" id="node3" href="$classConfigurationFolder.html" title="A implementation of a configuration folder, it has a number of children pointers to them and a name..." alt="" coords="191,5,324,35"/>
+<area shape="rect" id="node5" href="$classConfigurationNumber.html" title="ConfigurationNumber" alt="" coords="185,59,329,88"/>
+<area shape="rect" id="node7" href="$classConfigurationString.html" title="ConfigurationString" alt="" coords="191,112,324,141"/>
 </map>

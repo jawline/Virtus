@@ -80,7 +80,7 @@
 <a name="l00040"></a>00040         <span class="keywordflow">return</span> 0;
 <a name="l00041"></a>00041     }
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043     <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* node = <a class="code" href="classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), Name.c_str());
+<a name="l00043"></a>00043     <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* node = <a class="code" href="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), Name);
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045     <span class="keywordflow">if</span> (node == 0)
 <a name="l00046"></a>00046     {
@@ -98,9 +98,9 @@
 <a name="l00058"></a>00058         <span class="keywordflow">return</span> 0;
 <a name="l00059"></a>00059     }
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061     <a class="code" href="classFile.html">File</a>* castToFile = <span class="keyword">static_cast&lt;</span><a class="code" href="classFile.html">File</a>*<span class="keyword">&gt;</span> (node);
+<a name="l00061"></a>00061     <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* castToFile = <span class="keyword">static_cast&lt;</span><a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>*<span class="keyword">&gt;</span> (node);
 <a name="l00062"></a>00062 
-<a name="l00063"></a>00063     <a class="code" href="classDataInputStream.html">DataInputStream</a>* newStream = castToFile-&gt;<a class="code" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d">createInputStream</a>();
+<a name="l00063"></a>00063     <a class="code" href="classDataInputStream.html">DataInputStream</a>* newStream = castToFile-&gt;<a class="code" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file.">createInputStream</a>();
 <a name="l00064"></a>00064     newStream-&gt;<a class="code" href="classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0">open</a>(<span class="keyword">false</span>);
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066     <span class="keywordflow">if</span> (<a class="code" href="classTextureMonitor.html#acab296e108e056a6ebd9cbc3a6393d22">m_Loader</a>.<a class="code" href="classTextureLoader.html#ab4f8ba75bdda15786fb7480c64126328">load</a>(newTexture, newStream) == <span class="keyword">false</span>)
@@ -144,7 +144,7 @@
 <a name="l00104"></a>00104 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

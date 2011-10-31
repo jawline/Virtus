@@ -2,18 +2,19 @@
 #define _LOCALOUTPUT_STREAM_DEF_H_
 #include "Stream.h"
 #include <stdio.h>
-#include <string.h>
+#include <string>
+using namespace std;
 
 class LocalDataOutputStream : public DataOutputStream
 {
 private:
 
-    char* m_filePath;
+    string m_filePath;
     FILE* m_fileOutputStream;
 
 public:
 
-    LocalDataOutputStream(const char* FilePath);
+    LocalDataOutputStream(string FilePath);
     ~LocalDataOutputStream();
 
     bool isOpen();

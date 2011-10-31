@@ -42,32 +42,33 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _LOCALOUTPUT_STREAM_DEF_H_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="Stream_8h.html">Stream.h</a>&quot;</span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;string.h&gt;</span>
-<a name="l00006"></a>00006 
-<a name="l00007"></a><a class="code" href="classLocalDataOutputStream.html">00007</a> <span class="keyword">class </span><a class="code" href="classLocalDataOutputStream.html">LocalDataOutputStream</a> : <span class="keyword">public</span> <a class="code" href="classDataOutputStream.html">DataOutputStream</a>
-<a name="l00008"></a>00008 {
-<a name="l00009"></a>00009 <span class="keyword">private</span>:
-<a name="l00010"></a>00010 
-<a name="l00011"></a><a class="code" href="classLocalDataOutputStream.html#ab3824181b6827da7e234e24d500225cb">00011</a>     <span class="keywordtype">char</span>* <a class="code" href="classLocalDataOutputStream.html#ab3824181b6827da7e234e24d500225cb">m_filePath</a>;
-<a name="l00012"></a><a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">00012</a>     FILE* <a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a>;
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014 <span class="keyword">public</span>:
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016     <a class="code" href="classLocalDataOutputStream.html#adde87b62ba95d87f69b3e03918e3e6c5">LocalDataOutputStream</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* FilePath);
-<a name="l00017"></a>00017     <a class="code" href="classLocalDataOutputStream.html#a5d82300a5a7dacb13103e76d6d3e0eec">~LocalDataOutputStream</a>();
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019     <span class="keywordtype">bool</span> <a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">isOpen</a>();
-<a name="l00020"></a>00020     <span class="keywordtype">bool</span> <a class="code" href="classLocalDataOutputStream.html#a49c8b8f106e31f43a53fdb4dc97bcb84">open</a>( <span class="keywordtype">bool</span> textMode );
-<a name="l00021"></a>00021     <span class="keywordtype">void</span> <a class="code" href="classLocalDataOutputStream.html#a46ee7220f3a49d70d218f12a91189ef2">close</a>();
-<a name="l00022"></a>00022     <span class="keywordtype">bool</span> <a class="code" href="classLocalDataOutputStream.html#ae4e380067f584433c820f6d2dedc8048">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* Data, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> len);
-<a name="l00023"></a>00023     <span class="keywordtype">void</span> <a class="code" href="classLocalDataOutputStream.html#a9f75bf364b5c9ae39594f2729b48fb37">flush</a>();
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 };
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027 <span class="preprocessor">#endif //_LOCALOUTPUT_STREAM_DEF_H_</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00006"></a>00006 <span class="keyword">using namespace </span>std;
+<a name="l00007"></a>00007 
+<a name="l00008"></a><a class="code" href="classLocalDataOutputStream.html">00008</a> <span class="keyword">class </span><a class="code" href="classLocalDataOutputStream.html">LocalDataOutputStream</a> : <span class="keyword">public</span> <a class="code" href="classDataOutputStream.html">DataOutputStream</a>
+<a name="l00009"></a>00009 {
+<a name="l00010"></a>00010 <span class="keyword">private</span>:
+<a name="l00011"></a>00011 
+<a name="l00012"></a><a class="code" href="classLocalDataOutputStream.html#a6da91e80ea9ea53c7e68b7d23e1d627f">00012</a>     <span class="keywordtype">string</span> <a class="code" href="classLocalDataOutputStream.html#a6da91e80ea9ea53c7e68b7d23e1d627f">m_filePath</a>;
+<a name="l00013"></a><a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">00013</a>     FILE* <a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a>;
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="keyword">public</span>:
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017     <a class="code" href="classLocalDataOutputStream.html">LocalDataOutputStream</a>(<span class="keywordtype">string</span> FilePath);
+<a name="l00018"></a>00018     ~<a class="code" href="classLocalDataOutputStream.html">LocalDataOutputStream</a>();
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020     <span class="keywordtype">bool</span> isOpen();
+<a name="l00021"></a>00021     <span class="keywordtype">bool</span> open( <span class="keywordtype">bool</span> textMode );
+<a name="l00022"></a>00022     <span class="keywordtype">void</span> close();
+<a name="l00023"></a>00023     <span class="keywordtype">bool</span> write(<span class="keyword">const</span> <span class="keywordtype">void</span>* Data, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> len);
+<a name="l00024"></a>00024     <span class="keywordtype">void</span> flush();
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 };
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <span class="preprocessor">#endif //_LOCALOUTPUT_STREAM_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

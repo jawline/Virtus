@@ -120,7 +120,7 @@
 <a name="l00080"></a>00080     }
 <a name="l00081"></a>00081 
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083     <a class="code" href="classFile.html">File</a>* shdFile = (<a class="code" href="classFile.html">File</a>*) <a class="code" href="classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), <span class="stringliteral">&quot;Data/Shaders/Terrain.shader&quot;</span>);
+<a name="l00083"></a>00083     <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* shdFile = (<a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>*) <a class="code" href="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), <span class="stringliteral">&quot;Data/Shaders/Terrain.shader&quot;</span>);
 <a name="l00084"></a>00084     <a class="code" href="classTerrainNode.html#acf87a7467da2d415a2d7c5593b9c91af">m_terrainShader</a> = <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()-&gt;<a class="code" href="classGraphicsAPI.html#a88b068374a288bc87236d3fce4750eac">getShaderFactory</a>()-&gt;<a class="code" href="classShaderFactory.html#a928c77b9bd4506b667635cc853ab0f81">loadShader</a>(shdFile);
 <a name="l00085"></a>00085 
 <a name="l00086"></a>00086     <span class="keywordflow">if</span> (<a class="code" href="classTerrainNode.html#acf87a7467da2d415a2d7c5593b9c91af">m_terrainShader</a> != 0)
@@ -264,7 +264,7 @@
 <a name="l00224"></a>00224     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (light_type == <a class="code" href="TerrainNode_8h.html#ad5240f63a202d28552bcca618f1283ef">slopeLighting</a>)
 <a name="l00225"></a>00225     {
 <a name="l00226"></a>00226 
-<a name="l00227"></a>00227         lightVector = lightVector.<a class="code" href="classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc" title="Returna new vector containing the normalization of this one.">normalize</a>();
+<a name="l00227"></a>00227         lightVector = lightVector.<a class="code" href="classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc" title="Return a new vector containing the normalization of this one.">normalize</a>();
 <a name="l00228"></a>00228 
 <a name="l00229"></a>00229         <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x = 0; x &lt; l_terrainLength; ++x)
 <a name="l00230"></a>00230         {
@@ -312,7 +312,7 @@
 <a name="l00272"></a>00272 <span class="comment">                vectorBetweenPointAndLight.y = m_terrainData[(z * m_terrainLength) + x];</span>
 <a name="l00273"></a>00273 <span class="comment">                vectorBetweenPointAndLight.z = lightVector.z - (z + m_position.z);</span>
 <a name="l00274"></a>00274 <span class="comment">*/</span>
-<a name="l00275"></a>00275                 vectorBetweenPointAndLight = vectorBetweenPointAndLight.<a class="code" href="classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc" title="Returna new vector containing the normalization of this one.">normalize</a>();
+<a name="l00275"></a>00275                 vectorBetweenPointAndLight = vectorBetweenPointAndLight.<a class="code" href="classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc" title="Return a new vector containing the normalization of this one.">normalize</a>();
 <a name="l00276"></a>00276 
 <a name="l00277"></a>00277 
 <a name="l00278"></a>00278                 <a class="code" href="classTerrainNode.html#a8be2b6c24ae198a0776e017d6804726c">m_lightingData</a>[(z * l_terrainLength) + x] = <a class="code" href="classTerrainNode.html#a1557ce91558ea5add43038d8c5ff67a2">m_ambientLight</a>;
@@ -415,7 +415,7 @@
 <a name="l00375"></a>00375 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

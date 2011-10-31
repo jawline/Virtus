@@ -108,7 +108,7 @@ public:
     float length();
 
     /**
-     * @brief Returna new vector containing the normalization of this one
+     * @brief Return a new vector containing the normalization of this one
      */
 
     Vector3f normalize();

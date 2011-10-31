@@ -63,7 +63,7 @@ Collaboration diagram for LogWriter:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogWriter.html#a872de1970984353798acf1d0328da71b">LogWriter</a> (<a class="el" href="classFile.html">File</a> *file)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a instance of a log bound to a specific FileSystem <a class="el" href="classFile.html">File</a>.  <a href="#a872de1970984353798acf1d0328da71b"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a instance of a log bound to a specific FileSystem <a class="el" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>.  <a href="#a872de1970984353798acf1d0328da71b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogWriter.html#a1cc506a798c0573b3ea87e3401a0e24e">~LogWriter</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the log. Flushes any buffers and deinitializes all.  <a href="#a1cc506a798c0573b3ea87e3401a0e24e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe">writeData</a> (const char *Data)</td></tr>
@@ -96,18 +96,18 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Creates a instance of a log bound to a specific FileSystem <a class="el" href="classFile.html">File</a>. </p>
+<p>Creates a instance of a log bound to a specific FileSystem <a class="el" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>. </p>
 
 <p>Definition at line <a class="el" href="LogWriter_8cpp_source.html#l00005">5</a> of file <a class="el" href="LogWriter_8cpp_source.html">LogWriter.cpp</a>.</p>
 
-<p>References <a class="el" href="classFile.html#a29f2b872d0cec26b0fb706cbd7934628">File::createOutputStream()</a>, <a class="el" href="classFilesystemNode.html#ae72c4830dc5036ec8878ca2499a141ce">FilesystemNode::getName()</a>, <a class="el" href="LogWriter_8h_source.html#l00014">m_logOutStream</a>, and <a class="el" href="classDataOutputStream.html#a3b640f16e0de59b60082c054db67f706">DataOutputStream::open()</a>.</p>
+<p>References <a class="el" href="classFile.html#a29f2b872d0cec26b0fb706cbd7934628">File::createOutputStream()</a>, <a class="el" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8">FilesystemNode::getName()</a>, <a class="el" href="LogWriter_8h_source.html#l00014">m_logOutStream</a>, and <a class="el" href="classDataOutputStream.html#a3b640f16e0de59b60082c054db67f706">DataOutputStream::open()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLogWriter_a872de1970984353798acf1d0328da71b_cgraph.png" border="0" usemap="#classLogWriter_a872de1970984353798acf1d0328da71b_cgraph" alt=""/></div>
 <map name="classLogWriter_a872de1970984353798acf1d0328da71b_cgraph" id="classLogWriter_a872de1970984353798acf1d0328da71b_cgraph">
-<area shape="rect" id="node3" href="classFile.html#a29f2b872d0cec26b0fb706cbd7934628" title="File::createOutputStream" alt="" coords="203,5,371,35"/><area shape="rect" id="node5" href="classFilesystemNode.html#ae72c4830dc5036ec8878ca2499a141ce" title="FilesystemNode::getName" alt="" coords="197,59,376,88"/><area shape="rect" id="node7" href="classDataOutputStream.html#a3b640f16e0de59b60082c054db67f706" title="DataOutputStream::open" alt="" coords="204,112,369,141"/></map>
+<area shape="rect" id="node3" href="classFile.html#a29f2b872d0cec26b0fb706cbd7934628" title="Create a output stream to that file." alt="" coords="203,5,371,35"/><area shape="rect" id="node5" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8" title="FilesystemNode::getName" alt="" coords="197,59,376,88"/><area shape="rect" id="node7" href="classDataOutputStream.html#a3b640f16e0de59b60082c054db67f706" title="DataOutputStream::open" alt="" coords="204,112,369,141"/></map>
 </div>
 </p>
 
@@ -155,16 +155,16 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="LogWriter_8cpp_source.html#l00058">58</a> of file <a class="el" href="LogWriter_8cpp_source.html">LogWriter.cpp</a>.</p>
 
-<p>References <a class="el" href="Filesystem_8cpp_source.html#l00006">Filesystem::evaluateChild()</a>, <a class="el" href="Folder_8h_source.html#l00006">folderId</a>, <a class="el" href="Filesystem_8cpp_source.html#l00097">Filesystem::getRoot()</a>, <a class="el" href="Folder_8h_source.html#l00020">Folder::getType()</a>, <a class="el" href="classFolder.html#a86e65707748fb4e35f2cd7e60d452804">Folder::newChild()</a>, and <a class="el" href="classFolder.html#ac9bd343406ddd4ee391558234e637cd1">Folder::searchForChild()</a>.</p>
+<p>References <a class="el" href="Filesystem_8cpp_source.html#l00006">Filesystem::evaluateChild()</a>, <a class="el" href="Folder_8h_source.html#l00006">folderId</a>, <a class="el" href="Filesystem_8cpp_source.html#l00104">Filesystem::getRoot()</a>, <a class="el" href="Folder_8h_source.html#l00023">Folder::getType()</a>, <a class="el" href="classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428">Folder::newChild()</a>, and <a class="el" href="classFolder.html#a56700301248e09d2eae56bc7b2a00c0e">Folder::searchForChild()</a>.</p>
 
-<p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00037">GRenderer::initialize()</a>, and <a class="el" href="GEngine_8cpp_source.html#l00078">GEngine::initialize()</a>.</p>
+<p>Referenced by <a class="el" href="GRender_8cpp_source.html#l00037">GRenderer::initialize()</a>, and <a class="el" href="GEngine_8cpp_source.html#l00074">GEngine::initialize()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLogWriter_ab898d65cc8de37fa352cfd8a10b3bb1a_cgraph.png" border="0" usemap="#classLogWriter_ab898d65cc8de37fa352cfd8a10b3bb1a_cgraph" alt=""/></div>
 <map name="classLogWriter_ab898d65cc8de37fa352cfd8a10b3bb1a_cgraph" id="classLogWriter_ab898d65cc8de37fa352cfd8a10b3bb1a_cgraph">
-<area shape="rect" id="node3" href="classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896" title="Filesystem::evaluateChild" alt="" coords="243,7,416,36"/><area shape="rect" id="node7" href="classFolder.html#ac9bd343406ddd4ee391558234e637cd1" title="Folder::searchForChild" alt="" coords="473,59,628,88"/><area shape="rect" id="node9" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117" title="Filesystem::getRoot" alt="" coords="260,111,399,140"/><area shape="rect" id="node13" href="classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5" title="Folder::getType" alt="" coords="273,164,385,193"/><area shape="rect" id="node15" href="classFolder.html#a86e65707748fb4e35f2cd7e60d452804" title="Folder::newChild" alt="" coords="269,217,389,247"/><area shape="rect" id="node5" href="classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c" title="FilesystemNode::getType" alt="" coords="465,5,636,35"/><area shape="rect" id="node11" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="497,112,604,141"/></map>
+<area shape="rect" id="node3" href="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d" title="Filesystem::evaluateChild" alt="" coords="243,7,416,36"/><area shape="rect" id="node7" href="classFolder.html#a56700301248e09d2eae56bc7b2a00c0e" title="Folder::searchForChild" alt="" coords="473,59,628,88"/><area shape="rect" id="node9" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117" title="Filesystem::getRoot" alt="" coords="260,111,399,140"/><area shape="rect" id="node13" href="classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5" title="Folder::getType" alt="" coords="273,164,385,193"/><area shape="rect" id="node15" href="classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428" title="Folder::newChild" alt="" coords="269,217,389,247"/><area shape="rect" id="node5" href="classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c" title="FilesystemNode::getType" alt="" coords="465,5,636,35"/><area shape="rect" id="node11" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="497,112,604,141"/></map>
 </div>
 </p>
 
@@ -191,7 +191,7 @@ Here is the call graph for this function:</div>
 
 <p>References <a class="el" href="classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea">DataOutputStream::flush()</a>, <a class="el" href="classDataOutputStream.html#a3b2832e1e54e9c045056a54b64efa20b">DataOutputStream::isOpen()</a>, <a class="el" href="LogWriter_8h_source.html#l00014">m_logOutStream</a>, and <a class="el" href="classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9">DataOutputStream::write()</a>.</p>
 
-<p>Referenced by <a class="el" href="Hive_8cpp_source.html#l00006">BeeHive::BeeHive()</a>, <a class="el" href="FREngine_8cpp_source.html#l00258">FREngine::Cleanup()</a>, <a class="el" href="FontMap_8cpp_source.html#l00072">FontMap::Cleanup()</a>, <a class="el" href="TextureMonitor_8cpp_source.html#l00030">TextureMonitor::f_loadEntity()</a>, <a class="el" href="GLShader_8cpp_source.html#l00009">GLShader::GLShader()</a>, <a class="el" href="FREngine_8cpp_source.html#l00019">FREngine::Init()</a>, <a class="el" href="GRender_8cpp_source.html#l00037">GRenderer::initialize()</a>, <a class="el" href="GLAPI_8cpp_source.html#l00048">GL2GraphicsAPI::initialize()</a>, <a class="el" href="GEngine_8cpp_source.html#l00078">GEngine::initialize()</a>, <a class="el" href="FREngine_8cpp_source.html#l00033">FREngine::Load()</a>, <a class="el" href="GLShader_8cpp_source.html#l00056">GLShader::loadShader()</a>, <a class="el" href="GLTexture_8cpp_source.html#l00028">GLTexture::loadTextureData()</a>, <a class="el" href="GEngine_8cpp_source.html#l00583">GEngine::setErrorDetails()</a>, <a class="el" href="GEngine_8cpp_source.html#l00298">GEngine::uninitialize()</a>, <a class="el" href="Hive_8cpp_source.html#l00029">BeeHive::~BeeHive()</a>, and <a class="el" href="GLShader_8cpp_source.html#l00028">GLShader::~GLShader()</a>.</p>
+<p>Referenced by <a class="el" href="Hive_8cpp_source.html#l00006">BeeHive::BeeHive()</a>, <a class="el" href="FREngine_8cpp_source.html#l00258">FREngine::Cleanup()</a>, <a class="el" href="FontMap_8cpp_source.html#l00072">FontMap::Cleanup()</a>, <a class="el" href="TextureMonitor_8cpp_source.html#l00030">TextureMonitor::f_loadEntity()</a>, <a class="el" href="GLShader_8cpp_source.html#l00009">GLShader::GLShader()</a>, <a class="el" href="FREngine_8cpp_source.html#l00019">FREngine::Init()</a>, <a class="el" href="GRender_8cpp_source.html#l00037">GRenderer::initialize()</a>, <a class="el" href="GLAPI_8cpp_source.html#l00048">GL2GraphicsAPI::initialize()</a>, <a class="el" href="GEngine_8cpp_source.html#l00074">GEngine::initialize()</a>, <a class="el" href="FREngine_8cpp_source.html#l00033">FREngine::Load()</a>, <a class="el" href="GLShader_8cpp_source.html#l00056">GLShader::loadShader()</a>, <a class="el" href="GLTexture_8cpp_source.html#l00028">GLTexture::loadTextureData()</a>, <a class="el" href="GEngine_8cpp_source.html#l00548">GEngine::setErrorDetails()</a>, <a class="el" href="GEngine_8cpp_source.html#l00294">GEngine::uninitialize()</a>, <a class="el" href="Hive_8cpp_source.html#l00029">BeeHive::~BeeHive()</a>, and <a class="el" href="GLShader_8cpp_source.html#l00028">GLShader::~GLShader()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -227,7 +227,7 @@ Here is the call graph for this function:</div>
 <li>Code/LogWriter/<a class="el" href="LogWriter_8cpp_source.html">LogWriter.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -46,7 +46,7 @@
 <a name="l00006"></a><a class="code" href="classInterfaceLayer.html#ab8a225a223437de4d9b9f81b524d639d">00006</a> <a class="code" href="classInterfaceLayer.html#ab8a225a223437de4d9b9f81b524d639d">InterfaceLayer::InterfaceLayer</a>()
 <a name="l00007"></a>00007 {
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009     <span class="keywordflow">if</span> ( <a class="code" href="classInterfaceLayer.html#ae308f3a42e31e831f469a207860fe93a">m_defaultTextRenderer</a>.<a class="code" href="classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588">Load</a>( (<a class="code" href="classFile.html">File</a>*) <a class="code" href="classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), <span class="stringliteral">&quot;Data/fonts/default.ttf&quot;</span>)) == false );
+<a name="l00009"></a>00009     <span class="keywordflow">if</span> ( <a class="code" href="classInterfaceLayer.html#ae308f3a42e31e831f469a207860fe93a">m_defaultTextRenderer</a>.<a class="code" href="classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588">Load</a>( (<a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>*) <a class="code" href="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Data/fonts/default.ttf&quot;</span>) )) == false );
 <a name="l00010"></a>00010     {
 <a name="l00011"></a>00011         printf(<span class="stringliteral">&quot;InterfaceLayer: Unable to load Data/fonts/default.ttf. Continuing, expect errors\n&quot;</span>);
 <a name="l00012"></a>00012     }
@@ -209,7 +209,7 @@
 <a name="l00169"></a>00169 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

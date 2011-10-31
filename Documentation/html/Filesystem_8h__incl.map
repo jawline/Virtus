@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$Folder_8h.html" title="Folder.h" alt="" coords="71,83,140,112"/>
-<area shape="rect" id="node5" href="$Node_8h.html" title="Node.h" alt="" coords="51,237,115,267"/>
-<area shape="rect" id="node7" href="$File_8h.html" title="File.h" alt="" coords="143,160,196,189"/>
-<area shape="rect" id="node10" href="$Stream_8h.html" title="Stream.h" alt="" coords="139,237,213,267"/>
+<area shape="rect" id="node3" href="$Folder_8h.html" title="Folder.h" alt="" coords="107,83,176,112"/>
+<area shape="rect" id="node5" href="$Node_8h.html" title="Node.h" alt="" coords="155,237,219,267"/>
+<area shape="rect" id="node9" href="$File_8h.html" title="File.h" alt="" coords="68,160,121,189"/>
+<area shape="rect" id="node12" href="$Stream_8h.html" title="Stream.h" alt="" coords="56,237,131,267"/>
 </map>

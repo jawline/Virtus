@@ -5,13 +5,14 @@
 #include <Input/InputEvent.h>
 #include <Input/Postbox.h>
 #include <Input/Keys.h>
-#include "FPSCalculator.h"
-#include "API/Application.h"
-#include "Configure/ConfigurationInstance.h"
-#include "HIVE/Hive.h"
+#include <Core/FPSCalculator.h>
+#include <API/Application.h>
+#include <Configure/ConfigurationInstance.h>
+#include <HIVE/Hive.h>
 #include <Filesystem/Filesystem.h>
 #include <Filesystem/LocalFolder.h>
 #include <LogWriter/LogWriter.h>
+#include <Core/Clock.h>
 
 typedef struct
 {
@@ -37,6 +38,8 @@ private:
     void freeInputBindings();
 
     FPSCalculator m_fpsCalculator;
+
+    Clock m_clock;
 
     EventManager* m_eventManager;
 

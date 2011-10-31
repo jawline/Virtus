@@ -2,31 +2,34 @@
 #define _LOCAL_FOLDER_DEF_H_
 #include "Folder.h"
 #include <vector>
+#include <string>
+using namespace std;
 
 class LocalFolder : public Folder
 {
 private:
-    char* m_localFolderPath;
-    char* m_localName;
+
+    string m_localFolderPath;
+    string m_localName;
 
     std::vector<FilesystemNode*> m_entryList;
     void emptyList();
 
 public:
 
-    LocalFolder(const char* Name, const char* Path);
+    LocalFolder(string Name, string Path);
     ~LocalFolder();
 
     unsigned int numChildren();
     FilesystemNode* getChild(unsigned int n);
 
-    File* newChild(const char* filename);
-    Folder* newChildFolder(const char* Name);
+    File* newChild(string filename);
+    Folder* newChildFolder(string Name);
 
     void refresh();
 
-    char* getName() { return m_localName; }
-    FilesystemNode* searchForChild(const char* Name, unsigned int nameLength = 0);
+    string getName() { return m_localName; }
+    FilesystemNode* searchForChild(std::string Name);
 
 };
 

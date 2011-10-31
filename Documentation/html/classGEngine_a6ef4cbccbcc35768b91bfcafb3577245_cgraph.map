@@ -1,7 +1,7 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$classGEngine.html#a2f445aaf503b28d11a6fcc8a3cc11b59" title="GEngine::GEngine" alt="" coords="203,435,333,465"/>
 <area shape="rect" id="node5" href="$classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757" title="GEngine::initialize" alt="" coords="205,489,331,518"/>
-<area shape="rect" id="node7" href="$classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896" title="Filesystem::evaluateChild" alt="" coords="701,66,875,95"/>
+<area shape="rect" id="node7" href="$classFilesystem.html#a37a43994ca9f07366fe93e361955f75d" title="Filesystem::evaluateChild" alt="" coords="701,66,875,95"/>
 <area shape="rect" id="node13" href="$classInterfaceLayer.html#a1f2ffa561b6ef715df829159c0b38462" title="InterfaceLayer::getDefaultTextRenderer" alt="" coords="383,65,633,94"/>
 <area shape="rect" id="node15" href="$classGRenderer.html#a6eee2e3bcc7a5bbeedfdb308b4ea7b65" title="GRenderer::getInterfaceManager" alt="" coords="403,118,613,147"/>
 <area shape="rect" id="node17" href="$classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877" title="ConfigurationInstance::getNode" alt="" coords="405,171,611,201"/>
@@ -21,17 +21,17 @@
 <area shape="rect" id="node80" href="$classRenderWindow.html#a2a806dfe5cc5503a1144902a0378ca4b" title="RenderWindow::setInputPostbox" alt="" coords="401,910,615,939"/>
 <area shape="rect" id="node82" href="$classRenderWindow.html#a6f6d06722d9661df64d3b2fbe2357364" title="RenderWindow::setTitle" alt="" coords="427,963,589,993"/>
 <area shape="rect" id="node9" href="$classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c" title="FilesystemNode::getType" alt="" coords="947,66,1117,95"/>
-<area shape="rect" id="node11" href="$classFolder.html#ac9bd343406ddd4ee391558234e637cd1" title="Folder::searchForChild" alt="" coords="955,119,1109,149"/>
+<area shape="rect" id="node11" href="$classFolder.html#a56700301248e09d2eae56bc7b2a00c0e" title="Folder::searchForChild" alt="" coords="955,119,1109,149"/>
 <area shape="rect" id="node26" href="$classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5" title="Folder::getType" alt="" coords="732,171,844,201"/>
-<area shape="rect" id="node28" href="$classFolder.html#a86e65707748fb4e35f2cd7e60d452804" title="Folder::newChild" alt="" coords="728,225,848,254"/>
+<area shape="rect" id="node28" href="$classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428" title="Folder::newChild" alt="" coords="728,225,848,254"/>
 <area shape="rect" id="node24" href="$classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="979,278,1085,307"/>
 <area shape="rect" id="node33" href="$classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="955,409,1109,438"/>
 <area shape="rect" id="node44" href="$classGraphicsAPI.html#a0bb0f880e4c6c71214ffecd2beeacc16" title="GraphicsAPI::getRenderWindow" alt="" coords="683,331,893,361"/>
-<area shape="rect" id="node50" href="$classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="File::createInputStream" alt="" coords="709,515,867,545"/>
-<area shape="rect" id="node52" href="$classFilesystemNode.html#ae72c4830dc5036ec8878ca2499a141ce" title="FilesystemNode::getName" alt="" coords="699,569,877,598"/>
+<area shape="rect" id="node50" href="$classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file." alt="" coords="709,515,867,545"/>
+<area shape="rect" id="node52" href="$classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8" title="FilesystemNode::getName" alt="" coords="699,569,877,598"/>
 <area shape="rect" id="node55" href="$classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="701,622,875,651"/>
 <area shape="rect" id="node57" href="$classFile.html#a43d0e1af3412f6b04b0fde9af3cef442" title="File::getType" alt="" coords="739,675,837,705"/>
-<area shape="rect" id="node59" href="$classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="File::length" alt="" coords="745,729,831,758"/>
+<area shape="rect" id="node59" href="$classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file." alt="" coords="745,729,831,758"/>
 <area shape="rect" id="node61" href="$classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0" title="DataInputStream::open" alt="" coords="709,782,867,811"/>
 <area shape="rect" id="node63" href="$classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60" title="DataInputStream::read" alt="" coords="711,462,865,491"/>
 <area shape="rect" id="node67" href="$classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="949,835,1115,865"/>

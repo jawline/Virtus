@@ -70,7 +70,7 @@
 <a name="l00030"></a>00030     <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00031"></a>00031 }
 <a name="l00032"></a>00032 
-<a name="l00033"></a><a class="code" href="classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588">00033</a> <span class="keywordtype">bool</span> <a class="code" href="classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588">FREngine::Load</a>(<a class="code" href="classFile.html">File</a>* filenode)
+<a name="l00033"></a><a class="code" href="classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588">00033</a> <span class="keywordtype">bool</span> <a class="code" href="classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588">FREngine::Load</a>(<a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* filenode)
 <a name="l00034"></a>00034 {
 <a name="l00035"></a>00035     <span class="comment">//Null sent return false</span>
 <a name="l00036"></a>00036     <span class="keywordflow">if</span> (filenode == 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;
@@ -79,9 +79,9 @@
 <a name="l00039"></a>00039     <span class="keywordflow">if</span> (filenode-&gt;<a class="code" href="classFile.html#a43d0e1af3412f6b04b0fde9af3cef442">getType</a>() != <a class="code" href="File_8h.html#a9d0ea989dfb1959561f444bc90cb1981">fileId</a>) <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041     <span class="comment">//Empty file obviously isn&#39;t a font</span>
-<a name="l00042"></a>00042     <span class="keywordflow">if</span> (filenode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b">length</a>() == 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00042"></a>00042     <span class="keywordflow">if</span> (filenode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file.">length</a>() == 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00043"></a>00043 
-<a name="l00044"></a>00044     <a class="code" href="classDataInputStream.html">DataInputStream</a>* strm = filenode-&gt;<a class="code" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d">createInputStream</a>();
+<a name="l00044"></a>00044     <a class="code" href="classDataInputStream.html">DataInputStream</a>* strm = filenode-&gt;<a class="code" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file.">createInputStream</a>();
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046     <span class="keywordflow">if</span> (strm == 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00047"></a>00047 
@@ -91,9 +91,9 @@
 <a name="l00051"></a>00051         <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00052"></a>00052     }
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054     <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data = <span class="keyword">new</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>[ filenode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b">length</a>() ];
+<a name="l00054"></a>00054     <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data = <span class="keyword">new</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>[ filenode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file.">length</a>() ];
 <a name="l00055"></a>00055 
-<a name="l00056"></a>00056     <span class="keywordflow">if</span> (strm-&gt;<a class="code" href="classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60">read</a>(data, filenode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b">length</a>()) == <span class="keyword">false</span>)
+<a name="l00056"></a>00056     <span class="keywordflow">if</span> (strm-&gt;<a class="code" href="classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60">read</a>(data, filenode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file.">length</a>()) == <span class="keyword">false</span>)
 <a name="l00057"></a>00057     {
 <a name="l00058"></a>00058         <span class="keyword">delete</span>[] data;
 <a name="l00059"></a>00059         <span class="keyword">delete</span> strm;
@@ -103,7 +103,7 @@
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064     <span class="keyword">delete</span> strm;
 <a name="l00065"></a>00065 
-<a name="l00066"></a>00066     <span class="keywordtype">int</span> Return = FT_New_Memory_Face(<a class="code" href="classFREngine.html#a92a9273d94f124ae80a25f53aaa62d7e">Library</a>, data, filenode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b">length</a>(), 0, &amp;<a class="code" href="classFREngine.html#a95ed22a25015adea4679b3b309bc16dd">FontFace</a>);
+<a name="l00066"></a>00066     <span class="keywordtype">int</span> Return = FT_New_Memory_Face(<a class="code" href="classFREngine.html#a92a9273d94f124ae80a25f53aaa62d7e">Library</a>, data, filenode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file.">length</a>(), 0, &amp;<a class="code" href="classFREngine.html#a95ed22a25015adea4679b3b309bc16dd">FontFace</a>);
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068     <span class="comment">//TODO: Work out a way of deleting the data when it&#39;s no longer needed</span>
 <a name="l00069"></a>00069     <span class="comment">//delete[] data;</span>
@@ -122,7 +122,7 @@
 <a name="l00082"></a>00082     <a class="code" href="classFREngine.html#af59f92539246c39015306f61f90bef7f">GlyphSlot</a> = <a class="code" href="classFREngine.html#a95ed22a25015adea4679b3b309bc16dd">FontFace</a>-&gt;glyph;
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084     std::string lString = <span class="stringliteral">&quot;Loaded freetype font: &quot;</span>;
-<a name="l00085"></a>00085     lString += filenode-&gt;<a class="code" href="classFilesystemNode.html#ae72c4830dc5036ec8878ca2499a141ce">getName</a>();
+<a name="l00085"></a>00085     lString += filenode-&gt;<a class="code" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8">getName</a>();
 <a name="l00086"></a>00086     lString += <span class="stringliteral">&quot;\n&quot;</span>;
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088     <span class="keywordflow">if</span> (<a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;getRenderLog() != 0)
@@ -330,7 +330,7 @@
 <a name="l00290"></a>00290 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

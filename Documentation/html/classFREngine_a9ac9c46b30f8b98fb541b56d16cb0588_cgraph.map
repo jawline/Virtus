@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="File::createInputStream" alt="" coords="181,5,339,35"/>
-<area shape="rect" id="node5" href="$classFilesystemNode.html#ae72c4830dc5036ec8878ca2499a141ce" title="FilesystemNode::getName" alt="" coords="171,59,349,88"/>
+<area shape="rect" id="node3" href="$classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file." alt="" coords="181,5,339,35"/>
+<area shape="rect" id="node5" href="$classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8" title="FilesystemNode::getName" alt="" coords="171,59,349,88"/>
 <area shape="rect" id="node7" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="179,112,341,141"/>
 <area shape="rect" id="node11" href="$classGRenderer.html#a5869a90c441779b8a14860a951aea0bd" title="GRenderer::getRenderLog" alt="" coords="173,165,347,195"/>
 <area shape="rect" id="node13" href="$classFile.html#a43d0e1af3412f6b04b0fde9af3cef442" title="File::getType" alt="" coords="211,219,309,248"/>
-<area shape="rect" id="node15" href="$classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="File::length" alt="" coords="217,272,303,301"/>
+<area shape="rect" id="node15" href="$classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file." alt="" coords="217,272,303,301"/>
 <area shape="rect" id="node17" href="$classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0" title="DataInputStream::open" alt="" coords="181,325,339,355"/>
 <area shape="rect" id="node19" href="$classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60" title="DataInputStream::read" alt="" coords="183,379,337,408"/>
 <area shape="rect" id="node21" href="$classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="189,432,331,461"/>

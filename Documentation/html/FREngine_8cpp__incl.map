@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$FREngine_8h.html" title="FREngine.h" alt="" coords="265,83,356,112"/>
-<area shape="rect" id="node13" href="$File_8h.html" title="Filesystem/File.h" alt="" coords="568,160,691,189"/>
-<area shape="rect" id="node19" href="$FontMap_8h.html" title="FontMap.h" alt="" coords="231,160,313,189"/>
-<area shape="rect" id="node15" href="$Node_8h.html" title="Node.h" alt="" coords="691,237,755,267"/>
-<area shape="rect" id="node17" href="$Stream_8h.html" title="Stream.h" alt="" coords="592,237,667,267"/>
-<area shape="rect" id="node24" href="$FontChar_8h.html" title="FontChar.h" alt="" coords="387,237,472,267"/>
+<area shape="rect" id="node3" href="$FREngine_8h.html" title="FREngine.h" alt="" coords="242,83,333,112"/>
+<area shape="rect" id="node13" href="$File_8h.html" title="Filesystem/File.h" alt="" coords="89,160,211,189"/>
+<area shape="rect" id="node20" href="$FontMap_8h.html" title="FontMap.h" alt="" coords="286,160,369,189"/>
+<area shape="rect" id="node15" href="$Node_8h.html" title="Node.h" alt="" coords="121,237,185,267"/>
+<area shape="rect" id="node18" href="$Stream_8h.html" title="Stream.h" alt="" coords="22,237,97,267"/>
+<area shape="rect" id="node25" href="$FontChar_8h.html" title="FontChar.h" alt="" coords="563,237,649,267"/>
 </map>

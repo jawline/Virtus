@@ -1,7 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node11" href="$File_8h.html" title="Filesystem/File.h" alt="" coords="568,83,691,112"/>
-<area shape="rect" id="node17" href="$FontMap_8h.html" title="FontMap.h" alt="" coords="231,83,313,112"/>
-<area shape="rect" id="node13" href="$Node_8h.html" title="Node.h" alt="" coords="691,160,755,189"/>
-<area shape="rect" id="node15" href="$Stream_8h.html" title="Stream.h" alt="" coords="592,160,667,189"/>
-<area shape="rect" id="node22" href="$FontChar_8h.html" title="FontChar.h" alt="" coords="387,160,472,189"/>
+<area shape="rect" id="node11" href="$File_8h.html" title="Filesystem/File.h" alt="" coords="89,83,211,112"/>
+<area shape="rect" id="node18" href="$FontMap_8h.html" title="FontMap.h" alt="" coords="286,83,369,112"/>
+<area shape="rect" id="node13" href="$Node_8h.html" title="Node.h" alt="" coords="121,160,185,189"/>
+<area shape="rect" id="node16" href="$Stream_8h.html" title="Stream.h" alt="" coords="22,160,97,189"/>
+<area shape="rect" id="node23" href="$FontChar_8h.html" title="FontChar.h" alt="" coords="563,160,649,189"/>
 </map>

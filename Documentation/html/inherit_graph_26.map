@@ -1,7 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$classIElement.html" title="the abstraction of a base element within the engine" alt="" coords="5,85,80,115"/>
-<area shape="rect" id="node3" href="$classButton.html" title="Button" alt="" coords="169,5,228,35"/>
-<area shape="rect" id="node5" href="$classCheckbox.html" title="Checkbox" alt="" coords="159,59,239,88"/>
-<area shape="rect" id="node7" href="$classStaticText.html" title="A piece of static text to be displayed." alt="" coords="157,112,240,141"/>
-<area shape="rect" id="node9" href="$classViewerUserInterface.html" title="ViewerUserInterface" alt="" coords="128,165,269,195"/>
+<area shape="rect" id="node1" href="$classGRenderLayer.html" title="GRenderLayer" alt="" coords="5,32,112,61"/>
+<area shape="rect" id="node3" href="$classInterfaceLayer.html" title="The engine interface render layer." alt="" coords="177,5,281,35"/>
+<area shape="rect" id="node5" href="$classThreeDRenderLayer.html" title="ThreeDRenderLayer" alt="" coords="160,59,299,88"/>
 </map>

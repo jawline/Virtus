@@ -44,22 +44,23 @@
 This is the complete list of members for <a class="el" href="classLocalFolder.html">LocalFolder</a>, including all inherited members.<table>
   <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0">emptyList</a>()</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a5aa9e6cff85958d95204f8f1e37e0dca">getChild</a>(unsigned int n)</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [virtual]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a78d800c9c8f8666c86448f8ac52d19ac">getName</a>()</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [inline, virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#af8027f4d2af6e4cba5feee85df75d54c">getName</a>()</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [inline, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5">getType</a>()</td><td><a class="el" href="classFolder.html">Folder</a></td><td><code> [inline, virtual]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a41049d219d73d0f20ee42d817c608818">LocalFolder</a>(const char *Name, const char *Path)</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238">LocalFolder</a>(string Name, string Path)</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a></td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [private]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#ab9651b25fcbde44cc5c0f78c59a5d894">m_localFolderPath</a></td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [private]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a72fd0f774239a963e342a454a80c8bc5">m_localName</a></td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [private]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a610a63c1558ec67a2c135c522a1ac32a">newChild</a>(const char *filename)</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [virtual]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a8c45a1fe8d397febbcd39eb5c0ef901a">newChildFolder</a>(const char *Name)</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a></td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a7e4fbd509abd9d25d9994782b61df44f">m_localName</a></td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#af9eea69e0cd51a2f563a51232f51519f">newChild</a>(string filename)</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a3d8a9d563114ea9c611348d8c3ce6309">newChildFolder</a>(string Name)</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a016d89627e9a5294077d843db4f4d3d0">numChildren</a>()</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classLocalFolder.html#aa6b99367df578f30adf336efa71649fe">refresh</a>()</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [virtual]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a18b331f02bad299954423c02964f68c2">searchForChild</a>(const char *Name, unsigned int nameLength=0)</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td><code> [virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf">searchForChild</a>(std::string Name)</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classFolder.html#a56700301248e09d2eae56bc7b2a00c0e">Folder::searchForChild</a>(string name)=0</td><td><a class="el" href="classFolder.html">Folder</a></td><td><code> [pure virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classFilesystemNode.html#a045774a9d9fcb3abf9094919469b9f80">~FilesystemNode</a>()</td><td><a class="el" href="classFilesystemNode.html">FilesystemNode</a></td><td><code> [inline, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classFolder.html#acecf6e0bbceb55415a4c5aaf324eb4a9">~Folder</a>()</td><td><a class="el" href="classFolder.html">Folder</a></td><td><code> [inline, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classLocalFolder.html#a3ddc7ebe6f95cccdeec5374f99042378">~LocalFolder</a>()</td><td><a class="el" href="classLocalFolder.html">LocalFolder</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

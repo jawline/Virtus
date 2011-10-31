@@ -16,12 +16,12 @@ LogWriter::LogWriter(File* file)
     {
         if ( m_logOutStream->open(true) == false)
         {
-            printf("Unable to open output stream for file %s\n", file->getName());
+            printf("Unable to open output stream for file %s\n", file->getName().c_str());
         }
     }
     else
     {
-        printf("LogWriter unable to create output stream for file %s\n", file->getName());
+        printf("LogWriter unable to create output stream for file %s\n", file->getName().c_str());
     }
 
 }

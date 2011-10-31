@@ -40,7 +40,7 @@ void* TextureMonitor::f_loadEntity(std::string Name)
         return 0;
     }
 
-    FilesystemNode* node = Filesystem::evaluateChild(Filesystem::getRoot(), Name.c_str());
+    FilesystemNode* node = Filesystem::evaluateChild(Filesystem::getRoot(), Name);
 
     if (node == 0)
     {

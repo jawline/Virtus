@@ -65,7 +65,7 @@ Collaboration diagram for LocalDataInputStream:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalDataInputStream.html#a63832b1b008c4043037386c7c712c7a6">LocalDataInputStream</a> (const char *filePath)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalDataInputStream.html#a7b06d64730290e4732bbf3f8f37d7187">LocalDataInputStream</a> (string filePath)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalDataInputStream.html#a0fcd499a5108916c7898472f473611bc">~LocalDataInputStream</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalDataInputStream.html#a7343e644391852265ca8149b0acea24d">read</a> (void *target, unsigned long amount)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalDataInputStream.html#a28496ab5bb761a2a29b345a98a539b27">close</a> ()</td></tr>
@@ -75,21 +75,21 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalDataInputStream.html#a16ae86709af129b7696749e5d2df0627">rewind</a> (unsigned long bytes)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalDataInputStream.html#ad71239e0508d8cd3ed2619023e7403b7">m_localDataFilePath</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalDataInputStream.html#a11f87f14b52709e2c9f598d128e8c241">m_localDataFilePath</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalDataInputStream.html#a433917f7d2d553c1c91bcec94bdcd368">m_fileInputStream</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="LocalInputStream_8h_source.html#l00007">7</a> of file <a class="el" href="LocalInputStream_8h_source.html">LocalInputStream.h</a>.</p>
+<p>Definition at line <a class="el" href="LocalInputStream_8h_source.html#l00008">8</a> of file <a class="el" href="LocalInputStream_8h_source.html">LocalInputStream.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a63832b1b008c4043037386c7c712c7a6"></a><!-- doxytag: member="LocalDataInputStream::LocalDataInputStream" ref="a63832b1b008c4043037386c7c712c7a6" args="(const char *filePath)" -->
+<a class="anchor" id="a7b06d64730290e4732bbf3f8f37d7187"></a><!-- doxytag: member="LocalDataInputStream::LocalDataInputStream" ref="a7b06d64730290e4732bbf3f8f37d7187" args="(string filePath)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">LocalDataInputStream::LocalDataInputStream </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>filePath</em></td><td>)</td>
           <td></td>
         </tr>
@@ -99,7 +99,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00003">3</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalInputStream_8h_source.html#l00011">m_fileInputStream</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00010">m_localDataFilePath</a>.</p>
+<p>References <a class="el" href="LocalInputStream_8h_source.html#l00012">m_fileInputStream</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00011">m_localDataFilePath</a>.</p>
 
 </div>
 </div>
@@ -117,9 +117,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00013">13</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00010">10</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalInputStream_8cpp_source.html#l00048">close()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00080">isOpen()</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00010">m_localDataFilePath</a>.</p>
+<p>References <a class="el" href="LocalInputStream_8cpp_source.html#l00032">close()</a>, and <a class="el" href="LocalInputStream_8cpp_source.html#l00068">isOpen()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -149,11 +149,11 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classDataInputStream.html#afe2ffd24065dc8dff216896abfc6153a">DataInputStream</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00048">48</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00032">32</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalInputStream_8cpp_source.html#l00080">isOpen()</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00011">m_fileInputStream</a>.</p>
+<p>References <a class="el" href="LocalInputStream_8cpp_source.html#l00068">isOpen()</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00012">m_fileInputStream</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalInputStream_8cpp_source.html#l00013">~LocalDataInputStream()</a>.</p>
+<p>Referenced by <a class="el" href="LocalInputStream_8cpp_source.html#l00010">~LocalDataInputStream()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -182,11 +182,11 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classDataInputStream.html#a7e05b99af408b49e5be07cc178ba23a7">DataInputStream</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00080">80</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00068">68</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalInputStream_8h_source.html#l00011">m_fileInputStream</a>.</p>
+<p>References <a class="el" href="LocalInputStream_8h_source.html#l00012">m_fileInputStream</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalInputStream_8cpp_source.html#l00048">close()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00061">open()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00031">read()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00109">rewind()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00093">skip()</a>, and <a class="el" href="LocalInputStream_8cpp_source.html#l00013">~LocalDataInputStream()</a>.</p>
+<p>Referenced by <a class="el" href="LocalInputStream_8cpp_source.html#l00032">close()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00043">open()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00018">read()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00089">rewind()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00074">skip()</a>, and <a class="el" href="LocalInputStream_8cpp_source.html#l00010">~LocalDataInputStream()</a>.</p>
 
 </div>
 </div>
@@ -207,9 +207,9 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0">DataInputStream</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00061">61</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00043">43</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalInputStream_8cpp_source.html#l00080">isOpen()</a>, <a class="el" href="LocalInputStream_8h_source.html#l00011">m_fileInputStream</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00010">m_localDataFilePath</a>.</p>
+<p>References <a class="el" href="LocalInputStream_8cpp_source.html#l00068">isOpen()</a>, <a class="el" href="LocalInputStream_8h_source.html#l00012">m_fileInputStream</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00011">m_localDataFilePath</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -249,9 +249,9 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60">DataInputStream</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00031">31</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00018">18</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalInputStream_8cpp_source.html#l00080">isOpen()</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00011">m_fileInputStream</a>.</p>
+<p>References <a class="el" href="LocalInputStream_8cpp_source.html#l00068">isOpen()</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00012">m_fileInputStream</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -281,9 +281,9 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classDataInputStream.html#afa9093ed850b8013fd4e4e52a0e7aacd">DataInputStream</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00109">109</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00089">89</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalInputStream_8cpp_source.html#l00080">isOpen()</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00011">m_fileInputStream</a>.</p>
+<p>References <a class="el" href="LocalInputStream_8cpp_source.html#l00068">isOpen()</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00012">m_fileInputStream</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -313,9 +313,9 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classDataInputStream.html#a681a57b13593cc1adb15e4053d1bdebc">DataInputStream</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00093">93</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalInputStream_8cpp_source.html#l00074">74</a> of file <a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalInputStream_8cpp_source.html#l00080">isOpen()</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00011">m_fileInputStream</a>.</p>
+<p>References <a class="el" href="LocalInputStream_8cpp_source.html#l00068">isOpen()</a>, and <a class="el" href="LocalInputStream_8h_source.html#l00012">m_fileInputStream</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -340,26 +340,26 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalInputStream_8h_source.html#l00011">11</a> of file <a class="el" href="LocalInputStream_8h_source.html">LocalInputStream.h</a>.</p>
+<p>Definition at line <a class="el" href="LocalInputStream_8h_source.html#l00012">12</a> of file <a class="el" href="LocalInputStream_8h_source.html">LocalInputStream.h</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalInputStream_8cpp_source.html#l00048">close()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00080">isOpen()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00003">LocalDataInputStream()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00061">open()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00031">read()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00109">rewind()</a>, and <a class="el" href="LocalInputStream_8cpp_source.html#l00093">skip()</a>.</p>
+<p>Referenced by <a class="el" href="LocalInputStream_8cpp_source.html#l00032">close()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00068">isOpen()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00003">LocalDataInputStream()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00043">open()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00018">read()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00089">rewind()</a>, and <a class="el" href="LocalInputStream_8cpp_source.html#l00074">skip()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad71239e0508d8cd3ed2619023e7403b7"></a><!-- doxytag: member="LocalDataInputStream::m_localDataFilePath" ref="ad71239e0508d8cd3ed2619023e7403b7" args="" -->
+<a class="anchor" id="a11f87f14b52709e2c9f598d128e8c241"></a><!-- doxytag: member="LocalDataInputStream::m_localDataFilePath" ref="a11f87f14b52709e2c9f598d128e8c241" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* <a class="el" href="classLocalDataInputStream.html#ad71239e0508d8cd3ed2619023e7403b7">LocalDataInputStream::m_localDataFilePath</a><code> [private]</code></td>
+          <td class="memname">string <a class="el" href="classLocalDataInputStream.html#a11f87f14b52709e2c9f598d128e8c241">LocalDataInputStream::m_localDataFilePath</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalInputStream_8h_source.html#l00010">10</a> of file <a class="el" href="LocalInputStream_8h_source.html">LocalInputStream.h</a>.</p>
+<p>Definition at line <a class="el" href="LocalInputStream_8h_source.html#l00011">11</a> of file <a class="el" href="LocalInputStream_8h_source.html">LocalInputStream.h</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalInputStream_8cpp_source.html#l00003">LocalDataInputStream()</a>, <a class="el" href="LocalInputStream_8cpp_source.html#l00061">open()</a>, and <a class="el" href="LocalInputStream_8cpp_source.html#l00013">~LocalDataInputStream()</a>.</p>
+<p>Referenced by <a class="el" href="LocalInputStream_8cpp_source.html#l00003">LocalDataInputStream()</a>, and <a class="el" href="LocalInputStream_8cpp_source.html#l00043">open()</a>.</p>
 
 </div>
 </div>
@@ -368,7 +368,7 @@ Here is the call graph for this function:</div>
 <li>Code/Filesystem/<a class="el" href="LocalInputStream_8cpp_source.html">LocalInputStream.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

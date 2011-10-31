@@ -42,34 +42,33 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _CONFIGURATION_NUMBER_DEF_H_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="ConfigurationNode_8h.html">ConfigurationNode.h</a>&quot;</span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a><a class="code" href="classConfigurationNumber.html">00005</a> <span class="keyword">class </span><a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a> : <span class="keyword">public</span> <a class="code" href="classConfigurationNode.html">ConfigurationNode</a>
-<a name="l00006"></a>00006 {
-<a name="l00007"></a>00007     <span class="keyword">private</span>:
-<a name="l00008"></a><a class="code" href="classConfigurationNumber.html#a6c389de44d0fd663151dba480e608889">00008</a>         <span class="keywordtype">float</span> <a class="code" href="classConfigurationNumber.html#a6c389de44d0fd663151dba480e608889">m_numberValue</a>;
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010     <span class="keyword">public</span>:
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012         <a class="code" href="classConfigurationNumber.html#a43e1e9c9c157ba19fe8d355dcb126b36">ConfigurationNumber</a>(<span class="keywordtype">char</span>* Name, <span class="keywordtype">float</span> value);
-<a name="l00013"></a>00013         <a class="code" href="classConfigurationNumber.html#ae190103a6a13b11dee24e40d5e22ccd2">~ConfigurationNumber</a>();
-<a name="l00014"></a>00014 
-<a name="l00015"></a><a class="code" href="classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb">00015</a>         <span class="keywordtype">float</span> <a class="code" href="classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb">getValue</a>()
-<a name="l00016"></a>00016         {
-<a name="l00017"></a>00017             <span class="keywordflow">return</span> <a class="code" href="classConfigurationNumber.html#a6c389de44d0fd663151dba480e608889">m_numberValue</a>;
-<a name="l00018"></a>00018         }
-<a name="l00019"></a>00019 
-<a name="l00020"></a><a class="code" href="classConfigurationNumber.html#a7da9537f9a120c9bb1c84df7cee8e073">00020</a>         <span class="keywordtype">void</span> <a class="code" href="classConfigurationNumber.html#a7da9537f9a120c9bb1c84df7cee8e073">setValue</a>(<span class="keywordtype">float</span> val)
-<a name="l00021"></a>00021         {
-<a name="l00022"></a>00022             <a class="code" href="classConfigurationNumber.html#a6c389de44d0fd663151dba480e608889">m_numberValue</a> = val;
-<a name="l00023"></a>00023         }
-<a name="l00024"></a>00024 
-<a name="l00025"></a><a class="code" href="classConfigurationNumber.html#a41a72e7af6576c6e7c217a7c79598581">00025</a>         <span class="keywordtype">int</span> <a class="code" href="classConfigurationNumber.html#a41a72e7af6576c6e7c217a7c79598581">getType</a>() { <span class="keywordflow">return</span> <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310adf9dfa08c709d806355279e2b18d1780">configurationNumber</a>; }
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027 };
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029 <span class="preprocessor">#endif //_CONFIGURATION_NUMBER_DEF_H_</span>
+<a name="l00005"></a><a class="code" href="classConfigurationNumber.html">00005</a> <span class="keyword">class </span><a class="code" href="classConfigurationNumber.html">ConfigurationNumber</a>: <span class="keyword">public</span> <a class="code" href="classConfigurationNode.html">ConfigurationNode</a> {
+<a name="l00006"></a>00006 <span class="keyword">private</span>:
+<a name="l00007"></a><a class="code" href="classConfigurationNumber.html#a6c389de44d0fd663151dba480e608889">00007</a>         <span class="keywordtype">float</span> <a class="code" href="classConfigurationNumber.html#a6c389de44d0fd663151dba480e608889">m_numberValue</a>;
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="keyword">public</span>:
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011         <a class="code" href="classConfigurationNumber.html#a43e1e9c9c157ba19fe8d355dcb126b36">ConfigurationNumber</a>(<span class="keywordtype">char</span>* Name, <span class="keywordtype">float</span> value);
+<a name="l00012"></a>00012         <a class="code" href="classConfigurationNumber.html#ae190103a6a13b11dee24e40d5e22ccd2">~ConfigurationNumber</a>();
+<a name="l00013"></a>00013 
+<a name="l00014"></a><a class="code" href="classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb">00014</a>         <span class="keywordtype">float</span> <a class="code" href="classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb">getValue</a>() {
+<a name="l00015"></a>00015                 <span class="keywordflow">return</span> <a class="code" href="classConfigurationNumber.html#a6c389de44d0fd663151dba480e608889">m_numberValue</a>;
+<a name="l00016"></a>00016         }
+<a name="l00017"></a>00017 
+<a name="l00018"></a><a class="code" href="classConfigurationNumber.html#a7da9537f9a120c9bb1c84df7cee8e073">00018</a>         <span class="keywordtype">void</span> <a class="code" href="classConfigurationNumber.html#a7da9537f9a120c9bb1c84df7cee8e073">setValue</a>(<span class="keywordtype">float</span> val) {
+<a name="l00019"></a>00019                 <a class="code" href="classConfigurationNumber.html#a6c389de44d0fd663151dba480e608889">m_numberValue</a> = val;
+<a name="l00020"></a>00020         }
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="classConfigurationNumber.html#a41a72e7af6576c6e7c217a7c79598581">00022</a>         <span class="keywordtype">int</span> <a class="code" href="classConfigurationNumber.html#a41a72e7af6576c6e7c217a7c79598581">getType</a>() {
+<a name="l00023"></a>00023                 <span class="keywordflow">return</span> <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310adf9dfa08c709d806355279e2b18d1780">configurationNumber</a>;
+<a name="l00024"></a>00024         }
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 };
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <span class="preprocessor">#endif //_CONFIGURATION_NUMBER_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

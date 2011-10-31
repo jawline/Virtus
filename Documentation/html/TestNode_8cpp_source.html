@@ -111,7 +111,7 @@
 <a name="l00071"></a>00071     <a class="code" href="classTestNode.html#afab42929be45b3506da67cbb56f2e1ef">nodeTexture</a> = <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a362ab6eb0a315a128badd5324a4cb6d0">getTextureMonitor</a>()-&gt;<a class="code" href="classTextureMonitor.html#a42d6983e0dfba61fd436176eb787a7f5">getTexture</a>(<span class="stringliteral">&quot;Data/backgrounds/background_2.tga&quot;</span>);
 <a name="l00072"></a>00072 
 <a name="l00073"></a>00073     <span class="comment">//TODO: Check before typecast</span>
-<a name="l00074"></a>00074     <a class="code" href="classFile.html">File</a>* shdFile = (<a class="code" href="classFile.html">File</a>*) <a class="code" href="classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), <span class="stringliteral">&quot;Data/Shaders/Test.shader&quot;</span>);
+<a name="l00074"></a>00074     <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* shdFile = (<a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>*) <a class="code" href="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), <span class="stringliteral">&quot;Data/Shaders/Test.shader&quot;</span>);
 <a name="l00075"></a>00075     <a class="code" href="classTestNode.html#ad29173905a7c875fa934400bfed4d1d0">nodeShader</a> = <a class="code" href="classGRenderer.html#adb025523209b3c42b9866343f23dbe70">GRenderer::getRenderer</a>()-&gt;<a class="code" href="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2">getGraphicsAPI</a>()-&gt;<a class="code" href="classGraphicsAPI.html#a88b068374a288bc87236d3fce4750eac">getShaderFactory</a>()-&gt;<a class="code" href="classShaderFactory.html#a928c77b9bd4506b667635cc853ab0f81">loadShader</a>(shdFile);
 <a name="l00076"></a>00076 
 <a name="l00077"></a>00077     printf(<span class="stringliteral">&quot;Compiling shader\n&quot;</span>);
@@ -545,7 +545,7 @@
 <a name="l00505"></a>00505 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

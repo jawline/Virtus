@@ -1,6 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$classConfigurationInstance.html#a9fc9b437b12644ac672a80304a418be6" title="ConfigurationInstance::loadFromPath" alt="" coords="340,137,577,167"/>
-<area shape="rect" id="node5" href="$classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="File::createInputStream" alt="" coords="677,57,835,87"/>
+<area shape="rect" id="node5" href="$classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file." alt="" coords="677,57,835,87"/>
 <area shape="rect" id="node7" href="$classConfigurationReader.html#ae9804c7377ebc2c0d43b34a1dde21ef1" title="ConfigurationReader::getNextNode" alt="" coords="643,111,869,140"/>
 <area shape="rect" id="node34" href="$classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0" title="DataInputStream::open" alt="" coords="677,164,835,193"/>
 <area shape="rect" id="node36" href="$classConfigurationInstance.html#a9eb24a889cb023a61bd49afc6f1262eb" title="ConfigurationInstance::unloadAndFreeAll" alt="" coords="627,217,885,247"/>

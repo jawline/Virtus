@@ -44,6 +44,9 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="File" --><!-- doxytag: inherits="FilesystemNode" -->
+<p>The abstraction of a file within the filesystem.  
+ <a href="classFile.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="File_8h_source.html">File.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for File:</div>
@@ -67,13 +70,18 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFile.html#a43d0e1af3412f6b04b0fde9af3cef442">getType</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFile.html#a313b1c0dbd15632f3e884639bb0bfa34">~File</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classDataInputStream.html">DataInputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d">createInputStream</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a input stream to that file.  <a href="#a25f707c5bc8f46bd2fb4c057d51a675d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classDataOutputStream.html">DataOutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFile.html#a29f2b872d0cec26b0fb706cbd7934628">createOutputStream</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a output stream to that file.  <a href="#a29f2b872d0cec26b0fb706cbd7934628"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFile.html#a28850906f5f2a1847c4f993eedd95e84">exists</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the file actually exists, or will be created when a output stream is found.  <a href="#a28850906f5f2a1847c4f993eedd95e84"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b">length</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the length of the file.  <a href="#a4e3b483b8707535b96f460f9b7c9152b"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="File_8h_source.html#l00008">8</a> of file <a class="el" href="File_8h_source.html">File.h</a>.</p>
+<div class="textblock"><p>The abstraction of a file within the filesystem. </p>
+
+<p>Definition at line <a class="el" href="File_8h_source.html#l00013">13</a> of file <a class="el" href="File_8h_source.html">File.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a313b1c0dbd15632f3e884639bb0bfa34"></a><!-- doxytag: member="File::~File" ref="a313b1c0dbd15632f3e884639bb0bfa34" args="()" -->
 <div class="memitem">
@@ -89,7 +97,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="File_8h_source.html#l00019">19</a> of file <a class="el" href="File_8h_source.html">File.h</a>.</p>
+<p>Definition at line <a class="el" href="File_8h_source.html#l00024">24</a> of file <a class="el" href="File_8h_source.html">File.h</a>.</p>
 
 </div>
 </div>
@@ -108,9 +116,11 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Create a input stream to that file. </p>
+
 <p>Implemented in <a class="el" href="classLocalFile.html#a2553d6ef0704082c4d80f2349535ca23">LocalFile</a>.</p>
 
-<p>Referenced by <a class="el" href="TextureMonitor_8cpp_source.html#l00030">TextureMonitor::f_loadEntity()</a>, <a class="el" href="Filesystem_8cpp_source.html#l00051">Filesystem::getFileInputStream()</a>, <a class="el" href="FREngine_8cpp_source.html#l00033">FREngine::Load()</a>, <a class="el" href="ConfigurationInstance_8cpp_source.html#l00059">ConfigurationInstance::loadFromPath()</a>, and <a class="el" href="GLShaderFactory_8cpp_source.html#l00142">GLShaderFactory::loadShader()</a>.</p>
+<p>Referenced by <a class="el" href="TextureMonitor_8cpp_source.html#l00030">TextureMonitor::f_loadEntity()</a>, <a class="el" href="Filesystem_8cpp_source.html#l00057">Filesystem::getFileInputStream()</a>, <a class="el" href="FREngine_8cpp_source.html#l00033">FREngine::Load()</a>, <a class="el" href="ConfigurationInstance_8cpp_source.html#l00059">ConfigurationInstance::loadFromPath()</a>, and <a class="el" href="GLShaderFactory_8cpp_source.html#l00142">GLShaderFactory::loadShader()</a>.</p>
 
 </div>
 </div>
@@ -128,9 +138,11 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Create a output stream to that file. </p>
+
 <p>Implemented in <a class="el" href="classLocalFile.html#abd0ec9137043e59f028b1a91c13d80c8">LocalFile</a>.</p>
 
-<p>Referenced by <a class="el" href="Filesystem_8cpp_source.html#l00073">Filesystem::getFileOutputStream()</a>, <a class="el" href="LogWriter_8cpp_source.html#l00005">LogWriter::LogWriter()</a>, and <a class="el" href="ConfigurationInstance_8cpp_source.html#l00024">ConfigurationInstance::writeToPath()</a>.</p>
+<p>Referenced by <a class="el" href="Filesystem_8cpp_source.html#l00079">Filesystem::getFileOutputStream()</a>, <a class="el" href="LogWriter_8cpp_source.html#l00005">LogWriter::LogWriter()</a>, and <a class="el" href="ConfigurationInstance_8cpp_source.html#l00024">ConfigurationInstance::writeToPath()</a>.</p>
 
 </div>
 </div>
@@ -147,6 +159,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Returns true if the file actually exists, or will be created when a output stream is found. </p>
 
 <p>Implemented in <a class="el" href="classLocalFile.html#abc99ed2bb51eb77f0e0b86f79b5c61a6">LocalFile</a>.</p>
 
@@ -168,7 +182,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c">FilesystemNode</a>.</p>
 
-<p>Definition at line <a class="el" href="File_8h_source.html#l00014">14</a> of file <a class="el" href="File_8h_source.html">File.h</a>.</p>
+<p>Definition at line <a class="el" href="File_8h_source.html#l00019">19</a> of file <a class="el" href="File_8h_source.html">File.h</a>.</p>
 
 <p>References <a class="el" href="File_8h_source.html#l00006">fileId</a>.</p>
 
@@ -190,6 +204,8 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Return the length of the file. </p>
+
 <p>Implemented in <a class="el" href="classLocalFile.html#a9e8a4bde444401a0c59ea8cff1152501">LocalFile</a>.</p>
 
 <p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00033">FREngine::Load()</a>, and <a class="el" href="GLShaderFactory_8cpp_source.html#l00142">GLShaderFactory::loadShader()</a>.</p>
@@ -200,7 +216,7 @@ Public Member Functions</h2></td></tr>
 <li>Code/Filesystem/<a class="el" href="File_8h_source.html">File.h</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

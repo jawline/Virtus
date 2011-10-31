@@ -4,6 +4,9 @@
 #include "File.h"
 #include "Node.h"
 
+#include <string>
+using namespace std;
+
 /**
  * Filesystem stores the root of the filesystem and the utility functions to access input and output streams
  */
@@ -21,7 +24,7 @@ public:
      * @return FilesystemNode* The node found, or null if it's not found
      */
 
-    static FilesystemNode* evaluateChild(Folder* Target, const char* targetFile);
+    static FilesystemNode* evaluateChild(Folder* Target, string targetFile);
 
     /**
      * Search for a child node in the filesystem
@@ -29,7 +32,7 @@ public:
      * @return FilesystemNode* The node found, or null if it's not found
      */
 
-     static FilesystemNode* search(const char* targetFile);
+     static FilesystemNode* search(std::string targetFile);
 
     /**
      * Open a input stream to the specified file
@@ -38,7 +41,7 @@ public:
      * @return DataInputStream* The input stream to the file - has not been opened
      */
 
-    static DataInputStream* getFileInputStream(const char* targetFile);
+    static DataInputStream* getFileInputStream(std::string targetFile);
 
     /**
      * Open a output stream to the specified file
@@ -47,7 +50,7 @@ public:
      * @return DataInputStream* The output stream to the file - has not been opened
      */
 
-    static DataOutputStream* getFileOutputStream(const char* targetFile);
+    static DataOutputStream* getFileOutputStream(std::string targetFile);
 
     /**
      * Get the root of the filesystem

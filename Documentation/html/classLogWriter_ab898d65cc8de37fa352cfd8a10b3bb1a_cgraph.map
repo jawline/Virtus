@@ -1,9 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896" title="Filesystem::evaluateChild" alt="" coords="243,7,416,36"/>
-<area shape="rect" id="node7" href="$classFolder.html#ac9bd343406ddd4ee391558234e637cd1" title="Folder::searchForChild" alt="" coords="473,59,628,88"/>
+<area shape="rect" id="node3" href="$classFilesystem.html#a37a43994ca9f07366fe93e361955f75d" title="Filesystem::evaluateChild" alt="" coords="243,7,416,36"/>
+<area shape="rect" id="node7" href="$classFolder.html#a56700301248e09d2eae56bc7b2a00c0e" title="Folder::searchForChild" alt="" coords="473,59,628,88"/>
 <area shape="rect" id="node9" href="$classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117" title="Filesystem::getRoot" alt="" coords="260,111,399,140"/>
 <area shape="rect" id="node13" href="$classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5" title="Folder::getType" alt="" coords="273,164,385,193"/>
-<area shape="rect" id="node15" href="$classFolder.html#a86e65707748fb4e35f2cd7e60d452804" title="Folder::newChild" alt="" coords="269,217,389,247"/>
+<area shape="rect" id="node15" href="$classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428" title="Folder::newChild" alt="" coords="269,217,389,247"/>
 <area shape="rect" id="node5" href="$classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c" title="FilesystemNode::getType" alt="" coords="465,5,636,35"/>
 <area shape="rect" id="node11" href="$classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="497,112,604,141"/>
 </map>

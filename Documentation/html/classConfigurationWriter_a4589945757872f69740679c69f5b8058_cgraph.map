@@ -5,6 +5,6 @@
 <area shape="rect" id="node9" href="$classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb" title="ConfigurationNumber::getValue" alt="" coords="287,165,489,195"/>
 <area shape="rect" id="node11" href="$classConfigurationFolder.html#abfcede97444700bca83822238d2e103f" title="Return the number of children in this node." alt="" coords="264,219,512,248"/>
 <area shape="rect" id="node13" href="$classConfigurationWriter.html#afd3ec657f112e4eae3d5dbf46e253b35" title="ConfigurationWriter::startNewLine" alt="" coords="279,272,497,301"/>
-<area shape="rect" id="node15" href="$classFilesystemUtils.html#a2184bdd61bbb57e810b4362346a36286" title="FilesystemUtils::writeLineToStream" alt="" coords="561,299,791,328"/>
-<area shape="rect" id="node17" href="$classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="841,299,1007,328"/>
+<area shape="rect" id="node15" href="$classFsUtils.html#a140322a1a4355887656d21d1e5793076" title="FsUtils::writeLineToStream" alt="" coords="560,299,741,328"/>
+<area shape="rect" id="node17" href="$classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="791,299,956,328"/>
 </map>

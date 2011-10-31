@@ -47,10 +47,10 @@
 <a name="l00007"></a>00007 
 <a name="l00008"></a><a class="code" href="classConfigurationWriter.html#afd3ec657f112e4eae3d5dbf46e253b35">00008</a> <span class="keywordtype">void</span> <a class="code" href="classConfigurationWriter.html#afd3ec657f112e4eae3d5dbf46e253b35">ConfigurationWriter::startNewLine</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> depth, <a class="code" href="classDataOutputStream.html">DataOutputStream</a>* outputStream)
 <a name="l00009"></a>00009 {
-<a name="l00010"></a>00010     <a class="code" href="classFilesystemUtils.html#a2184bdd61bbb57e810b4362346a36286">FilesystemUtils::writeLineToStream</a>(outputStream, <span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00010"></a>00010     <a class="code" href="classFsUtils.html#a140322a1a4355887656d21d1e5793076">FsUtils::writeLineToStream</a>(outputStream, <span class="stringliteral">&quot;\n&quot;</span>);
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012     <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; depth; i++)
-<a name="l00013"></a>00013         <a class="code" href="classFilesystemUtils.html#a2184bdd61bbb57e810b4362346a36286">FilesystemUtils::writeLineToStream</a>(outputStream, <span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00013"></a>00013         <a class="code" href="classFsUtils.html#a140322a1a4355887656d21d1e5793076">FsUtils::writeLineToStream</a>(outputStream, <span class="stringliteral">&quot;\n&quot;</span>);
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 }
 <a name="l00016"></a>00016 
@@ -66,7 +66,7 @@
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027         <span class="comment">//Create the line folder &quot;NAME&quot; { and write it to the file</span>
 <a name="l00028"></a>00028         sprintf(lineBuffer, <span class="stringliteral">&quot;folder \&quot;%s\&quot; {&quot;</span>, Node-&gt;<a class="code" href="classConfigurationNode.html#aa43c73fa441abb475d68f30732996744">getName</a>());
-<a name="l00029"></a>00029         <a class="code" href="classFilesystemUtils.html#a2184bdd61bbb57e810b4362346a36286">FilesystemUtils::writeLineToStream</a>(outStrm, lineBuffer);
+<a name="l00029"></a>00029         <a class="code" href="classFsUtils.html#a140322a1a4355887656d21d1e5793076">FsUtils::writeLineToStream</a>(outStrm, lineBuffer);
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031         <span class="comment">//Loop through each child and write them in as children</span>
 <a name="l00032"></a>00032         <a class="code" href="classConfigurationFolder.html" title="A implementation of a configuration folder, it has a number of children pointers to them and a name...">ConfigurationFolder</a>* folder = <span class="keyword">static_cast&lt;</span><a class="code" href="classConfigurationFolder.html" title="A implementation of a configuration folder, it has a number of children pointers to them and a name...">ConfigurationFolder</a>*<span class="keyword">&gt;</span> (Node);
@@ -85,7 +85,7 @@
 <a name="l00045"></a>00045         <a class="code" href="classConfigurationWriter.html#afd3ec657f112e4eae3d5dbf46e253b35">startNewLine</a>(depth, outStrm);
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047         <span class="comment">//Output the } to signify the end of the folder in the file</span>
-<a name="l00048"></a>00048         FilesystemUtils::writeLineToStream(outStrm, <span class="stringliteral">&quot;}&quot;</span>);
+<a name="l00048"></a>00048         FsUtils::writeLineToStream(outStrm, <span class="stringliteral">&quot;}&quot;</span>);
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050     }
 <a name="l00051"></a>00051     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Node-&gt;<a class="code" href="classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30">getType</a>() == <a class="code" href="ConfigurationNode_8h.html#a468d3f0ee3c819ce93e3dcef2db03310add618b70afb3f0c772611eb62e2ae862">configurationString</a>)
@@ -99,7 +99,7 @@
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060         <span class="comment">//Write the string line using fprintf</span>
 <a name="l00061"></a>00061         sprintf(lineBuffer, <span class="stringliteral">&quot;string \&quot;%s\&quot; = \&quot;%s\&quot;;&quot;</span>, Node-&gt;<a class="code" href="classConfigurationNode.html#aa43c73fa441abb475d68f30732996744">getName</a>(), <span class="keywordtype">string</span>-&gt;getStringData());
-<a name="l00062"></a>00062         <a class="code" href="classFilesystemUtils.html#a2184bdd61bbb57e810b4362346a36286">FilesystemUtils::writeLineToStream</a>(outStrm, lineBuffer);
+<a name="l00062"></a>00062         <a class="code" href="classFsUtils.html#a140322a1a4355887656d21d1e5793076">FsUtils::writeLineToStream</a>(outStrm, lineBuffer);
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065     }
@@ -114,7 +114,7 @@
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075         <span class="comment">//Write the number line using fprintf</span>
 <a name="l00076"></a>00076         sprintf(lineBuffer, <span class="stringliteral">&quot;number \&quot;%s\&quot; = %f;&quot;</span>, Node-&gt;<a class="code" href="classConfigurationNode.html#aa43c73fa441abb475d68f30732996744">getName</a>(), Number-&gt;<a class="code" href="classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb">getValue</a>());
-<a name="l00077"></a>00077         <a class="code" href="classFilesystemUtils.html#a2184bdd61bbb57e810b4362346a36286">FilesystemUtils::writeLineToStream</a>(outStrm, lineBuffer);
+<a name="l00077"></a>00077         <a class="code" href="classFsUtils.html#a140322a1a4355887656d21d1e5793076">FsUtils::writeLineToStream</a>(outStrm, lineBuffer);
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079     }
 <a name="l00080"></a>00080     <span class="keywordflow">else</span>
@@ -127,7 +127,7 @@
 <a name="l00087"></a>00087 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

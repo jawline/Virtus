@@ -2,7 +2,7 @@
 #define _FILESYSTEM_UTILITY_FUNCTIONS_
 #include "File.h"
 
-class FilesystemUtils
+class FsUtils
 {
 public:
 

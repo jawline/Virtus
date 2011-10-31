@@ -45,33 +45,30 @@
 <a name="l00005"></a>00005 
 <a name="l00006"></a><a class="code" href="Folder_8h.html#a88d9f0fcd19efe0d19fea117268be2a8">00006</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="Folder_8h.html#a88d9f0fcd19efe0d19fea117268be2a8">folderId</a> = 2;
 <a name="l00007"></a>00007 
-<a name="l00008"></a><a class="code" href="classFolder.html">00008</a> <span class="keyword">class </span><a class="code" href="classFolder.html">Folder</a> : <span class="keyword">public</span> <a class="code" href="classFilesystemNode.html">FilesystemNode</a>
-<a name="l00009"></a>00009 {
-<a name="l00010"></a>00010 <span class="keyword">public</span>:
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012     <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classFolder.html#ae23a04e096a0cd53dd3feecf0bd96c80">numChildren</a>() = 0;
-<a name="l00013"></a>00013     <span class="keyword">virtual</span> <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* <a class="code" href="classFolder.html#a20e1ec7bdd5a34d1ed6ba3d614d9581a">getChild</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> number) = 0;
+<a name="l00012"></a><a class="code" href="classFolder.html">00012</a> <span class="keyword">class </span><a class="code" href="classFolder.html" title="The abstraction of a folder within the filesystem.">Folder</a>: <span class="keyword">public</span> <a class="code" href="classFilesystemNode.html">FilesystemNode</a> {
+<a name="l00013"></a>00013 <span class="keyword">public</span>:
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2">refresh</a>() = 0;
-<a name="l00016"></a>00016     <span class="keyword">virtual</span> <a class="code" href="classFile.html">File</a>* <a class="code" href="classFolder.html#a86e65707748fb4e35f2cd7e60d452804">newChild</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Name) = 0;
-<a name="l00017"></a>00017     <span class="keyword">virtual</span> <a class="code" href="classFolder.html">Folder</a>* <a class="code" href="classFolder.html#a92d12c385ac1080a44767cf431bf8230">newChildFolder</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Name) = 0;
-<a name="l00018"></a>00018     <span class="keyword">virtual</span> <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* <a class="code" href="classFolder.html#ac9bd343406ddd4ee391558234e637cd1">searchForChild</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Name, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nameLength = 0) = 0;
-<a name="l00019"></a>00019 
-<a name="l00020"></a><a class="code" href="classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5">00020</a>     <span class="keywordtype">int</span> <a class="code" href="classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5">getType</a>()
-<a name="l00021"></a>00021     {
-<a name="l00022"></a>00022         <span class="keywordflow">return</span> <a class="code" href="Folder_8h.html#a88d9f0fcd19efe0d19fea117268be2a8">folderId</a>;
-<a name="l00023"></a>00023     }
-<a name="l00024"></a>00024 
-<a name="l00025"></a><a class="code" href="classFolder.html#acecf6e0bbceb55415a4c5aaf324eb4a9">00025</a>     <span class="keyword">virtual</span> <a class="code" href="classFolder.html#acecf6e0bbceb55415a4c5aaf324eb4a9">~Folder</a>()
-<a name="l00026"></a>00026     {
-<a name="l00027"></a>00027     }
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029 };
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <span class="preprocessor">#endif //_FILESYSTEM_FOLDER_DEF_H_</span>
+<a name="l00015"></a>00015         <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classFolder.html#ae23a04e096a0cd53dd3feecf0bd96c80">numChildren</a>() = 0;
+<a name="l00016"></a>00016         <span class="keyword">virtual</span> <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* <a class="code" href="classFolder.html#a20e1ec7bdd5a34d1ed6ba3d614d9581a">getChild</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> number) = 0;
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2">refresh</a>() = 0;
+<a name="l00019"></a>00019         <span class="keyword">virtual</span> <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* <a class="code" href="classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428">newChild</a>(<span class="keywordtype">string</span> name) = 0;
+<a name="l00020"></a>00020         <span class="keyword">virtual</span> <a class="code" href="classFolder.html" title="The abstraction of a folder within the filesystem.">Folder</a>* <a class="code" href="classFolder.html#a74501a9c3cb239194005ceb8a2536416">newChildFolder</a>(<span class="keywordtype">string</span> name) = 0;
+<a name="l00021"></a>00021         <span class="keyword">virtual</span> <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* <a class="code" href="classFolder.html#a56700301248e09d2eae56bc7b2a00c0e">searchForChild</a>(<span class="keywordtype">string</span> name) = 0;
+<a name="l00022"></a>00022 
+<a name="l00023"></a><a class="code" href="classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5">00023</a>         <span class="keywordtype">int</span> <a class="code" href="classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5">getType</a>() {
+<a name="l00024"></a>00024                 <span class="keywordflow">return</span> <a class="code" href="Folder_8h.html#a88d9f0fcd19efe0d19fea117268be2a8">folderId</a>;
+<a name="l00025"></a>00025         }
+<a name="l00026"></a>00026 
+<a name="l00027"></a><a class="code" href="classFolder.html#acecf6e0bbceb55415a4c5aaf324eb4a9">00027</a>         <span class="keyword">virtual</span> <a class="code" href="classFolder.html#acecf6e0bbceb55415a4c5aaf324eb4a9">~Folder</a>() {
+<a name="l00028"></a>00028         }
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 };
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="preprocessor">#endif //_FILESYSTEM_FOLDER_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

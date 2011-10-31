@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896" title="Filesystem::evaluateChild" alt="" coords="221,32,395,61"/>
+<area shape="rect" id="node3" href="$classFilesystem.html#a37a43994ca9f07366fe93e361955f75d" title="Filesystem::evaluateChild" alt="" coords="221,32,395,61"/>
 <area shape="rect" id="node9" href="$classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2" title="GRenderer::getGraphicsAPI" alt="" coords="216,85,400,115"/>
 <area shape="rect" id="node11" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="227,139,389,168"/>
 <area shape="rect" id="node15" href="$classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117" title="Filesystem::getRoot" alt="" coords="239,192,377,221"/>
@@ -14,7 +14,7 @@
 <area shape="rect" id="node39" href="$classShader.html#ade9d59c311b425f568dd7d8ad5fad19e" title="Shader::setTextureName" alt="" coords="224,672,392,701"/>
 <area shape="rect" id="node41" href="$classVertexSet.html#acbece1981a6126fbadbd7942cf31d28d" title="VertexSet::setVertices" alt="" coords="231,725,385,755"/>
 <area shape="rect" id="node5" href="$classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c" title="FilesystemNode::getType" alt="" coords="492,5,663,35"/>
-<area shape="rect" id="node7" href="$classFolder.html#ac9bd343406ddd4ee391558234e637cd1" title="Folder::searchForChild" alt="" coords="500,59,655,88"/>
+<area shape="rect" id="node7" href="$classFolder.html#a56700301248e09d2eae56bc7b2a00c0e" title="Folder::searchForChild" alt="" coords="500,59,655,88"/>
 <area shape="rect" id="node13" href="$classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="500,139,655,168"/>
 <area shape="rect" id="node17" href="$classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="524,192,631,221"/>
 <area shape="rect" id="node23" href="$classResourceMonitor.html#a22691a8a097d240e12b78d5faa931b0d" title="ResourceMonitor::rmGetResource" alt="" coords="467,299,688,328"/>

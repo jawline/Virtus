@@ -51,44 +51,48 @@ Inheritance diagram for LocalFile:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLocalFile__inherit__graph.png" border="0" usemap="#LocalFile_inherit__map" alt="Inheritance graph"/></div>
 <map name="LocalFile_inherit__map" id="LocalFile_inherit__map">
-<area shape="rect" id="node2" href="classFile.html" title="File" alt="" coords="43,83,85,112"/><area shape="rect" id="node4" href="classFilesystemNode.html" title="FilesystemNode" alt="" coords="5,5,123,35"/></map>
+<area shape="rect" id="node2" href="classFile.html" title="The abstraction of a file within the filesystem." alt="" coords="43,83,85,112"/><area shape="rect" id="node4" href="classFilesystemNode.html" title="FilesystemNode" alt="" coords="5,5,123,35"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for LocalFile:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLocalFile__coll__graph.png" border="0" usemap="#LocalFile_coll__map" alt="Collaboration graph"/></div>
 <map name="LocalFile_coll__map" id="LocalFile_coll__map">
-<area shape="rect" id="node2" href="classFile.html" title="File" alt="" coords="43,83,85,112"/><area shape="rect" id="node4" href="classFilesystemNode.html" title="FilesystemNode" alt="" coords="5,5,123,35"/></map>
+<area shape="rect" id="node2" href="classFile.html" title="The abstraction of a file within the filesystem." alt="" coords="43,83,85,112"/><area shape="rect" id="node4" href="classFilesystemNode.html" title="FilesystemNode" alt="" coords="5,5,123,35"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classLocalFile-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#a0e5a564b952bf19a35ee874967836206">LocalFile</a> (const char *FullPath)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#a8596cd99f3eb81d0c38a763c8188731e">LocalFile</a> (string FullPath)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#a739f67ada55c6d28a3540412bc81a4a9">~LocalFile</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDataInputStream.html">DataInputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#a2553d6ef0704082c4d80f2349535ca23">createInputStream</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a input stream to that file.  <a href="#a2553d6ef0704082c4d80f2349535ca23"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDataOutputStream.html">DataOutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#abd0ec9137043e59f028b1a91c13d80c8">createOutputStream</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a output stream to that file.  <a href="#abd0ec9137043e59f028b1a91c13d80c8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#abc99ed2bb51eb77f0e0b86f79b5c61a6">exists</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the file actually exists, or will be created when a output stream is found.  <a href="#abc99ed2bb51eb77f0e0b86f79b5c61a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#a9e8a4bde444401a0c59ea8cff1152501">length</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#acbb5052c66fb0c331e5303f74bc45285">getName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the length of the file.  <a href="#a9e8a4bde444401a0c59ea8cff1152501"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#a285481756f0b72e50f6638dfe6c3ad3f">getName</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#a595913c14e5fee72ad36e6e4bbe01f50">m_localFilePath</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#ac20324c4a131f88d5342be8db58ef10e">m_localName</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#a2b8075c988095091e6ffcf24597f09d6">m_localFilePath</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFile.html#a6bf7df0c750209e1d977bb5b34709bc1">m_localName</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="LocalFile_8h_source.html#l00005">5</a> of file <a class="el" href="LocalFile_8h_source.html">LocalFile.h</a>.</p>
+<p>Definition at line <a class="el" href="LocalFile_8h_source.html#l00007">7</a> of file <a class="el" href="LocalFile_8h_source.html">LocalFile.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0e5a564b952bf19a35ee874967836206"></a><!-- doxytag: member="LocalFile::LocalFile" ref="a0e5a564b952bf19a35ee874967836206" args="(const char *FullPath)" -->
+<a class="anchor" id="a8596cd99f3eb81d0c38a763c8188731e"></a><!-- doxytag: member="LocalFile::LocalFile" ref="a8596cd99f3eb81d0c38a763c8188731e" args="(string FullPath)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">LocalFile::LocalFile </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>FullPath</em></td><td>)</td>
           <td></td>
         </tr>
@@ -98,7 +102,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="LocalFile_8cpp_source.html#l00008">8</a> of file <a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFile_8h_source.html#l00008">m_localFilePath</a>, and <a class="el" href="LocalFile_8h_source.html#l00009">m_localName</a>.</p>
+<p>References <a class="el" href="LocalFile_8h_source.html#l00010">m_localFilePath</a>, and <a class="el" href="LocalFile_8h_source.html#l00011">m_localName</a>.</p>
 
 </div>
 </div>
@@ -116,9 +120,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalFile_8cpp_source.html#l00037">37</a> of file <a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a>.</p>
-
-<p>References <a class="el" href="LocalFile_8h_source.html#l00008">m_localFilePath</a>, and <a class="el" href="LocalFile_8h_source.html#l00009">m_localName</a>.</p>
+<p>Definition at line <a class="el" href="LocalFile_8cpp_source.html#l00029">29</a> of file <a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -137,11 +139,13 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Create a input stream to that file. </p>
+
 <p>Implements <a class="el" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d">File</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFile_8cpp_source.html#l00057">57</a> of file <a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalFile_8cpp_source.html#l00033">33</a> of file <a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFile_8h_source.html#l00008">m_localFilePath</a>.</p>
+<p>References <a class="el" href="LocalFile_8h_source.html#l00010">m_localFilePath</a>.</p>
 
 </div>
 </div>
@@ -159,11 +163,13 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Create a output stream to that file. </p>
+
 <p>Implements <a class="el" href="classFile.html#a29f2b872d0cec26b0fb706cbd7934628">File</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFile_8cpp_source.html#l00062">62</a> of file <a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalFile_8cpp_source.html#l00037">37</a> of file <a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFile_8h_source.html#l00008">m_localFilePath</a>.</p>
+<p>References <a class="el" href="LocalFile_8h_source.html#l00010">m_localFilePath</a>.</p>
 
 </div>
 </div>
@@ -181,33 +187,35 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Returns true if the file actually exists, or will be created when a output stream is found. </p>
+
 <p>Implements <a class="el" href="classFile.html#a28850906f5f2a1847c4f993eedd95e84">File</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFile_8cpp_source.html#l00067">67</a> of file <a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalFile_8cpp_source.html#l00041">41</a> of file <a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFile_8h_source.html#l00008">m_localFilePath</a>.</p>
+<p>References <a class="el" href="LocalFile_8h_source.html#l00010">m_localFilePath</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acbb5052c66fb0c331e5303f74bc45285"></a><!-- doxytag: member="LocalFile::getName" ref="acbb5052c66fb0c331e5303f74bc45285" args="()" -->
+<a class="anchor" id="a285481756f0b72e50f6638dfe6c3ad3f"></a><!-- doxytag: member="LocalFile::getName" ref="a285481756f0b72e50f6638dfe6c3ad3f" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* LocalFile::getName </td>
+          <td class="memname">string LocalFile::getName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [inline, virtual]</code></td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classFilesystemNode.html#ae72c4830dc5036ec8878ca2499a141ce">FilesystemNode</a>.</p>
+<p>Implements <a class="el" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8">FilesystemNode</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFile_8h_source.html#l00022">22</a> of file <a class="el" href="LocalFile_8h_source.html">LocalFile.h</a>.</p>
+<p>Definition at line <a class="el" href="LocalFile_8cpp_source.html#l00066">66</a> of file <a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFile_8h_source.html#l00009">m_localName</a>.</p>
+<p>References <a class="el" href="LocalFile_8h_source.html#l00011">m_localName</a>.</p>
 
 </div>
 </div>
@@ -225,46 +233,48 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Return the length of the file. </p>
+
 <p>Implements <a class="el" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b">File</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFile_8cpp_source.html#l00079">79</a> of file <a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalFile_8cpp_source.html#l00052">52</a> of file <a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFile_8h_source.html#l00008">m_localFilePath</a>.</p>
+<p>References <a class="el" href="LocalFile_8h_source.html#l00010">m_localFilePath</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a595913c14e5fee72ad36e6e4bbe01f50"></a><!-- doxytag: member="LocalFile::m_localFilePath" ref="a595913c14e5fee72ad36e6e4bbe01f50" args="" -->
+<a class="anchor" id="a2b8075c988095091e6ffcf24597f09d6"></a><!-- doxytag: member="LocalFile::m_localFilePath" ref="a2b8075c988095091e6ffcf24597f09d6" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* <a class="el" href="classLocalFile.html#a595913c14e5fee72ad36e6e4bbe01f50">LocalFile::m_localFilePath</a><code> [private]</code></td>
+          <td class="memname">string <a class="el" href="classLocalFile.html#a2b8075c988095091e6ffcf24597f09d6">LocalFile::m_localFilePath</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalFile_8h_source.html#l00008">8</a> of file <a class="el" href="LocalFile_8h_source.html">LocalFile.h</a>.</p>
+<p>Definition at line <a class="el" href="LocalFile_8h_source.html#l00010">10</a> of file <a class="el" href="LocalFile_8h_source.html">LocalFile.h</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalFile_8cpp_source.html#l00057">createInputStream()</a>, <a class="el" href="LocalFile_8cpp_source.html#l00062">createOutputStream()</a>, <a class="el" href="LocalFile_8cpp_source.html#l00067">exists()</a>, <a class="el" href="LocalFile_8cpp_source.html#l00079">length()</a>, <a class="el" href="LocalFile_8cpp_source.html#l00008">LocalFile()</a>, and <a class="el" href="LocalFile_8cpp_source.html#l00037">~LocalFile()</a>.</p>
+<p>Referenced by <a class="el" href="LocalFile_8cpp_source.html#l00033">createInputStream()</a>, <a class="el" href="LocalFile_8cpp_source.html#l00037">createOutputStream()</a>, <a class="el" href="LocalFile_8cpp_source.html#l00041">exists()</a>, <a class="el" href="LocalFile_8cpp_source.html#l00052">length()</a>, and <a class="el" href="LocalFile_8cpp_source.html#l00008">LocalFile()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac20324c4a131f88d5342be8db58ef10e"></a><!-- doxytag: member="LocalFile::m_localName" ref="ac20324c4a131f88d5342be8db58ef10e" args="" -->
+<a class="anchor" id="a6bf7df0c750209e1d977bb5b34709bc1"></a><!-- doxytag: member="LocalFile::m_localName" ref="a6bf7df0c750209e1d977bb5b34709bc1" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* <a class="el" href="classLocalFile.html#ac20324c4a131f88d5342be8db58ef10e">LocalFile::m_localName</a><code> [private]</code></td>
+          <td class="memname">string <a class="el" href="classLocalFile.html#a6bf7df0c750209e1d977bb5b34709bc1">LocalFile::m_localName</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalFile_8h_source.html#l00009">9</a> of file <a class="el" href="LocalFile_8h_source.html">LocalFile.h</a>.</p>
+<p>Definition at line <a class="el" href="LocalFile_8h_source.html#l00011">11</a> of file <a class="el" href="LocalFile_8h_source.html">LocalFile.h</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalFile_8h_source.html#l00022">getName()</a>, <a class="el" href="LocalFile_8cpp_source.html#l00008">LocalFile()</a>, and <a class="el" href="LocalFile_8cpp_source.html#l00037">~LocalFile()</a>.</p>
+<p>Referenced by <a class="el" href="LocalFile_8cpp_source.html#l00066">getName()</a>, and <a class="el" href="LocalFile_8cpp_source.html#l00008">LocalFile()</a>.</p>
 
 </div>
 </div>
@@ -273,7 +283,7 @@ Private Attributes</h2></td></tr>
 <li>Code/Filesystem/<a class="el" href="LocalFile_8cpp_source.html">LocalFile.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

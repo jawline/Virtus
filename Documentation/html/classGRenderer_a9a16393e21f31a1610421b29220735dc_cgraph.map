@@ -8,11 +8,11 @@
 <area shape="rect" id="node30" href="$classGRenderer.html#a0530349c97b2b04a22019e26dd3d3bcc" title="GRenderer::setLayer" alt="" coords="229,325,371,355"/>
 <area shape="rect" id="node32" href="$classGRenderer.html#a8f9a5f0cbc4a4df10ad0e34af3c36a5a" title="GRenderer::uninitialize" alt="" coords="223,379,377,408"/>
 <area shape="rect" id="node34" href="$classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="229,432,371,461"/>
-<area shape="rect" id="node11" href="$classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896" title="Filesystem::evaluateChild" alt="" coords="457,61,631,91"/>
-<area shape="rect" id="node15" href="$classFolder.html#ac9bd343406ddd4ee391558234e637cd1" title="Folder::searchForChild" alt="" coords="692,113,847,143"/>
+<area shape="rect" id="node11" href="$classFilesystem.html#a37a43994ca9f07366fe93e361955f75d" title="Filesystem::evaluateChild" alt="" coords="457,61,631,91"/>
+<area shape="rect" id="node15" href="$classFolder.html#a56700301248e09d2eae56bc7b2a00c0e" title="Folder::searchForChild" alt="" coords="692,113,847,143"/>
 <area shape="rect" id="node17" href="$classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117" title="Filesystem::getRoot" alt="" coords="475,165,613,195"/>
 <area shape="rect" id="node21" href="$classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5" title="Folder::getType" alt="" coords="488,219,600,248"/>
-<area shape="rect" id="node23" href="$classFolder.html#a86e65707748fb4e35f2cd7e60d452804" title="Folder::newChild" alt="" coords="484,272,604,301"/>
+<area shape="rect" id="node23" href="$classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428" title="Folder::newChild" alt="" coords="484,272,604,301"/>
 <area shape="rect" id="node13" href="$classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c" title="FilesystemNode::getType" alt="" coords="684,60,855,89"/>
 <area shape="rect" id="node19" href="$classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="716,167,823,196"/>
 <area shape="rect" id="node36" href="$classDataOutputStream.html#aa0a0d6b34e82949be02ae799d05dbaea" title="DataOutputStream::flush" alt="" coords="461,379,627,408"/>

@@ -42,7 +42,7 @@
 <a name="l00002"></a>00002 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
 <a name="l00003"></a>00003 <span class="preprocessor">#include &lt;string.h&gt;</span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a><a class="code" href="classLogWriter.html#a872de1970984353798acf1d0328da71b">00005</a> <a class="code" href="classLogWriter.html#a872de1970984353798acf1d0328da71b" title="Creates a instance of a log bound to a specific FileSystem File.">LogWriter::LogWriter</a>(<a class="code" href="classFile.html">File</a>* file)
+<a name="l00005"></a><a class="code" href="classLogWriter.html#a872de1970984353798acf1d0328da71b">00005</a> <a class="code" href="classLogWriter.html#a872de1970984353798acf1d0328da71b" title="Creates a instance of a log bound to a specific FileSystem File.">LogWriter::LogWriter</a>(<a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* file)
 <a name="l00006"></a>00006 {
 <a name="l00007"></a>00007     <span class="keywordflow">if</span> (file == 0) <span class="keywordflow">return</span>;
 <a name="l00008"></a>00008     <span class="keywordflow">else</span>
@@ -50,18 +50,18 @@
 <a name="l00010"></a>00010         printf(<span class="stringliteral">&quot;LogWriter passed invalid file\n&quot;</span>);
 <a name="l00011"></a>00011     }
 <a name="l00012"></a>00012 
-<a name="l00013"></a>00013     <a class="code" href="classLogWriter.html#abdd17e977eba316b817c21a3a2e29277">m_logOutStream</a> = file-&gt;<a class="code" href="classFile.html#a29f2b872d0cec26b0fb706cbd7934628">createOutputStream</a>();
+<a name="l00013"></a>00013     <a class="code" href="classLogWriter.html#abdd17e977eba316b817c21a3a2e29277">m_logOutStream</a> = file-&gt;<a class="code" href="classFile.html#a29f2b872d0cec26b0fb706cbd7934628" title="Create a output stream to that file.">createOutputStream</a>();
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015     <span class="keywordflow">if</span> (<a class="code" href="classLogWriter.html#abdd17e977eba316b817c21a3a2e29277">m_logOutStream</a> != 0)
 <a name="l00016"></a>00016     {
 <a name="l00017"></a>00017         <span class="keywordflow">if</span> ( <a class="code" href="classLogWriter.html#abdd17e977eba316b817c21a3a2e29277">m_logOutStream</a>-&gt;<a class="code" href="classDataOutputStream.html#a3b640f16e0de59b60082c054db67f706">open</a>(<span class="keyword">true</span>) == <span class="keyword">false</span>)
 <a name="l00018"></a>00018         {
-<a name="l00019"></a>00019             printf(<span class="stringliteral">&quot;Unable to open output stream for file %s\n&quot;</span>, file-&gt;<a class="code" href="classFilesystemNode.html#ae72c4830dc5036ec8878ca2499a141ce">getName</a>());
+<a name="l00019"></a>00019             printf(<span class="stringliteral">&quot;Unable to open output stream for file %s\n&quot;</span>, file-&gt;<a class="code" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8">getName</a>().c_str());
 <a name="l00020"></a>00020         }
 <a name="l00021"></a>00021     }
 <a name="l00022"></a>00022     <span class="keywordflow">else</span>
 <a name="l00023"></a>00023     {
-<a name="l00024"></a>00024         printf(<span class="stringliteral">&quot;LogWriter unable to create output stream for file %s\n&quot;</span>, file-&gt;<a class="code" href="classFilesystemNode.html#ae72c4830dc5036ec8878ca2499a141ce">getName</a>());
+<a name="l00024"></a>00024         printf(<span class="stringliteral">&quot;LogWriter unable to create output stream for file %s\n&quot;</span>, file-&gt;<a class="code" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8">getName</a>().c_str());
 <a name="l00025"></a>00025     }
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 }
@@ -95,14 +95,14 @@
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056 }
 <a name="l00057"></a>00057 
-<a name="l00058"></a><a class="code" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a">00058</a> <a class="code" href="classFile.html">File</a>* <a class="code" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a" title="Convert the string name of the log (I.e. Render.Log) to a internal filesystem node (Creating it if it...">LogWriter::getPathToLogFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Name)
+<a name="l00058"></a><a class="code" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a">00058</a> <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* <a class="code" href="classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a" title="Convert the string name of the log (I.e. Render.Log) to a internal filesystem node (Creating it if it...">LogWriter::getPathToLogFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Name)
 <a name="l00059"></a>00059 {
-<a name="l00060"></a>00060     <a class="code" href="classFolder.html">Folder</a>* folder = <span class="keyword">static_cast&lt;</span><a class="code" href="classFolder.html">Folder</a>*<span class="keyword">&gt;</span>(<a class="code" href="classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), <span class="stringliteral">&quot;Logs&quot;</span>));
+<a name="l00060"></a>00060     <a class="code" href="classFolder.html" title="The abstraction of a folder within the filesystem.">Folder</a>* folder = <span class="keyword">static_cast&lt;</span><a class="code" href="classFolder.html" title="The abstraction of a folder within the filesystem.">Folder</a>*<span class="keyword">&gt;</span>(<a class="code" href="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d">Filesystem::evaluateChild</a>(<a class="code" href="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117">Filesystem::getRoot</a>(), <span class="stringliteral">&quot;Logs&quot;</span>));
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062     <span class="keywordflow">if</span> (folder == 0) <span class="keywordflow">return</span> 0;
 <a name="l00063"></a>00063     <span class="keywordflow">if</span> (folder-&gt;<a class="code" href="classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5">getType</a>() != <a class="code" href="Folder_8h.html#a88d9f0fcd19efe0d19fea117268be2a8">folderId</a>) <span class="keywordflow">return</span> 0;
 <a name="l00064"></a>00064 
-<a name="l00065"></a>00065     <a class="code" href="classFile.html">File</a>* searchForFile = <span class="keyword">static_cast&lt;</span> <a class="code" href="classFile.html">File</a> * <span class="keyword">&gt;</span>( folder-&gt;<a class="code" href="classFolder.html#ac9bd343406ddd4ee391558234e637cd1">searchForChild</a>(Name) );
+<a name="l00065"></a>00065     <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* searchForFile = <span class="keyword">static_cast&lt;</span> <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a> * <span class="keyword">&gt;</span>( folder-&gt;<a class="code" href="classFolder.html#a56700301248e09d2eae56bc7b2a00c0e">searchForChild</a>(Name) );
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067     <span class="keywordflow">if</span> (searchForFile != 0)
 <a name="l00068"></a>00068     {
@@ -113,14 +113,14 @@
 <a name="l00073"></a>00073     <span class="keywordflow">else</span>
 <a name="l00074"></a>00074     {
 <a name="l00075"></a>00075 
-<a name="l00076"></a>00076         <span class="keywordflow">return</span> folder-&gt;<a class="code" href="classFolder.html#a86e65707748fb4e35f2cd7e60d452804">newChild</a>(Name);
+<a name="l00076"></a>00076         <span class="keywordflow">return</span> folder-&gt;<a class="code" href="classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428">newChild</a>(Name);
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078     }
 <a name="l00079"></a>00079 
 <a name="l00080"></a>00080 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

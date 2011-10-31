@@ -19,7 +19,7 @@
 <area shape="rect" id="node31" href="$classTerrainData.html#a957fb76a7542678336cb5c7d20443cdd" title="TerrainData::getTerrainData" alt="" coords="485,560,669,589"/>
 <area shape="rect" id="node33" href="$classTerrainData.html#a0da6e1f77f4faefcd86fd19d44afa637" title="TerrainData::getTerrainLength" alt="" coords="480,613,675,643"/>
 <area shape="rect" id="node37" href="$classTexture.html#a49791edaa3beb8f9658565b2ced82cc8" title="Texture::loadTextureData" alt="" coords="492,667,663,696"/>
-<area shape="rect" id="node39" href="$classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc" title="Returna new vector containing the normalization of this one." alt="" coords="511,720,644,749"/>
+<area shape="rect" id="node39" href="$classVector3f.html#af86f3422d11cfb5e56bdada4b4bc68cc" title="Return a new vector containing the normalization of this one." alt="" coords="511,720,644,749"/>
 <area shape="rect" id="node43" href="$classVector3f.html#a3999baa8fa2c761253362f7e5f68bfec" title="Set the X value." alt="" coords="524,773,631,803"/>
 <area shape="rect" id="node45" href="$classVector3f.html#a533d6931dc15f0f0e66b094debeaf4ce" title="Set the Y value." alt="" coords="524,453,631,483"/>
 <area shape="rect" id="node47" href="$classVector3f.html#a0cb5d2450424090a599f0e429f8f3a34" title="Set the Z value." alt="" coords="525,507,629,536"/>

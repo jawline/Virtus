@@ -1,3 +1,3 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$classPostbox.html" title="Abstraction of a Postbox/Queue used to log input events (FIFO) Warning &#45; Correct usage is to check th..." alt="" coords="7,5,108,35"/>
+<area shape="rect" id="node1" href="$classMutex.html" title="The actual mutex lock used by the lock class." alt="" coords="5,5,64,35"/>
 </map>

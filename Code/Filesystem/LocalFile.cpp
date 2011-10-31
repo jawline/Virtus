@@ -5,89 +5,64 @@
 #include "LocalInputStream.h"
 #include <sys/stat.h>
 
-LocalFile::LocalFile(const char* Path)
-{
-    m_localName = 0;
-    m_localFilePath = 0;
+LocalFile::LocalFile(string Path) {
 
-    if (Path != 0)
-    {
+	m_localFilePath = Path;
 
-        m_localFilePath = new char[strlen(Path) + 1];
-        strncpy(m_localFilePath, Path, strlen(Path) + 1);
+	size_t lastSlash = Path.find_last_of("/");
 
-        const char* lastSlash = strrchr(Path, '/');
+	if (lastSlash == string::npos) {
 
-        if (lastSlash == 0)
-        {
-            lastSlash = Path;
-        }
-        else
-        {
-            //Increment by 1 to remove the / from the string
-            lastSlash++;
-        }
+		lastSlash = 0;
 
-        m_localName = new char[ strlen(lastSlash) + 1 ];
-        strncpy(m_localName, lastSlash, strlen(lastSlash) + 1);
+	} else {
 
-    }
+		//Increment by 1 to remove the / from the string
+		lastSlash++;
+
+	}
+
+	m_localName = Path.substr(lastSlash, Path.length());
+	printf("m_localName %s\n", m_localName.c_str());
 }
 
-LocalFile::~LocalFile()
-{
-
-    if (m_localFilePath != 0)
-    {
-
-        delete[] m_localFilePath;
-        m_localFilePath = 0;
-
-    }
-
-    if (m_localName != 0)
-    {
-        delete[] m_localName;
-        m_localName = 0;
-    }
-
-    return;
+LocalFile::~LocalFile() {
+	return;
 }
 
-DataInputStream* LocalFile::createInputStream()
-{
-    return new LocalDataInputStream(m_localFilePath);
+DataInputStream* LocalFile::createInputStream() {
+	return new LocalDataInputStream(m_localFilePath);
 }
 
-DataOutputStream* LocalFile::createOutputStream()
-{
-    return new LocalDataOutputStream(m_localFilePath);
+DataOutputStream* LocalFile::createOutputStream() {
+	return new LocalDataOutputStream(m_localFilePath);
 }
 
-bool LocalFile::exists()
-{
+bool LocalFile::exists() {
 
-  struct stat fileInfo;
+	struct stat fileInfo;
 
-  //If stat returns 0 something by that name exists
-  if (stat(m_localFilePath, &fileInfo) == 0)
-    return true;
+	//If stat returns 0 something by that name exists
+	if (stat(m_localFilePath.c_str(), &fileInfo) == 0)
+		return true;
 
-  return false;
+	return false;
 }
 
-unsigned long LocalFile::length()
-{
+unsigned long LocalFile::length() {
 
-  struct stat fileInfo;
+	struct stat fileInfo;
 
-  //If stat returns 0 something by that name exists
-  if (stat(m_localFilePath, &fileInfo) == 0)
-  {
+	//If stat returns 0 something by that name exists
+	if (stat(m_localFilePath.c_str(), &fileInfo) == 0) {
 
-        return fileInfo.st_size;
+		return fileInfo.st_size;
 
-  }
+	}
 
-  return 0;
+	return 0;
+}
+
+string LocalFile::getName() {
+	return m_localName;
 }

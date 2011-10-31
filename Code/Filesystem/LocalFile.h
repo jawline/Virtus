@@ -1,16 +1,18 @@
 #ifndef _LOCALFILE_DEF_H_
 #define _LOCALFILE_DEF_H_
 #include "File.h"
+#include <string>
+using namespace std;
 
 class LocalFile : public File
 {
 private:
-    char* m_localFilePath;
-    char* m_localName;
+    string m_localFilePath;
+    string m_localName;
 
 public:
 
-    LocalFile(const char* FullPath);
+    LocalFile(string FullPath);
     ~LocalFile();
 
     DataInputStream* createInputStream();
@@ -19,7 +21,7 @@ public:
     bool exists();
     unsigned long length();
 
-    char* getName() { return m_localName; }
+    string getName();
 };
 
 #endif //_LOCALFILE_DEF_H_

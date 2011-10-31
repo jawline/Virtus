@@ -2,7 +2,7 @@
 <area shape="rect" id="node3" href="$classConfigurationInstance.html#a0eb390e419c1db5a3c5fe1ed347c0eb4" title="ConfigurationInstance::saveInstance" alt="" coords="359,112,593,141"/>
 <area shape="rect" id="node30" href="$classConfigurationInstance.html#a9eb24a889cb023a61bd49afc6f1262eb" title="ConfigurationInstance::unloadAndFreeAll" alt="" coords="347,165,605,195"/>
 <area shape="rect" id="node5" href="$classConfigurationInstance.html#ae64795d1d705767a896c256611fb2ba8" title="ConfigurationInstance::writeToPath" alt="" coords="653,112,880,141"/>
-<area shape="rect" id="node7" href="$classFile.html#a29f2b872d0cec26b0fb706cbd7934628" title="File::createOutputStream" alt="" coords="949,59,1117,88"/>
+<area shape="rect" id="node7" href="$classFile.html#a29f2b872d0cec26b0fb706cbd7934628" title="Create a output stream to that file." alt="" coords="949,59,1117,88"/>
 <area shape="rect" id="node9" href="$classDataOutputStream.html#a3b640f16e0de59b60082c054db67f706" title="DataOutputStream::open" alt="" coords="951,112,1116,141"/>
 <area shape="rect" id="node11" href="$classConfigurationWriter.html#a4589945757872f69740679c69f5b8058" title="ConfigurationWriter::outputNode" alt="" coords="929,165,1137,195"/>
 <area shape="rect" id="node13" href="$classConfigurationFolder.html#a2e490b6594b1d65fc4eede8fe48fd634" title="Return the specified child of the node." alt="" coords="1216,5,1405,35"/>
@@ -11,6 +11,6 @@
 <area shape="rect" id="node19" href="$classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb" title="ConfigurationNumber::getValue" alt="" coords="1209,165,1412,195"/>
 <area shape="rect" id="node21" href="$classConfigurationFolder.html#abfcede97444700bca83822238d2e103f" title="Return the number of children in this node." alt="" coords="1187,219,1435,248"/>
 <area shape="rect" id="node23" href="$classConfigurationWriter.html#afd3ec657f112e4eae3d5dbf46e253b35" title="ConfigurationWriter::startNewLine" alt="" coords="1201,272,1420,301"/>
-<area shape="rect" id="node25" href="$classFilesystemUtils.html#a2184bdd61bbb57e810b4362346a36286" title="FilesystemUtils::writeLineToStream" alt="" coords="1484,299,1713,328"/>
-<area shape="rect" id="node27" href="$classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="1764,299,1929,328"/>
+<area shape="rect" id="node25" href="$classFsUtils.html#a140322a1a4355887656d21d1e5793076" title="FsUtils::writeLineToStream" alt="" coords="1483,299,1664,328"/>
+<area shape="rect" id="node27" href="$classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="1713,299,1879,328"/>
 </map>

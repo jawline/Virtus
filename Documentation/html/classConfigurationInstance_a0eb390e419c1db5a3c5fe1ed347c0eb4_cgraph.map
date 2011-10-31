@@ -1,6 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$classConfigurationInstance.html#ae64795d1d705767a896c256611fb2ba8" title="ConfigurationInstance::writeToPath" alt="" coords="288,112,515,141"/>
-<area shape="rect" id="node5" href="$classFile.html#a29f2b872d0cec26b0fb706cbd7934628" title="File::createOutputStream" alt="" coords="584,59,752,88"/>
+<area shape="rect" id="node5" href="$classFile.html#a29f2b872d0cec26b0fb706cbd7934628" title="Create a output stream to that file." alt="" coords="584,59,752,88"/>
 <area shape="rect" id="node7" href="$classDataOutputStream.html#a3b640f16e0de59b60082c054db67f706" title="DataOutputStream::open" alt="" coords="585,112,751,141"/>
 <area shape="rect" id="node9" href="$classConfigurationWriter.html#a4589945757872f69740679c69f5b8058" title="ConfigurationWriter::outputNode" alt="" coords="564,165,772,195"/>
 <area shape="rect" id="node11" href="$classConfigurationFolder.html#a2e490b6594b1d65fc4eede8fe48fd634" title="Return the specified child of the node." alt="" coords="851,5,1040,35"/>
@@ -9,6 +9,6 @@
 <area shape="rect" id="node17" href="$classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb" title="ConfigurationNumber::getValue" alt="" coords="844,165,1047,195"/>
 <area shape="rect" id="node19" href="$classConfigurationFolder.html#abfcede97444700bca83822238d2e103f" title="Return the number of children in this node." alt="" coords="821,219,1069,248"/>
 <area shape="rect" id="node21" href="$classConfigurationWriter.html#afd3ec657f112e4eae3d5dbf46e253b35" title="ConfigurationWriter::startNewLine" alt="" coords="836,272,1055,301"/>
-<area shape="rect" id="node23" href="$classFilesystemUtils.html#a2184bdd61bbb57e810b4362346a36286" title="FilesystemUtils::writeLineToStream" alt="" coords="1119,299,1348,328"/>
-<area shape="rect" id="node25" href="$classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="1399,299,1564,328"/>
+<area shape="rect" id="node23" href="$classFsUtils.html#a140322a1a4355887656d21d1e5793076" title="FsUtils::writeLineToStream" alt="" coords="1117,299,1299,328"/>
+<area shape="rect" id="node25" href="$classDataOutputStream.html#ac11d871796eb29d8762f79d3540e83a9" title="DataOutputStream::write" alt="" coords="1348,299,1513,328"/>
 </map>

@@ -1,11 +1,11 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$InterfaceLayer_8h.html" title="InterfaceLayer.h" alt="" coords="588,83,703,112"/>
-<area shape="rect" id="node28" href="$Filesystem_8h.html" title="Filesystem/Filesystem.h" alt="" coords="1164,83,1329,112"/>
-<area shape="rect" id="node11" href="$InputEvent_8h.html" title="Input/InputEvent.h" alt="" coords="5,237,133,267"/>
-<area shape="rect" id="node15" href="$IElement_8h.html" title="IElement.h" alt="" coords="67,160,152,189"/>
-<area shape="rect" id="node18" href="$Color_8h.html" title="Render/Color.h" alt="" coords="176,160,285,189"/>
-<area shape="rect" id="node30" href="$Folder_8h.html" title="Folder.h" alt="" coords="1248,160,1317,189"/>
-<area shape="rect" id="node32" href="$Node_8h.html" title="Node.h" alt="" coords="1228,315,1292,344"/>
-<area shape="rect" id="node34" href="$File_8h.html" title="File.h" alt="" coords="1320,237,1373,267"/>
-<area shape="rect" id="node37" href="$Stream_8h.html" title="Stream.h" alt="" coords="1316,315,1391,344"/>
+<area shape="rect" id="node3" href="$InterfaceLayer_8h.html" title="InterfaceLayer.h" alt="" coords="705,83,820,112"/>
+<area shape="rect" id="node28" href="$Filesystem_8h.html" title="Filesystem/Filesystem.h" alt="" coords="1189,83,1355,112"/>
+<area shape="rect" id="node11" href="$InputEvent_8h.html" title="Input/InputEvent.h" alt="" coords="509,237,637,267"/>
+<area shape="rect" id="node15" href="$IElement_8h.html" title="IElement.h" alt="" coords="5,160,91,189"/>
+<area shape="rect" id="node18" href="$Color_8h.html" title="Render/Color.h" alt="" coords="115,160,224,189"/>
+<area shape="rect" id="node30" href="$Folder_8h.html" title="Folder.h" alt="" coords="1237,160,1307,189"/>
+<area shape="rect" id="node32" href="$Node_8h.html" title="Node.h" alt="" coords="1195,315,1259,344"/>
+<area shape="rect" id="node36" href="$File_8h.html" title="File.h" alt="" coords="1292,237,1345,267"/>
+<area shape="rect" id="node39" href="$Stream_8h.html" title="Stream.h" alt="" coords="1283,315,1357,344"/>
 </map>

@@ -45,7 +45,7 @@
 <a name="l00005"></a>00005 <span class="preprocessor">#include &lt;string.h&gt;</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a><a class="code" href="classConfigurationInstance.html#ae7d373a5c37699780a5f789428bead09">00008</a> <a class="code" href="classConfigurationInstance.html#ae7d373a5c37699780a5f789428bead09">ConfigurationInstance::ConfigurationInstance</a>(<a class="code" href="classFile.html">File</a>* fileToLoad)
+<a name="l00008"></a><a class="code" href="classConfigurationInstance.html#ae7d373a5c37699780a5f789428bead09">00008</a> <a class="code" href="classConfigurationInstance.html#ae7d373a5c37699780a5f789428bead09">ConfigurationInstance::ConfigurationInstance</a>(<a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* fileToLoad)
 <a name="l00009"></a>00009 {
 <a name="l00010"></a>00010     <a class="code" href="classConfigurationInstance.html#a4e06a04d271c3e6c591c46ae3ab60e75">m_instanceFile</a> = fileToLoad;
 <a name="l00011"></a>00011 
@@ -67,7 +67,7 @@
 <a name="l00027"></a>00027     <span class="keywordflow">if</span> (<a class="code" href="classConfigurationInstance.html#a4e06a04d271c3e6c591c46ae3ab60e75">m_instanceFile</a> == 0) <span class="keywordflow">return</span>;
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029     <span class="comment">//Attempt to create a new output stream</span>
-<a name="l00030"></a>00030     <a class="code" href="classDataOutputStream.html">DataOutputStream</a>* oStream = <a class="code" href="classConfigurationInstance.html#a4e06a04d271c3e6c591c46ae3ab60e75">m_instanceFile</a>-&gt;<a class="code" href="classFile.html#a29f2b872d0cec26b0fb706cbd7934628">createOutputStream</a>();
+<a name="l00030"></a>00030     <a class="code" href="classDataOutputStream.html">DataOutputStream</a>* oStream = <a class="code" href="classConfigurationInstance.html#a4e06a04d271c3e6c591c46ae3ab60e75">m_instanceFile</a>-&gt;<a class="code" href="classFile.html#a29f2b872d0cec26b0fb706cbd7934628" title="Create a output stream to that file.">createOutputStream</a>();
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032     <span class="comment">//Check oStream is valid</span>
 <a name="l00033"></a>00033     <span class="keywordflow">if</span> (oStream == 0) <span class="keywordflow">return</span>;
@@ -105,7 +105,7 @@
 <a name="l00065"></a>00065     <span class="comment">//If the file to load from is invalid exit</span>
 <a name="l00066"></a>00066     <span class="keywordflow">if</span> (<a class="code" href="classConfigurationInstance.html#a4e06a04d271c3e6c591c46ae3ab60e75">m_instanceFile</a> == 0) <span class="keywordflow">return</span>;
 <a name="l00067"></a>00067 
-<a name="l00068"></a>00068     <a class="code" href="classDataInputStream.html">DataInputStream</a>* inputStream = <a class="code" href="classConfigurationInstance.html#a4e06a04d271c3e6c591c46ae3ab60e75">m_instanceFile</a>-&gt;<a class="code" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d">createInputStream</a>();
+<a name="l00068"></a>00068     <a class="code" href="classDataInputStream.html">DataInputStream</a>* inputStream = <a class="code" href="classConfigurationInstance.html#a4e06a04d271c3e6c591c46ae3ab60e75">m_instanceFile</a>-&gt;<a class="code" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file.">createInputStream</a>();
 <a name="l00069"></a>00069 
 <a name="l00070"></a>00070     <span class="comment">//If the input stream is invalid exit</span>
 <a name="l00071"></a>00071     <span class="keywordflow">if</span> (inputStream == 0)
@@ -322,7 +322,7 @@
 <a name="l00282"></a>00282 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -34,6 +34,8 @@ ConfigurationString_8cpp_source.html
 ConfigurationString_8h_source.html
 ConfigurationWriter_8cpp_source.html
 ConfigurationWriter_8h_source.html
+Clock_8cpp_source.html
+Clock_8h_source.html
 FPSCalculator_8cpp_source.html
 FPSCalculator_8h_source.html
 GEngine_8cpp_source.html
@@ -165,6 +167,8 @@ ConfigurationString_8cpp.html
 ConfigurationString_8h.html
 ConfigurationWriter_8cpp.html
 ConfigurationWriter_8h.html
+Clock_8cpp.html
+Clock_8h.html
 FPSCalculator_8cpp.html
 FPSCalculator_8h.html
 GEngine_8cpp.html
@@ -357,6 +361,8 @@ classCamera.html
 classCamera-members.html
 classCheckbox.html
 classCheckbox-members.html
+classClock.html
+classClock-members.html
 classCloseHandler.html
 classCloseHandler-members.html
 classColor.html
@@ -395,8 +401,6 @@ classFilesystem.html
 classFilesystem-members.html
 classFilesystemNode.html
 classFilesystemNode-members.html
-classFilesystemUtils.html
-classFilesystemUtils-members.html
 classFolder.html
 classFolder-members.html
 classFontChar.html
@@ -407,6 +411,8 @@ classFPSCalculator.html
 classFPSCalculator-members.html
 classFREngine.html
 classFREngine-members.html
+classFsUtils.html
+classFsUtils-members.html
 classGApplication.html
 classGApplication-members.html
 classGEngine.html
@@ -567,6 +573,8 @@ ConfigurationString_8h__dep__incl.png
 ConfigurationWriter_8cpp__incl.png
 ConfigurationWriter_8h__incl.png
 ConfigurationWriter_8h__dep__incl.png
+Clock_8cpp__incl.png
+Clock_8h__dep__incl.png
 FPSCalculator_8cpp__incl.png
 FPSCalculator_8h__dep__incl.png
 GEngine_8cpp__incl.png
@@ -593,6 +601,7 @@ LocalInputStream_8h__dep__incl.png
 LocalOutputStream_8cpp__incl.png
 LocalOutputStream_8h__incl.png
 LocalOutputStream_8h__dep__incl.png
+Node_8h__incl.png
 Node_8h__dep__incl.png
 Stream_8h__dep__incl.png
 Utils_8cpp__incl.png
@@ -789,13 +798,12 @@ classEventManager_a2e43e8b165b54f75e9c005cf5b04ade7_cgraph.png
 classEventManager_a96150c5f3f9b325126d077d0802b7534_cgraph.png
 classFile__inherit__graph.png
 classFile__coll__graph.png
-classFilesystem_af62bfb21a84d1a8a02c60926b4318896_cgraph.png
-classFilesystem_a5cc281e62422ef6f9f2c555fb7a5f46a_cgraph.png
-classFilesystem_a3c8e54f984216ce34a67faae0c1262c6_cgraph.png
+classFilesystem_a37a43994ca9f07366fe93e361955f75d_cgraph.png
+classFilesystem_a0ba0843a45536605ee1b10a7f64e0508_cgraph.png
+classFilesystem_aa9f6858df3701d202b0fb8fe4cfc7d4e_cgraph.png
 classFilesystem_a2b4a3707941e4538a55515aa28bb0117_cgraph.png
-classFilesystem_ac5fd2d2f0c2921df1552b5686f8295cc_cgraph.png
+classFilesystem_a7974ac55c31a719bc3b32c63a5e21122_cgraph.png
 classFilesystemNode__inherit__graph.png
-classFilesystemUtils_a2184bdd61bbb57e810b4362346a36286_cgraph.png
 classFolder__inherit__graph.png
 classFolder__coll__graph.png
 classFontChar__coll__graph.png
@@ -811,6 +819,7 @@ classFREngine_a9ac9c46b30f8b98fb541b56d16cb0588_cgraph.png
 classFREngine_aaab255417ff59d5a671419895e7e9121_cgraph.png
 classFREngine_a8f8abef0e97322d4f01b237654d8e453_cgraph.png
 classFREngine_ac2561f4397b93a7c000770b6223ca906_cgraph.png
+classFsUtils_a140322a1a4355887656d21d1e5793076_cgraph.png
 classGApplication__inherit__graph.png
 classGEngine__coll__graph.png
 classGEngine_a3bdec944d319d1f91af57597f781faa7_cgraph.png
@@ -886,10 +895,9 @@ classLocalFile__coll__graph.png
 classLocalFolder__inherit__graph.png
 classLocalFolder__coll__graph.png
 classLocalFolder_a3ddc7ebe6f95cccdeec5374f99042378_cgraph.png
-classLocalFolder_a610a63c1558ec67a2c135c522a1ac32a_cgraph.png
-classLocalFolder_a8c45a1fe8d397febbcd39eb5c0ef901a_cgraph.png
+classLocalFolder_af9eea69e0cd51a2f563a51232f51519f_cgraph.png
+classLocalFolder_a3d8a9d563114ea9c611348d8c3ce6309_cgraph.png
 classLocalFolder_aa6b99367df578f30adf336efa71649fe_cgraph.png
-classLocalFolder_a18b331f02bad299954423c02964f68c2_cgraph.png
 classLock__coll__graph.png
 classLock_a96b9505f0d427217c77f0a0182ad1503_cgraph.png
 classLock_a7ab6d9485c8665bb3643710432882971_cgraph.png
@@ -1041,4 +1049,5 @@ inherit_graph_46.png
 inherit_graph_47.png
 inherit_graph_48.png
 inherit_graph_49.png
+inherit_graph_50.png
 graph_legend.png

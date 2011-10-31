@@ -40,134 +40,115 @@
 <div class="contents">
 <a href="LocalOutputStream_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="LocalOutputStream_8h.html">LocalOutputStream.h</a>&quot;</span>
 <a name="l00002"></a>00002 
-<a name="l00003"></a><a class="code" href="classLocalDataOutputStream.html#adde87b62ba95d87f69b3e03918e3e6c5">00003</a> <a class="code" href="classLocalDataOutputStream.html#adde87b62ba95d87f69b3e03918e3e6c5">LocalDataOutputStream::LocalDataOutputStream</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Path)
-<a name="l00004"></a>00004 {
-<a name="l00005"></a>00005 
-<a name="l00006"></a>00006     <span class="comment">//Allocate memory and copy the file path</span>
-<a name="l00007"></a>00007     <a class="code" href="classLocalDataOutputStream.html#ab3824181b6827da7e234e24d500225cb">m_filePath</a> = <span class="keyword">new</span> <span class="keywordtype">char</span>[strlen(Path) + 1];
-<a name="l00008"></a>00008     strncpy(<a class="code" href="classLocalDataOutputStream.html#ab3824181b6827da7e234e24d500225cb">m_filePath</a>, Path, strlen(Path) + 1);
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010     <span class="comment">//Null the fileOutputStream pointer</span>
-<a name="l00011"></a>00011     <a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a> = 0;
-<a name="l00012"></a>00012 }
+<a name="l00003"></a><a class="code" href="classLocalDataOutputStream.html#aa7e9bdaa86373c58e5b5934883729602">00003</a> <a class="code" href="classLocalDataOutputStream.html#aa7e9bdaa86373c58e5b5934883729602">LocalDataOutputStream::LocalDataOutputStream</a>(<span class="keywordtype">string</span> Path) {
+<a name="l00004"></a>00004 
+<a name="l00005"></a>00005         <span class="comment">//Allocate memory and copy the file path</span>
+<a name="l00006"></a>00006         <a class="code" href="classLocalDataOutputStream.html#a6da91e80ea9ea53c7e68b7d23e1d627f">m_filePath</a> = Path;
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008         <span class="comment">//Null the fileOutputStream pointer</span>
+<a name="l00009"></a>00009         <a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a> = 0;
+<a name="l00010"></a>00010 }
+<a name="l00011"></a>00011 
+<a name="l00012"></a><a class="code" href="classLocalDataOutputStream.html#a5d82300a5a7dacb13103e76d6d3e0eec">00012</a> <a class="code" href="classLocalDataOutputStream.html#a5d82300a5a7dacb13103e76d6d3e0eec">LocalDataOutputStream::~LocalDataOutputStream</a>() {
 <a name="l00013"></a>00013 
-<a name="l00014"></a><a class="code" href="classLocalDataOutputStream.html#a5d82300a5a7dacb13103e76d6d3e0eec">00014</a> <a class="code" href="classLocalDataOutputStream.html#a5d82300a5a7dacb13103e76d6d3e0eec">LocalDataOutputStream::~LocalDataOutputStream</a>()
-<a name="l00015"></a>00015 {
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017     <span class="comment">//If the stream is still open</span>
-<a name="l00018"></a>00018     <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">isOpen</a>() == <span class="keyword">true</span>)
-<a name="l00019"></a>00019     {
-<a name="l00020"></a>00020         <span class="comment">//Close it</span>
-<a name="l00021"></a>00021         <a class="code" href="classLocalDataOutputStream.html#a46ee7220f3a49d70d218f12a91189ef2">close</a>();
+<a name="l00014"></a>00014         <span class="comment">//If the stream is still open</span>
+<a name="l00015"></a>00015         <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">isOpen</a>() == <span class="keyword">true</span>) {
+<a name="l00016"></a>00016                 <span class="comment">//Close it</span>
+<a name="l00017"></a>00017                 <a class="code" href="classLocalDataOutputStream.html#a46ee7220f3a49d70d218f12a91189ef2">close</a>();
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019         }
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 }
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023     }
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025     <span class="comment">//If there is a valid file path</span>
-<a name="l00026"></a>00026     <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#ab3824181b6827da7e234e24d500225cb">m_filePath</a> != 0)
-<a name="l00027"></a>00027     {
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029         <span class="comment">//Free up the memory allocated to store it</span>
-<a name="l00030"></a>00030         <span class="keyword">delete</span>[] <a class="code" href="classLocalDataOutputStream.html#ab3824181b6827da7e234e24d500225cb">m_filePath</a>;
-<a name="l00031"></a>00031         <a class="code" href="classLocalDataOutputStream.html#ab3824181b6827da7e234e24d500225cb">m_filePath</a> = 0;
+<a name="l00023"></a>00023 <span class="comment">//Returns true if the output stream is already open</span>
+<a name="l00024"></a><a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">00024</a> <span class="keywordtype">bool</span> <a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">LocalDataOutputStream::isOpen</a>() {
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026         <span class="comment">//If there is a fileOutputStream</span>
+<a name="l00027"></a>00027         <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a> != 0) {
+<a name="l00028"></a>00028                 <span class="comment">//return true, the stream is open</span>
+<a name="l00029"></a>00029                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031         }
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033     }
-<a name="l00034"></a>00034 
+<a name="l00033"></a>00033         <span class="comment">//Otherwise return false</span>
+<a name="l00034"></a>00034         <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00035"></a>00035 }
 <a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="comment">//Returns true if the output stream is already open</span>
-<a name="l00038"></a><a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">00038</a> <span class="keywordtype">bool</span> <a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">LocalDataOutputStream::isOpen</a>()
-<a name="l00039"></a>00039 {
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041     <span class="comment">//If there is a fileOutputStream</span>
-<a name="l00042"></a>00042     <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a> != 0)
-<a name="l00043"></a>00043     {
-<a name="l00044"></a>00044         <span class="comment">//return true, the stream is open</span>
-<a name="l00045"></a>00045          <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047     }
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049     <span class="comment">//Otherwise return false</span>
-<a name="l00050"></a>00050     <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00051"></a>00051 }
+<a name="l00037"></a>00037 <span class="comment">//Attempt to open a output stream for the dataoutputstream class</span>
+<a name="l00038"></a><a class="code" href="classLocalDataOutputStream.html#a49c8b8f106e31f43a53fdb4dc97bcb84">00038</a> <span class="keywordtype">bool</span> <a class="code" href="classLocalDataOutputStream.html#a49c8b8f106e31f43a53fdb4dc97bcb84">LocalDataOutputStream::open</a>(<span class="keywordtype">bool</span> textMode) {
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040         <span class="comment">//If the file path is empty return false</span>
+<a name="l00041"></a>00041         <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#a6da91e80ea9ea53c7e68b7d23e1d627f">m_filePath</a>.length() == 0) {
+<a name="l00042"></a>00042                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00043"></a>00043         }
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045         <span class="comment">//if the stream is already open return false</span>
+<a name="l00046"></a>00046         <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">isOpen</a>() == <span class="keyword">true</span>) {
+<a name="l00047"></a>00047                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00048"></a>00048         }
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050         <span class="comment">//Attempt to open the file</span>
+<a name="l00051"></a>00051         <span class="keywordflow">if</span> (textMode == <span class="keyword">true</span>) {
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="comment">//Attempt to open a output stream for the dataoutputstream class</span>
-<a name="l00054"></a><a class="code" href="classLocalDataOutputStream.html#a49c8b8f106e31f43a53fdb4dc97bcb84">00054</a> <span class="keywordtype">bool</span> <a class="code" href="classLocalDataOutputStream.html#a49c8b8f106e31f43a53fdb4dc97bcb84">LocalDataOutputStream::open</a>( <span class="keywordtype">bool</span> textMode )
-<a name="l00055"></a>00055 {
+<a name="l00053"></a>00053                 printf(<span class="stringliteral">&quot;Opening in text mode\n&quot;</span>);
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055                 <a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a> = fopen(<a class="code" href="classLocalDataOutputStream.html#a6da91e80ea9ea53c7e68b7d23e1d627f">m_filePath</a>.c_str(), <span class="stringliteral">&quot;w&quot;</span>);
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057     <span class="comment">//If the file path is null return false</span>
-<a name="l00058"></a>00058     <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#ab3824181b6827da7e234e24d500225cb">m_filePath</a> == 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00057"></a>00057         } <span class="keywordflow">else</span> {
+<a name="l00058"></a>00058                 printf(<span class="stringliteral">&quot;Open in binary write mode\n&quot;</span>);
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060     <span class="comment">//if the stream is already open return false</span>
-<a name="l00061"></a>00061     <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">isOpen</a>() == <span class="keyword">true</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063     <span class="comment">//Attempt to open the file</span>
-<a name="l00064"></a>00064     <span class="keywordflow">if</span> (textMode == <span class="keyword">true</span>)
-<a name="l00065"></a>00065     {
-<a name="l00066"></a>00066         printf(<span class="stringliteral">&quot;Opening in text mode\n&quot;</span>);
+<a name="l00060"></a>00060                 <a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a> = fopen(<a class="code" href="classLocalDataOutputStream.html#a6da91e80ea9ea53c7e68b7d23e1d627f">m_filePath</a>.c_str(), <span class="stringliteral">&quot;wb&quot;</span>);
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062         }
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064         <span class="comment">//If the open was good then return true</span>
+<a name="l00065"></a>00065         <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a> != 0)
+<a name="l00066"></a>00066                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00067"></a>00067 
-<a name="l00068"></a>00068         <a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a> = fopen(<a class="code" href="classLocalDataOutputStream.html#ab3824181b6827da7e234e24d500225cb">m_filePath</a>, <span class="stringliteral">&quot;w&quot;</span>);
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070     }
-<a name="l00071"></a>00071     <span class="keywordflow">else</span>
-<a name="l00072"></a>00072     {
-<a name="l00073"></a>00073         printf(<span class="stringliteral">&quot;Open in binary write mode\n&quot;</span>);
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075         <a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a> = fopen(<a class="code" href="classLocalDataOutputStream.html#ab3824181b6827da7e234e24d500225cb">m_filePath</a>, <span class="stringliteral">&quot;wb&quot;</span>);
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077     }
+<a name="l00068"></a>00068         <span class="comment">//Otherwise return false</span>
+<a name="l00069"></a>00069         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00070"></a>00070 }
+<a name="l00071"></a>00071 
+<a name="l00072"></a><a class="code" href="classLocalDataOutputStream.html#a46ee7220f3a49d70d218f12a91189ef2">00072</a> <span class="keywordtype">void</span> <a class="code" href="classLocalDataOutputStream.html#a46ee7220f3a49d70d218f12a91189ef2">LocalDataOutputStream::close</a>() {
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074         <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">isOpen</a>() == <span class="keyword">true</span>) {
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076                 fclose(<a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a>);
+<a name="l00077"></a>00077                 <a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a> = 0;
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079     <span class="comment">//If the open was good then return true</span>
-<a name="l00080"></a>00080     <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a> != 0) <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082     <span class="comment">//Otherwise return false</span>
-<a name="l00083"></a>00083     <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00084"></a>00084 }
+<a name="l00079"></a>00079         }
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 }
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 <span class="comment">//Attempt to write specified data to the stream</span>
+<a name="l00084"></a><a class="code" href="classLocalDataOutputStream.html#ae4e380067f584433c820f6d2dedc8048">00084</a> <span class="keywordtype">bool</span> <a class="code" href="classLocalDataOutputStream.html#ae4e380067f584433c820f6d2dedc8048">LocalDataOutputStream::write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* Data, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> size) {
 <a name="l00085"></a>00085 
-<a name="l00086"></a><a class="code" href="classLocalDataOutputStream.html#a46ee7220f3a49d70d218f12a91189ef2">00086</a> <span class="keywordtype">void</span> <a class="code" href="classLocalDataOutputStream.html#a46ee7220f3a49d70d218f12a91189ef2">LocalDataOutputStream::close</a>()
-<a name="l00087"></a>00087 {
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089     <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">isOpen</a>() == <span class="keyword">true</span>)
-<a name="l00090"></a>00090     {
+<a name="l00086"></a>00086         <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">isOpen</a>() == <span class="keyword">true</span>) {
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088                 <span class="keywordflow">if</span> (fwrite(Data, size, 1, <a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a>) != 1) {
+<a name="l00089"></a>00089                         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00090"></a>00090                 }
 <a name="l00091"></a>00091 
-<a name="l00092"></a>00092         fclose(<a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a>);
-<a name="l00093"></a>00093         <a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a> = 0;
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095     }
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097 }
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099 <span class="comment">//Attempt to write specified data to the stream</span>
-<a name="l00100"></a><a class="code" href="classLocalDataOutputStream.html#ae4e380067f584433c820f6d2dedc8048">00100</a> <span class="keywordtype">bool</span> <a class="code" href="classLocalDataOutputStream.html#ae4e380067f584433c820f6d2dedc8048">LocalDataOutputStream::write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* Data, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> size)
-<a name="l00101"></a>00101 {
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103     <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">isOpen</a>() == <span class="keyword">true</span>)
-<a name="l00104"></a>00104     {
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106         <span class="keywordflow">if</span> (fwrite(Data, size, 1, <a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a>) != 1)
-<a name="l00107"></a>00107         {
-<a name="l00108"></a>00108             <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00109"></a>00109         }
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111         <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113     }
-<a name="l00114"></a>00114     <span class="keywordflow">else</span>
-<a name="l00115"></a>00115     {
-<a name="l00116"></a>00116 
-<a name="l00117"></a>00117         <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00118"></a>00118 
-<a name="l00119"></a>00119     }
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121 }
-<a name="l00122"></a>00122 
-<a name="l00123"></a><a class="code" href="classLocalDataOutputStream.html#a9f75bf364b5c9ae39594f2729b48fb37">00123</a> <span class="keywordtype">void</span> <a class="code" href="classLocalDataOutputStream.html#a9f75bf364b5c9ae39594f2729b48fb37">LocalDataOutputStream::flush</a>()
-<a name="l00124"></a>00124 {
-<a name="l00125"></a>00125     <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">isOpen</a>() == <span class="keyword">true</span>)
-<a name="l00126"></a>00126         fflush(<a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a>);
-<a name="l00127"></a>00127 }
+<a name="l00092"></a>00092                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094         } <span class="keywordflow">else</span> {
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098         }
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 }
+<a name="l00101"></a>00101 
+<a name="l00102"></a><a class="code" href="classLocalDataOutputStream.html#a9f75bf364b5c9ae39594f2729b48fb37">00102</a> <span class="keywordtype">void</span> <a class="code" href="classLocalDataOutputStream.html#a9f75bf364b5c9ae39594f2729b48fb37">LocalDataOutputStream::flush</a>() {
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104         <span class="keywordflow">if</span> (<a class="code" href="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155">isOpen</a>() == <span class="keyword">true</span>) {
+<a name="l00105"></a>00105                 fflush(<a class="code" href="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6">m_fileOutputStream</a>);
+<a name="l00106"></a>00106         }
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

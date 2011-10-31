@@ -1,3 +1,3 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$classLogWriter.html" title="Convenience class for a log." alt="" coords="7,5,84,35"/>
+<area shape="rect" id="node1" href="$classLock.html" title="A mutual exclusion lock used to try and ensure that the threads don&#39;t crash each other or the core th..." alt="" coords="5,5,56,35"/>
 </map>

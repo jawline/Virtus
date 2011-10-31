@@ -10,6 +10,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Button"><param name="Local" value="classButton.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Camera"><param name="Local" value="classCamera.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Checkbox"><param name="Local" value="classCheckbox.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Clock"><param name="Local" value="classClock.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="CloseHandler"><param name="Local" value="classCloseHandler.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Color"><param name="Local" value="classColor.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="ConfigurationFolder"><param name="Local" value="classConfigurationFolder.html"><param name="ImageNumber" value="11"></OBJECT>
@@ -29,12 +30,12 @@
   <LI><OBJECT type="text/sitemap"><param name="Name" value="File"><param name="Local" value="classFile.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Filesystem"><param name="Local" value="classFilesystem.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="FilesystemNode"><param name="Local" value="classFilesystemNode.html"><param name="ImageNumber" value="11"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="FilesystemUtils"><param name="Local" value="classFilesystemUtils.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Folder"><param name="Local" value="classFolder.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="FontChar"><param name="Local" value="classFontChar.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="FontMap"><param name="Local" value="classFontMap.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="FPSCalculator"><param name="Local" value="classFPSCalculator.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="FREngine"><param name="Local" value="classFREngine.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="FsUtils"><param name="Local" value="classFsUtils.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="GApplication"><param name="Local" value="classGApplication.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="GEngine"><param name="Local" value="classGEngine.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="GL2GraphicsAPI"><param name="Local" value="classGL2GraphicsAPI.html"><param name="ImageNumber" value="11"></OBJECT>
@@ -95,6 +96,7 @@
   <UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="BeeHive"><param name="Local" value="classBeeHive.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Camera"><param name="Local" value="classCamera.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Clock"><param name="Local" value="classClock.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Color"><param name="Local" value="classColor.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="ConfigurationInstance"><param name="Local" value="classConfigurationInstance.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="ConfigurationNode"><param name="Local" value="classConfigurationNode.html"><param name="ImageNumber" value="1"></OBJECT>
@@ -136,11 +138,11 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="LocalFolder"><param name="Local" value="classLocalFolder.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="FilesystemUtils"><param name="Local" value="classFilesystemUtils.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="FontChar"><param name="Local" value="classFontChar.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="FontMap"><param name="Local" value="classFontMap.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="FPSCalculator"><param name="Local" value="classFPSCalculator.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="FREngine"><param name="Local" value="classFREngine.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="FsUtils"><param name="Local" value="classFsUtils.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="GApplication"><param name="Local" value="classGApplication.html"><param name="ImageNumber" value="1"></OBJECT>
     <UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="ModelViewer"><param name="Local" value="classModelViewer.html"><param name="ImageNumber" value="11"></OBJECT>
@@ -240,6 +242,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Configure/ConfigurationString.h"><param name="Local" value="ConfigurationString_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Configure/ConfigurationWriter.cpp"><param name="Local" value="ConfigurationWriter_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Configure/ConfigurationWriter.h"><param name="Local" value="ConfigurationWriter_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Core/Clock.cpp"><param name="Local" value="Clock_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Core/Clock.h"><param name="Local" value="Clock_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Core/FPSCalculator.cpp"><param name="Local" value="FPSCalculator_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Core/FPSCalculator.h"><param name="Local" value="FPSCalculator_8h.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Code/Core/GEngine.cpp"><param name="Local" value="GEngine_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>

@@ -179,12 +179,12 @@
 <a name="l00139"></a>00139 
 <a name="l00140"></a>00140 }
 <a name="l00141"></a>00141 
-<a name="l00142"></a><a class="code" href="classGLShaderFactory.html#aca104c05da575dbd053bab1106f73a18">00142</a> <a class="code" href="classShader.html">Shader</a>* <a class="code" href="classGLShaderFactory.html#aca104c05da575dbd053bab1106f73a18">GLShaderFactory::loadShader</a>(<a class="code" href="classFile.html">File</a>* fileNode)
+<a name="l00142"></a><a class="code" href="classGLShaderFactory.html#aca104c05da575dbd053bab1106f73a18">00142</a> <a class="code" href="classShader.html">Shader</a>* <a class="code" href="classGLShaderFactory.html#aca104c05da575dbd053bab1106f73a18">GLShaderFactory::loadShader</a>(<a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* fileNode)
 <a name="l00143"></a>00143 {
-<a name="l00144"></a>00144     <span class="keywordflow">if</span> (fileNode == 0)
+<a name="l00144"></a>00144     <span class="keywordflow">if</span> (fileNode == 0) <span class="keywordflow">return</span> 0;
 <a name="l00145"></a>00145     <span class="keywordflow">if</span> (fileNode-&gt;<a class="code" href="classFile.html#a43d0e1af3412f6b04b0fde9af3cef442">getType</a>() != <a class="code" href="File_8h.html#a9d0ea989dfb1959561f444bc90cb1981">fileId</a>) <span class="keywordflow">return</span> 0;
 <a name="l00146"></a>00146 
-<a name="l00147"></a>00147     <a class="code" href="classDataInputStream.html">DataInputStream</a>* strm = fileNode-&gt;<a class="code" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d">createInputStream</a>();
+<a name="l00147"></a>00147     <a class="code" href="classDataInputStream.html">DataInputStream</a>* strm = fileNode-&gt;<a class="code" href="classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file.">createInputStream</a>();
 <a name="l00148"></a>00148     <span class="keywordflow">if</span> (strm == 0) <span class="keywordflow">return</span> 0;
 <a name="l00149"></a>00149 
 <a name="l00150"></a>00150     <span class="comment">//If the open fails</span>
@@ -195,9 +195,9 @@
 <a name="l00155"></a>00155         <span class="keywordflow">return</span> 0;
 <a name="l00156"></a>00156     }
 <a name="l00157"></a>00157 
-<a name="l00158"></a>00158     <span class="keywordtype">char</span>* dataBuffer = <span class="keyword">new</span> <span class="keywordtype">char</span>[ fileNode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b">length</a>() ];
+<a name="l00158"></a>00158     <span class="keywordtype">char</span>* dataBuffer = <span class="keyword">new</span> <span class="keywordtype">char</span>[ fileNode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file.">length</a>() ];
 <a name="l00159"></a>00159 
-<a name="l00160"></a>00160     <span class="keywordflow">if</span> (strm-&gt;<a class="code" href="classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60">read</a>(dataBuffer, fileNode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b">length</a>()) == <span class="keyword">false</span>)
+<a name="l00160"></a>00160     <span class="keywordflow">if</span> (strm-&gt;<a class="code" href="classDataInputStream.html#a8b8cb01f0ed496122822a082b2666f60">read</a>(dataBuffer, fileNode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file.">length</a>()) == <span class="keyword">false</span>)
 <a name="l00161"></a>00161     {
 <a name="l00162"></a>00162 
 <a name="l00163"></a>00163         <span class="keyword">delete</span>[] dataBuffer;
@@ -213,13 +213,13 @@
 <a name="l00173"></a>00173     <span class="keywordtype">char</span>* vertexBuffer = 0;
 <a name="l00174"></a>00174     <span class="keywordtype">char</span>* fragmentBuffer = 0;
 <a name="l00175"></a>00175 
-<a name="l00176"></a>00176     <span class="keywordflow">while</span> ( <a class="code" href="GLShaderFactory_8cpp.html#a48ce8db5e9bd8333f5a94153da7c03eb">nextWord</a>(dataBuffer, &amp;currentPtr, wordBuffer) &amp;&amp; currentPtr &lt; fileNode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b">length</a>())
+<a name="l00176"></a>00176     <span class="keywordflow">while</span> ( <a class="code" href="GLShaderFactory_8cpp.html#a48ce8db5e9bd8333f5a94153da7c03eb">nextWord</a>(dataBuffer, &amp;currentPtr, wordBuffer) &amp;&amp; currentPtr &lt; fileNode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file.">length</a>())
 <a name="l00177"></a>00177     {
 <a name="l00178"></a>00178 
 <a name="l00179"></a>00179         <span class="keywordflow">if</span> (strcmp(wordBuffer, <span class="stringliteral">&quot;api&quot;</span>) == 0)
 <a name="l00180"></a>00180         {
 <a name="l00181"></a>00181 
-<a name="l00182"></a>00182             <span class="keywordflow">if</span> ((<a class="code" href="GLShaderFactory_8cpp.html#a48ce8db5e9bd8333f5a94153da7c03eb">nextWord</a>(dataBuffer, &amp;currentPtr, wordBuffer) == <span class="keyword">false</span>) &amp;&amp; ((currentPtr &lt; fileNode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b">length</a>()) == <span class="keyword">false</span>))
+<a name="l00182"></a>00182             <span class="keywordflow">if</span> ((<a class="code" href="GLShaderFactory_8cpp.html#a48ce8db5e9bd8333f5a94153da7c03eb">nextWord</a>(dataBuffer, &amp;currentPtr, wordBuffer) == <span class="keyword">false</span>) &amp;&amp; ((currentPtr &lt; fileNode-&gt;<a class="code" href="classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file.">length</a>()) == <span class="keyword">false</span>))
 <a name="l00183"></a>00183             {
 <a name="l00184"></a>00184                 printf(<span class="stringliteral">&quot;ERR Unexpected end of file\n&quot;</span>);
 <a name="l00185"></a>00185                 <span class="keywordflow">break</span>;
@@ -354,7 +354,7 @@
 <a name="l00314"></a>00314 }
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

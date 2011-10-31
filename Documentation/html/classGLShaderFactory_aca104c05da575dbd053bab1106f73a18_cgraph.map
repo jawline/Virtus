@@ -1,7 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="File::createInputStream" alt="" coords="252,5,409,35"/>
+<area shape="rect" id="node3" href="$classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file." alt="" coords="252,5,409,35"/>
 <area shape="rect" id="node5" href="$classFile.html#a43d0e1af3412f6b04b0fde9af3cef442" title="File::getType" alt="" coords="281,59,380,88"/>
-<area shape="rect" id="node7" href="$classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="File::length" alt="" coords="288,112,373,141"/>
+<area shape="rect" id="node7" href="$classFile.html#a4e3b483b8707535b96f460f9b7c9152b" title="Return the length of the file." alt="" coords="288,112,373,141"/>
 <area shape="rect" id="node9" href="$classGLShader.html#a9ca588ab6e77024808bfb6efd486476e" title="GLShader::loadShader" alt="" coords="255,165,407,195"/>
 <area shape="rect" id="node25" href="$GLShaderFactory_8cpp.html#a48ce8db5e9bd8333f5a94153da7c03eb" title="nextWord" alt="" coords="292,219,369,248"/>
 <area shape="rect" id="node29" href="$classDataInputStream.html#aa3217641f4bbc8a339e78cba335c73b0" title="DataInputStream::open" alt="" coords="252,272,409,301"/>

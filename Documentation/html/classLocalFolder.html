@@ -52,56 +52,56 @@ Inheritance diagram for LocalFolder:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLocalFolder__inherit__graph.png" border="0" usemap="#LocalFolder_inherit__map" alt="Inheritance graph"/></div>
 <map name="LocalFolder_inherit__map" id="LocalFolder_inherit__map">
-<area shape="rect" id="node2" href="classFolder.html" title="Folder" alt="" coords="35,83,93,112"/><area shape="rect" id="node4" href="classFilesystemNode.html" title="FilesystemNode" alt="" coords="5,5,123,35"/></map>
+<area shape="rect" id="node2" href="classFolder.html" title="The abstraction of a folder within the filesystem." alt="" coords="35,83,93,112"/><area shape="rect" id="node4" href="classFilesystemNode.html" title="FilesystemNode" alt="" coords="5,5,123,35"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for LocalFolder:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLocalFolder__coll__graph.png" border="0" usemap="#LocalFolder_coll__map" alt="Collaboration graph"/></div>
 <map name="LocalFolder_coll__map" id="LocalFolder_coll__map">
-<area shape="rect" id="node2" href="classFolder.html" title="Folder" alt="" coords="35,83,93,112"/><area shape="rect" id="node4" href="classFilesystemNode.html" title="FilesystemNode" alt="" coords="5,5,123,35"/></map>
+<area shape="rect" id="node2" href="classFolder.html" title="The abstraction of a folder within the filesystem." alt="" coords="35,83,93,112"/><area shape="rect" id="node4" href="classFilesystemNode.html" title="FilesystemNode" alt="" coords="5,5,123,35"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classLocalFolder-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a41049d219d73d0f20ee42d817c608818">LocalFolder</a> (const char *Name, const char *Path)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238">LocalFolder</a> (string Name, string Path)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a3ddc7ebe6f95cccdeec5374f99042378">~LocalFolder</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a016d89627e9a5294077d843db4f4d3d0">numChildren</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFilesystemNode.html">FilesystemNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a5aa9e6cff85958d95204f8f1e37e0dca">getChild</a> (unsigned int n)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFile.html">File</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a610a63c1558ec67a2c135c522a1ac32a">newChild</a> (const char *filename)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFolder.html">Folder</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a8c45a1fe8d397febbcd39eb5c0ef901a">newChildFolder</a> (const char *Name)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFile.html">File</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#af9eea69e0cd51a2f563a51232f51519f">newChild</a> (string filename)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFolder.html">Folder</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a3d8a9d563114ea9c611348d8c3ce6309">newChildFolder</a> (string Name)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#aa6b99367df578f30adf336efa71649fe">refresh</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a78d800c9c8f8666c86448f8ac52d19ac">getName</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFilesystemNode.html">FilesystemNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a18b331f02bad299954423c02964f68c2">searchForChild</a> (const char *Name, unsigned int nameLength=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#af8027f4d2af6e4cba5feee85df75d54c">getName</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFilesystemNode.html">FilesystemNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf">searchForChild</a> (std::string Name)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0">emptyList</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#ab9651b25fcbde44cc5c0f78c59a5d894">m_localFolderPath</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a72fd0f774239a963e342a454a80c8bc5">m_localName</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#a7e4fbd509abd9d25d9994782b61df44f">m_localName</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classFilesystemNode.html">FilesystemNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="LocalFolder_8h_source.html#l00006">6</a> of file <a class="el" href="LocalFolder_8h_source.html">LocalFolder.h</a>.</p>
+<p>Definition at line <a class="el" href="LocalFolder_8h_source.html#l00008">8</a> of file <a class="el" href="LocalFolder_8h_source.html">LocalFolder.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a41049d219d73d0f20ee42d817c608818"></a><!-- doxytag: member="LocalFolder::LocalFolder" ref="a41049d219d73d0f20ee42d817c608818" args="(const char *Name, const char *Path)" -->
+<a class="anchor" id="a8bfb7cdf5a046855a3d7c880f6d4c238"></a><!-- doxytag: member="LocalFolder::LocalFolder" ref="a8bfb7cdf5a046855a3d7c880f6d4c238" args="(string Name, string Path)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">LocalFolder::LocalFolder </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>Name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>Path</em>&#160;</td>
         </tr>
         <tr>
@@ -113,11 +113,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00009">9</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00008">8</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFolder_8h_source.html#l00009">m_localFolderPath</a>, and <a class="el" href="LocalFolder_8h_source.html#l00010">m_localName</a>.</p>
+<p>References <a class="el" href="LocalFolder_8h_source.html#l00012">m_localFolderPath</a>, and <a class="el" href="LocalFolder_8h_source.html#l00013">m_localName</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalFolder_8cpp_source.html#l00094">newChildFolder()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00126">refresh()</a>.</p>
+<p>Referenced by <a class="el" href="LocalFolder_8cpp_source.html#l00054">newChildFolder()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00080">refresh()</a>.</p>
 
 </div>
 </div>
@@ -135,9 +135,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00033">33</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00013">13</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFolder_8cpp_source.html#l00209">emptyList()</a>, <a class="el" href="LocalFolder_8h_source.html#l00009">m_localFolderPath</a>, and <a class="el" href="LocalFolder_8h_source.html#l00010">m_localName</a>.</p>
+<p>References <a class="el" href="LocalFolder_8cpp_source.html#l00139">emptyList()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -165,11 +165,11 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00209">209</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00139">139</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFolder_8h_source.html#l00012">m_entryList</a>.</p>
+<p>References <a class="el" href="LocalFolder_8h_source.html#l00015">m_entryList</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalFolder_8cpp_source.html#l00126">refresh()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00033">~LocalFolder()</a>.</p>
+<p>Referenced by <a class="el" href="LocalFolder_8cpp_source.html#l00080">refresh()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00013">~LocalFolder()</a>.</p>
 
 </div>
 </div>
@@ -190,18 +190,18 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classFolder.html#a20e1ec7bdd5a34d1ed6ba3d614d9581a">Folder</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00064">64</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00026">26</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFolder_8h_source.html#l00012">m_entryList</a>.</p>
+<p>References <a class="el" href="LocalFolder_8h_source.html#l00015">m_entryList</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a78d800c9c8f8666c86448f8ac52d19ac"></a><!-- doxytag: member="LocalFolder::getName" ref="a78d800c9c8f8666c86448f8ac52d19ac" args="()" -->
+<a class="anchor" id="af8027f4d2af6e4cba5feee85df75d54c"></a><!-- doxytag: member="LocalFolder::getName" ref="af8027f4d2af6e4cba5feee85df75d54c" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* LocalFolder::getName </td>
+          <td class="memname">string LocalFolder::getName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [inline, virtual]</code></td>
@@ -210,24 +210,20 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classFilesystemNode.html#ae72c4830dc5036ec8878ca2499a141ce">FilesystemNode</a>.</p>
+<p>Implements <a class="el" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8">FilesystemNode</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFolder_8h_source.html#l00028">28</a> of file <a class="el" href="LocalFolder_8h_source.html">LocalFolder.h</a>.</p>
-
-<p>References <a class="el" href="LocalFolder_8h_source.html#l00010">m_localName</a>.</p>
-
-<p>Referenced by <a class="el" href="LocalFolder_8cpp_source.html#l00221">searchForChild()</a>.</p>
+<p>Definition at line <a class="el" href="LocalFolder_8h_source.html#l00031">31</a> of file <a class="el" href="LocalFolder_8h_source.html">LocalFolder.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a610a63c1558ec67a2c135c522a1ac32a"></a><!-- doxytag: member="LocalFolder::newChild" ref="a610a63c1558ec67a2c135c522a1ac32a" args="(const char *filename)" -->
+<a class="anchor" id="af9eea69e0cd51a2f563a51232f51519f"></a><!-- doxytag: member="LocalFolder::newChild" ref="af9eea69e0cd51a2f563a51232f51519f" args="(string filename)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classFile.html">File</a> * LocalFolder::newChild </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>filename</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -235,31 +231,31 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classFolder.html#a86e65707748fb4e35f2cd7e60d452804">Folder</a>.</p>
+<p>Implements <a class="el" href="classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428">Folder</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00072">72</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00033">33</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFolder_8h_source.html#l00012">m_entryList</a>, <a class="el" href="LocalFolder_8h_source.html#l00009">m_localFolderPath</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00221">searchForChild()</a>.</p>
+<p>References <a class="el" href="LocalFolder_8h_source.html#l00015">m_entryList</a>, <a class="el" href="LocalFolder_8h_source.html#l00012">m_localFolderPath</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00149">searchForChild()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classLocalFolder_a610a63c1558ec67a2c135c522a1ac32a_cgraph.png" border="0" usemap="#classLocalFolder_a610a63c1558ec67a2c135c522a1ac32a_cgraph" alt=""/></div>
-<map name="classLocalFolder_a610a63c1558ec67a2c135c522a1ac32a_cgraph" id="classLocalFolder_a610a63c1558ec67a2c135c522a1ac32a_cgraph">
-<area shape="rect" id="node3" href="classLocalFolder.html#a18b331f02bad299954423c02964f68c2" title="LocalFolder::searchForChild" alt="" coords="207,5,391,35"/><area shape="rect" id="node5" href="classLocalFolder.html#a78d800c9c8f8666c86448f8ac52d19ac" title="LocalFolder::getName" alt="" coords="441,5,591,35"/></map>
+<div class="center"><img src="classLocalFolder_af9eea69e0cd51a2f563a51232f51519f_cgraph.png" border="0" usemap="#classLocalFolder_af9eea69e0cd51a2f563a51232f51519f_cgraph" alt=""/></div>
+<map name="classLocalFolder_af9eea69e0cd51a2f563a51232f51519f_cgraph" id="classLocalFolder_af9eea69e0cd51a2f563a51232f51519f_cgraph">
+<area shape="rect" id="node3" href="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf" title="LocalFolder::searchForChild" alt="" coords="207,5,391,35"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a8c45a1fe8d397febbcd39eb5c0ef901a"></a><!-- doxytag: member="LocalFolder::newChildFolder" ref="a8c45a1fe8d397febbcd39eb5c0ef901a" args="(const char *Name)" -->
+<a class="anchor" id="a3d8a9d563114ea9c611348d8c3ce6309"></a><!-- doxytag: member="LocalFolder::newChildFolder" ref="a3d8a9d563114ea9c611348d8c3ce6309" args="(string Name)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classFolder.html">Folder</a> * LocalFolder::newChildFolder </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>Name</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -267,18 +263,18 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classFolder.html#a92d12c385ac1080a44767cf431bf8230">Folder</a>.</p>
+<p>Implements <a class="el" href="classFolder.html#a74501a9c3cb239194005ceb8a2536416">Folder</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00094">94</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00054">54</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFolder_8cpp_source.html#l00009">LocalFolder()</a>, <a class="el" href="LocalFolder_8h_source.html#l00012">m_entryList</a>, <a class="el" href="LocalFolder_8h_source.html#l00009">m_localFolderPath</a>, <a class="el" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2">Folder::refresh()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00221">searchForChild()</a>.</p>
+<p>References <a class="el" href="LocalFolder_8cpp_source.html#l00008">LocalFolder()</a>, <a class="el" href="LocalFolder_8h_source.html#l00015">m_entryList</a>, <a class="el" href="LocalFolder_8h_source.html#l00012">m_localFolderPath</a>, <a class="el" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2">Folder::refresh()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00149">searchForChild()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classLocalFolder_a8c45a1fe8d397febbcd39eb5c0ef901a_cgraph.png" border="0" usemap="#classLocalFolder_a8c45a1fe8d397febbcd39eb5c0ef901a_cgraph" alt=""/></div>
-<map name="classLocalFolder_a8c45a1fe8d397febbcd39eb5c0ef901a_cgraph" id="classLocalFolder_a8c45a1fe8d397febbcd39eb5c0ef901a_cgraph">
-<area shape="rect" id="node3" href="classLocalFolder.html#a41049d219d73d0f20ee42d817c608818" title="LocalFolder::LocalFolder" alt="" coords="252,5,415,35"/><area shape="rect" id="node5" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="280,59,387,88"/><area shape="rect" id="node7" href="classLocalFolder.html#a18b331f02bad299954423c02964f68c2" title="LocalFolder::searchForChild" alt="" coords="241,112,425,141"/><area shape="rect" id="node9" href="classLocalFolder.html#a78d800c9c8f8666c86448f8ac52d19ac" title="LocalFolder::getName" alt="" coords="476,112,625,141"/></map>
+<div class="center"><img src="classLocalFolder_a3d8a9d563114ea9c611348d8c3ce6309_cgraph.png" border="0" usemap="#classLocalFolder_a3d8a9d563114ea9c611348d8c3ce6309_cgraph" alt=""/></div>
+<map name="classLocalFolder_a3d8a9d563114ea9c611348d8c3ce6309_cgraph" id="classLocalFolder_a3d8a9d563114ea9c611348d8c3ce6309_cgraph">
+<area shape="rect" id="node3" href="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238" title="LocalFolder::LocalFolder" alt="" coords="252,5,415,35"/><area shape="rect" id="node5" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="280,59,387,88"/><area shape="rect" id="node7" href="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf" title="LocalFolder::searchForChild" alt="" coords="241,112,425,141"/></map>
 </div>
 </p>
 
@@ -300,9 +296,9 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classFolder.html#ae23a04e096a0cd53dd3feecf0bd96c80">Folder</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00057">57</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00020">20</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFolder_8h_source.html#l00012">m_entryList</a>.</p>
+<p>References <a class="el" href="LocalFolder_8h_source.html#l00015">m_entryList</a>.</p>
 
 </div>
 </div>
@@ -322,62 +318,41 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2">Folder</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00126">126</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00080">80</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalFolder_8cpp_source.html#l00209">emptyList()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00009">LocalFolder()</a>, <a class="el" href="LocalFolder_8h_source.html#l00012">m_entryList</a>, <a class="el" href="LocalFolder_8h_source.html#l00009">m_localFolderPath</a>, and <a class="el" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2">Folder::refresh()</a>.</p>
+<p>References <a class="el" href="LocalFolder_8cpp_source.html#l00139">emptyList()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00008">LocalFolder()</a>, <a class="el" href="LocalFolder_8h_source.html#l00015">m_entryList</a>, <a class="el" href="LocalFolder_8h_source.html#l00012">m_localFolderPath</a>, and <a class="el" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2">Folder::refresh()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLocalFolder_aa6b99367df578f30adf336efa71649fe_cgraph.png" border="0" usemap="#classLocalFolder_aa6b99367df578f30adf336efa71649fe_cgraph" alt=""/></div>
 <map name="classLocalFolder_aa6b99367df578f30adf336efa71649fe_cgraph" id="classLocalFolder_aa6b99367df578f30adf336efa71649fe_cgraph">
-<area shape="rect" id="node3" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0" title="LocalFolder::emptyList" alt="" coords="197,5,352,35"/><area shape="rect" id="node5" href="classLocalFolder.html#a41049d219d73d0f20ee42d817c608818" title="LocalFolder::LocalFolder" alt="" coords="193,59,356,88"/><area shape="rect" id="node7" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="221,112,328,141"/></map>
+<area shape="rect" id="node3" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0" title="LocalFolder::emptyList" alt="" coords="197,5,352,35"/><area shape="rect" id="node5" href="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238" title="LocalFolder::LocalFolder" alt="" coords="193,59,356,88"/><area shape="rect" id="node7" href="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2" title="Folder::refresh" alt="" coords="221,112,328,141"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a18b331f02bad299954423c02964f68c2"></a><!-- doxytag: member="LocalFolder::searchForChild" ref="a18b331f02bad299954423c02964f68c2" args="(const char *Name, unsigned int nameLength=0)" -->
+<a class="anchor" id="a84c009856a080f854e9a534a32edd0cf"></a><!-- doxytag: member="LocalFolder::searchForChild" ref="a84c009856a080f854e9a534a32edd0cf" args="(std::string Name)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classFilesystemNode.html">FilesystemNode</a> * LocalFolder::searchForChild </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>Name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>Name</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>nameLength</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classFolder.html#ac9bd343406ddd4ee391558234e637cd1">Folder</a>.</p>
+<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00149">149</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFolder_8cpp_source.html#l00221">221</a> of file <a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a>.</p>
+<p>References <a class="el" href="LocalFolder_8h_source.html#l00015">m_entryList</a>.</p>
 
-<p>References <a class="el" href="LocalFolder_8h_source.html#l00028">getName()</a>, and <a class="el" href="LocalFolder_8h_source.html#l00012">m_entryList</a>.</p>
-
-<p>Referenced by <a class="el" href="LocalFolder_8cpp_source.html#l00072">newChild()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00094">newChildFolder()</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classLocalFolder_a18b331f02bad299954423c02964f68c2_cgraph.png" border="0" usemap="#classLocalFolder_a18b331f02bad299954423c02964f68c2_cgraph" alt=""/></div>
-<map name="classLocalFolder_a18b331f02bad299954423c02964f68c2_cgraph" id="classLocalFolder_a18b331f02bad299954423c02964f68c2_cgraph">
-<area shape="rect" id="node3" href="classLocalFolder.html#a78d800c9c8f8666c86448f8ac52d19ac" title="LocalFolder::getName" alt="" coords="241,5,391,35"/></map>
-</div>
-</p>
+<p>Referenced by <a class="el" href="LocalFolder_8cpp_source.html#l00033">newChild()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00054">newChildFolder()</a>.</p>
 
 </div>
 </div>
@@ -393,43 +368,43 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Definition at line <a class="el" href="LocalFolder_8h_source.html#l00015">15</a> of file <a class="el" href="LocalFolder_8h_source.html">LocalFolder.h</a>.</p>
+
+<p>Referenced by <a class="el" href="LocalFolder_8cpp_source.html#l00139">emptyList()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00026">getChild()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00033">newChild()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00054">newChildFolder()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00020">numChildren()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00080">refresh()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00149">searchForChild()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf5a821b5bc4205173258f2d52e0e319"></a><!-- doxytag: member="LocalFolder::m_localFolderPath" ref="acf5a821b5bc4205173258f2d52e0e319" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">LocalFolder::m_localFolderPath</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
 <p>Definition at line <a class="el" href="LocalFolder_8h_source.html#l00012">12</a> of file <a class="el" href="LocalFolder_8h_source.html">LocalFolder.h</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalFolder_8cpp_source.html#l00209">emptyList()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00064">getChild()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00072">newChild()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00094">newChildFolder()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00057">numChildren()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00126">refresh()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00221">searchForChild()</a>.</p>
+<p>Referenced by <a class="el" href="LocalFolder_8cpp_source.html#l00008">LocalFolder()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00033">newChild()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00054">newChildFolder()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00080">refresh()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab9651b25fcbde44cc5c0f78c59a5d894"></a><!-- doxytag: member="LocalFolder::m_localFolderPath" ref="ab9651b25fcbde44cc5c0f78c59a5d894" args="" -->
+<a class="anchor" id="a7e4fbd509abd9d25d9994782b61df44f"></a><!-- doxytag: member="LocalFolder::m_localName" ref="a7e4fbd509abd9d25d9994782b61df44f" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* <a class="el" href="classLocalFolder.html#ab9651b25fcbde44cc5c0f78c59a5d894">LocalFolder::m_localFolderPath</a><code> [private]</code></td>
+          <td class="memname">string <a class="el" href="classLocalFolder.html#a7e4fbd509abd9d25d9994782b61df44f">LocalFolder::m_localName</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalFolder_8h_source.html#l00009">9</a> of file <a class="el" href="LocalFolder_8h_source.html">LocalFolder.h</a>.</p>
+<p>Definition at line <a class="el" href="LocalFolder_8h_source.html#l00013">13</a> of file <a class="el" href="LocalFolder_8h_source.html">LocalFolder.h</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalFolder_8cpp_source.html#l00009">LocalFolder()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00072">newChild()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00094">newChildFolder()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00126">refresh()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00033">~LocalFolder()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a72fd0f774239a963e342a454a80c8bc5"></a><!-- doxytag: member="LocalFolder::m_localName" ref="a72fd0f774239a963e342a454a80c8bc5" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char* <a class="el" href="classLocalFolder.html#a72fd0f774239a963e342a454a80c8bc5">LocalFolder::m_localName</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="LocalFolder_8h_source.html#l00010">10</a> of file <a class="el" href="LocalFolder_8h_source.html">LocalFolder.h</a>.</p>
-
-<p>Referenced by <a class="el" href="LocalFolder_8h_source.html#l00028">getName()</a>, <a class="el" href="LocalFolder_8cpp_source.html#l00009">LocalFolder()</a>, and <a class="el" href="LocalFolder_8cpp_source.html#l00033">~LocalFolder()</a>.</p>
+<p>Referenced by <a class="el" href="LocalFolder_8cpp_source.html#l00008">LocalFolder()</a>.</p>
 
 </div>
 </div>
@@ -438,7 +413,7 @@ Here is the call graph for this function:</div>
 <li>Code/Filesystem/<a class="el" href="LocalFolder_8cpp_source.html">LocalFolder.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

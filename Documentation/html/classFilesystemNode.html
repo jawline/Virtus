@@ -50,7 +50,7 @@ Inheritance diagram for FilesystemNode:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFilesystemNode__inherit__graph.png" border="0" usemap="#FilesystemNode_inherit__map" alt="Inheritance graph"/></div>
 <map name="FilesystemNode_inherit__map" id="FilesystemNode_inherit__map">
-<area shape="rect" id="node3" href="classFile.html" title="File" alt="" coords="29,83,72,112"/><area shape="rect" id="node7" href="classFolder.html" title="Folder" alt="" coords="111,83,169,112"/><area shape="rect" id="node5" href="classLocalFile.html" title="LocalFile" alt="" coords="5,160,80,189"/><area shape="rect" id="node9" href="classLocalFolder.html" title="LocalFolder" alt="" coords="104,160,192,189"/></map>
+<area shape="rect" id="node3" href="classFile.html" title="The abstraction of a file within the filesystem." alt="" coords="29,83,72,112"/><area shape="rect" id="node7" href="classFolder.html" title="The abstraction of a folder within the filesystem." alt="" coords="111,83,169,112"/><area shape="rect" id="node5" href="classLocalFile.html" title="LocalFile" alt="" coords="5,160,80,189"/><area shape="rect" id="node9" href="classLocalFolder.html" title="LocalFolder" alt="" coords="104,160,192,189"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classFilesystemNode-members.html">List of all members.</a></p>
@@ -59,11 +59,11 @@ Inheritance diagram for FilesystemNode:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFilesystemNode.html#a045774a9d9fcb3abf9094919469b9f80">~FilesystemNode</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c">getType</a> ()=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFilesystemNode.html#ae72c4830dc5036ec8878ca2499a141ce">getName</a> ()=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8">getName</a> ()=0</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Node_8h_source.html#l00004">4</a> of file <a class="el" href="Node_8h_source.html">Node.h</a>.</p>
+<p>Definition at line <a class="el" href="Node_8h_source.html#l00006">6</a> of file <a class="el" href="Node_8h_source.html">Node.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a045774a9d9fcb3abf9094919469b9f80"></a><!-- doxytag: member="FilesystemNode::~FilesystemNode" ref="a045774a9d9fcb3abf9094919469b9f80" args="()" -->
 <div class="memitem">
@@ -79,17 +79,17 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Node_8h_source.html#l00008">8</a> of file <a class="el" href="Node_8h_source.html">Node.h</a>.</p>
+<p>Definition at line <a class="el" href="Node_8h_source.html#l00010">10</a> of file <a class="el" href="Node_8h_source.html">Node.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ae72c4830dc5036ec8878ca2499a141ce"></a><!-- doxytag: member="FilesystemNode::getName" ref="ae72c4830dc5036ec8878ca2499a141ce" args="()=0" -->
+<a class="anchor" id="a16eda76e32f8d063b459475eacb26ba8"></a><!-- doxytag: member="FilesystemNode::getName" ref="a16eda76e32f8d063b459475eacb26ba8" args="()=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual char* FilesystemNode::getName </td>
+          <td class="memname">virtual string FilesystemNode::getName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [pure virtual]</code></td>
@@ -98,7 +98,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implemented in <a class="el" href="classLocalFile.html#acbb5052c66fb0c331e5303f74bc45285">LocalFile</a>, and <a class="el" href="classLocalFolder.html#a78d800c9c8f8666c86448f8ac52d19ac">LocalFolder</a>.</p>
+<p>Implemented in <a class="el" href="classLocalFile.html#a285481756f0b72e50f6638dfe6c3ad3f">LocalFile</a>, and <a class="el" href="classLocalFolder.html#af8027f4d2af6e4cba5feee85df75d54c">LocalFolder</a>.</p>
 
 <p>Referenced by <a class="el" href="FREngine_8cpp_source.html#l00033">FREngine::Load()</a>, and <a class="el" href="LogWriter_8cpp_source.html#l00005">LogWriter::LogWriter()</a>.</p>
 
@@ -120,7 +120,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classFile.html#a43d0e1af3412f6b04b0fde9af3cef442">File</a>, and <a class="el" href="classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5">Folder</a>.</p>
 
-<p>Referenced by <a class="el" href="Filesystem_8cpp_source.html#l00006">Filesystem::evaluateChild()</a>, <a class="el" href="TextureMonitor_8cpp_source.html#l00030">TextureMonitor::f_loadEntity()</a>, <a class="el" href="Filesystem_8cpp_source.html#l00051">Filesystem::getFileInputStream()</a>, and <a class="el" href="Filesystem_8cpp_source.html#l00073">Filesystem::getFileOutputStream()</a>.</p>
+<p>Referenced by <a class="el" href="Filesystem_8cpp_source.html#l00006">Filesystem::evaluateChild()</a>, <a class="el" href="TextureMonitor_8cpp_source.html#l00030">TextureMonitor::f_loadEntity()</a>, <a class="el" href="Filesystem_8cpp_source.html#l00057">Filesystem::getFileInputStream()</a>, and <a class="el" href="Filesystem_8cpp_source.html#l00079">Filesystem::getFileOutputStream()</a>.</p>
 
 </div>
 </div>
@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <li>Code/Filesystem/<a class="el" href="Node_8h_source.html">Node.h</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:30 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

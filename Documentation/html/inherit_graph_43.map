@@ -1,3 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$classTextureLoader.html" title="TextureLoader" alt="" coords="7,5,111,35"/>
+<area shape="rect" id="node1" href="$classTexture.html" title="Texture" alt="" coords="5,5,72,35"/>
+<area shape="rect" id="node3" href="$classGLTexture.html" title="GLTexture" alt="" coords="120,5,203,35"/>
 </map>

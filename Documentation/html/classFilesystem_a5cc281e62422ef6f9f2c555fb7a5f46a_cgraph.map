@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="File::createInputStream" alt="" coords="260,5,417,35"/>
+<area shape="rect" id="node3" href="$classFile.html#a25f707c5bc8f46bd2fb4c057d51a675d" title="Create a input stream to that file." alt="" coords="260,5,417,35"/>
 <area shape="rect" id="node5" href="$classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c" title="FilesystemNode::getType" alt="" coords="689,56,860,85"/>
 <area shape="rect" id="node7" href="$classFilesystem.html#ac5fd2d2f0c2921df1552b5686f8295cc" title="Filesystem::search" alt="" coords="272,109,405,139"/>
 <area shape="rect" id="node9" href="$classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896" title="Filesystem::evaluateChild" alt="" coords="467,109,640,139"/>

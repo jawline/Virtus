@@ -1,4 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$classFile.html" title="File" alt="" coords="59,85,101,115"/>
+<area shape="rect" id="node2" href="$classFile.html" title="The abstraction of a file within the filesystem." alt="" coords="59,85,101,115"/>
 <area shape="rect" id="node4" href="$classFilesystemNode.html" title="FilesystemNode" alt="" coords="21,5,139,35"/>
 </map>

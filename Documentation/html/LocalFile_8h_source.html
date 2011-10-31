@@ -41,31 +41,33 @@
 <a href="LocalFile_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _LOCALFILE_DEF_H_</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _LOCALFILE_DEF_H_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="File_8h.html">File.h</a>&quot;</span>
-<a name="l00004"></a>00004 
-<a name="l00005"></a><a class="code" href="classLocalFile.html">00005</a> <span class="keyword">class </span><a class="code" href="classLocalFile.html">LocalFile</a> : <span class="keyword">public</span> <a class="code" href="classFile.html">File</a>
-<a name="l00006"></a>00006 {
-<a name="l00007"></a>00007 <span class="keyword">private</span>:
-<a name="l00008"></a><a class="code" href="classLocalFile.html#a595913c14e5fee72ad36e6e4bbe01f50">00008</a>     <span class="keywordtype">char</span>* <a class="code" href="classLocalFile.html#a595913c14e5fee72ad36e6e4bbe01f50">m_localFilePath</a>;
-<a name="l00009"></a><a class="code" href="classLocalFile.html#ac20324c4a131f88d5342be8db58ef10e">00009</a>     <span class="keywordtype">char</span>* <a class="code" href="classLocalFile.html#ac20324c4a131f88d5342be8db58ef10e">m_localName</a>;
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="keyword">public</span>:
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00005"></a>00005 <span class="keyword">using namespace </span>std;
+<a name="l00006"></a>00006 
+<a name="l00007"></a><a class="code" href="classLocalFile.html">00007</a> <span class="keyword">class </span><a class="code" href="classLocalFile.html">LocalFile</a> : <span class="keyword">public</span> <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>
+<a name="l00008"></a>00008 {
+<a name="l00009"></a>00009 <span class="keyword">private</span>:
+<a name="l00010"></a><a class="code" href="classLocalFile.html#a2b8075c988095091e6ffcf24597f09d6">00010</a>     <span class="keywordtype">string</span> <a class="code" href="classLocalFile.html#a2b8075c988095091e6ffcf24597f09d6">m_localFilePath</a>;
+<a name="l00011"></a><a class="code" href="classLocalFile.html#a6bf7df0c750209e1d977bb5b34709bc1">00011</a>     <span class="keywordtype">string</span> <a class="code" href="classLocalFile.html#a6bf7df0c750209e1d977bb5b34709bc1">m_localName</a>;
 <a name="l00012"></a>00012 
-<a name="l00013"></a>00013     <a class="code" href="classLocalFile.html#a0e5a564b952bf19a35ee874967836206">LocalFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* FullPath);
-<a name="l00014"></a>00014     <a class="code" href="classLocalFile.html#a739f67ada55c6d28a3540412bc81a4a9">~LocalFile</a>();
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016     <a class="code" href="classDataInputStream.html">DataInputStream</a>* <a class="code" href="classLocalFile.html#a2553d6ef0704082c4d80f2349535ca23">createInputStream</a>();
-<a name="l00017"></a>00017     <a class="code" href="classDataOutputStream.html">DataOutputStream</a>* <a class="code" href="classLocalFile.html#abd0ec9137043e59f028b1a91c13d80c8">createOutputStream</a>();
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019     <span class="keywordtype">bool</span> <a class="code" href="classLocalFile.html#abc99ed2bb51eb77f0e0b86f79b5c61a6">exists</a>();
-<a name="l00020"></a>00020     <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="classLocalFile.html#a9e8a4bde444401a0c59ea8cff1152501">length</a>();
-<a name="l00021"></a>00021 
-<a name="l00022"></a><a class="code" href="classLocalFile.html#acbb5052c66fb0c331e5303f74bc45285">00022</a>     <span class="keywordtype">char</span>* <a class="code" href="classLocalFile.html#acbb5052c66fb0c331e5303f74bc45285">getName</a>() { <span class="keywordflow">return</span> <a class="code" href="classLocalFile.html#ac20324c4a131f88d5342be8db58ef10e">m_localName</a>; }
-<a name="l00023"></a>00023 };
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="preprocessor">#endif //_LOCALFILE_DEF_H_</span>
+<a name="l00013"></a>00013 <span class="keyword">public</span>:
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015     <a class="code" href="classLocalFile.html">LocalFile</a>(<span class="keywordtype">string</span> FullPath);
+<a name="l00016"></a>00016     ~<a class="code" href="classLocalFile.html">LocalFile</a>();
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018     <a class="code" href="classDataInputStream.html">DataInputStream</a>* createInputStream();
+<a name="l00019"></a>00019     <a class="code" href="classDataOutputStream.html">DataOutputStream</a>* createOutputStream();
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021     <span class="keywordtype">bool</span> exists();
+<a name="l00022"></a>00022     <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> length();
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024     <span class="keywordtype">string</span> getName();
+<a name="l00025"></a>00025 };
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="preprocessor">#endif //_LOCALFILE_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

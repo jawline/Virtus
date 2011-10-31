@@ -6,7 +6,7 @@
 InterfaceLayer::InterfaceLayer()
 {
 
-    if ( m_defaultTextRenderer.Load( (File*) Filesystem::evaluateChild(Filesystem::getRoot(), "Data/fonts/default.ttf")) == false );
+    if ( m_defaultTextRenderer.Load( (File*) Filesystem::evaluateChild(Filesystem::getRoot(), string("Data/fonts/default.ttf") )) == false );
     {
         printf("InterfaceLayer: Unable to load Data/fonts/default.ttf. Continuing, expect errors\n");
     }

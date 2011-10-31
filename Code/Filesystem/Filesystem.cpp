@@ -3,20 +3,24 @@
 #include <stdio.h>
 #include "LocalFolder.h"
 
-FilesystemNode* Filesystem::evaluateChild(Folder* Parent, const char* targetNode)
+FilesystemNode* Filesystem::evaluateChild(Folder* Parent, string targetNode)
 {
-    const char* firstSlash = strchr( targetNode , '/');
+    size_t firstSlash = targetNode.find_first_of("/");
 
-    if (firstSlash == 0)
+    if (firstSlash == string::npos)
     {
+
         //Pass it to the folder internal search
-        return Parent->searchForChild( targetNode );
+        return Parent->searchForChild( targetNode.c_str() );
+
     }
     else
     {
-        size_t entryLength = firstSlash - targetNode;
 
-        FilesystemNode* childNode = Parent->searchForChild( targetNode , entryLength);
+    	//Get the part of the string after the slash
+        string splitPath = targetNode.substr(0, firstSlash);
+
+        FilesystemNode* childNode = Parent->searchForChild( splitPath.c_str() );
 
         if (childNode != 0)
         {
@@ -32,7 +36,7 @@ FilesystemNode* Filesystem::evaluateChild(Folder* Parent, const char* targetNode
             {
 
                 Folder* childFolder = static_cast<Folder*>(childNode);
-                return Filesystem::evaluateChild(childFolder, firstSlash + 1);
+                return Filesystem::evaluateChild(childFolder, targetNode.substr(firstSlash + 1, targetNode.length() - (firstSlash + 1)) );
 
             }
         }
@@ -44,11 +48,13 @@ FilesystemNode* Filesystem::evaluateChild(Folder* Parent, const char* targetNode
     }
 }
 
-FilesystemNode* Filesystem::search(const char* TargetFile) {
+FilesystemNode* Filesystem::search(std::string TargetFile) {
+
     return Filesystem::evaluateChild( Filesystem::getRoot(), TargetFile );
+
 }
 
-DataInputStream* Filesystem::getFileInputStream(const char* targetFile) {
+DataInputStream* Filesystem::getFileInputStream(std::string targetFile) {
 
     //Find the node
     FilesystemNode* node = Filesystem::search(targetFile);
@@ -70,7 +76,7 @@ DataInputStream* Filesystem::getFileInputStream(const char* targetFile) {
     return toFileNode->createInputStream();
 }
 
-DataOutputStream* Filesystem::getFileOutputStream(const char* targetFile) {
+DataOutputStream* Filesystem::getFileOutputStream(std::string targetFile) {
 
     //Find the node
     FilesystemNode* node = Filesystem::search(targetFile);
@@ -79,6 +85,7 @@ DataOutputStream* Filesystem::getFileOutputStream(const char* targetFile) {
     if (!node) {
 
         return 0;
+
     }
 
     //Check the file type
@@ -94,10 +101,10 @@ DataOutputStream* Filesystem::getFileOutputStream(const char* targetFile) {
 
 static Folder* g_filesystemRoot = 0;
 
-Folder* Filesystem::getRoot()
-{
-    if (g_filesystemRoot == 0)
-    {
+Folder* Filesystem::getRoot() {
+
+    if (g_filesystemRoot == 0) {
+
         g_filesystemRoot = new LocalFolder("Root", "./");
         g_filesystemRoot->refresh();
     }

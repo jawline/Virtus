@@ -42,38 +42,41 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _LOCAL_FOLDER_DEF_H_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="Folder_8h.html">Folder.h</a>&quot;</span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;vector&gt;</span>
-<a name="l00005"></a>00005 
-<a name="l00006"></a><a class="code" href="classLocalFolder.html">00006</a> <span class="keyword">class </span><a class="code" href="classLocalFolder.html">LocalFolder</a> : <span class="keyword">public</span> <a class="code" href="classFolder.html">Folder</a>
-<a name="l00007"></a>00007 {
-<a name="l00008"></a>00008 <span class="keyword">private</span>:
-<a name="l00009"></a><a class="code" href="classLocalFolder.html#ab9651b25fcbde44cc5c0f78c59a5d894">00009</a>     <span class="keywordtype">char</span>* <a class="code" href="classLocalFolder.html#ab9651b25fcbde44cc5c0f78c59a5d894">m_localFolderPath</a>;
-<a name="l00010"></a><a class="code" href="classLocalFolder.html#a72fd0f774239a963e342a454a80c8bc5">00010</a>     <span class="keywordtype">char</span>* <a class="code" href="classLocalFolder.html#a72fd0f774239a963e342a454a80c8bc5">m_localName</a>;
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00006"></a>00006 <span class="keyword">using namespace </span>std;
+<a name="l00007"></a>00007 
+<a name="l00008"></a><a class="code" href="classLocalFolder.html">00008</a> <span class="keyword">class </span><a class="code" href="classLocalFolder.html">LocalFolder</a> : <span class="keyword">public</span> <a class="code" href="classFolder.html" title="The abstraction of a folder within the filesystem.">Folder</a>
+<a name="l00009"></a>00009 {
+<a name="l00010"></a>00010 <span class="keyword">private</span>:
 <a name="l00011"></a>00011 
-<a name="l00012"></a><a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">00012</a>     std::vector&lt;FilesystemNode*&gt; <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>;
-<a name="l00013"></a>00013     <span class="keywordtype">void</span> <a class="code" href="classLocalFolder.html#a8b4db543b418855874e54990043892c0">emptyList</a>();
+<a name="l00012"></a><a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">00012</a>     <span class="keywordtype">string</span> <a class="code" href="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319">m_localFolderPath</a>;
+<a name="l00013"></a><a class="code" href="classLocalFolder.html#a7e4fbd509abd9d25d9994782b61df44f">00013</a>     <span class="keywordtype">string</span> <a class="code" href="classLocalFolder.html#a7e4fbd509abd9d25d9994782b61df44f">m_localName</a>;
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="keyword">public</span>:
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017     <a class="code" href="classLocalFolder.html#a41049d219d73d0f20ee42d817c608818">LocalFolder</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Name, <span class="keyword">const</span> <span class="keywordtype">char</span>* Path);
-<a name="l00018"></a>00018     <a class="code" href="classLocalFolder.html#a3ddc7ebe6f95cccdeec5374f99042378">~LocalFolder</a>();
+<a name="l00015"></a><a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">00015</a>     std::vector&lt;FilesystemNode*&gt; <a class="code" href="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03">m_entryList</a>;
+<a name="l00016"></a>00016     <span class="keywordtype">void</span> emptyList();
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keyword">public</span>:
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classLocalFolder.html#a016d89627e9a5294077d843db4f4d3d0">numChildren</a>();
-<a name="l00021"></a>00021     <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* <a class="code" href="classLocalFolder.html#a5aa9e6cff85958d95204f8f1e37e0dca">getChild</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n);
+<a name="l00020"></a>00020     <a class="code" href="classLocalFolder.html">LocalFolder</a>(<span class="keywordtype">string</span> Name, <span class="keywordtype">string</span> Path);
+<a name="l00021"></a>00021     ~<a class="code" href="classLocalFolder.html">LocalFolder</a>();
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023     <a class="code" href="classFile.html">File</a>* <a class="code" href="classLocalFolder.html#a610a63c1558ec67a2c135c522a1ac32a">newChild</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);
-<a name="l00024"></a>00024     <a class="code" href="classFolder.html">Folder</a>* <a class="code" href="classLocalFolder.html#a8c45a1fe8d397febbcd39eb5c0ef901a">newChildFolder</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Name);
+<a name="l00023"></a>00023     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numChildren();
+<a name="l00024"></a>00024     <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* getChild(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n);
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026     <span class="keywordtype">void</span> <a class="code" href="classLocalFolder.html#aa6b99367df578f30adf336efa71649fe">refresh</a>();
-<a name="l00027"></a>00027 
-<a name="l00028"></a><a class="code" href="classLocalFolder.html#a78d800c9c8f8666c86448f8ac52d19ac">00028</a>     <span class="keywordtype">char</span>* <a class="code" href="classLocalFolder.html#a78d800c9c8f8666c86448f8ac52d19ac">getName</a>() { <span class="keywordflow">return</span> <a class="code" href="classLocalFolder.html#a72fd0f774239a963e342a454a80c8bc5">m_localName</a>; }
-<a name="l00029"></a>00029     <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* <a class="code" href="classLocalFolder.html#a18b331f02bad299954423c02964f68c2">searchForChild</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Name, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nameLength = 0);
+<a name="l00026"></a>00026     <a class="code" href="classFile.html" title="The abstraction of a file within the filesystem.">File</a>* newChild(<span class="keywordtype">string</span> filename);
+<a name="l00027"></a>00027     <a class="code" href="classFolder.html" title="The abstraction of a folder within the filesystem.">Folder</a>* newChildFolder(<span class="keywordtype">string</span> Name);
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029     <span class="keywordtype">void</span> refresh();
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031 };
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="preprocessor">#endif //_LOCAL_FOLDER_DEF_H_</span>
+<a name="l00031"></a><a class="code" href="classLocalFolder.html#af8027f4d2af6e4cba5feee85df75d54c">00031</a>     <span class="keywordtype">string</span> <a class="code" href="classLocalFolder.html#af8027f4d2af6e4cba5feee85df75d54c">getName</a>() { <span class="keywordflow">return</span> m_localName; }
+<a name="l00032"></a>00032     <a class="code" href="classFilesystemNode.html">FilesystemNode</a>* searchForChild(std::string Name);
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 };
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="preprocessor">#endif //_LOCAL_FOLDER_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

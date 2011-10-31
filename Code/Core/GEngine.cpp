@@ -10,10 +10,6 @@
 #include "Configure/ConfigurationNumber.h"
 #include "Configure/ConfigurationString.h"
 
-#if defined(_BUILD_LINUX_)
-#include <sys/time.h>
-#endif
-
 const char* defaultCfgFile = "./engine.cfg";
 const unsigned int defaultWindowWidth = 800;
 const unsigned int defaultWindowHeight = 600;
@@ -472,25 +468,17 @@ int GEngine::gameLoop()
     m_GameActive = true;
     m_physicsActive = true;
 
-#if defined(_BUILD_WIN32_)
-
-    unsigned int clockspermili = CLOCKS_PER_SEC / 1000;
-    unsigned int lastclock = clock();
-
-#elif defined(_BUILD_LINUX_)
-
-    struct timeval last_time;
-    struct timezone zone;
-    gettimeofday(&last_time, &zone);
-
-#else
-
-#error "Unsupported platform GEngine.cpp"
-
-#endif
+    m_clock.initialize();
+    float secondsPassed;
 
     while (m_GameActive)
     {
+
+    	secondsPassed =  m_clock.calculateElapsedTime();
+
+
+    	//Alert to the FPS calculator of a new frame
+        m_fpsCalculator.frame(secondsPassed);
 
         //Run through the postbox and trigger events
         while (m_inputPostbox.HasNext())
@@ -500,29 +488,6 @@ int GEngine::gameLoop()
 
         }
 
-#if defined(_BUILD_WIN32_)
-
-        unsigned long difference = (clock() - lastclock) / clockspermili;
-        lastclock = clock();
-        float secondsPassed = static_cast<float>(difference) / CLOCKS_PER_SEC;
-
-#elif defined(_BUILD_LINUX_)
-
-        struct timeval new_time;
-        gettimeofday(&new_time, &zone);
-
-        struct timeval difference;
-        difference.tv_sec = new_time.tv_sec - last_time.tv_sec;
-        difference.tv_usec = new_time.tv_usec - last_time.tv_usec;
-
-        last_time = new_time;
-
-        float secondsPassed = difference.tv_sec;
-        secondsPassed += difference.tv_usec / (1000.0f * 1000.0f);
-
-#endif
-
-        m_fpsCalculator.frame(secondsPassed);
 
         doFrameUpdate(secondsPassed);
 

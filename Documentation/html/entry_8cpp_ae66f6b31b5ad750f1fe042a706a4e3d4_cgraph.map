@@ -1,51 +1,51 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classGEngine.html#a214448871793f7202095185a8b800c8b" title="GEngine::errorDetails" alt="" coords="115,588,261,617"/>
-<area shape="rect" id="node5" href="$classGEngine.html#a02af5bc774fd00507f5339f97d4eb426" title="GEngine::gameLoop" alt="" coords="119,641,257,671"/>
-<area shape="rect" id="node9" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="884,745,1047,775"/>
-<area shape="rect" id="node65" href="$classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245" title="GEngine::getInstance" alt="" coords="115,1033,261,1063"/>
-<area shape="rect" id="node110" href="$classGEngine.html#a46eea5a53dd1491fbc67a279a819ad22" title="GEngine::isInErrorState" alt="" coords="108,1087,268,1116"/>
-<area shape="rect" id="node112" href="$classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9" title="GEngine::loadApplication" alt="" coords="104,1532,272,1561"/>
-<area shape="rect" id="node7" href="$classGEngine.html#a14bda10f38212a7532dcb38a3a3dd859" title="GEngine::doFrameUpdate" alt="" coords="320,563,493,592"/>
-<area shape="rect" id="node17" href="$classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36" title="GEngine::f_sleep" alt="" coords="345,641,468,671"/>
-<area shape="rect" id="node21" href="$classFPSCalculator.html#a5266e420f914751170b470095e2b7d0a" title="Notify that a frame has occured and how long it took." alt="" coords="333,745,480,775"/>
-<area shape="rect" id="node24" href="$classPostbox.html#a38cdeca8626362e8fe1f0f31cf8f0f09" title="Postbox::HasNext" alt="" coords="341,168,472,197"/>
-<area shape="rect" id="node26" href="$classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b" title="GEngine::processEvent" alt="" coords="588,5,748,35"/>
-<area shape="rect" id="node37" href="$classPostbox.html#aec8a72fffe1c67845bae08a05bb8b95c" title="Postbox::ReadNext" alt="" coords="339,272,475,301"/>
-<area shape="rect" id="node39" href="$classGRenderer.html#a207514ec158f1be5508858c4b4c7658a" title="GRenderer::renderScene" alt="" coords="324,325,489,355"/>
-<area shape="rect" id="node61" href="$classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285" title="GEngine::setErrorDetails" alt="" coords="585,1744,751,1773"/>
-<area shape="rect" id="node13" href="$classGRenderer.html#a7888dc4b2197e16cfb11e476edba51d1" title="GRenderer::update" alt="" coords="603,539,733,568"/>
-<area shape="rect" id="node15" href="$classGApplication.html#ad0b604100468ce2edef6d7172d5af43f" title="Called once per frame with the time that has elapsed since the last frame in seconds." alt="" coords="565,485,771,515"/>
-<area shape="rect" id="node11" href="$classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="1137,745,1292,775"/>
-<area shape="rect" id="node19" href="$classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4" title="Return the last calculated FPS." alt="" coords="589,643,747,672"/>
-<area shape="rect" id="node28" href="$classRenderWindow.html#a6815da80b74f775fb1710186ee023269" title="RenderWindow::getHeight" alt="" coords="879,85,1052,115"/>
-<area shape="rect" id="node31" href="$classRenderWindow.html#ade00c67880046e2b7dd2220b15ca7873" title="RenderWindow::getWidth" alt="" coords="880,152,1051,181"/>
-<area shape="rect" id="node33" href="$classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27" title="GRenderer::getWindow" alt="" coords="887,319,1044,348"/>
-<area shape="rect" id="node35" href="$classGEngine.html#a261a030dbf510182e2e672105be7b00f" title="GEngine::sendEventManagerMessage" alt="" coords="843,5,1088,35"/>
-<area shape="rect" id="node41" href="$classGRenderer.html#ac203b753c5649c9ee8c0ab139be9f1e9" title="GRenderer::begin" alt="" coords="607,165,729,195"/>
-<area shape="rect" id="node46" href="$classGraphicsAPI.html#a51f4f0fed27c8c19021f858864541e90" title="GraphicsAPI::clearActiveTexture" alt="" coords="561,219,775,248"/>
-<area shape="rect" id="node48" href="$classGraphicsAPI.html#abc33a446a32b6eff1b540cbb04067eb4" title="GraphicsAPI::disableBlending" alt="" coords="571,272,765,301"/>
-<area shape="rect" id="node50" href="$classGRenderLayer.html#a5ce642f7adc62595dc429e267647b0ad" title="GRenderLayer::draw" alt="" coords="597,325,739,355"/>
-<area shape="rect" id="node52" href="$classGraphicsAPI.html#a8f03058d15aff693207f14a589b4dce5" title="GraphicsAPI::enableBlending" alt="" coords="572,379,764,408"/>
-<area shape="rect" id="node54" href="$classGRenderer.html#a04f9d9c4661e28d03fb7cecb658c02bb" title="GRenderer::end" alt="" coords="611,432,725,461"/>
-<area shape="rect" id="node57" href="$classGRenderer.html#a189dc79fbe3e40ab1cf0fd0cb9e83dfc" title="GRenderer::getLayer" alt="" coords="597,59,739,88"/>
-<area shape="rect" id="node59" href="$classGraphicsAPI.html#a5fe75791c0d601d014fb35487913b5ce" title="GraphicsAPI::setupFor2D" alt="" coords="583,112,753,141"/>
-<area shape="rect" id="node63" href="$classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="895,1692,1036,1721"/>
-<area shape="rect" id="node67" href="$classGEngine.html#a2f445aaf503b28d11a6fcc8a3cc11b59" title="GEngine::GEngine" alt="" coords="341,1320,472,1349"/>
-<area shape="rect" id="node69" href="$classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757" title="GEngine::initialize" alt="" coords="344,1216,469,1245"/>
-<area shape="rect" id="node71" href="$classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896" title="Filesystem::evaluateChild" alt="" coords="879,1191,1052,1220"/>
-<area shape="rect" id="node73" href="$classInterfaceLayer.html#a1f2ffa561b6ef715df829159c0b38462" title="InterfaceLayer::getDefaultTextRenderer" alt="" coords="543,899,793,928"/>
-<area shape="rect" id="node75" href="$classGRenderer.html#a6eee2e3bcc7a5bbeedfdb308b4ea7b65" title="GRenderer::getInterfaceManager" alt="" coords="563,952,773,981"/>
-<area shape="rect" id="node77" href="$classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877" title="ConfigurationInstance::getNode" alt="" coords="565,1005,771,1035"/>
-<area shape="rect" id="node79" href="$classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a" title="Convert the string name of the log (I.e. Render.Log) to a internal filesystem node (Creating it if it..." alt="" coords="575,1323,761,1352"/>
-<area shape="rect" id="node82" href="$classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117" title="Filesystem::getRoot" alt="" coords="896,1456,1035,1485"/>
-<area shape="rect" id="node86" href="$classConfigurationString.html#aa22ff0fb4c20ae04240b430fe58a9f1a" title="ConfigurationString::getStringData" alt="" coords="557,1109,779,1139"/>
-<area shape="rect" id="node88" href="$classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30" title="ConfigurationNode::getType" alt="" coords="576,1163,760,1192"/>
-<area shape="rect" id="node90" href="$classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb" title="ConfigurationNumber::getValue" alt="" coords="567,1216,769,1245"/>
-<area shape="rect" id="node93" href="$classGEngine.html#af9b11a02b018385249d96e9a8201d513" title="GEngine::initializeInputBindings" alt="" coords="565,1269,771,1299"/>
-<area shape="rect" id="node95" href="$classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588" title="FREngine::Load" alt="" coords="611,1640,725,1669"/>
-<area shape="rect" id="node99" href="$classRenderWindow.html#a9950d9b256c7b37be2011b5a5fd23181" title="RenderWindow::setDimensions" alt="" coords="565,1376,771,1405"/>
-<area shape="rect" id="node102" href="$classRenderWindow.html#a575c1bceb25c3629ec4f363779aade6b" title="RenderWindow::setFullscreen" alt="" coords="569,1429,767,1459"/>
-<area shape="rect" id="node104" href="$classRenderWindow.html#a2a806dfe5cc5503a1144902a0378ca4b" title="RenderWindow::setInputPostbox" alt="" coords="561,1483,775,1512"/>
-<area shape="rect" id="node106" href="$classRenderWindow.html#a6f6d06722d9661df64d3b2fbe2357364" title="RenderWindow::setTitle" alt="" coords="587,1536,749,1565"/>
-<area shape="rect" id="node114" href="$classGApplication.html#a89afefa2721de6db1932d71444af506c" title="Called the first time the app is loaded, initialisation should be done here." alt="" coords="333,1532,480,1561"/>
+<area shape="rect" id="node3" href="$classGEngine.html#a214448871793f7202095185a8b800c8b" title="GEngine::errorDetails" alt="" coords="123,484,269,513"/>
+<area shape="rect" id="node5" href="$classGEngine.html#a02af5bc774fd00507f5339f97d4eb426" title="GEngine::gameLoop" alt="" coords="127,537,265,567"/>
+<area shape="rect" id="node11" href="$classGRenderer.html#adb025523209b3c42b9866343f23dbe70" title="GRenderer::getRenderer" alt="" coords="919,720,1081,749"/>
+<area shape="rect" id="node69" href="$classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245" title="GEngine::getInstance" alt="" coords="123,993,269,1023"/>
+<area shape="rect" id="node106" href="$classGEngine.html#a46eea5a53dd1491fbc67a279a819ad22" title="GEngine::isInErrorState" alt="" coords="116,901,276,931"/>
+<area shape="rect" id="node108" href="$classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9" title="GEngine::loadApplication" alt="" coords="112,848,280,877"/>
+<area shape="rect" id="node113" href="$classGEngine.html#a53c80ec3b530c90281275dc5f3692135" title="GEngine::unloadApplication" alt="" coords="105,1124,287,1153"/>
+<area shape="rect" id="node7" href="$classClock.html#a438ea54b4ab041c82718600668bbb394" title="Returns the time that has elapsed since this was last called in seconds." alt="" coords="336,537,528,567"/>
+<area shape="rect" id="node9" href="$classGEngine.html#a14bda10f38212a7532dcb38a3a3dd859" title="GEngine::doFrameUpdate" alt="" coords="345,484,519,513"/>
+<area shape="rect" id="node19" href="$classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36" title="GEngine::f_sleep" alt="" coords="371,591,493,620"/>
+<area shape="rect" id="node23" href="$classFPSCalculator.html#a5266e420f914751170b470095e2b7d0a" title="Notify that a frame has occured and how long it took." alt="" coords="359,695,505,724"/>
+<area shape="rect" id="node26" href="$classPostbox.html#a38cdeca8626362e8fe1f0f31cf8f0f09" title="Postbox::HasNext" alt="" coords="367,141,497,171"/>
+<area shape="rect" id="node28" href="$classClock.html#a0e1d9a28caec6c2128e4278136a4722f" title="Initialise the clock." alt="" coords="377,195,487,224"/>
+<area shape="rect" id="node30" href="$classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b" title="GEngine::processEvent" alt="" coords="623,5,783,35"/>
+<area shape="rect" id="node41" href="$classPostbox.html#aec8a72fffe1c67845bae08a05bb8b95c" title="Postbox::ReadNext" alt="" coords="364,299,500,328"/>
+<area shape="rect" id="node43" href="$classGRenderer.html#a207514ec158f1be5508858c4b4c7658a" title="GRenderer::renderScene" alt="" coords="349,352,515,381"/>
+<area shape="rect" id="node65" href="$classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285" title="GEngine::setErrorDetails" alt="" coords="620,797,785,827"/>
+<area shape="rect" id="node15" href="$classGRenderer.html#a7888dc4b2197e16cfb11e476edba51d1" title="GRenderer::update" alt="" coords="637,485,768,515"/>
+<area shape="rect" id="node17" href="$classGApplication.html#ad0b604100468ce2edef6d7172d5af43f" title="Called once per frame with the time that has elapsed since the last frame in seconds." alt="" coords="600,539,805,568"/>
+<area shape="rect" id="node13" href="$classGRenderer.html#a33bd1fd8860525decac95d88e0d8df3a" title="GRenderer::GRenderer" alt="" coords="1172,720,1327,749"/>
+<area shape="rect" id="node21" href="$classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4" title="Return the last calculated FPS." alt="" coords="624,643,781,672"/>
+<area shape="rect" id="node32" href="$classRenderWindow.html#a6815da80b74f775fb1710186ee023269" title="RenderWindow::getHeight" alt="" coords="913,192,1087,221"/>
+<area shape="rect" id="node35" href="$classRenderWindow.html#ade00c67880046e2b7dd2220b15ca7873" title="RenderWindow::getWidth" alt="" coords="915,112,1085,141"/>
+<area shape="rect" id="node37" href="$classGRenderer.html#a76a0d65d1459c486da9fa661e9a0ff27" title="GRenderer::getWindow" alt="" coords="921,339,1079,368"/>
+<area shape="rect" id="node39" href="$classGEngine.html#a261a030dbf510182e2e672105be7b00f" title="GEngine::sendEventManagerMessage" alt="" coords="877,5,1123,35"/>
+<area shape="rect" id="node45" href="$classGRenderer.html#ac203b753c5649c9ee8c0ab139be9f1e9" title="GRenderer::begin" alt="" coords="641,219,764,248"/>
+<area shape="rect" id="node50" href="$classGraphicsAPI.html#a51f4f0fed27c8c19021f858864541e90" title="GraphicsAPI::clearActiveTexture" alt="" coords="596,379,809,408"/>
+<area shape="rect" id="node52" href="$classGraphicsAPI.html#abc33a446a32b6eff1b540cbb04067eb4" title="GraphicsAPI::disableBlending" alt="" coords="605,59,800,88"/>
+<area shape="rect" id="node54" href="$classGRenderLayer.html#a5ce642f7adc62595dc429e267647b0ad" title="GRenderLayer::draw" alt="" coords="632,112,773,141"/>
+<area shape="rect" id="node56" href="$classGraphicsAPI.html#a8f03058d15aff693207f14a589b4dce5" title="GraphicsAPI::enableBlending" alt="" coords="607,165,799,195"/>
+<area shape="rect" id="node58" href="$classGRenderer.html#a04f9d9c4661e28d03fb7cecb658c02bb" title="GRenderer::end" alt="" coords="645,432,760,461"/>
+<area shape="rect" id="node61" href="$classGRenderer.html#a189dc79fbe3e40ab1cf0fd0cb9e83dfc" title="GRenderer::getLayer" alt="" coords="632,272,773,301"/>
+<area shape="rect" id="node63" href="$classGraphicsAPI.html#a5fe75791c0d601d014fb35487913b5ce" title="GraphicsAPI::setupFor2D" alt="" coords="617,325,788,355"/>
+<area shape="rect" id="node67" href="$classLogWriter.html#af4359cbe4566a4c02676d5af080127fe" title="Write the specified line to the log." alt="" coords="929,952,1071,981"/>
+<area shape="rect" id="node71" href="$classGEngine.html#a2f445aaf503b28d11a6fcc8a3cc11b59" title="GEngine::GEngine" alt="" coords="367,993,497,1023"/>
+<area shape="rect" id="node73" href="$classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757" title="GEngine::initialize" alt="" coords="369,1109,495,1139"/>
+<area shape="rect" id="node75" href="$classFilesystem.html#a37a43994ca9f07366fe93e361955f75d" title="Filesystem::evaluateChild" alt="" coords="913,1241,1087,1271"/>
+<area shape="rect" id="node77" href="$classInterfaceLayer.html#a1f2ffa561b6ef715df829159c0b38462" title="InterfaceLayer::getDefaultTextRenderer" alt="" coords="577,1056,828,1085"/>
+<area shape="rect" id="node79" href="$classGRenderer.html#a6eee2e3bcc7a5bbeedfdb308b4ea7b65" title="GRenderer::getInterfaceManager" alt="" coords="597,1109,808,1139"/>
+<area shape="rect" id="node81" href="$classConfigurationInstance.html#a618269318748eb601ae9ebcd38afa877" title="ConfigurationInstance::getNode" alt="" coords="600,1163,805,1192"/>
+<area shape="rect" id="node83" href="$classLogWriter.html#ab898d65cc8de37fa352cfd8a10b3bb1a" title="Convert the string name of the log (I.e. Render.Log) to a internal filesystem node (Creating it if it..." alt="" coords="609,1267,796,1296"/>
+<area shape="rect" id="node86" href="$classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117" title="Filesystem::getRoot" alt="" coords="931,1400,1069,1429"/>
+<area shape="rect" id="node90" href="$classConfigurationString.html#aa22ff0fb4c20ae04240b430fe58a9f1a" title="ConfigurationString::getStringData" alt="" coords="592,1320,813,1349"/>
+<area shape="rect" id="node92" href="$classConfigurationNode.html#a5d8d5361e35d7c0214c7de1b6cbd3f30" title="ConfigurationNode::getType" alt="" coords="611,1373,795,1403"/>
+<area shape="rect" id="node94" href="$classConfigurationNumber.html#a0d76d3383695aff98981d71b238cfceb" title="ConfigurationNumber::getValue" alt="" coords="601,1427,804,1456"/>
+<area shape="rect" id="node97" href="$classGEngine.html#af9b11a02b018385249d96e9a8201d513" title="GEngine::initializeInputBindings" alt="" coords="600,1480,805,1509"/>
+<area shape="rect" id="node99" href="$classFREngine.html#a9ac9c46b30f8b98fb541b56d16cb0588" title="FREngine::Load" alt="" coords="645,952,760,981"/>
+<area shape="rect" id="node110" href="$classGApplication.html#a89afefa2721de6db1932d71444af506c" title="Called the first time the app is loaded, initialisation should be done here." alt="" coords="359,900,505,929"/>
+<area shape="rect" id="node115" href="$classGApplication.html#a45e65b2a4a70b8e398effef37dbd06be" title="Called when the app is unloaded, deinitilization should be done here." alt="" coords="353,1163,511,1192"/>
 </map>

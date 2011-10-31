@@ -141,7 +141,7 @@ bool nextWord(const char* inputData, size_t* cPtr, char* wordBuffer)
 
 Shader* GLShaderFactory::loadShader(File* fileNode)
 {
-    if (fileNode == 0)
+    if (fileNode == 0) return 0;
     if (fileNode->getType() != fileId) return 0;
 
     DataInputStream* strm = fileNode->createInputStream();

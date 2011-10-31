@@ -45,184 +45,187 @@
 <a name="l00005"></a>00005 <span class="preprocessor">#include &lt;<a class="code" href="InputEvent_8h.html">Input/InputEvent.h</a>&gt;</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;<a class="code" href="Postbox_8h.html">Input/Postbox.h</a>&gt;</span>
 <a name="l00007"></a>00007 <span class="preprocessor">#include &lt;<a class="code" href="Keys_8h.html">Input/Keys.h</a>&gt;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="FPSCalculator_8h.html">FPSCalculator.h</a>&quot;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="Application_8h.html">API/Application.h</a>&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="ConfigurationInstance_8h.html">Configure/ConfigurationInstance.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="Hive_8h.html">HIVE/Hive.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;<a class="code" href="FPSCalculator_8h.html">Core/FPSCalculator.h</a>&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;<a class="code" href="Application_8h.html">API/Application.h</a>&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;<a class="code" href="ConfigurationInstance_8h.html">Configure/ConfigurationInstance.h</a>&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;<a class="code" href="Hive_8h.html">HIVE/Hive.h</a>&gt;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &lt;<a class="code" href="Filesystem_8h.html">Filesystem/Filesystem.h</a>&gt;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &lt;<a class="code" href="LocalFolder_8h.html">Filesystem/LocalFolder.h</a>&gt;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &lt;<a class="code" href="LogWriter_8h.html">LogWriter/LogWriter.h</a>&gt;</span>
-<a name="l00015"></a>00015 
-<a name="l00016"></a><a class="code" href="structEventBinding.html">00016</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
-<a name="l00017"></a>00017 {
-<a name="l00018"></a>00018 
-<a name="l00019"></a><a class="code" href="structEventBinding.html#a83c608264021d3b316e454248e727245">00019</a>     std::vector &lt;unsigned int&gt; <a class="code" href="structEventBinding.html#a83c608264021d3b316e454248e727245">Events</a>;
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021 } <a class="code" href="structEventBinding.html">EventBinding</a>;
-<a name="l00022"></a>00022 
-<a name="l00023"></a><a class="code" href="structInputBinding.html">00023</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
-<a name="l00024"></a>00024 {
-<a name="l00025"></a>00025 
-<a name="l00026"></a><a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">00026</a>     <a class="code" href="structEventBinding.html">EventBinding</a>* <a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">Keys</a>;
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028 } <a class="code" href="structInputBinding.html">InputBinding</a>;
-<a name="l00029"></a>00029 
-<a name="l00030"></a><a class="code" href="classGEngine.html">00030</a> <span class="keyword">class </span><a class="code" href="classGEngine.html">GEngine</a>
-<a name="l00031"></a>00031 {
-<a name="l00032"></a>00032 <span class="keyword">private</span>:
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757">initialize</a>();
-<a name="l00035"></a>00035     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a68edb6e836587b90042abde3cc8e1219">uninitialize</a>();
-<a name="l00036"></a>00036     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#af9b11a02b018385249d96e9a8201d513">initializeInputBindings</a>();
-<a name="l00037"></a>00037     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#aed97f611db6edabe8b7febc731aa6400">freeInputBindings</a>();
-<a name="l00038"></a>00038 
-<a name="l00039"></a><a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">00039</a>     <a class="code" href="classFPSCalculator.html" title="Class to calculate how many frames are occurring per second.">FPSCalculator</a> <a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>;
-<a name="l00040"></a>00040 
-<a name="l00041"></a><a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">00041</a>     <a class="code" href="classEventManager.html" title="Manages and stores mapping between events.">EventManager</a>* <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>;
-<a name="l00042"></a>00042 
-<a name="l00043"></a><a class="code" href="classGEngine.html#ab647a8b8faee4a9b6dac40c54b5054c5">00043</a>     <a class="code" href="classPostbox.html">Postbox&lt;Input_Event&gt;</a> <a class="code" href="classGEngine.html#ab647a8b8faee4a9b6dac40c54b5054c5">m_inputPostbox</a>;
-<a name="l00044"></a><a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">00044</a>     <a class="code" href="structInputBinding.html">InputBinding</a>* <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>;
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;<a class="code" href="Clock_8h.html">Core/Clock.h</a>&gt;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a><a class="code" href="structEventBinding.html">00017</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="structEventBinding.html#a83c608264021d3b316e454248e727245">00020</a>     std::vector &lt;unsigned int&gt; <a class="code" href="structEventBinding.html#a83c608264021d3b316e454248e727245">Events</a>;
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 } <a class="code" href="structEventBinding.html">EventBinding</a>;
+<a name="l00023"></a>00023 
+<a name="l00024"></a><a class="code" href="structInputBinding.html">00024</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00025"></a>00025 {
+<a name="l00026"></a>00026 
+<a name="l00027"></a><a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">00027</a>     <a class="code" href="structEventBinding.html">EventBinding</a>* <a class="code" href="structInputBinding.html#a650aae1ede5d6eaecb06818820d00f06">Keys</a>;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 } <a class="code" href="structInputBinding.html">InputBinding</a>;
+<a name="l00030"></a>00030 
+<a name="l00031"></a><a class="code" href="classGEngine.html">00031</a> <span class="keyword">class </span><a class="code" href="classGEngine.html">GEngine</a>
+<a name="l00032"></a>00032 {
+<a name="l00033"></a>00033 <span class="keyword">private</span>:
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757">initialize</a>();
+<a name="l00036"></a>00036     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a68edb6e836587b90042abde3cc8e1219">uninitialize</a>();
+<a name="l00037"></a>00037     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#af9b11a02b018385249d96e9a8201d513">initializeInputBindings</a>();
+<a name="l00038"></a>00038     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#aed97f611db6edabe8b7febc731aa6400">freeInputBindings</a>();
+<a name="l00039"></a>00039 
+<a name="l00040"></a><a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">00040</a>     <a class="code" href="classFPSCalculator.html" title="Class to calculate how many frames are occurring per second.">FPSCalculator</a> <a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>;
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="classGEngine.html#a70037a06c731f2291baac8596640e2ba">00042</a>     <a class="code" href="classClock.html">Clock</a> <a class="code" href="classGEngine.html#a70037a06c731f2291baac8596640e2ba">m_clock</a>;
+<a name="l00043"></a>00043 
+<a name="l00044"></a><a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">00044</a>     <a class="code" href="classEventManager.html" title="Manages and stores mapping between events.">EventManager</a>* <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>;
 <a name="l00045"></a>00045 
-<a name="l00046"></a><a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">00046</a>     <a class="code" href="classGApplication.html" title="Abstraction of a application that runs on the engine.">GApplication</a>* <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>;
-<a name="l00047"></a>00047 
-<a name="l00048"></a><a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">00048</a>     <a class="code" href="classConfigurationInstance.html">ConfigurationInstance</a>* <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>;
-<a name="l00049"></a>00049 
-<a name="l00050"></a><a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">00050</a>     <a class="code" href="classBeeHive.html" title="Manages a collection of worker bees which process jobs passed to them over multiple threads...">BeeHive</a>* <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a>;
-<a name="l00051"></a>00051 
-<a name="l00052"></a><a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">00052</a>     <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>* <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>;
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36">f_sleep</a>();
-<a name="l00055"></a>00055 
-<a name="l00056"></a><a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">00056</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">m_GameActive</a>;
-<a name="l00057"></a><a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">00057</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a>;
-<a name="l00058"></a><a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">00058</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a>;
-<a name="l00059"></a>00059 
-<a name="l00060"></a><a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">00060</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a>;
-<a name="l00061"></a><a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">00061</a>     <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a>;
+<a name="l00046"></a><a class="code" href="classGEngine.html#ab647a8b8faee4a9b6dac40c54b5054c5">00046</a>     <a class="code" href="classPostbox.html">Postbox&lt;Input_Event&gt;</a> <a class="code" href="classGEngine.html#ab647a8b8faee4a9b6dac40c54b5054c5">m_inputPostbox</a>;
+<a name="l00047"></a><a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">00047</a>     <a class="code" href="structInputBinding.html">InputBinding</a>* <a class="code" href="classGEngine.html#a7e1da95df055bbc527beb851a8a8450c">m_inputBindings</a>;
+<a name="l00048"></a>00048 
+<a name="l00049"></a><a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">00049</a>     <a class="code" href="classGApplication.html" title="Abstraction of a application that runs on the engine.">GApplication</a>* <a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>;
+<a name="l00050"></a>00050 
+<a name="l00051"></a><a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">00051</a>     <a class="code" href="classConfigurationInstance.html">ConfigurationInstance</a>* <a class="code" href="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66">m_engineCfg</a>;
+<a name="l00052"></a>00052 
+<a name="l00053"></a><a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">00053</a>     <a class="code" href="classBeeHive.html" title="Manages a collection of worker bees which process jobs passed to them over multiple threads...">BeeHive</a>* <a class="code" href="classGEngine.html#ad329cb853b9fc8dcb3c125ee11fa1b61">m_threadHive</a>;
+<a name="l00054"></a>00054 
+<a name="l00055"></a><a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">00055</a>     <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>* <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>;
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a5261cefda3c5e30d1ec20edd2c8cfe36">f_sleep</a>();
+<a name="l00058"></a>00058 
+<a name="l00059"></a><a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">00059</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">m_GameActive</a>;
+<a name="l00060"></a><a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">00060</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a>;
+<a name="l00061"></a><a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">00061</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a>;
 <a name="l00062"></a>00062 
-<a name="l00063"></a><a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">00063</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a>;
-<a name="l00064"></a><a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">00064</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a>;
+<a name="l00063"></a><a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">00063</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a>;
+<a name="l00064"></a><a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">00064</a>     <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a>;
 <a name="l00065"></a>00065 
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">setErrorDetails</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);
+<a name="l00066"></a><a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">00066</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a>;
+<a name="l00067"></a><a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">00067</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a>;
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069     <a class="code" href="classGEngine.html#a2f445aaf503b28d11a6fcc8a3cc11b59">GEngine</a>();
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071 <span class="keyword">public</span>:
-<a name="l00072"></a>00072     <a class="code" href="classGEngine.html#a3bdec944d319d1f91af57597f781faa7">~GEngine</a>();
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a29690dd74b85bfda6d1f56c4b3281285">setErrorDetails</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072     <a class="code" href="classGEngine.html#a2f445aaf503b28d11a6fcc8a3cc11b59">GEngine</a>();
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074     <span class="comment">//Bind a event to a event ID and key (For example, keypressed A or mouseclicked LEFT)</span>
-<a name="l00075"></a>00075     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a371f1436dca8af65e605d1854062ed5f">bindEvent</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Eve, <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60">input_event_ids</a>, <a class="code" href="Keys_8h.html#ade02ebcdfd4994c66d26563fb1494a35">key_ids</a>);
-<a name="l00076"></a>00076     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">sendEventManagerMessage</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> iEvent);
-<a name="l00077"></a>00077     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">processEvent</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> event);
-<a name="l00078"></a>00078 
-<a name="l00079"></a><a class="code" href="classGEngine.html#a46eea5a53dd1491fbc67a279a819ad22">00079</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#a46eea5a53dd1491fbc67a279a819ad22">isInErrorState</a>() { <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a>; }
-<a name="l00080"></a><a class="code" href="classGEngine.html#a214448871793f7202095185a8b800c8b">00080</a>     <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classGEngine.html#a214448871793f7202095185a8b800c8b">errorDetails</a>() { <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a>; }
+<a name="l00074"></a>00074 <span class="keyword">public</span>:
+<a name="l00075"></a>00075     <a class="code" href="classGEngine.html#a3bdec944d319d1f91af57597f781faa7">~GEngine</a>();
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077     <span class="comment">//Bind a event to a event ID and key (For example, keypressed A or mouseclicked LEFT)</span>
+<a name="l00078"></a>00078     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a371f1436dca8af65e605d1854062ed5f">bindEvent</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Eve, <a class="code" href="InputEvent_8h.html#a35ee81db4cc67f9bfb2f7f3630b8eb60">input_event_ids</a>, <a class="code" href="Keys_8h.html#ade02ebcdfd4994c66d26563fb1494a35">key_ids</a>);
+<a name="l00079"></a>00079     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a261a030dbf510182e2e672105be7b00f">sendEventManagerMessage</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> iEvent);
+<a name="l00080"></a>00080     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#ae505517fa2d1a1924a2f8a47868b6e1b">processEvent</a>(<a class="code" href="structInput__Event.html" title="A structure to contain the details of a input event.">Input_Event</a> event);
 <a name="l00081"></a>00081 
-<a name="l00082"></a>00082     <span class="keywordtype">int</span> <a class="code" href="classGEngine.html#a02af5bc774fd00507f5339f97d4eb426">gameLoop</a>();
-<a name="l00083"></a>00083 
-<a name="l00084"></a><a class="code" href="classGEngine.html#a92e87ea1f337d94dfea477ba031c6856">00084</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a92e87ea1f337d94dfea477ba031c6856">killEngine</a>()
-<a name="l00085"></a>00085     {
+<a name="l00082"></a><a class="code" href="classGEngine.html#a46eea5a53dd1491fbc67a279a819ad22">00082</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#a46eea5a53dd1491fbc67a279a819ad22">isInErrorState</a>() { <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a1b7b78e51e20dda415d068683e39ddc9">m_errorState</a>; }
+<a name="l00083"></a><a class="code" href="classGEngine.html#a214448871793f7202095185a8b800c8b">00083</a>     <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classGEngine.html#a214448871793f7202095185a8b800c8b">errorDetails</a>() { <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a10f7d7698053ce0a73401cdfd74150da">m_errorDetails</a>; }
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085     <span class="keywordtype">int</span> <a class="code" href="classGEngine.html#a02af5bc774fd00507f5339f97d4eb426">gameLoop</a>();
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087         <a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">m_GameActive</a> = <span class="keyword">false</span>;
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089     }
-<a name="l00090"></a>00090 
-<a name="l00091"></a><a class="code" href="classGEngine.html#a9a3facf7debcad99fb0cc806317ff937">00091</a>     <a class="code" href="classEventManager.html" title="Manages and stores mapping between events.">EventManager</a>* <a class="code" href="classGEngine.html#a9a3facf7debcad99fb0cc806317ff937">getEventManager</a>()
-<a name="l00092"></a>00092     {
+<a name="l00087"></a><a class="code" href="classGEngine.html#a92e87ea1f337d94dfea477ba031c6856">00087</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a92e87ea1f337d94dfea477ba031c6856">killEngine</a>()
+<a name="l00088"></a>00088     {
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090         <a class="code" href="classGEngine.html#aa16a9c06c0e0c9cb65e1378ed0149179">m_GameActive</a> = <span class="keyword">false</span>;
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092     }
 <a name="l00093"></a>00093 
-<a name="l00094"></a>00094         <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>;
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096     }
-<a name="l00097"></a>00097 
-<a name="l00098"></a><a class="code" href="classGEngine.html#ad5d13a3e4aeac37b090b3315d74fcd6d">00098</a>     <a class="code" href="classFPSCalculator.html" title="Class to calculate how many frames are occurring per second.">FPSCalculator</a>* <a class="code" href="classGEngine.html#ad5d13a3e4aeac37b090b3315d74fcd6d">getFpsCalculator</a>()
-<a name="l00099"></a>00099     {
+<a name="l00094"></a><a class="code" href="classGEngine.html#a9a3facf7debcad99fb0cc806317ff937">00094</a>     <a class="code" href="classEventManager.html" title="Manages and stores mapping between events.">EventManager</a>* <a class="code" href="classGEngine.html#a9a3facf7debcad99fb0cc806317ff937">getEventManager</a>()
+<a name="l00095"></a>00095     {
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097         <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7">m_eventManager</a>;
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099     }
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101         <span class="keywordflow">return</span> &amp;<a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>;
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103     }
-<a name="l00104"></a>00104 
-<a name="l00105"></a><a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">00105</a>     <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>* <a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">getLog</a>()
-<a name="l00106"></a>00106     {
-<a name="l00107"></a>00107         <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>;
-<a name="l00108"></a>00108     }
-<a name="l00109"></a>00109 
-<a name="l00110"></a><a class="code" href="classGEngine.html#a5e18e3c8d20ccf8ca737f61432221e52">00110</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a5e18e3c8d20ccf8ca737f61432221e52">pauseEngine</a>()
-<a name="l00111"></a>00111     {
+<a name="l00101"></a><a class="code" href="classGEngine.html#ad5d13a3e4aeac37b090b3315d74fcd6d">00101</a>     <a class="code" href="classFPSCalculator.html" title="Class to calculate how many frames are occurring per second.">FPSCalculator</a>* <a class="code" href="classGEngine.html#ad5d13a3e4aeac37b090b3315d74fcd6d">getFpsCalculator</a>()
+<a name="l00102"></a>00102     {
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104         <span class="keywordflow">return</span> &amp;<a class="code" href="classGEngine.html#a2f719a2efedea821316cfdb996998419">m_fpsCalculator</a>;
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106     }
+<a name="l00107"></a>00107 
+<a name="l00108"></a><a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">00108</a>     <a class="code" href="classLogWriter.html" title="Convenience class for a log.">LogWriter</a>* <a class="code" href="classGEngine.html#a493f6e567c86d38f5edebc1ef6199ad6">getLog</a>()
+<a name="l00109"></a>00109     {
+<a name="l00110"></a>00110         <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0">m_engineLog</a>;
+<a name="l00111"></a>00111     }
 <a name="l00112"></a>00112 
-<a name="l00113"></a>00113         <a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a> = <span class="keyword">true</span>;
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115     }
-<a name="l00116"></a>00116 
-<a name="l00117"></a><a class="code" href="classGEngine.html#ae0168170455b8058e788a599c1a2b388">00117</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#ae0168170455b8058e788a599c1a2b388">unpauseEngine</a>()
-<a name="l00118"></a>00118     {
+<a name="l00113"></a><a class="code" href="classGEngine.html#a5e18e3c8d20ccf8ca737f61432221e52">00113</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a5e18e3c8d20ccf8ca737f61432221e52">pauseEngine</a>()
+<a name="l00114"></a>00114     {
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116         <a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a> = <span class="keyword">true</span>;
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118     }
 <a name="l00119"></a>00119 
-<a name="l00120"></a>00120         <a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a> = <span class="keyword">false</span>;
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122     }
-<a name="l00123"></a>00123 
-<a name="l00124"></a><a class="code" href="classGEngine.html#a9343a84ccc6525921945cf09d794e00b">00124</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a9343a84ccc6525921945cf09d794e00b">togglePaused</a>()
-<a name="l00125"></a>00125     {
+<a name="l00120"></a><a class="code" href="classGEngine.html#ae0168170455b8058e788a599c1a2b388">00120</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#ae0168170455b8058e788a599c1a2b388">unpauseEngine</a>()
+<a name="l00121"></a>00121     {
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123         <a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a> = <span class="keyword">false</span>;
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125     }
 <a name="l00126"></a>00126 
-<a name="l00127"></a>00127         <a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a> = !<a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a>;
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129     }
-<a name="l00130"></a>00130 
-<a name="l00131"></a><a class="code" href="classGEngine.html#a5d3c1fe1792237ab2dd06901774bc5af">00131</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a5d3c1fe1792237ab2dd06901774bc5af">pausePhysics</a>()
-<a name="l00132"></a>00132     {
+<a name="l00127"></a><a class="code" href="classGEngine.html#a9343a84ccc6525921945cf09d794e00b">00127</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a9343a84ccc6525921945cf09d794e00b">togglePaused</a>()
+<a name="l00128"></a>00128     {
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130         <a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a> = !<a class="code" href="classGEngine.html#af3896ed63d6da7bf9cde70923ba6c9d1">m_GamePaused</a>;
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132     }
 <a name="l00133"></a>00133 
-<a name="l00134"></a>00134         <a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a> = <span class="keyword">false</span>;
-<a name="l00135"></a>00135 
-<a name="l00136"></a>00136     }
-<a name="l00137"></a>00137 
-<a name="l00138"></a><a class="code" href="classGEngine.html#a0e07430e3f57be7278917db49571d46b">00138</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a0e07430e3f57be7278917db49571d46b">unpausePhysics</a>()
-<a name="l00139"></a>00139     {
+<a name="l00134"></a><a class="code" href="classGEngine.html#a5d3c1fe1792237ab2dd06901774bc5af">00134</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a5d3c1fe1792237ab2dd06901774bc5af">pausePhysics</a>()
+<a name="l00135"></a>00135     {
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137         <a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a> = <span class="keyword">false</span>;
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139     }
 <a name="l00140"></a>00140 
-<a name="l00141"></a>00141         <a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a> = <span class="keyword">true</span>;
-<a name="l00142"></a>00142 
-<a name="l00143"></a>00143     }
-<a name="l00144"></a>00144 
-<a name="l00145"></a><a class="code" href="classGEngine.html#a18e6fa827b9de649acb59632584d0ab5">00145</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a18e6fa827b9de649acb59632584d0ab5">togglePhysics</a>()
-<a name="l00146"></a>00146     {
+<a name="l00141"></a><a class="code" href="classGEngine.html#a0e07430e3f57be7278917db49571d46b">00141</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a0e07430e3f57be7278917db49571d46b">unpausePhysics</a>()
+<a name="l00142"></a>00142     {
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144         <a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a> = <span class="keyword">true</span>;
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146     }
 <a name="l00147"></a>00147 
-<a name="l00148"></a>00148         <a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a> = !<a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a>;
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150     }
-<a name="l00151"></a>00151 
-<a name="l00152"></a>00152     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9">loadApplication</a>(<a class="code" href="classGApplication.html" title="Abstraction of a application that runs on the engine.">GApplication</a>* App);
-<a name="l00153"></a>00153     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#a53c80ec3b530c90281275dc5f3692135">unloadApplication</a>();
+<a name="l00148"></a><a class="code" href="classGEngine.html#a18e6fa827b9de649acb59632584d0ab5">00148</a>     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a18e6fa827b9de649acb59632584d0ab5">togglePhysics</a>()
+<a name="l00149"></a>00149     {
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151         <a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a> = !<a class="code" href="classGEngine.html#aa2f302bca0ecc1e9268b4bbbe71061eb">m_physicsActive</a>;
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153     }
 <a name="l00154"></a>00154 
-<a name="l00155"></a><a class="code" href="classGEngine.html#af9b072269cee5122cf390ebd5ffc1b55">00155</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#af9b072269cee5122cf390ebd5ffc1b55">applicationLoaded</a>()
-<a name="l00156"></a>00156     {
+<a name="l00155"></a>00155     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9">loadApplication</a>(<a class="code" href="classGApplication.html" title="Abstraction of a application that runs on the engine.">GApplication</a>* App);
+<a name="l00156"></a>00156     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#a53c80ec3b530c90281275dc5f3692135">unloadApplication</a>();
 <a name="l00157"></a>00157 
-<a name="l00158"></a>00158         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>)
-<a name="l00159"></a>00159         {
+<a name="l00158"></a><a class="code" href="classGEngine.html#af9b072269cee5122cf390ebd5ffc1b55">00158</a>     <span class="keywordtype">bool</span> <a class="code" href="classGEngine.html#af9b072269cee5122cf390ebd5ffc1b55">applicationLoaded</a>()
+<a name="l00159"></a>00159     {
 <a name="l00160"></a>00160 
-<a name="l00161"></a>00161             <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00162"></a>00162 
-<a name="l00163"></a>00163         }
-<a name="l00164"></a>00164 
-<a name="l00165"></a>00165         <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00166"></a>00166     }
+<a name="l00161"></a>00161         <span class="keywordflow">if</span> (<a class="code" href="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45">m_currentApplication</a>)
+<a name="l00162"></a>00162         {
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164             <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166         }
 <a name="l00167"></a>00167 
-<a name="l00168"></a><a class="code" href="classGEngine.html#a5b8ca556fcacf1231c905fc1534f96c7">00168</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classGEngine.html#a5b8ca556fcacf1231c905fc1534f96c7">getCanvasWidth</a>()
-<a name="l00169"></a>00169     {
-<a name="l00170"></a>00170         <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a>;
-<a name="l00171"></a>00171     }
-<a name="l00172"></a><a class="code" href="classGEngine.html#ad8ba06b69bd8c49bf77be33c88d8d842">00172</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classGEngine.html#ad8ba06b69bd8c49bf77be33c88d8d842">getCanvasHeight</a>()
-<a name="l00173"></a>00173     {
-<a name="l00174"></a>00174         <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a>;
-<a name="l00175"></a>00175     }
-<a name="l00176"></a>00176 
-<a name="l00177"></a>00177     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a14bda10f38212a7532dcb38a3a3dd859">doFrameUpdate</a>(<span class="keywordtype">float</span> seconds);
-<a name="l00178"></a>00178 
-<a name="l00179"></a>00179     <span class="keyword">static</span> <a class="code" href="classGEngine.html">GEngine</a>* <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">getInstance</a>();
-<a name="l00180"></a>00180 };
+<a name="l00168"></a>00168         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00169"></a>00169     }
+<a name="l00170"></a>00170 
+<a name="l00171"></a><a class="code" href="classGEngine.html#a5b8ca556fcacf1231c905fc1534f96c7">00171</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classGEngine.html#a5b8ca556fcacf1231c905fc1534f96c7">getCanvasWidth</a>()
+<a name="l00172"></a>00172     {
+<a name="l00173"></a>00173         <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab">m_canvasWidth</a>;
+<a name="l00174"></a>00174     }
+<a name="l00175"></a><a class="code" href="classGEngine.html#ad8ba06b69bd8c49bf77be33c88d8d842">00175</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classGEngine.html#ad8ba06b69bd8c49bf77be33c88d8d842">getCanvasHeight</a>()
+<a name="l00176"></a>00176     {
+<a name="l00177"></a>00177         <span class="keywordflow">return</span> <a class="code" href="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052">m_canvasHeight</a>;
+<a name="l00178"></a>00178     }
+<a name="l00179"></a>00179 
+<a name="l00180"></a>00180     <span class="keywordtype">void</span> <a class="code" href="classGEngine.html#a14bda10f38212a7532dcb38a3a3dd859">doFrameUpdate</a>(<span class="keywordtype">float</span> seconds);
 <a name="l00181"></a>00181 
-<a name="l00182"></a>00182 <span class="preprocessor">#endif //_GAME_ENGINE_DEF_H_</span>
+<a name="l00182"></a>00182     <span class="keyword">static</span> <a class="code" href="classGEngine.html">GEngine</a>* <a class="code" href="classGEngine.html#a6ef4cbccbcc35768b91bfcafb3577245">getInstance</a>();
+<a name="l00183"></a>00183 };
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185 <span class="preprocessor">#endif //_GAME_ENGINE_DEF_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Tue Oct 25 2011 18:40:29 for Virtus by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Oct 31 2011 12:51:18 for Virtus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

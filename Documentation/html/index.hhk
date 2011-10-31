@@ -74,6 +74,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classButton.html#a44d1e942cdeca0db5f6613c6602b5c03"><param name="Name" value="setOnMouseUp"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classButton.html#a2a001eb9c3cc8ae54768a850dd345002"><param name="Name" value="~Button"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classClock.html#a438ea54b4ab041c82718600668bbb394"><param name="Name" value="calculateElapsedTime"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classCamera.html"><param name="Name" value="Camera"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="Camera_8h.html"><param name="Name" value="Camera.h"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classCamera.html"><param name="Name" value="Camera"></OBJECT>
@@ -129,6 +130,13 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGL2GraphicsAPI.html#ac93462bbd670f51130f72ed2f76da4d3"><param name="Name" value="GL2GraphicsAPI"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphicsAPI.html#ab5f8505a14211950fb90b1a407a80153"><param name="Name" value="GraphicsAPI"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classClock.html"><param name="Name" value="Clock"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classClock.html#a438ea54b4ab041c82718600668bbb394"><param name="Name" value="calculateElapsedTime"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classClock.html#adbc370eb6b5f8d01645cf440188160a8"><param name="Name" value="Clock"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classClock.html#a0e1d9a28caec6c2128e4278136a4722f"><param name="Name" value="initialize"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classClock.html#afc976ce68fa85e15cc06f9ed47bddb7c"><param name="Name" value="~Clock"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classDataInputStream.html#afe2ffd24065dc8dff216896abfc6153a"><param name="Name" value="close"></OBJECT>
   <UL>
@@ -370,7 +378,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="entry_8cpp.html"><param name="Name" value="entry.cpp"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classThread.html#a58e4651f748403d4a56d0a027b0b9b1d"><param name="Name" value="entryPoint"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a214448871793f7202095185a8b800c8b"><param name="Name" value="errorDetails"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896"><param name="Name" value="evaluateChild"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d"><param name="Name" value="evaluateChild"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structevent__callback__struct.html"><param name="Name" value="event_callback_struct"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structevent__callback__struct.html#a7e3920defc8a0cb07eee1d82c0c56042"><param name="Name" value="m_eventList"></OBJECT>
@@ -473,21 +481,17 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="File_8h.html#a9d0ea989dfb1959561f444bc90cb1981"><param name="Name" value="fileId"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html"><param name="Name" value="Filesystem"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#af62bfb21a84d1a8a02c60926b4318896"><param name="Name" value="evaluateChild"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#a5cc281e62422ef6f9f2c555fb7a5f46a"><param name="Name" value="getFileInputStream"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#a3c8e54f984216ce34a67faae0c1262c6"><param name="Name" value="getFileOutputStream"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#a37a43994ca9f07366fe93e361955f75d"><param name="Name" value="evaluateChild"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#a0ba0843a45536605ee1b10a7f64e0508"><param name="Name" value="getFileInputStream"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#aa9f6858df3701d202b0fb8fe4cfc7d4e"><param name="Name" value="getFileOutputStream"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#a2b4a3707941e4538a55515aa28bb0117"><param name="Name" value="getRoot"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#ac5fd2d2f0c2921df1552b5686f8295cc"><param name="Name" value="search"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#a7974ac55c31a719bc3b32c63a5e21122"><param name="Name" value="search"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystemNode.html"><param name="Name" value="FilesystemNode"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystemNode.html#ae72c4830dc5036ec8878ca2499a141ce"><param name="Name" value="getName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8"><param name="Name" value="getName"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystemNode.html#ad154f8a41d96e52c0d040b797976f00c"><param name="Name" value="getType"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystemNode.html#a045774a9d9fcb3abf9094919469b9f80"><param name="Name" value="~FilesystemNode"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystemUtils.html"><param name="Name" value="FilesystemUtils"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystemUtils.html#a2184bdd61bbb57e810b4362346a36286"><param name="Name" value="writeLineToStream"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGWindowGLX.html#a525e4fe18fd682ada33ef852b84c670b"><param name="Name" value="finalFrame"></OBJECT>
   <UL>
@@ -505,11 +509,11 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a20e1ec7bdd5a34d1ed6ba3d614d9581a"><param name="Name" value="getChild"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#ac032a805ab49927a9b0a97453a2ae5d5"><param name="Name" value="getType"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a86e65707748fb4e35f2cd7e60d452804"><param name="Name" value="newChild"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a92d12c385ac1080a44767cf431bf8230"><param name="Name" value="newChildFolder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428"><param name="Name" value="newChild"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a74501a9c3cb239194005ceb8a2536416"><param name="Name" value="newChildFolder"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#ae23a04e096a0cd53dd3feecf0bd96c80"><param name="Name" value="numChildren"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a7c2a8efeb1542ec6ad9586afd7b568c2"><param name="Name" value="refresh"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#ac9bd343406ddd4ee391558234e637cd1"><param name="Name" value="searchForChild"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a56700301248e09d2eae56bc7b2a00c0e"><param name="Name" value="searchForChild"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#acecf6e0bbceb55415a4c5aaf324eb4a9"><param name="Name" value="~Folder"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="Folder_8h.html#a88d9f0fcd19efe0d19fea117268be2a8"><param name="Name" value="folderId"></OBJECT>
@@ -573,6 +577,10 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classFREngine.html#abb26208c17b12a26acd70df9e8e85e96"><param name="Name" value="~FREngine"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGWindowGLX.html#a31d351f331e50413de083f38d83ee839"><param name="Name" value="fs"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFsUtils.html"><param name="Name" value="FsUtils"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFsUtils.html#a140322a1a4355887656d21d1e5793076"><param name="Name" value="writeLineToStream"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classColor.html#a5defbb21620e480e556181772d665f34"><param name="Name" value="g"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a02af5bc774fd00507f5339f97d4eb426"><param name="Name" value="gameLoop"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGApplication.html"><param name="Name" value="GApplication"></OBJECT>
@@ -615,6 +623,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#ada4a5a22a1d1ed34d4d2dba4bdd963b9"><param name="Name" value="loadApplication"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a6fee93df3d308dcb6d3db05e6858f052"><param name="Name" value="m_canvasHeight"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a285bf0b50cb6a0a574ca0da1373ef7ab"><param name="Name" value="m_canvasWidth"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a70037a06c731f2291baac8596640e2ba"><param name="Name" value="m_clock"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a08ecd641fde6d57a2f6d1328ed676b45"><param name="Name" value="m_currentApplication"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a01df4b1f9eea73c1a1f386158d8a7e66"><param name="Name" value="m_engineCfg"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a6c9c3bf8022544fbb1f5495ae1dc58f0"><param name="Name" value="m_engineLog"></OBJECT>
@@ -669,8 +678,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInterfaceLayer.html#a1f2ffa561b6ef715df829159c0b38462"><param name="Name" value="getDefaultTextRenderer"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classWorkerJob.html#ae7e1d97ecb2e9ba1f6564384d21dcfbe"><param name="Name" value="getErrorDetails"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a9a3facf7debcad99fb0cc806317ff937"><param name="Name" value="getEventManager"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#a5cc281e62422ef6f9f2c555fb7a5f46a"><param name="Name" value="getFileInputStream"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#a3c8e54f984216ce34a67faae0c1262c6"><param name="Name" value="getFileOutputStream"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#a0ba0843a45536605ee1b10a7f64e0508"><param name="Name" value="getFileInputStream"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#aa9f6858df3701d202b0fb8fe4cfc7d4e"><param name="Name" value="getFileOutputStream"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classFPSCalculator.html#a0adc463c21e25972f427fcb8c6a207f4"><param name="Name" value="getFPS"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#ad5d13a3e4aeac37b090b3315d74fcd6d"><param name="Name" value="getFpsCalculator"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGRenderer.html#a6fd47466eb4f7d2cb780de5b9a7d90f2"><param name="Name" value="getGraphicsAPI"></OBJECT>
@@ -700,9 +709,9 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classConfigurationNode.html#aa43c73fa441abb475d68f30732996744"><param name="Name" value="getName"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classConfigurationNode.html#aa43c73fa441abb475d68f30732996744"><param name="Name" value="ConfigurationNode"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystemNode.html#ae72c4830dc5036ec8878ca2499a141ce"><param name="Name" value="FilesystemNode"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#acbb5052c66fb0c331e5303f74bc45285"><param name="Name" value="LocalFile"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a78d800c9c8f8666c86448f8ac52d19ac"><param name="Name" value="LocalFolder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystemNode.html#a16eda76e32f8d063b459475eacb26ba8"><param name="Name" value="FilesystemNode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a285481756f0b72e50f6638dfe6c3ad3f"><param name="Name" value="LocalFile"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#af8027f4d2af6e4cba5feee85df75d54c"><param name="Name" value="LocalFolder"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classConfigurationReader.html#ae9804c7377ebc2c0d43b34a1dde21ef1"><param name="Name" value="getNextNode"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classConfigurationReader.html#a8094d63cdaa2e98b6a0cb2924dbe96db"><param name="Name" value="getNextWord"></OBJECT>
@@ -1086,8 +1095,9 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtga__header.html#af876d5f63d15177fa979d5d42c965aa3"><param name="Name" value="tga_header"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classFREngine.html#ad81e6daa06fe655d270c4b404690f191"><param name="Name" value="Init"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757"><param name="Name" value="initialize"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classClock.html#a0e1d9a28caec6c2128e4278136a4722f"><param name="Name" value="initialize"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classClock.html#a0e1d9a28caec6c2128e4278136a4722f"><param name="Name" value="Clock"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#ab2b35754ed20fb6bd0c131e41789e757"><param name="Name" value="GEngine"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGL2GraphicsAPI.html#af40994a7ab7859ad6954565e2bffa45d"><param name="Name" value="GL2GraphicsAPI"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphicsAPI.html#abd430dcdcf0f1519731736289fcb45b0"><param name="Name" value="GraphicsAPI"></OBJECT>
@@ -1313,9 +1323,9 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#a28496ab5bb761a2a29b345a98a539b27"><param name="Name" value="close"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#ab27d9ee79c3e779fb03b8da1b322802c"><param name="Name" value="isOpen"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#a63832b1b008c4043037386c7c712c7a6"><param name="Name" value="LocalDataInputStream"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#a7b06d64730290e4732bbf3f8f37d7187"><param name="Name" value="LocalDataInputStream"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#a433917f7d2d553c1c91bcec94bdcd368"><param name="Name" value="m_fileInputStream"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#ad71239e0508d8cd3ed2619023e7403b7"><param name="Name" value="m_localDataFilePath"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#a11f87f14b52709e2c9f598d128e8c241"><param name="Name" value="m_localDataFilePath"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#a298c2b1695b396f782dcec5b5c3b2f99"><param name="Name" value="open"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#a7343e644391852265ca8149b0acea24d"><param name="Name" value="read"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#a16ae86709af129b7696749e5d2df0627"><param name="Name" value="rewind"></OBJECT>
@@ -1327,9 +1337,9 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#a46ee7220f3a49d70d218f12a91189ef2"><param name="Name" value="close"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#a9f75bf364b5c9ae39594f2729b48fb37"><param name="Name" value="flush"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#a79500bca6ee6e762abcb153231121155"><param name="Name" value="isOpen"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#adde87b62ba95d87f69b3e03918e3e6c5"><param name="Name" value="LocalDataOutputStream"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#aa7e9bdaa86373c58e5b5934883729602"><param name="Name" value="LocalDataOutputStream"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6"><param name="Name" value="m_fileOutputStream"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#ab3824181b6827da7e234e24d500225cb"><param name="Name" value="m_filePath"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#a6da91e80ea9ea53c7e68b7d23e1d627f"><param name="Name" value="m_filePath"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#a49c8b8f106e31f43a53fdb4dc97bcb84"><param name="Name" value="open"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#ae4e380067f584433c820f6d2dedc8048"><param name="Name" value="write"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#a5d82300a5a7dacb13103e76d6d3e0eec"><param name="Name" value="~LocalDataOutputStream"></OBJECT>
@@ -1339,27 +1349,27 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a2553d6ef0704082c4d80f2349535ca23"><param name="Name" value="createInputStream"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#abd0ec9137043e59f028b1a91c13d80c8"><param name="Name" value="createOutputStream"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#abc99ed2bb51eb77f0e0b86f79b5c61a6"><param name="Name" value="exists"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#acbb5052c66fb0c331e5303f74bc45285"><param name="Name" value="getName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a285481756f0b72e50f6638dfe6c3ad3f"><param name="Name" value="getName"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a9e8a4bde444401a0c59ea8cff1152501"><param name="Name" value="length"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a0e5a564b952bf19a35ee874967836206"><param name="Name" value="LocalFile"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a595913c14e5fee72ad36e6e4bbe01f50"><param name="Name" value="m_localFilePath"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#ac20324c4a131f88d5342be8db58ef10e"><param name="Name" value="m_localName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a8596cd99f3eb81d0c38a763c8188731e"><param name="Name" value="LocalFile"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a2b8075c988095091e6ffcf24597f09d6"><param name="Name" value="m_localFilePath"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a6bf7df0c750209e1d977bb5b34709bc1"><param name="Name" value="m_localName"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a739f67ada55c6d28a3540412bc81a4a9"><param name="Name" value="~LocalFile"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html"><param name="Name" value="LocalFolder"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a8b4db543b418855874e54990043892c0"><param name="Name" value="emptyList"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a5aa9e6cff85958d95204f8f1e37e0dca"><param name="Name" value="getChild"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a78d800c9c8f8666c86448f8ac52d19ac"><param name="Name" value="getName"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a41049d219d73d0f20ee42d817c608818"><param name="Name" value="LocalFolder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#af8027f4d2af6e4cba5feee85df75d54c"><param name="Name" value="getName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a8bfb7cdf5a046855a3d7c880f6d4c238"><param name="Name" value="LocalFolder"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#adc16949055dffcaa5386ac35b9ca7b03"><param name="Name" value="m_entryList"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#ab9651b25fcbde44cc5c0f78c59a5d894"><param name="Name" value="m_localFolderPath"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a72fd0f774239a963e342a454a80c8bc5"><param name="Name" value="m_localName"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a610a63c1558ec67a2c135c522a1ac32a"><param name="Name" value="newChild"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a8c45a1fe8d397febbcd39eb5c0ef901a"><param name="Name" value="newChildFolder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319"><param name="Name" value="m_localFolderPath"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a7e4fbd509abd9d25d9994782b61df44f"><param name="Name" value="m_localName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#af9eea69e0cd51a2f563a51232f51519f"><param name="Name" value="newChild"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a3d8a9d563114ea9c611348d8c3ce6309"><param name="Name" value="newChildFolder"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a016d89627e9a5294077d843db4f4d3d0"><param name="Name" value="numChildren"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#aa6b99367df578f30adf336efa71649fe"><param name="Name" value="refresh"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a18b331f02bad299954423c02964f68c2"><param name="Name" value="searchForChild"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf"><param name="Name" value="searchForChild"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a3ddc7ebe6f95cccdeec5374f99042378"><param name="Name" value="~LocalFolder"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLock.html"><param name="Name" value="Lock"></OBJECT>
@@ -1393,6 +1403,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classConfigurationFolder.html#abea48bad5a5065aaa37c9da23e99cba7"><param name="Name" value="ConfigurationFolder"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classSceneNode.html#af13c618c96f5ffd9aad4bc412a660d27"><param name="Name" value="SceneNode"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a70037a06c731f2291baac8596640e2ba"><param name="Name" value="m_clock"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGL2VertexSet.html#aae276cb95f09a88e375a81bf5746ace5"><param name="Name" value="m_colourVals"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGL2VertexSet.html#a4b92ca1714859bb2194005be73a716e9"><param name="Name" value="m_colourValuesType"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classFPSCalculator.html#a80a84ffab663c1ea297f8adfebdf496a"><param name="Name" value="m_curNumFrames"></OBJECT>
@@ -1417,7 +1428,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a4bee2175de06f0a2c468981bfb4303c7"><param name="Name" value="m_eventManager"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#a433917f7d2d553c1c91bcec94bdcd368"><param name="Name" value="m_fileInputStream"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#ab4e1b4da4a5258c16b3a16a8a5d71ed6"><param name="Name" value="m_fileOutputStream"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#ab3824181b6827da7e234e24d500225cb"><param name="Name" value="m_filePath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#a6da91e80ea9ea53c7e68b7d23e1d627f"><param name="Name" value="m_filePath"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classModelViewer.html#a7adb5d3d2e42f4c727cc0cbd045a743f"><param name="Name" value="m_Forward"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a2f719a2efedea821316cfdb996998419"><param name="Name" value="m_fpsCalculator"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGLShader.html#abbcde2514d5c63468338425f1a1def81"><param name="Name" value="m_fragmentShaderID"></OBJECT>
@@ -1444,13 +1455,13 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classTerrainData.html#afd1917c5e0a1b19e62a25647abef9b42"><param name="Name" value="m_lightmapData"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classTerrainNode.html#a435d10576e825876f9b016e250e17820"><param name="Name" value="m_lightmapDirty"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classTextureMonitor.html#acab296e108e056a6ebd9cbc3a6393d22"><param name="Name" value="m_Loader"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#ad71239e0508d8cd3ed2619023e7403b7"><param name="Name" value="m_localDataFilePath"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a595913c14e5fee72ad36e6e4bbe01f50"><param name="Name" value="m_localFilePath"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#ab9651b25fcbde44cc5c0f78c59a5d894"><param name="Name" value="m_localFolderPath"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#ac20324c4a131f88d5342be8db58ef10e"><param name="Name" value="m_localName"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataInputStream.html#a11f87f14b52709e2c9f598d128e8c241"><param name="Name" value="m_localDataFilePath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a2b8075c988095091e6ffcf24597f09d6"><param name="Name" value="m_localFilePath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#acf5a821b5bc4205173258f2d52e0e319"><param name="Name" value="m_localFolderPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a6bf7df0c750209e1d977bb5b34709bc1"><param name="Name" value="m_localName"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#ac20324c4a131f88d5342be8db58ef10e"><param name="Name" value="LocalFile"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a72fd0f774239a963e342a454a80c8bc5"><param name="Name" value="LocalFolder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFile.html#a6bf7df0c750209e1d977bb5b34709bc1"><param name="Name" value="LocalFile"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a7e4fbd509abd9d25d9994782b61df44f"><param name="Name" value="LocalFolder"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classTerrainPatch.html#a0a96c7b1cae2080885a341aa0a75eeb7"><param name="Name" value="m_lodNumVs"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogWriter.html#abdd17e977eba316b817c21a3a2e29277"><param name="Name" value="m_logOutStream"></OBJECT>
@@ -1612,15 +1623,15 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLock.html#a28477d6b318ed985e5fc174c8a6cd1fb"><param name="Name" value="myMutex"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classCamera.html#ae68d4bb4b35e19f81f30ac10ecb24f51"><param name="Name" value="nearD"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classVector2f.html#ae2480fb5d5f1c991f2c3bc309cf674a3"><param name="Name" value="negative"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a86e65707748fb4e35f2cd7e60d452804"><param name="Name" value="newChild"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428"><param name="Name" value="newChild"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a86e65707748fb4e35f2cd7e60d452804"><param name="Name" value="Folder"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a610a63c1558ec67a2c135c522a1ac32a"><param name="Name" value="LocalFolder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a7da50ea4a2c7e69bec5c31bcacd8f428"><param name="Name" value="Folder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#af9eea69e0cd51a2f563a51232f51519f"><param name="Name" value="LocalFolder"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a92d12c385ac1080a44767cf431bf8230"><param name="Name" value="newChildFolder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a74501a9c3cb239194005ceb8a2536416"><param name="Name" value="newChildFolder"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a92d12c385ac1080a44767cf431bf8230"><param name="Name" value="Folder"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a8c45a1fe8d397febbcd39eb5c0ef901a"><param name="Name" value="LocalFolder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a74501a9c3cb239194005ceb8a2536416"><param name="Name" value="Folder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a3d8a9d563114ea9c611348d8c3ce6309"><param name="Name" value="LocalFolder"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGL2GraphicsAPI.html#a1fcdf9f146913fcf644898c883de5076"><param name="Name" value="newTexture"></OBJECT>
   <UL>
@@ -1848,11 +1859,11 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classSceneNode.html#aba07311f3ac1149fe7425a40f4aa71f3"><param name="Name" value="~SceneNode"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGWindowGLX.html#a6f895223832c323d26480a2a0ed8875d"><param name="Name" value="screen"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#ac5fd2d2f0c2921df1552b5686f8295cc"><param name="Name" value="search"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#ac9bd343406ddd4ee391558234e637cd1"><param name="Name" value="searchForChild"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystem.html#a7974ac55c31a719bc3b32c63a5e21122"><param name="Name" value="search"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a56700301248e09d2eae56bc7b2a00c0e"><param name="Name" value="searchForChild"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#ac9bd343406ddd4ee391558234e637cd1"><param name="Name" value="Folder"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a18b331f02bad299954423c02964f68c2"><param name="Name" value="LocalFolder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classFolder.html#a56700301248e09d2eae56bc7b2a00c0e"><param name="Name" value="Folder"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalFolder.html#a84c009856a080f854e9a534a32edd0cf"><param name="Name" value="LocalFolder"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGEngine.html#a261a030dbf510182e2e672105be7b00f"><param name="Name" value="sendEventManagerMessage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGL2GraphicsAPI.html#ac20a91e7bf25de1531033b399ec36756"><param name="Name" value="setAPISummary"></OBJECT>
@@ -2421,7 +2432,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLocalDataOutputStream.html#ae4e380067f584433c820f6d2dedc8048"><param name="Name" value="LocalDataOutputStream"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogWriter.html#af4359cbe4566a4c02676d5af080127fe"><param name="Name" value="writeData"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFilesystemUtils.html#a2184bdd61bbb57e810b4362346a36286"><param name="Name" value="writeLineToStream"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classFsUtils.html#a140322a1a4355887656d21d1e5793076"><param name="Name" value="writeLineToStream"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classConfigurationInstance.html#ae64795d1d705767a896c256611fb2ba8"><param name="Name" value="writeToPath"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="GLXWindow_8h.html#abd9e16b19fc610d9800613fe3d79d8b1"><param name="Name" value="X11_H"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="GLXWindow_8h.html#a9b4ee9e2d1f9d7bf7813f85f3a97c04d"><param name="Name" value="X11_KEYSYM"></OBJECT>
@@ -2451,6 +2462,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classButton.html#a2a001eb9c3cc8ae54768a850dd345002"><param name="Name" value="~Button"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classCamera.html#ad1897942d0ccf91052386388a497349f"><param name="Name" value="~Camera"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classCheckbox.html#a828c1436e32c8be0d9d395286d8e6bfe"><param name="Name" value="~Checkbox"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classClock.html#afc976ce68fa85e15cc06f9ed47bddb7c"><param name="Name" value="~Clock"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classConfigurationFolder.html#abbc195f7f320231200adb95464b509a4"><param name="Name" value="~ConfigurationFolder"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classConfigurationInstance.html#a2948ae50ab6d2c2920d31a544bed7f6b"><param name="Name" value="~ConfigurationInstance"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classConfigurationNode.html#abfdec33505dbb6d52218e785f4c171b7"><param name="Name" value="~ConfigurationNode"></OBJECT>
